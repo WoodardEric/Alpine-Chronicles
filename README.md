@@ -3,6 +3,9 @@ A 2D adventure game made in Unity
 
 ![image](docs/Alpine_Computing.png)
 
+## Design Doc
+[Alpine Computing Draft](https://docs.google.com/document/d/1eAREV0RRximKHGK7bjXQoJQA8XUjeVl9MnlidFYvaVA/edit?skip_itp2_check=true)
+
 ## Gantt Chart
 [Gantt Chart](https://vandalsuidaho-my.sharepoint.com/:x:/g/personal/mill7025_vandals_uidaho_edu/EXpynLxGfpdInh3KsIjbctoBXEMf71t_pLgpgAv0CJ7YLg?e=4%3ANP0L1p&at=9&CID=bf6aea30-80ca-0056-3520-f6a0321edc72)
 
