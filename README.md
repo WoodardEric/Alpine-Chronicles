@@ -168,30 +168,30 @@ First navigate to your teams main repository, Tl1 should send you a link to thei
 Like a project folder, or C disk drive. It stores all your current working projects. 
 
 ### Branches
-Each branch is essentially a pointer to a snapshot of changes to the repo and any commit will only affect the selected branch on git. To list all branches, use ‘git branch’. To change the current working branch use ‘git switch <branch name>’ For this project we will only use the ‘main’ branch.
+Each branch is essentially a pointer to a snapshot of changes to the repo and any commit will only affect the selected branch on git. To list all branches, use `git branch`. To change the current working branch use `git switch <branch name>` For this project we will only use the ‘main’ branch.
 
 ### Pull
-Use ‘git pull’ to download any changes from the online repository. This should be the first thing you do anytime you start coding. You will want your code to be up to date with your team since you will be using some of their functions. Also if changes are made to the same line of code then there will be a merge conflict which will have to be resolved before you can push your code to the repo. In this class though we shouldn’t have to worry about that sense no one should be working on the same file.
+Use `git pull` to download any changes from the online repository. This should be the first thing you do anytime you start coding. You will want your code to be up to date with your team since you will be using some of their functions. Also if changes are made to the same line of code then there will be a merge conflict which will have to be resolved before you can push your code to the repo. In this class though we shouldn’t have to worry about that sense no one should be working on the same file.
 
 ### Staging
 Each change that you want to commit first needs to be staged. Use ‘git add’ to stage any changes or added files to the current branch. You can add single files, directories, every change in the branch, or do it interactively by hunks. Note that adding every change at once is fast and easy it also makes it easy to add unwanted changes without realizing it.
-* ‘git add <path>’ stages a single file or directory 
+* `git add <path>` stages a single file or directory 
 
-* ‘git add .’ a period means to add every change in the repository 
+* `git add .` a period means to add every change in the repository 
 
-* ‘git add –p' interactively select chunks of code to stage. Note can’t be used to add new files
+* `git add –p` interactively select chunks of code to stage. Note can’t be used to add new files
 
 ### Commit
 Use ‘git commit’ to save any staged changes to the current local branch. To stage a change us ‘git add <file name>. 
 
-* ‘git commit –a' commits all changes in the working directory. Not only staged changes. 
+* `git commit –a` commits all changes in the working directory. Not only staged changes. 
 
-* ‘git commit –m ”commit message”' adds a message to the commit. Every commit should have a message and it should be a brief description of what the changes do.  
+* `git commit –m ”commit message”` adds a message to the commit. Every commit should have a message and it should be a brief description of what the changes do.  
 
-* ‘git commit –am “commit message”’ Commits all changes with a message. 
+* `git commit –am “commit message”` Commits all changes with a message. 
 
 ### Push
-‘git push’ will upload all the commits from your local branch into the online git repository. Do this when your code is at a point where it is ready to be shared with the group. You should generally not push code that does not compile or is broken. Also make sure all your changes are committed before pushing.
+`git push` will upload all the commits from your local branch into the online git repository. Do this when your code is at a point where it is ready to be shared with the group. You should generally not push code that does not compile or is broken. Also make sure all your changes are committed before pushing.
 
 ### In-depth git guide
 For advanced git knowledge, refer to the [git guides published on GitHub](https://github.com/git-guides/).
