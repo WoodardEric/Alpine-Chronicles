@@ -6,7 +6,6 @@ TagManager:
   tags:
   - item
   - interactable
-  - AudioPlayer
   layers:
   - Default
   - TransparentFX
