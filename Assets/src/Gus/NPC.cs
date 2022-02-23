@@ -10,6 +10,7 @@ public class NPC : MonoBehaviour
 
     private void Start()
     {
+        // Searches the heirarchy for the "Player" and reports an error if the components looking for on the player are not found.
         playerController = GameObject.Find("Player").GetComponent<playerClass>();
         if (playerController == null)
         {

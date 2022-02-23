@@ -6,29 +6,41 @@ using UnityEngine.UI;
 public class NPCDialogue : MonoBehaviour
 {
     [Header("Public References")]
-    public NPC npcController;
+    [SerializeField]
+    private NPC npcController;
     [Space]
-    public Text textContainer;
+    [SerializeField]
+    private Text textContainer;
     [Space]
-    public bool cycleOnClick;
+    [SerializeField]
+    private bool cycleOnClick;
     [Space]
-    public bool cycleOnButton;
-    public Button buttonToAdvanceDiaglog;
+    [SerializeField]
+    private bool cycleOnButton;
+    private Button buttonToAdvanceDiaglog;
     [Header("Key Controls")]
     [Space]
-    public bool cycleOnKey;
-    public KeyCode keyPressToAdvance;
+    [SerializeField]
+    private bool cycleOnKey;
+    [SerializeField]
+    private KeyCode keyPressToAdvance;
     [Space]
-    public bool deactivateThisObjectAfterDialog = false;
+    [SerializeField]
+    private bool deactivateThisObjectAfterDialog = false;
     [Space]
-    public bool activateTargetObjectAfterDialog = false;
-    public GameObject targetGameObject;
+    [SerializeField]
+    private bool activateTargetObjectAfterDialog = false;
+    [SerializeField]
+    private GameObject targetGameObject;
     [Space]
-    public bool resetAfterDialog = false;
+    [SerializeField]
+    private bool resetAfterDialog = false;
     [Space]
-    public float textSpeed = 0.05f;  //The speed at which you'll see the game type the text
+    [SerializeField]
+    private float textSpeed = 0.05f;  //The speed at which you'll see the game type the text
     [Space]
-    public List<string> dialogContentRollout;
+    [SerializeField]
+    private List<string> dialogContentRollout;
     [Space]
     int current = -1;
 

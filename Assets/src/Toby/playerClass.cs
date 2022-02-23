@@ -20,6 +20,7 @@ public class playerClass : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // freezes the player when they are "interacting" with an NPC specifically. This could be used in other instances as well.
         if(!frozen)
         {
             newPos = new Vector2(this.transform.position.x, this.transform.position.y);
