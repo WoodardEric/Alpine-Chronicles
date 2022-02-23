@@ -71,10 +71,13 @@ public class playerClass : MonoBehaviour
 
         if (Input.GetKey(KeyCode.E) && !interacting)
         {
+            //IInteractable interactedObj = other.gameObject.GetComponent<IInteractable>();
+            //interactedObj.interact();
             Debug.Log("Player has interacted with the " + other.gameObject.name);
             interacting = true;
             //frozen = true; Uncomment when we decide how to leave interaction
 
+            
             // Implement interactable interface in class to customize interaction
             // Special interaction if the "interactable" is an NPC
             // if(other.gameObject.GetComponent<NPC>() != null)
