@@ -7,7 +7,7 @@ public class playerClass : MonoBehaviour
     [SerializeField] float moveSpeed;
     Rigidbody2D rgdb;
     Vector2 newPos;
-    int interacted = 0;
+    bool interacted = false;
     
     // Start is called before the first frame update
     void Start()
@@ -49,10 +49,13 @@ public class playerClass : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "item")
+        if (other.gameObject.tag != "item")
         {
-            pickupItem(other.gameObject);
+            return;
         }
+
+        pickupItem(other.gameObject);
+        Destroy(other.gameObject);
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -62,25 +65,25 @@ public class playerClass : MonoBehaviour
             return;
         }
         
-        if (interacted == 1)
-        {
-            return;
-        }
+        // if (interacted == 1)
+        // {
+        //     return;
+        // }
 
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKey(KeyCode.E) && !interacted)
         {
             Debug.Log("Player has interacted with the computer");
-            interacted = 1;
+            interacted = true;
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        interacted = 0;    
+        interacted = false;    
     }
 
     private void pickupItem(GameObject item)
     {
-        Debug.Log("Picked up an item named " + item.name);
+        Debug.Log("Picked up a " + item.name + " item.");
     }
 }
