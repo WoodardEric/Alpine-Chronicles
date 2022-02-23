@@ -22,7 +22,7 @@ public class NPC : MonoBehaviour, IInteractable
 
     public void UnfreezePlayer()
     {
-        playerController.frozen = false;
+        playerController.isInteracting(false);
     }
 
     // public void OnInteract()
@@ -33,6 +33,7 @@ public class NPC : MonoBehaviour, IInteractable
 
     public void interact()
     {
+        playerController.isInteracting(true);
         dialogue.gameObject.SetActive(true);
         dialogue.AdvanceDialog();  // Starts the first part of dialogue, since the dialogue box opens with no text initially
     }
