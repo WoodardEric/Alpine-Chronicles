@@ -7,7 +7,7 @@ public class playerClass : MonoBehaviour
     [SerializeField] float moveSpeed;
     Rigidbody2D rgdb;
     Vector2 newPos;
-    bool interacted = false;
+    bool interacting = false;
     public bool frozen = false;
     
     // Start is called before the first frame update
@@ -70,23 +70,28 @@ public class playerClass : MonoBehaviour
             return;
         }
 
-        if (Input.GetKey(KeyCode.E) && !interacted)
+        if (Input.GetKey(KeyCode.E) && !interacting)
         {
+            //IInteractable interactedObj = other.gameObject.GetComponent<IInteractable>();
+            //interactedObj.interact();
             Debug.Log("Player has interacted with the " + other.gameObject.name);
-            interacted = true;
+            interacting = true;
+            //frozen = true; Uncomment when we decide how to leave interaction
 
+            
+            // Implement interactable interface in class to customize interaction
             // Special interaction if the "interactable" is an NPC
-            if(other.gameObject.GetComponent<NPC>() != null)
-            {
-                other.gameObject.GetComponent<NPC>().OnInteract();
-                frozen = true;
-            }
+            // if(other.gameObject.GetComponent<NPC>() != null)
+            // {
+            //     other.gameObject.GetComponent<NPC>().OnInteract();
+            //     frozen = true;
+            // }
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        interacted = false;    
+        interacting = false;    
     }
 
     private void pickupItem(GameObject item)
