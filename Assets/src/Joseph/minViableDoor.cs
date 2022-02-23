@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class minViableDoor : MonoBehaviour
 {
-   void OnTriggerEnter2D(Collider2D other)
+   void OnCollisionEnter2D(Collision2D other)
    {
-      if(other.tag == "Player")
+      if(other.collider.tag == "Player" && Input.GetKey("e"))
       {
          Debug.Log("The door appears to be locked.");
       }
