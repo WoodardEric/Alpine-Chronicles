@@ -791,7 +791,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ff91f9f215f24e10b760408b34f68bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound: {fileID: 2015582160}
 --- !u!70 &607036573
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -3019,9 +3018,9 @@ GameObject:
   - component: {fileID: 2015582160}
   - component: {fileID: 2015582159}
   m_Layer: 0
-  m_Name: Audio Source
+  m_Name: AudioManager
   m_TagString: AudioPlayer
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3050,7 +3049,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ecfccda44125c434eae05cb13112dfb6, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.557
+  m_Volume: 0.19
   m_Pitch: 1
   Loop: 0
   Mute: 0
