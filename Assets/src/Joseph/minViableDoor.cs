@@ -2,13 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class minViableDoor : MonoBehaviour
+public class minViableDoor : MonoBehaviour, IInteractable
 {
-   void OnCollisionEnter2D(Collision2D other)
+   public void interact()
    {
-      if(other.collider.tag == "Player" && Input.GetKey("e"))
-      {
-         Debug.Log("The door appears to be locked.");
-      }
+      Debug.Log("The door appears to be locked.");
    }
 }

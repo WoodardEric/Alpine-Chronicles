@@ -35,8 +35,8 @@ public class playerClass : MonoBehaviour
             }
 
             rgdb.MovePosition(newPos);
-            this.transform.rotation = Quaternion.identity;
         }
+        this.transform.rotation = Quaternion.identity;
     }
 
     // private void FixedUpdate()
@@ -63,6 +63,7 @@ public class playerClass : MonoBehaviour
         Destroy(other.gameObject);
     }
 
+
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.tag != "interactable")
@@ -72,9 +73,9 @@ public class playerClass : MonoBehaviour
 
         if (Input.GetKey(KeyCode.E) && !interacting)
         {
-            //IInteractable interactedObj = other.gameObject.GetComponent<IInteractable>();
-            //interactedObj.interact();
-            Debug.Log("Player has interacted with the " + other.gameObject.name);
+            IInteractable interactedObj = other.gameObject.GetComponent<IInteractable>();
+            interactedObj.interact();
+            //Debug.Log("Player has interacted with the " + other.gameObject.name);
             interacting = true;
             //frozen = true; Uncomment when we decide how to leave interaction
 
@@ -97,5 +98,16 @@ public class playerClass : MonoBehaviour
     private void pickupItem(GameObject item)
     {
         Debug.Log("Player has picked up a " + item.name + " item.");
+    }
+
+    public bool isInteracting()
+    {
+        return interacting;
+    }
+
+    public void isInteracting(bool isInteracting)
+    {
+        interacting = isInteracting;
+        frozen = isInteracting;
     }
 }
