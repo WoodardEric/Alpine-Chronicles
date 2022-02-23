@@ -8,6 +8,7 @@ public class playerClass : MonoBehaviour
     Rigidbody2D rgdb;
     Vector2 newPos;
     bool interacted = false;
+    public bool frozen = false;
     
     // Start is called before the first frame update
     void Start()
@@ -19,19 +20,22 @@ public class playerClass : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        newPos = new Vector2(this.transform.position.x, this.transform.position.y);
-        if(Input.GetAxisRaw("Horizontal") != 0)
+        if(!frozen)
         {
-            newPos.x += (moveSpeed * Input.GetAxisRaw("Horizontal") * Time.deltaTime);
-        }
+            newPos = new Vector2(this.transform.position.x, this.transform.position.y);
+            if (Input.GetAxisRaw("Horizontal") != 0)
+            {
+                newPos.x += (moveSpeed * Input.GetAxisRaw("Horizontal") * Time.deltaTime);
+            }
 
-        if(Input.GetAxisRaw("Vertical") != 0)
-        {
-            newPos.y += (moveSpeed * Input.GetAxisRaw("Vertical") * Time.deltaTime);
+            if (Input.GetAxisRaw("Vertical") != 0)
+            {
+                newPos.y += (moveSpeed * Input.GetAxisRaw("Vertical") * Time.deltaTime);
+            }
+
+            rgdb.MovePosition(newPos);
+            this.transform.rotation = Quaternion.identity;
         }
-        
-        rgdb.MovePosition(newPos);
-        this.transform.rotation = Quaternion.identity;
     }
 
     // private void FixedUpdate()
@@ -69,6 +73,13 @@ public class playerClass : MonoBehaviour
         {
             Debug.Log("Player has interacted with the " + other.gameObject.name);
             interacted = true;
+
+            // Special interaction if the "interactable" is an NPC
+            if(other.gameObject.GetComponent<NPC>() != null)
+            {
+                other.gameObject.GetComponent<NPC>().OnInteract();
+                frozen = true;
+            }
         }
     }
 
