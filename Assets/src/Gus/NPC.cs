@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPC : MonoBehaviour
+public class NPC : MonoBehaviour, IInteractable
 {
     [SerializeField]
     private NPCDialogue dialogue = null;
@@ -25,7 +25,13 @@ public class NPC : MonoBehaviour
         playerController.frozen = false;
     }
 
-    public void OnInteract()
+    // public void OnInteract()
+    // {
+    //     dialogue.gameObject.SetActive(true);
+    //     dialogue.AdvanceDialog();  // Starts the first part of dialogue, since the dialogue box opens with no text initially
+    // }
+
+    public void interact()
     {
         dialogue.gameObject.SetActive(true);
         dialogue.AdvanceDialog();  // Starts the first part of dialogue, since the dialogue box opens with no text initially
