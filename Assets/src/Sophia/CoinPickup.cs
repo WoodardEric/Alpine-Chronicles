@@ -7,11 +7,11 @@ using UnityEngine;
 public class CoinPickup : MonoBehaviour
 {
 
-    public AudioSource sound;
+    public GameObject sound;
     void OnTriggerEnter2D (Collider2D col){
         if(col.gameObject.name == "Player"){
             Debug.Log("Coin has been collected!");
-            sound.Play();
+            sound.SendMessage("PlaySound");
             Destroy(this.gameObject);
 
         }
