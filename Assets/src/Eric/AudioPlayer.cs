@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class AudioPlayer : MonoBehaviour
 {
-    private float volume = 1.0f;
+    private float volume = 0.5f;
 
     public AudioSource audioSource;
 
