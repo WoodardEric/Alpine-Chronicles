@@ -136,7 +136,6 @@ GameObject:
   - component: {fileID: 29891862}
   - component: {fileID: 29891861}
   - component: {fileID: 29891865}
-  - component: {fileID: 29891866}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -258,19 +257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1286abf95e5b4c238e6ecc4d875d6e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 8
---- !u!114 &29891866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 29891860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 201add9c4192243c290ecc129cdf57aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  moveSpeed: 20
 --- !u!1 &96548347
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,7 +271,7 @@ GameObject:
   - component: {fileID: 96548349}
   m_Layer: 0
   m_Name: HardBox
-  m_TagString: Untagged
+  m_TagString: interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -427,7 +414,7 @@ GameObject:
   - component: {fileID: 346475243}
   m_Layer: 0
   m_Name: rightDoor
-  m_TagString: Untagged
+  m_TagString: interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -679,7 +666,7 @@ GameObject:
   - component: {fileID: 607036572}
   m_Layer: 0
   m_Name: Coin
-  m_TagString: Untagged
+  m_TagString: item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -925,7 +912,7 @@ GameObject:
   - component: {fileID: 934372681}
   m_Layer: 0
   m_Name: Computer
-  m_TagString: Untagged
+  m_TagString: interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1910,7 +1897,7 @@ GameObject:
   - component: {fileID: 1641513173}
   m_Layer: 0
   m_Name: Computer
-  m_TagString: Untagged
+  m_TagString: interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2499,7 +2486,7 @@ GameObject:
   - component: {fileID: 1954511217}
   m_Layer: 0
   m_Name: leftDoor
-  m_TagString: Untagged
+  m_TagString: interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

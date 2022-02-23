@@ -60,19 +60,14 @@ public class playerClass : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.name != "Computer")
+        if (other.gameObject.tag != "interactable")
         {
             return;
         }
-        
-        // if (interacted == 1)
-        // {
-        //     return;
-        // }
 
         if (Input.GetKey(KeyCode.E) && !interacted)
         {
-            Debug.Log("Player has interacted with the computer");
+            Debug.Log("Player has interacted with the " + other.gameObject.name);
             interacted = true;
         }
     }
@@ -84,6 +79,6 @@ public class playerClass : MonoBehaviour
 
     private void pickupItem(GameObject item)
     {
-        Debug.Log("Picked up a " + item.name + " item.");
+        Debug.Log("Player has picked up a " + item.name + " item.");
     }
 }
