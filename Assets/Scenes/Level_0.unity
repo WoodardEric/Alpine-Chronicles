@@ -952,12 +952,16 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5305277600787681461, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
+      propertyPath: dialogContentRollout.Array.data[0]
+      value: Hello There.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5305277600787681461, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: dialogContentRollout.Array.data[1]
-      value: I am a test NPC
+      value: I am a test NPC.
       objectReference: {fileID: 0}
     - target: {fileID: 5305277600787681461, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: dialogContentRollout.Array.data[2]
-      value: Made by "Gus"
+      value: Made by "Gus."
       objectReference: {fileID: 0}
     - target: {fileID: 5305277600787681461, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: dialogContentRollout.Array.data[3]
@@ -1838,7 +1842,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5305277600787681461, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: dialogContentRollout.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5305277600787681461, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: dialogContentRollout.Array.data[0]
@@ -1846,14 +1850,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5305277600787681461, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: dialogContentRollout.Array.data[1]
-      value: I have something for you that you may find quite useful!
+      value: It is I, the incredible Dr. BC!
       objectReference: {fileID: 0}
     - target: {fileID: 5305277600787681461, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: dialogContentRollout.Array.data[2]
-      value: Here, take this golden samurai sword!
+      value: I have something for you that you may find quite useful!
       objectReference: {fileID: 0}
     - target: {fileID: 5305277600787681461, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: dialogContentRollout.Array.data[3]
+      value: Here, take this golden katana!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5305277600787681461, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
+      propertyPath: dialogContentRollout.Array.data[4]
       value: May it serve you well.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2148,7 +2156,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.7039366
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
