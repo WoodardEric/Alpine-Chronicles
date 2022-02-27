@@ -1,0 +1,16 @@
+{
+    "name": "TobySrc",
+    "rootNamespace": "",
+    "references": [
+        "GUID:0e0bbc3a49dddf04aa391a885fe9037d"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

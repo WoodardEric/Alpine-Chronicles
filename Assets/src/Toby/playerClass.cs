@@ -8,7 +8,7 @@ public class playerClass : MonoBehaviour
     Rigidbody2D rgdb;
     Vector2 newPos;
     bool interacting = false;
-    public bool frozen = false;
+    bool frozen = false;
     
     // Start is called before the first frame update
     void Start()
@@ -16,11 +16,14 @@ public class playerClass : MonoBehaviour
         rgdb =  this.GetComponent<Rigidbody2D>();
     }
 
-
     // Update is called once per frame
     void Update()
     {
-        // freezes the player when they are "interacting" with an NPC specifically. This could be used in other instances as well.
+        
+    }
+
+    private void FixedUpdate()
+    {
         if(!frozen)
         {
             newPos = new Vector2(this.transform.position.x, this.transform.position.y);
@@ -36,21 +39,7 @@ public class playerClass : MonoBehaviour
 
             rgdb.MovePosition(newPos);
         }
-        this.transform.rotation = Quaternion.identity;
     }
-
-    // private void FixedUpdate()
-    // {
-    //     if(Input.GetAxisRaw("Horizontal") != 0)
-    //     {
-    //         this.transform.Translate(new Vector3(Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime, 0.0f, 0.0f));
-    //     }
-
-    //     if(Input.GetAxisRaw("Vertical") != 0)
-    //     {
-    //         this.transform.Translate(new Vector3(0.0f, Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime, 0.0f));
-    //     }
-    // }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -60,9 +49,7 @@ public class playerClass : MonoBehaviour
         }
 
         pickupItem(other.gameObject);
-        Destroy(other.gameObject);
     }
-
 
     private void OnTriggerStay2D(Collider2D other)
     {
@@ -75,18 +62,7 @@ public class playerClass : MonoBehaviour
         {
             IInteractable interactedObj = other.gameObject.GetComponent<IInteractable>();
             interactedObj.interact();
-            //Debug.Log("Player has interacted with the " + other.gameObject.name);
             interacting = true;
-            //frozen = true; Uncomment when we decide how to leave interaction
-
-            
-            // Implement interactable interface in class to customize interaction
-            // Special interaction if the "interactable" is an NPC
-            // if(other.gameObject.GetComponent<NPC>() != null)
-            // {
-            //     other.gameObject.GetComponent<NPC>().OnInteract();
-            //     frozen = true;
-            // }
         }
     }
 
