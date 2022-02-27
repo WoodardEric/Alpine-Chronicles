@@ -2227,7 +2227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0
   SaveGame: 0
-  Timecheck: 5
+  Timecheck: 1800
 --- !u!1 &1665917761
 GameObject:
   m_ObjectHideFlags: 0
