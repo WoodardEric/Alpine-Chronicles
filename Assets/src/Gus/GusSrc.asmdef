@@ -1,0 +1,17 @@
+{
+    "name": "GusSrc",
+    "rootNamespace": "",
+    "references": [
+        "GUID:0e0bbc3a49dddf04aa391a885fe9037d",
+        "GUID:5bd2199bfcac83f4da8964a90f5905ed"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
