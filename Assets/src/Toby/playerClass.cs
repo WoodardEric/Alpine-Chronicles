@@ -6,7 +6,7 @@ public class playerClass : MonoBehaviour
 {
     [SerializeField] float moveSpeed;
     Rigidbody2D rgdb;
-    Vector2 newPos;
+    public Vector2 newPos;
     bool interacting = false;
     bool frozen = false;
     

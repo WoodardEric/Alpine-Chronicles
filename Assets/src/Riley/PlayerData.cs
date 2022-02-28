@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Make system serializable so we can put in file stream. 
 [System.Serializable]
-public class PlayerData
-{
-    public float[] position;
+public class PlayerData : MonoBehaviour
+{  
+    public playerClass myStats;
 
-    public PlayerData ()
+    public void update ()
     {
-        position = new float[3];
-        //position[0] = player.transform.position.x;
-        //position[1] = player.transform.position.y;
-        //position[2] = player.transform.position.z;
+        //save current position as new position.
+        Vector3 pos = transform.position;
+        pos.x = myStats.newPos.x;
+        pos.y = myStats.newPos.y;
+        transform.position = pos; 
+
 
     }
     

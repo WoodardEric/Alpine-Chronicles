@@ -12,6 +12,15 @@ public class Autosave : MonoBehaviour
 	public bool SaveGame = false;
 	public float Timecheck = 1800f;
 
+	public PlayerData  _player;
+
+	//Make sure to create a gameobject for our _player data. 
+	public void Awake()
+	{
+		_player = GameObject.FindObjectOfType<PlayerData>();
+	
+	}
+	
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -32,11 +41,10 @@ public class Autosave : MonoBehaviour
 			}
 
 			if (SaveGame == true)
-			{
+			{ 
 			Debug.Log("AutoSaving Data...");
-			//SavePlayerFunc(playerClass);
+			SavePlayerFunc();
 			Timer = 0f;
-
 			}
 	}
 	
@@ -52,19 +60,24 @@ public class Autosave : MonoBehaviour
 		}
 	}*/
 	
-	public static void SavePlayerFunc() //insert player data here
+	public void SavePlayerFunc() 
 
 	{
 		//save the data in binary, more secure
 		BinaryFormatter formatter = new BinaryFormatter();
 
+		//create a path using application.p...
 		string path = Application.persistentDataPath + "/data.ap";
+
+		//Create a stream
 		FileStream stream = new FileStream(path, FileMode.Create);
 
-		//PlayerData data = new PlayerData(pplayer);
-		//formatter.Serialize(stream, data);
+		//set the stream to the new gameobject, for PlayerData script.
+		formatter.Serialize(stream, _player.myStats);
 		
+		//print out file location
 		Debug.Log(Application.persistentDataPath);
+
 		stream.Close();
 		
 	}
