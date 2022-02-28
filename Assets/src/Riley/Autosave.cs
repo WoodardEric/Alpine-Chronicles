@@ -52,7 +52,7 @@ public class Autosave : MonoBehaviour
 		}
 	}*/
 	
-	public static void SavePlayerFunc(playerClass pplayer) //insert player data here
+	public static void SavePlayerFunc() //insert player data here
 
 	{
 		//save the data in binary, more secure
@@ -61,8 +61,8 @@ public class Autosave : MonoBehaviour
 		string path = Application.persistentDataPath + "/data.ap";
 		FileStream stream = new FileStream(path, FileMode.Create);
 
-		PlayerData data = new PlayerData(pplayer);
-		formatter.Serialize(stream, data);
+		//PlayerData data = new PlayerData(pplayer);
+		//formatter.Serialize(stream, data);
 		
 		Debug.Log(Application.persistentDataPath);
 		stream.Close();
