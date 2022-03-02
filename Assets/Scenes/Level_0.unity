@@ -376,8 +376,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0
   SaveGame: 0
-  Timecheck: 100
-  _player: {fileID: 0}
+  Timecheck: 5
+  _player:
+    stats: {fileID: 0}
 --- !u!1 &96548347
 GameObject:
   m_ObjectHideFlags: 0
@@ -2514,7 +2515,8 @@ MonoBehaviour:
   Timer: 0
   SaveGame: 0
   Timecheck: 1800
-  _player: {fileID: 0}
+  _player:
+    stats: {fileID: 0}
 --- !u!1 &1665917761
 GameObject:
   m_ObjectHideFlags: 0

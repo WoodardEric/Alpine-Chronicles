@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
-using System.Runtime.Serialization.Formatters.Binary; 
+using System.Runtime.Serialization.Formatters.Binary;
 
 
 public class Autosave : MonoBehaviour
@@ -12,15 +12,9 @@ public class Autosave : MonoBehaviour
 	public bool SaveGame = false;
 	public float Timecheck = 1800f;
 
-	public PlayerData  _player;
+	public PlayerData _player;
 
-	//Make sure to create a gameobject for our _player data. 
-	public void Awake()
-	{
-		_player = GameObject.FindObjectOfType<PlayerData>();
-	
-	}
-	
+
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -33,21 +27,22 @@ public class Autosave : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-			Timer = Timer + 1 * Time.deltaTime;
-			if (Timer >= Timecheck)
-			{
-				SaveGame = true;
+		Timer = Timer + 1 * Time.deltaTime;
+		if (Timer >= Timecheck)
+		{
+			SaveGame = true;
 
-			}
+		}
 
-			if (SaveGame == true)
-			{ 
+		if (SaveGame == true)
+		{
 			Debug.Log("AutoSaving Data...");
+
 			SavePlayerFunc();
 			Timer = 0f;
-			}
+		}
 	}
-	
+
 	//coroutine if using will continue to loop forever. 
 	/*
 	private IEnumerator Countdown3()
@@ -70,10 +65,12 @@ public class Autosave : MonoBehaviour
 		string path = Application.persistentDataPath + "/data.ap";
 
 		//Create a stream
-		FileStream stream = new FileStream(path, FileMode.Create);
+		FileStream stream = new FileStream(path, FileMode.OpenOrCreate);
 
 		//set the stream to the new gameobject, for PlayerData script.
-		formatter.Serialize(stream, _player.myStats);
+
+		//PlayerData data = new PlayerData(_player);
+		formatter.Serialize(stream, _player);
 		
 		//print out file location
 		Debug.Log(Application.persistentDataPath);
@@ -82,6 +79,18 @@ public class Autosave : MonoBehaviour
 		
 	}
 
+	public void load()
+	{
+		string path = Application.persistentDataPath + "/data.ap";
+		BinaryFormatter formatter = new BinaryFormatter();
+		//Create a stream
+		FileStream stream = new FileStream(path, FileMode.Open);
+		//cast it as a playerClass
+		//_player = (playerClass)formatter.Deserialize(stream);
+		_player = formatter.Deserialize(stream) as PlayerData;
+
+		stream.Close();
+	}
 
 
 
