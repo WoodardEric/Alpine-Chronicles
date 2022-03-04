@@ -6,6 +6,6 @@ using UnityEngine;
 [System.Serializable]
 public class PlayerData
 {
-   public playerClass stats;
+   //public playerClass stats;
     //enter tobys data here
 }

@@ -76,22 +76,31 @@ public class Autosave : MonoBehaviour
 		Debug.Log(Application.persistentDataPath);
 
 		stream.Close();
-		
-	}
 
-	public void load()
+		if (System.IO.File.Exists(path))
+		{
+			//Debug.Log("File exists...");
+		}
+		else
+		{
+			//Debug.Log("File does not exist in the current directory!");
+		}
+
+	}
+	
+public void load()
 	{
 		string path = Application.persistentDataPath + "/data.ap";
 		BinaryFormatter formatter = new BinaryFormatter();
 		//Create a stream
 		FileStream stream = new FileStream(path, FileMode.Open);
 		//cast it as a playerClass
-		//_player = (playerClass)formatter.Deserialize(stream);
+		_player = (PlayerData)formatter.Deserialize(stream);
 		_player = formatter.Deserialize(stream) as PlayerData;
 
 		stream.Close();
 	}
 
-
+	
 
 }
