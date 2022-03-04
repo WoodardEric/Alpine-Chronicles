@@ -6,6 +6,7 @@ TagManager:
   tags:
   - item
   - interactable
+  - TestObject
   layers:
   - Default
   - TransparentFX
