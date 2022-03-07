@@ -7,10 +7,10 @@ public class SceneDoor : Door
 
    public int toScene;
    public int fromScene;
-   LevelManager LM = LevelManager.LMInstance;
+   LevelManager LM = LevelManager.Instance;
 
    override public void interact()
    {
-      this.LM.changeScene(toScene,fromScene);
+      LM.changeScene(toScene,fromScene);
    }
 }

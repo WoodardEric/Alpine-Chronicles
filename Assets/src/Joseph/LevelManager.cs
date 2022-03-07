@@ -7,7 +7,7 @@ public class LevelManager : MonoBehaviour
 {
    private static LevelManager _instance ;
 
-   public static LevelManager LMInstance
+   public static LevelManager Instance
    {
       get
       {
