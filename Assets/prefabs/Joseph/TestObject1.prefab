@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5184887325985173416}
   - component: {fileID: 5184887325985173417}
   - component: {fileID: 5184887325985173418}
+  - component: {fileID: 1366987630388018461}
   m_Layer: 0
   m_Name: TestObject1
   m_TagString: TestObject
@@ -124,10 +125,23 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1366987630388018461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5184887325985173419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 229d6b3ba21a7ba40bf6f19b6d4f3007, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
