@@ -21,6 +21,6 @@ EditorBuildSettings:
     path: Assets/Tests/PlayMode/Toby/TobyStressScene.unity
     guid: d18e8622a0ae50c4f89f90bd8e161bbe
   - enabled: 1
-    path: Assets/Scenes/StressLevel.unity
+    path: Assets/Tests/PlayMode/Sophia/SophiaStressLevel.unity
     guid: 57c3d412c31cd9c498269656e584cd93
   m_configObjects: {}
