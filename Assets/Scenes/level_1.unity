@@ -3440,6 +3440,10 @@ PrefabInstance:
       propertyPath: toScene
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1997307476905130716, guid: 59214172fc839744cbebf71f249c1ec1, type: 3}
+      propertyPath: fromScene
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2785289518613754930, guid: 59214172fc839744cbebf71f249c1ec1, type: 3}
       propertyPath: m_Name
       value: SceneDoor

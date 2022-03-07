@@ -1,15 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class SceneDoor : Door
 {
 
    public int toScene;
+   public int fromScene;
+   LevelManager LM = LevelManager.LMInstance;
 
    override public void interact()
    {
-      SceneManager.LoadScene(toScene);
+      this.LM.changeScene(toScene,fromScene);
    }
 }

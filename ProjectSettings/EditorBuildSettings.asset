@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Tests/PlayMode/Sophia/SophiaStressLevel.unity
     guid: 57c3d412c31cd9c498269656e584cd93
+  - enabled: 1
+    path: Assets/Tests/PlayMode/Joseph/JosephTestScene.unity
+    guid: 07815a40d626e254792dd131d59dea1e
   m_configObjects: {}
