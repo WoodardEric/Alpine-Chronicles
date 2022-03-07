@@ -27,7 +27,7 @@ public class CollisionStressTest
          testObject.speed=speed;
          Debug.Log("Speed = "+speed);
          speed = speed * 1.05f;
-         yield return new WaitForSeconds(4);
+         yield return new WaitForSeconds(Mathf.Ceil(4f/speed));
      }
   }
 }
