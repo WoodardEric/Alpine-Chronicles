@@ -167,7 +167,6 @@ public class HealthBoundsTest
 
         // Assert
         Assert.AreEqual(Int32.MinValue, player.getHealth());
-        Debug.Log(player.getHealth());
     }
 
     [TearDown]
