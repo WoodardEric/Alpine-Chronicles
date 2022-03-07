@@ -5,26 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-   private static LevelManager _instance ;
-
-   public static LevelManager Instance
-   {
-      get
-      {
-         if( _instance == null)
-         {
-            Debug.LogError("LevelManager is NULL");
-         }
-         return _instance;
-      }
-   }
-
-   PlayerClass player = PlayerClass.Instance;
+   public static LevelManager Instance {get; private set;}
 
    private void Awake()
    {
-      _instance = this;
-      DontDestroyOnLoad(this);
+      // Ensure that only one instance of the LevelManager can exist
+      if (Instance != null && Instance != this)
+      {
+         Destroy(this.gameObject);
+      }
+      else
+      {
+         // Create LevelManager and keep it between scenes
+         Instance = this;
+         DontDestroyOnLoad(this);
+      }
    }
 
    // Start is called before the first frame update
@@ -34,6 +29,7 @@ public class LevelManager : MonoBehaviour
 
    public void changeScene(int toScene, int fromScene)
    {
+      PlayerClass player = PlayerClass.Instance;
       Vector2 loadPos = new Vector2(0,0);
       SceneManager.LoadScene(toScene);
 
