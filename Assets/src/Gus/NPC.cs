@@ -6,12 +6,12 @@ public class NPC : MonoBehaviour, IInteractable
 {
     [SerializeField]
     private NPCDialogue dialogue = null;
-    private playerClass playerController = null;
+    private PlayerClass playerController = null;
 
     private void Start()
     {
         // Searches the heirarchy for the "Player" and reports an error if the components looking for on the player are not found.
-        playerController = GameObject.Find("Player").GetComponent<playerClass>();
+        playerController = PlayerClass.Instance;
         if (playerController == null)
         {
             Debug.LogError("No player class script was found on the player");

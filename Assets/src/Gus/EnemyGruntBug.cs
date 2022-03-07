@@ -11,14 +11,14 @@ public class EnemyGruntBug : MonoBehaviour
     [SerializeField]
     private float moveSpeed = 1.0f;
 
-    private playerClass player = null;
+    private PlayerClass player = null;
     private bool alert = false;
     private bool waitForEvent = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player").GetComponent<playerClass>();
+        player = PlayerClass.Instance;
         if(player == null)
         {
             Debug.LogError("The ENEMY can't find an active player");

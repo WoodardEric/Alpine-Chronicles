@@ -13,10 +13,9 @@ GameObject:
   - component: {fileID: 6184829317893687094}
   - component: {fileID: 6184829317893687098}
   - component: {fileID: 6184829317893687093}
-  - component: {fileID: 6184829317893687097}
-  - component: {fileID: 6184829317893687099}
+  - component: {fileID: -6417949282524048523}
   m_Layer: 0
-  m_Name: Player
+  m_Name: StressPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -140,7 +139,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &6184829317893687097
+--- !u!114 &-6417949282524048523
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -149,22 +148,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6184829317893687092}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1286abf95e5b4c238e6ecc4d875d6e6, type: 3}
+  m_Script: {fileID: 11500000, guid: b4ede8bedc5e7b04fa12ca0657cc9d32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
---- !u!114 &6184829317893687099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6184829317893687092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eb1edfd4cbcf8046a65278185c411ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Timer: 0
-  SaveGame: 0
-  Timecheck: 100

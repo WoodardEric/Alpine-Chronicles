@@ -1,19 +1,59 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-public class playerClass : MonoBehaviour
+public class PlayerClass : MonoBehaviour
 {
-  
+    public static PlayerClass Instance { get; private set; }
+
     [SerializeField] float moveSpeed;
+    protected int health;
+    bool BCMode;
     Rigidbody2D rgdb;
-    public Vector2 newPos;
-    bool interacting = false;
-    bool frozen = false;
+    Vector2 newPos;
+    bool interacting;
+    bool frozen;
+    bool gameOver;
+    InventoryClass inventory;
+    bool compSet;
+
+    private void Awake()
+    {
+        // Ensure that only one instance of the player can exist
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            // Create player and Keep player between scenes
+            Instance = this;
+            DontDestroyOnLoad(this);
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        rgdb =  this.GetComponent<Rigidbody2D>();
+        // Initialize player
+        this.health = 100;
+        this.BCMode = false;
+        this.gameOver = false;
+        this.frozen = false;
+        this.interacting = false;
+        this.compSet = false;
+        setInventory();
+    }
+
+    public void setInventory()
+    {
+        if (!compSet)
+        {
+            this.rgdb = this.GetComponent<Rigidbody2D>();
+            this.inventory = this.GetComponent<InventoryClass>();
+            compSet = true;
+        }
     }
 
     // Update is called once per frame
@@ -22,33 +62,58 @@ public class playerClass : MonoBehaviour
         
     }
 
+    void OnValidate()
+    {
+        if (moveSpeed > 10)
+        {
+            moveSpeed = 10;
+        }
+        else if (moveSpeed < 1)
+        {
+            moveSpeed = 1;
+        }
+    }
+
     private void FixedUpdate()
     {
-        if(!frozen)
+        // If the player is not currently interacting with something
+        if(!this.frozen)
         {
-            newPos = new Vector2(this.transform.position.x, this.transform.position.y);
+            // Get the players current position
+            this.newPos = new Vector2(this.transform.position.x, this.transform.position.y);
+            
+            // If user is moving left or right, adjust the x position of the player
             if (Input.GetAxisRaw("Horizontal") != 0)
             {
-                newPos.x += (moveSpeed * Input.GetAxisRaw("Horizontal") * Time.deltaTime);
+                this.newPos.x += (this.moveSpeed * Input.GetAxisRaw("Horizontal") * Time.deltaTime);
             }
 
+            // If user is moving up or down, adjust the y position of the player
             if (Input.GetAxisRaw("Vertical") != 0)
             {
-                newPos.y += (moveSpeed * Input.GetAxisRaw("Vertical") * Time.deltaTime);
+                this.newPos.y += (this.moveSpeed * Input.GetAxisRaw("Vertical") * Time.deltaTime);
             }
 
-            rgdb.MovePosition(newPos);
+            // Apply any position adjustments made to the player
+            this.rgdb.MovePosition(newPos);
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag != "item")
+        // Check if user is interacting with something interactable or an item
+        if (other.gameObject.tag == "interactable")
+        {
+            this.interacting = false;
+        }
+        else if (other.gameObject.tag != "item")
         {
             return;
         }
-
-        pickupItem(other.gameObject);
+        else
+        {
+            pickupItem(other.gameObject);
+        }
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -58,17 +123,20 @@ public class playerClass : MonoBehaviour
             return;
         }
 
-        if (Input.GetKey(KeyCode.E) && !interacting)
+        // Interact with the object if the user it touchinig it an presses E
+        if (Input.GetKey(KeyCode.E) && !this.interacting)
         {
+            // Create a temp object to utilize the Interactable interface, then interact with it
             IInteractable interactedObj = other.gameObject.GetComponent<IInteractable>();
+            this.interacting = true;
             interactedObj.interact();
-            interacting = true;
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        interacting = false;    
+        // Reset the player interaction
+        this.interacting = false;    
     }
 
     private void pickupItem(GameObject item)
@@ -78,12 +146,116 @@ public class playerClass : MonoBehaviour
 
     public bool isInteracting()
     {
-        return interacting;
+        // Show whether use is interacting with something
+        return this.interacting;
     }
 
     public void isInteracting(bool isInteracting)
     {
-        interacting = isInteracting;
-        frozen = isInteracting;
+        // Freeze the player and update interacting variables
+        this.interacting = isInteracting;
+        this.frozen = isInteracting;
+    }
+
+    public void updateHealth(int change)
+    {
+        // Check if BC mode is active
+        if (BCMode)
+        {
+            // Create a temporary long variable to hold the health's value (to prevent underflow)
+            long rangeExp = (long)this.health + (long)change;
+            // If user's health will be over 100, set it to the max of 100
+            if ((rangeExp) > 100)
+            {
+                this.health = 100;
+            }
+            // If the new health is a lower value than the variable can hold, set it to the min value
+            else if (rangeExp < Int32.MinValue)
+            {
+                this.health = Int32.MinValue;
+            }
+            // If the health is within range, then adjust as normal
+            else
+            {
+                this.health += change;
+            }
+            // Finish updating health
+            return;
+        }
+
+        // If user's health will be over 100, set it to the max of 100
+        if ((health + change) > 100)
+        {
+            health = 100;
+        }
+        // If user's health will be less than 0, set it to 0 and trigger game over
+        else if ((this.health + change) <= 0)
+        {
+            this.health = 0;
+            this.gameOverAct();
+        }
+        // Adjust health as normal
+        else
+        {
+            this.health += change;
+        }
+    }
+
+    public int getHealth()
+    {
+        return health;
+    }
+
+    public void setSpd(float newSpd)
+    {
+        moveSpeed = newSpd;
+    }
+
+    public float getSpd()
+    {
+        return moveSpeed;
+    }
+
+    private void gameOverAct()
+    {
+
+    }
+
+    public bool startBCMode(string password)
+    {
+        // Check whether password is correct
+        if (password.Equals("GoBig", StringComparison.Ordinal))
+        {
+            // If correct passowrd, activate BC mode
+            this.BCMode = true;
+        }
+
+        return this.BCMode;
+    }
+
+    public void setPlayerPos(Vector2 pos)
+    {
+        // Set the player's position
+        this.transform.position = new Vector3(pos.x, pos.y, 0);
+    }
+
+    public bool addInvItem(/*Item addedItem*/)
+    {
+        return this.inventory.addItem(/*addedItem*/);
+    }
+
+    public bool removeInvItem(/*Item removedItem*/)
+    {
+        return this.inventory.removeItem(/*removedItem*/);
+    }
+
+    public int getNumInvItems()
+    {
+        return this.inventory.getNumItems();
+    }
+
+    public int getMaxItems()
+    {
+        return this.inventory.getMaxItems();
     }
 }
