@@ -5,7 +5,8 @@
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
         "JosieSrc",
-        "JosieTst"
+        "JosieTst",
+        "TobySrc"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

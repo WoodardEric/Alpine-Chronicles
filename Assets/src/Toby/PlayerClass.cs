@@ -239,14 +239,14 @@ public class PlayerClass : MonoBehaviour
         this.transform.position = new Vector3(pos.x, pos.y, 0);
     }
 
-    public bool addInvItem(/*Item addedItem*/)
+    public bool addInvItem(ItemClass addedItem)
     {
-        return this.inventory.addItem(/*addedItem*/);
+        return this.inventory.addItem(addedItem);
     }
 
-    public bool removeInvItem(/*Item removedItem*/)
+    public bool removeInvItem(int invIndex)
     {
-        return this.inventory.removeItem(/*removedItem*/);
+        return this.inventory.removeItem(invIndex);
     }
 
     public int getNumInvItems()
@@ -257,5 +257,15 @@ public class PlayerClass : MonoBehaviour
     public int getMaxItems()
     {
         return this.inventory.getMaxItems();
+    }
+
+    public ItemClass getInvItem(int index)
+    {
+        return inventory.getItem(index);
+    }
+
+    public void switchInvItems(int InvitemOne, int InvitemTwo)
+    {
+        inventory.switchItems(InvitemOne, InvitemTwo);
     }
 }

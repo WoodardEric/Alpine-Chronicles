@@ -6,7 +6,7 @@ public class InventoryClass : MonoBehaviour
 {
     const int MAX_INV_SIZE = 20;
     int currentAmt;
-    //Item[] items = new Item[MAX_INV_SIZE];
+    ItemClass[] items = new ItemClass[MAX_INV_SIZE];
 
     // Start is called before the first frame update
     void Start()
@@ -20,11 +20,11 @@ public class InventoryClass : MonoBehaviour
         
     }
 
-    public bool addItem(/*Item addedItem*/)
+    public bool addItem(ItemClass addedItem)
     {
         if (currentAmt < MAX_INV_SIZE)
         {
-            // items[currentAmt] = addedItem;
+            items[currentAmt] = addedItem;
             ++currentAmt;
             return true;
         }
@@ -32,17 +32,31 @@ public class InventoryClass : MonoBehaviour
         return false;
     }
 
-    public bool removeItem(/*Item removedItem*/)
+    public bool removeItem(int index)
     {
-        if (currentAmt > 0)
+        if (currentAmt <= 0)
         {
-            // items[currentAmt] = addedItem;
-            --currentAmt;
+            return false;
+        }
 
+        if (index < 0 || index > (currentAmt - 1))
+        {
+            return false;
+        }
+
+        if (index == (currentAmt - 1))
+        {
+            items[--currentAmt] = null;
             return true;
         }
 
-        return false;
+        for (int i = index; i < (currentAmt - 1); ++i)
+        {
+            items[i] = items[i + 1];
+        }
+        items[--currentAmt] = null;
+
+        return true;
     }
 
     public int getNumItems()
@@ -53,5 +67,17 @@ public class InventoryClass : MonoBehaviour
     public int getMaxItems()
     {
         return MAX_INV_SIZE;
+    }
+
+    public ItemClass getItem(int index)
+    {
+        return items[index];
+    }
+
+    public void switchItems(int itemOne, int itemTwo)
+    {
+        ItemClass temp = items[itemOne];
+        items[itemOne] = items[itemTwo];
+        items[itemTwo] = temp;
     }
 }

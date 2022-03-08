@@ -23,18 +23,22 @@ public class InventoryTesting
     [Test]
     public void InvSizeTest()
     {
-        player.removeInvItem();
+        Assert.IsFalse(player.removeInvItem(0));
 
         Assert.AreEqual(0, player.getNumInvItems());
 
         for (int i = 0; i < player.getMaxItems(); ++i)
         {
-            player.addInvItem();
+            GameObject obj = new GameObject();
+            ItemClass item = obj.AddComponent<ItemClass>();
+            player.addInvItem(item);
         }
 
         Assert.AreEqual(20, player.getNumInvItems());
 
-        player.addInvItem();
+        GameObject outsideObj = new GameObject();
+        ItemClass outsideItem = outsideObj.AddComponent<ItemClass>();
+        Assert.IsFalse(player.addInvItem(outsideItem));
 
         Assert.AreEqual(20, player.getNumInvItems());
     }

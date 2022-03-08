@@ -31,7 +31,7 @@ public class CoinPickup : MonoBehaviour
         if(col.gameObject.name == "Player"){
             Debug.Log("Coin has been collected!");
             AdjustScore();
-            sound.SendMessage("PlaySound");
+            //sound.SendMessage("PlaySound");
             Destroy(this.gameObject);
 
         }
