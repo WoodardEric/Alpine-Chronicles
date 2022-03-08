@@ -7,6 +7,8 @@ public class LevelManager : MonoBehaviour
 {
    public static LevelManager Instance {get; private set;}
 
+   public bool goodScene = true;
+
    private void Awake()
    {
       // Ensure that only one instance of the LevelManager can exist
@@ -31,6 +33,23 @@ public class LevelManager : MonoBehaviour
    {
       PlayerClass player = PlayerClass.Instance;
       Vector2 loadPos = new Vector2(0,0);
+
+      if((toScene < 1) && (toScene > 2))
+      {
+         Debug.LogError(toScene + "Is Not A Valid toScene Number");
+         goodScene = false;
+      }
+      if((fromScene < 1) && (fromScene > 2))
+      {
+         Debug.LogError(fromScene + "Is Not A Valid fromScene Number");
+         goodScene = false;
+      }
+
+      if(goodScene == false)
+      {
+         return;
+      }
+
       SceneManager.LoadScene(toScene);
 
       if(toScene == 1)
