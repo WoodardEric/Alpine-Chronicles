@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/menu.unity
     guid: 0a11bcc635ee349ff913807ce55d0281
   - enabled: 1
+    path: Assets/Scenes/inputPassword.unity
+    guid: e9e8a4c6d51574c4dbedd13479f33ce2
+  - enabled: 1
     path: Assets/Scenes/Level_0.unity
     guid: c33a700b3dbac476f9f98e93222c5562
   - enabled: 1
@@ -26,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Tests/PlayMode/Joseph/JosephTestScene.unity
     guid: 07815a40d626e254792dd131d59dea1e
+  - enabled: 1
+    path: Assets/Scenes/inputPassword.unity
+    guid: e9e8a4c6d51574c4dbedd13479f33ce2
   m_configObjects: {}
