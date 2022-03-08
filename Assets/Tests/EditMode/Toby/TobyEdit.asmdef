@@ -5,7 +5,8 @@
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
         "TobySrc",
-        "TobyTst"
+        "TobyTst",
+        "SophiaSrc"
     ],
     "includePlatforms": [
         "Editor"
