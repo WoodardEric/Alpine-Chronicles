@@ -12,6 +12,12 @@ public class StartMenu : MonoBehaviour
             SceneManager.LoadScene("Level_0");
         }
 
+        public void drBcMode()
+        {
+            Debug.Log("pull up password input text");
+            SceneManager.LoadScene("inputPassword");
+        }
+
 
     // Start is called before the first frame update
     void Start()
