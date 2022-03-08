@@ -16,11 +16,11 @@ public class EnemyStressTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Alpha1))
+        if(Input.GetKeyDown(KeyCode.Alpha1)) //press the 1 key on the keyboard to spawn a test enemy at a random point in the stresstest level.
         {
             SpawnDude(1);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (Input.GetKeyDown(KeyCode.Alpha2)) //press the 2 key on the keyboard to spawn 10 test enemies at a random points in the stresstest level.
         {
             SpawnDude(10);
         }
