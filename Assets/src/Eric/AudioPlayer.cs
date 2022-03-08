@@ -12,4 +12,5 @@ public class AudioPlayer : MonoBehaviour
         audioSource.Play();
         Debug.Log("Sound Played!");
     }
+
 }
