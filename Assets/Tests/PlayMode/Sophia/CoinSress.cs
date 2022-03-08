@@ -7,24 +7,45 @@ using UnityEngine.SceneManagement;
 
 public class CoinSress
 {
-    // A Test behaves as an ordinary method
-    
+    float contactTime;
 
-    // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-    // `yield return null;` to skip a frame.
+    [SetUp]
+    public void setup(){
+        SceneManager.LoadScene("SophiaStressLevel");
+        contactTime = 1f;
+    }
+
     [UnityTest]
-    public IEnumerator CoinSressWithEnumeratorPasses()
+    public IEnumerator CoinSpeedStress()
     {
-         SceneManager.LoadScene("SophiaStressLevel");
-         List<GameObject> list = new List<GameObject>();
-         int count = 0;
-        while(true){
-            
-            list.Add(GameObject.Instantiate(Resources.Load("Coin")) as GameObject);
-            Debug.Log("Number of objects spawned: " + (++count));
-            yield return null;
-        }
-        
-        
+        StressPlayer player = StressPlayer.Instance;
+        Vector3 pos = new Vector3(5.25f, 0f, 0f);
+
+        Debug.Log("Initial player speed: " + player.moveSpeed);
+        GameObject coin = null;//GameObject.Find("Coin");
+
+    
+        do 
+        {
+            if (coin == null)
+            {
+                coin = Object.Instantiate(Resources.Load("Coin"), pos, Quaternion.identity) as GameObject;
+                float tempSpd = player.moveSpeed;
+                player.moveSpeed = 0;
+                yield return null;
+                player.moveSpeed = tempSpd;
+            }
+            Debug.Log("Succeeds at speed: " + player.moveSpeed);
+            player.setPlayerPos(new Vector2(0f, 0f));
+            float currSpd = player.moveSpeed;
+            currSpd *= 1.1f;
+            player.moveSpeed = currSpd;
+
+            contactTime /= 1.075f;
+            yield return new WaitForSeconds(contactTime);
+        } while (coin == null);
+
+        Debug.Log("Failed collision at speed: " + player.moveSpeed);
+        player.moveSpeed = 0f;
     }
 }
