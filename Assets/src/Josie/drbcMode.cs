@@ -11,29 +11,48 @@ public class drbcMode : MonoBehaviour
     public void readStringInput(string s)
     {
         input = s;
-        if(input.Length >= 1 && input.Length <= 10)
+        if(input.Length < 1)
         {
-            Debug.Log(input);
-            checkPassword(input);
+            Debug.Log("Password must be at least 1 character");
+        }
+        else if (input.Length > 10)
+        {
+            Debug.Log("Password must be less than 10 characters");
         }
         else
         {
-            Debug.Log("password must be less than 10 characters");
+            Debug.Log(input);
+
+            bool check = checkPassword(input);
+
+            if (check)
+            {
+                SceneManager.LoadScene("Level_0");
+                PlayerClass player = PlayerClass.Instance;
+                player.setPlayerPos(new Vector2(-5.18f, -2.87f));
+            }
+            else
+            {
+                Debug.Log("Incorrect Password");
+            }
+            
         }
     }
 
-    private void checkPassword(string s)
+    private bool checkPassword(string s)
     {
-        PlayerClass T;
+        PlayerClass player = PlayerClass.Instance;
         
-        bool check = T.startBCMode(s); //GoBig 
+        bool correct = player.startBCMode(s); //GoBig 
 
-        if(check = true)
+        if(correct == true)
         {
-            Debug.Log("password is correct");
+            Debug.Log("Password is correct");
+            return true;
         }
 
-        Debug.Log("password is wrong");
+        Debug.Log("Password is wrong");
+        return false;
     }
     
     
