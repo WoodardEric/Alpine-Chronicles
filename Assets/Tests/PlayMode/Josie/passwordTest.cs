@@ -20,20 +20,20 @@ public class passwordTest
 
         yield return null;
 
-        valid = t.readStringInput("s");
-        Assert.IsTrue(valid);
+        t.readStringInput("s");
+        Assert.IsTrue(t.isValid);
 
-        valid = t.readStringInput("");
-        Assert.IsFalse(valid);
+        t.readStringInput("");
+        Assert.IsFalse(t.isValid);
 
-        valid = t.readStringInput("123456789");
-        Assert.IsTrue(valid);
+        t.readStringInput("123456789");
+        Assert.IsTrue(t.isValid);
 
-        valid = t.readStringInput("0123456789");
-        Assert.IsTrue(valid);
+        t.readStringInput("0123456789");
+        Assert.IsTrue(t.isValid);
 
-        valid = t.readStringInput("00123456789");
-        Assert.IsFalse(valid);
+        t.readStringInput("00123456789");
+        Assert.IsFalse(t.isValid);
     }
 
 }

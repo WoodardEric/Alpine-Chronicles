@@ -6,20 +6,21 @@ using UnityEngine.SceneManagement;
 
 public class drbcMode : MonoBehaviour
 {
+    public bool isValid;
     private string input;
 
-    public bool readStringInput(string s)
+    public void readStringInput(string s)
     {
         input = s;
         if(input.Length < 1)
         {
             Debug.Log("Password must be at least 1 character");
-            return false;
+            isValid = false;
         }
         else if (input.Length > 10)
         {
             Debug.Log("Password must be less than 10 characters");
-            return false;
+            isValid = false;
         }
         else
         {
@@ -32,12 +33,12 @@ public class drbcMode : MonoBehaviour
                 SceneManager.LoadScene("Level_0");
                 PlayerClass player = PlayerClass.Instance;
                 player.setPlayerPos(new Vector2(-5.18f, -2.87f));
-                return true; 
+                isValid = true; 
             }
             else
             {
                 Debug.Log("Incorrect Password");
-                return true;
+                isValid = true;
             }
             
         }
