@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Tests/PlayMode/Josie/PassTestScene.unity
     guid: 77f89204894847243acbe40b175045af
   - enabled: 1
+    path: Assets/Tests/PlayMode/Eric/AudioStress.unity
+    guid: dae575a8a444a5d498b116252acfcfe2
+  - enabled: 1
     path: Assets/Scenes/StressLevel.unity
     guid: 7ad05116c594346cea1f80914278569b
   m_configObjects: {}

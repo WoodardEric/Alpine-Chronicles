@@ -3,25 +3,51 @@ using UnityEngine;
 public class AudioStress : MonoBehaviour
 {
     public GameObject audioManager;
-    public KeyCode key = KeyCode.Z;
-    private  bool playsounds = false;
- 
+    private KeyCode stop = KeyCode.Alpha0;
+    private KeyCode ten = KeyCode.Alpha1;
+    private KeyCode hundred = KeyCode.Alpha2;
+    private KeyCode thousand = KeyCode.Alpha3;
+    private KeyCode hundredThousand = KeyCode.Alpha4;
+    private int num = 0;
+
+    public  bool playsounds = false;
+    
+    public void PlaySounds(int num)
+    {
+        for(int i = 0; i < num; ++i)
+        {
+            audioManager.SendMessage("PlaySound");
+        }
+    }
+
     void Update()
     {
-        if (Input.GetKey(key))
+        if (Input.GetKey(stop))
         {
-            playsounds = !playsounds;
+            num = 0;
+        }
+        else if(Input.GetKey(ten))
+        {
+            num = 10;
+        }
+        else if (Input.GetKey(hundred))
+        {
+            num = 100;
+        }
+        else if (Input.GetKey(thousand))
+        {
+            num = 1000;
+        }
+        else if (Input.GetKey(hundredThousand))
+        {
+            num = 10000;
         }
 
-        if (playsounds)
-        {
-            for (int i = 0; i < 100; ++i)
+
+            for (int i = 0; i < num; ++i)
             {
                 audioManager.SendMessage("PlaySound");
-                audioManager.SendMessage("PlaySound");
-                audioManager.SendMessage("PlaySound");
-                audioManager.SendMessage("PlaySound");
             }
-        }
+        
     }
 }
