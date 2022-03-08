@@ -4,10 +4,20 @@ using UnityEngine;
 
 public class Void : MonoBehaviour
 {
-   public bool triggered = false;
+   public int triggered = 0;
 
    // Start is called before the first frame update
    void Start(){}
    // Update is called once per frame
    void Update(){}
+
+   void OnTriggerStay2D(Collider2D other)
+   {
+      triggered=1;
+   }
+
+   void OnTriggerExit2D(Collider2D other)
+   {
+      triggered=0;
+   }
 }
