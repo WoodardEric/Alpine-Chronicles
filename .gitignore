@@ -58,18 +58,4 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
-UserSetting/*
-
-UserSettings/EditorUserSettings.asset
-UserSettings/EditorUserSettings.asset
-UserSettings/EditorUserSettings.asset
-UserSettings/EditorUserSettings.asset
-UserSettings/EditorUserSettings.asset
-UserSettings/EditorUserSettings.asset
-UserSettings/EditorUserSettings.asset
-UserSettings/EditorUserSettings.asset
-UserSettings/EditorUserSettings.asset
-UserSettings/EditorUserSettings.asset
-UserSettings/EditorUserSettings.asset
-UserSettings/EditorUserSettings.asset
-UserSettings/EditorUserSettings.asset
+UserSettings/
