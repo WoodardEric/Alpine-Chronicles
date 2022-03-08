@@ -38,12 +38,12 @@ public class LevelManager : MonoBehaviour
 
       if((toScene < 1) || (toScene > 2))
       {
-         Debug.LogError(toScene + "Is Not A Valid toScene Number");
+         Debug.Log(toScene + " Is Not A Valid toScene Number");
          goodScene = 0;
       }
       if((fromScene < 1) || (fromScene > 2))
       {
-         Debug.LogError(fromScene + "Is Not A Valid fromScene Number");
+         Debug.Log(fromScene + " Is Not A Valid fromScene Number");
          goodScene = 0;
       }
 
