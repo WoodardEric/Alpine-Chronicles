@@ -13,7 +13,7 @@ public class SceneDoor : Door
    override public void interact()
    {
       LevelManager.Instance.changeScene(toScene,fromScene);
-      //SceneManager.LoadScene(toScene);
+      //LM.changeScene(toScene,fromScene);
       Debug.Log("Change Scene");
    }
 }

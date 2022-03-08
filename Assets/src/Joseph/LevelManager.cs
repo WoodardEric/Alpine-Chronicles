@@ -7,7 +7,8 @@ public class LevelManager : MonoBehaviour
 {
    public static LevelManager Instance {get; private set;}
 
-   public bool goodScene = true;
+   public int goodScene;
+   public bool test = false;
 
    private void Awake()
    {
@@ -33,19 +34,20 @@ public class LevelManager : MonoBehaviour
    {
       PlayerClass player = PlayerClass.Instance;
       Vector2 loadPos = new Vector2(0,0);
+      goodScene = 1;
 
-      if((toScene < 1) && (toScene > 2))
+      if((toScene < 1) || (toScene > 2))
       {
          Debug.LogError(toScene + "Is Not A Valid toScene Number");
-         goodScene = false;
+         goodScene = 0;
       }
-      if((fromScene < 1) && (fromScene > 2))
+      if((fromScene < 1) || (fromScene > 2))
       {
          Debug.LogError(fromScene + "Is Not A Valid fromScene Number");
-         goodScene = false;
+         goodScene = 0;
       }
 
-      if(goodScene == false)
+      if((goodScene == 0) || (test==true))
       {
          return;
       }
