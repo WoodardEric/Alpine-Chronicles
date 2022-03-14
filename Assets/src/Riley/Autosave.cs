@@ -14,7 +14,6 @@ public class Autosave : MonoBehaviour
 
 	public PlayerData _player;
 
-
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -38,7 +37,7 @@ public class Autosave : MonoBehaviour
 		{
 			Debug.Log("AutoSaving Data...");
 
-			SavePlayerFunc();
+			Manualsave.SavePlayerFunc();
 			Timer = 0f;
 		}
 	}
@@ -54,9 +53,11 @@ public class Autosave : MonoBehaviour
 			Debug.Log("AutoSaving Data...");
 		}
 	}*/
-	
-	public void SavePlayerFunc() 
+}
 
+public class Manualsave : MonoBehaviour
+{ 
+	public static void SavePlayerFunc() 
 	{
 		//save the data in binary, more secure
 		BinaryFormatter formatter = new BinaryFormatter();
@@ -70,7 +71,7 @@ public class Autosave : MonoBehaviour
 		//set the stream to the new gameobject, for PlayerData script.
 
 		//PlayerData data = new PlayerData(_player);
-		formatter.Serialize(stream, _player);
+		//formatter.Serialize(stream, _player);
 		
 		//print out file location
 		Debug.Log(Application.persistentDataPath);
@@ -79,28 +80,27 @@ public class Autosave : MonoBehaviour
 
 		if (System.IO.File.Exists(path))
 		{
-			//Debug.Log("File exists...");
+			Debug.Log("File exists...");
 		}
 		else
 		{
-			//Debug.Log("File does not exist in the current directory!");
+			Debug.Log("File does not exist in the current directory!");
 		}
 
 	}
 	
-public void load()
+	public static void load()
 	{
 		string path = Application.persistentDataPath + "/data.ap";
 		BinaryFormatter formatter = new BinaryFormatter();
 		//Create a stream
 		FileStream stream = new FileStream(path, FileMode.Open);
 		//cast it as a playerClass
-		_player = (PlayerData)formatter.Deserialize(stream);
-		_player = formatter.Deserialize(stream) as PlayerData;
-
+		//_player = (PlayerData)formatter.Deserialize(stream);
+		//_player = formatter.Deserialize(stream) as PlayerData;
+		Debug.Log("file loaded");
 		stream.Close();
 	}
 
-	
 
 }
