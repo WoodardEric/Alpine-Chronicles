@@ -9,6 +9,7 @@ TagManager:
   - TestObject
   - AudioPlayer
   - Enemy
+  - Fog
   layers:
   - Default
   - TransparentFX
