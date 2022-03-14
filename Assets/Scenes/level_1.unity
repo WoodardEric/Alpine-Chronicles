@@ -1993,16 +1993,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< Updated upstream
   - component: {fileID: 351951623}
   - component: {fileID: 351951624}
   - component: {fileID: 351951625}
-=======
-  - component: {fileID: 389886711}
-  - component: {fileID: 389886710}
-  - component: {fileID: 389886709}
-  - component: {fileID: 389886712}
->>>>>>> Stashed changes
   m_Layer: 0
   m_Name: rightCorner
   m_TagString: Untagged
@@ -2024,40 +2017,7 @@ Transform:
   m_Father: {fileID: 1437146894}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
 --- !u!212 &351951624
-=======
---- !u!114 &389886712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 389886708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1aca8bf6258b2b44eb4918ccc6a8142a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &398065657
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 398065659}
-  - component: {fileID: 398065658}
-  m_Layer: 0
-  m_Name: fog2a
-  m_TagString: Fog
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &398065658
->>>>>>> Stashed changes
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
