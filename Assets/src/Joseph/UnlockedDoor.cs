@@ -13,5 +13,6 @@ public class UnlockedDoor : Door
    {
       Debug.Log("Open the door");
       Destroy(this);
+      this.gameObject.SetActive(false);
    }
 }
