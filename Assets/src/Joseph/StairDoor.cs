@@ -12,9 +12,9 @@ public class StairDoor : Door
 
    override public void interact()
    {
-      //PlayerClass player = PlayerClass.Instance;
+      PlayerClass player = PlayerClass.Instance;
       Vector2 newPosition = new Vector2(newX,newY);
       Debug.Log("Teleporting Player");
-      //player.setPlayerPos(newPosition);
+      player.setPlayerPos(newPosition);
    }
 }
