@@ -37,11 +37,16 @@ public class Autosave : MonoBehaviour
 		{
 			Debug.Log("AutoSaving Data...");
 
-			Manualsave.SavePlayerFunc();
+			function();
 			Timer = 0f;
 		}
 	}
 
+	public void function()
+    {
+		Manualsave.SavePlayerFunc();
+
+	}
 	//coroutine if using will continue to loop forever. 
 	/*
 	private IEnumerator Countdown3()
