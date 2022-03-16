@@ -24,11 +24,17 @@ public class Void : MonoBehaviour
       }
 
       //Move Player to the start of the level
-      if(scene == 2)
+      if(scene == 1)
       {
          position.x = -9f;
          position.y = 3.75f;
          player.setPlayerPos(position);
+      }
+	  else if(scene == 2)
+      {
+         position.x = 9.125f;
+		 position.y = -32.5f;
+		 player.setPlayerPos(position);
       }
       //Damage the player
       player.updateHealth(damage);
