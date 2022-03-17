@@ -17,6 +17,7 @@ public class PlayerClass : MonoBehaviour
     bool gameOver;
     InventoryClass inventory;
     bool compSet;
+    int updateNum;
 
     private void Awake()
     {
@@ -38,15 +39,16 @@ public class PlayerClass : MonoBehaviour
     {
         // Initialize player
         this.health = 100;
+        this.updateNum = 0;
         this.BCMode = false;
         this.gameOver = false;
         this.frozen = false;
         this.interacting = false;
         this.compSet = false;
-        setInventory();
+        setComponents();
     }
 
-    public void setInventory()
+    public void setComponents()
     {
         if (!compSet)
         {
@@ -64,13 +66,13 @@ public class PlayerClass : MonoBehaviour
 
     void OnValidate()
     {
-        if (moveSpeed > 10)
+        if (moveSpeed > 15)
         {
-            moveSpeed = 10;
+            moveSpeed = 15;
         }
-        else if (moveSpeed < 1)
+        else if (moveSpeed < 5)
         {
-            moveSpeed = 1;
+            moveSpeed = 5;
         }
     }
 
@@ -105,15 +107,15 @@ public class PlayerClass : MonoBehaviour
         if (other.gameObject.tag == "interactable")
         {
             this.interacting = false;
+            return;
         }
         else if (other.gameObject.tag != "item")
         {
             return;
         }
-        else
-        {
-            pickupItem(other.gameObject);
-        }
+        
+        pickupItem(other.gameObject.GetComponent<ItemClass>());
+        
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -136,11 +138,13 @@ public class PlayerClass : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         // Reset the player interaction
-        this.interacting = false;    
+        this.interacting = false;
+        this.updateNum = 0;
     }
 
-    private void pickupItem(GameObject item)
+    private void pickupItem(ItemClass item)
     {
+        addInvItem(item);
         Debug.Log("Player has picked up a " + item.name + " item.");
     }
 
@@ -159,6 +163,10 @@ public class PlayerClass : MonoBehaviour
 
     public void updateHealth(int change)
     {
+        if (++this.updateNum > 1)
+        {
+            return;
+        }
         // Check if BC mode is active
         if (BCMode)
         {
@@ -180,6 +188,7 @@ public class PlayerClass : MonoBehaviour
                 this.health += change;
             }
             // Finish updating health
+            Debug.Log("Player health is now " + this.health);
             return;
         }
 
@@ -199,6 +208,7 @@ public class PlayerClass : MonoBehaviour
         {
             this.health += change;
         }
+        Debug.Log("Player health is now " + this.health);
     }
 
     public int getHealth()

@@ -17,7 +17,7 @@ public class InventoryTesting
         gameObject = new GameObject();
         gameObject.AddComponent<InventoryClass>();
         player = gameObject.AddComponent<PlayerClass>();
-        player.setInventory();
+        player.setComponents();
     }
     
     [Test]
