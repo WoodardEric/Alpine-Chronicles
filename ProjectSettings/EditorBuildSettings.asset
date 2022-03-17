@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/level_1.unity
     guid: b0ed9130e324c8b479b154ae5eca166e
   - enabled: 1
+    path: Assets/Scenes/level_2.unity
+    guid: 98adc4be4ded098479f2a565ea87cb2f
+  - enabled: 1
     path: Assets/Tests/PlayMode/Toby/TobyStressScene.unity
     guid: d18e8622a0ae50c4f89f90bd8e161bbe
   - enabled: 1

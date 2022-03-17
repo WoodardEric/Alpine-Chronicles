@@ -5,14 +5,10 @@ using UnityEngine;
 public class FogDoor : Door
 {
    public GameObject fog;
-   // Start is called before the first frame update
-   void Start(){}
-   // Update is called once per frame
-   void Update(){}
 
-   override public void interact()
+   override public void open()
    {
-      //Remove associated fog
+	  //Remove associated fog
       Debug.Log("Remove Fog");
       fog.SetActive(false);
       //Open the Door

@@ -4,14 +4,9 @@ using UnityEngine;
 
 public class UnlockedDoor : Door
 {
-   // Start is called before the first frame update
-   void Start(){}
-   // Update is called once per frame
-   void Update(){}
-
-   override public void interact()
+   override public void open()
    {
-      Debug.Log("Open the door");
+	  Debug.Log("Open the door");
       Destroy(this);
       this.gameObject.SetActive(false);
    }

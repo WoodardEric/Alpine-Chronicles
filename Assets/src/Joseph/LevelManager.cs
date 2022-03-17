@@ -36,12 +36,12 @@ public class LevelManager : MonoBehaviour
       Vector2 loadPos = new Vector2(0,0);
       goodScene = 1;
 
-      if((toScene < 1) || (toScene > 2))
+      if((toScene < 1) || (toScene > 3))
       {
          Debug.Log(toScene + " Is Not A Valid toScene Number");
          goodScene = 0;
       }
-      if((fromScene < 1) || (fromScene > 2))
+      if((fromScene < 1) || (fromScene > 3))
       {
          Debug.Log(fromScene + " Is Not A Valid fromScene Number");
          goodScene = 0;
@@ -62,9 +62,27 @@ public class LevelManager : MonoBehaviour
       }
       else if(toScene == 2)
       {
-         loadPos.x = -9f;
-         loadPos.y = 3.75f;
-         player.setPlayerPos(loadPos);
+         if(fromScene == 1)
+		 {
+            loadPos.x = -9f;
+            loadPos.y = 3.75f;
+            player.setPlayerPos(loadPos);
+		 }
+		 else if(fromScene == 3)
+		 {
+			 loadPos.x = 7.5f;
+			 loadPos.y = -106f;
+			 player.setPlayerPos(loadPos);
+		 }
       }
+	  else if(toScene == 3)
+	  {
+         if(fromScene == 2)
+		 {
+            loadPos.x = -6f;
+			loadPos.y = 16f;
+			player.setPlayerPos(loadPos);
+		 }
+	  }
    }
 }

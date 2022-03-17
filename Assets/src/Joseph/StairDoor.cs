@@ -7,12 +7,9 @@ public class StairDoor : Door
    public float newX;
    public float newY;
 
-   void Start(){}
-   void Update(){}
-
-   override public void interact()
+   override public void open()
    {
-      PlayerClass player = PlayerClass.Instance;
+	  PlayerClass player = PlayerClass.Instance;
       Vector2 newPosition = new Vector2(newX,newY);
       Debug.Log("Teleporting Player");
       player.setPlayerPos(newPosition);

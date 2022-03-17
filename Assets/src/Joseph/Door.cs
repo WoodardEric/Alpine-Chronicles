@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class Door : MonoBehaviour, IInteractable
 {
-   virtual public void interact()
+   public void interact()
+   {
+      open();
+   }
+   
+   public virtual void open()
    {
       Debug.Log("The door appears to be locked.");
    }
