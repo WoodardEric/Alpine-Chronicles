@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
-using UnityEngine.TestTools;
 
 public class AudioTests
 {
@@ -16,7 +13,7 @@ public class AudioTests
         gameObject = new GameObject();
         audioPlayer = gameObject.AddComponent<AudioPlayer>();
         audioSource = new GameObject();
-        audioPlayer.audioSource = audioSource.AddComponent<AudioSource>();
+        //audioPlayer.audioSource = audioSource.AddComponent<AudioSource>();
     }
 
     [TearDown]
@@ -30,25 +27,25 @@ public class AudioTests
     [Test]
     public void VolumeTest()
     {
-        audioPlayer.setVolume(1.0f);
+        audioPlayer.SetVolume(1.0f);
 
-        Assert.AreEqual(1.0f, audioPlayer.audioSource.volume);
+        Assert.AreEqual(1.0f, audioPlayer.Volume);
 
-        audioPlayer.setVolume(0);
+        audioPlayer.SetVolume(0);
 
-        Assert.AreEqual(0, audioPlayer.audioSource.volume);
+        Assert.AreEqual(0, audioPlayer.Volume);
 
-        audioPlayer.setVolume(0.3f);
+        audioPlayer.SetVolume(0.3f);
 
-        Assert.AreEqual(0.3f, audioPlayer.audioSource.volume);
+        Assert.AreEqual(0.3f, audioPlayer.Volume);
 
-        audioPlayer.setVolume(2.5f);
+        audioPlayer.SetVolume(2.5f);
 
-        Assert.AreEqual(1.0f, audioPlayer.audioSource.volume);
+        Assert.AreEqual(1.0f, audioPlayer.Volume);
 
-        audioPlayer.setVolume(-0.4f);
+        audioPlayer.SetVolume(-0.4f);
 
-        Assert.AreEqual(0, audioPlayer.audioSource.volume);
+        Assert.AreEqual(0, audioPlayer.Volume);
     }
 
 }

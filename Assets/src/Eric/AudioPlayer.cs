@@ -3,13 +3,23 @@ using UnityEngine;
 
 public class AudioPlayer : MonoBehaviour
 {
-    private float volume = 0.2f;
+    public float Volume 
+    { 
+        get 
+        { 
+            return audioSource.volume; 
+        }
+        private set 
+        { 
+            audioSource.volume = value; 
+        } 
+    } 
 
-    public AudioSource audioSource;
+    private AudioSource audioSource;
 
-    public void setVolume(float vol)
+    public void SetVolume(float vol)
     {
-        audioSource.volume = Mathf.Clamp01(vol);
+        Volume = Mathf.Clamp01(vol);
     }
 
     public void PlaySound()
