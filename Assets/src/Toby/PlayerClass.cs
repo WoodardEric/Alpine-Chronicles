@@ -15,7 +15,7 @@ public class PlayerClass : MonoBehaviour
     bool interacting;
     bool frozen;
     bool gameOver;
-    InventoryClass inventory = new PlayerInventory();
+    PlayerInventory inventory;
     bool compSet;
     int updateNum;
 
