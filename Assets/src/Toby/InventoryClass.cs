@@ -6,7 +6,7 @@ public class InventoryClass : MonoBehaviour
 {
     const int MAX_INV_SIZE = 20;
     int currentAmt;
-    ItemClass[] items = new ItemClass[MAX_INV_SIZE];
+    protected ItemClass[] items = new ItemClass[MAX_INV_SIZE];
 
     // Start is called before the first frame update
     void Start()
@@ -74,10 +74,5 @@ public class InventoryClass : MonoBehaviour
         return items[index];
     }
 
-    public void switchItems(int itemOne, int itemTwo)
-    {
-        ItemClass temp = items[itemOne];
-        items[itemOne] = items[itemTwo];
-        items[itemTwo] = temp;
-    }
+    
 }

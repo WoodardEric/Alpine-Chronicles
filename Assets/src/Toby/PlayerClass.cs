@@ -15,7 +15,7 @@ public class PlayerClass : MonoBehaviour
     bool interacting;
     bool frozen;
     bool gameOver;
-    InventoryClass inventory;
+    InventoryClass inventory = new PlayerInventory();
     bool compSet;
     int updateNum;
 
@@ -53,7 +53,7 @@ public class PlayerClass : MonoBehaviour
         if (!compSet)
         {
             this.rgdb = this.GetComponent<Rigidbody2D>();
-            this.inventory = this.GetComponent<InventoryClass>();
+            this.inventory = this.GetComponent<PlayerInventory>();
             compSet = true;
         }
     }
