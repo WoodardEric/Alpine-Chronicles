@@ -5,13 +5,13 @@ public class AudioTests
 {
     GameObject gameObject;
     GameObject audioSource;
-    AudioPlayer audioPlayer;
+    AudioManager audioPlayer;
 
     [SetUp]
     public void Setup()
     {
         gameObject = new GameObject();
-        audioPlayer = gameObject.AddComponent<AudioPlayer>();
+        audioPlayer = gameObject.AddComponent<AudioManager>();
         audioSource = new GameObject();
         //audioPlayer.audioSource = audioSource.AddComponent<AudioSource>();
     }
