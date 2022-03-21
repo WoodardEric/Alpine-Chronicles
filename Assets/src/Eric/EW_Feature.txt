@@ -1,3 +1,13 @@
 I will be handling the sound and music for the game. I will be making an music and sound manager.
 The music manager will manager playing music from the playlist then the sound manager will be used
 to play sound for any game object. Then I will create all the audio content for the game.
+
+To play a sound effect use `SoundManager.Instance.Play(SoundManager.SoundEffect.Coin);`
+SoundEfect is an enum with all available sounds listed.
+
+    public enum SoundEffect
+    {
+        Coin,
+        Door
+    }
+    
