@@ -9,9 +9,9 @@ public class SceneDoor : Door
    public int fromScene;
    //LevelManager LM = LevelManager.Instance;
 
-   override public void open()
+   override public void Open()
    {
-      LevelManager.Instance.changeScene(toScene,fromScene);
+      LevelManager.Instance.ChangeScene(toScene,fromScene);
       //LM.changeScene(toScene,fromScene);
       Debug.Log("Change Scene");
    }

@@ -21,23 +21,23 @@ public class LevelsTests
       Assert.IsNotNull(LM);
       LM.test = true;
 
-      LM.changeScene(1,2);
+      LM.ChangeScene(1,2);
       yield return null;
       Assert.AreEqual(1,LM.goodScene);
 
-      LM.changeScene(1,3);
+      LM.ChangeScene(1,3);
       yield return null;
       Assert.AreEqual(0,LM.goodScene);
  
-      LM.changeScene(1,0);
+      LM.ChangeScene(1,0);
       yield return null;
       Assert.AreEqual(0,LM.goodScene);
 
-      LM.changeScene(0,1);
+      LM.ChangeScene(0,1);
       yield return null;
       Assert.AreEqual(0,LM.goodScene);
 
-      LM.changeScene(3,2);
+      LM.ChangeScene(3,2);
       yield return null;
       Assert.AreEqual(0,LM.goodScene);
    }

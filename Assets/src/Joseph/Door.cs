@@ -6,10 +6,10 @@ public class Door : MonoBehaviour, IInteractable
 {
    public void interact()
    {
-      open();
+      Open();
    }
    
-   public virtual void open()
+   public virtual void Open()
    {
       Debug.Log("The door appears to be locked.");
    }

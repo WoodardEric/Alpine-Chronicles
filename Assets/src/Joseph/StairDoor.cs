@@ -7,7 +7,7 @@ public class StairDoor : Door
    public float newX;
    public float newY;
 
-   override public void open()
+   override public void Open()
    {
 	  PlayerClass player = PlayerClass.Instance;
       Vector2 newPosition = new Vector2(newX,newY);

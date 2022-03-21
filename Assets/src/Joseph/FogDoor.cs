@@ -6,7 +6,7 @@ public class FogDoor : Door
 {
    public GameObject fog;
 
-   override public void open()
+   override public void Open()
    {
 	  //Remove associated fog
       Debug.Log("Remove Fog");
