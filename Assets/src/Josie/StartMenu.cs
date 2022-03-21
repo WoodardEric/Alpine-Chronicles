@@ -20,7 +20,10 @@ public class StartMenu : MonoBehaviour
             SceneManager.LoadScene("inputPassword");
         }
 
-
+        public void LoadGame()
+        {
+            SceneManager.LoadScene(PlayerPrefs.GetInt("SavedScene"));
+        }   
     // Start is called before the first frame update
     void Start()
     {

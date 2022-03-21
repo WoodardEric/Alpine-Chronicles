@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
-
+using UnityEngine.SceneManagement;
 
 public class Autosave : MonoBehaviour
 {
@@ -36,13 +36,13 @@ public class Autosave : MonoBehaviour
 		if (SaveGame == true)
 		{
 			Debug.Log("AutoSaving Data...");
-
-			function();
+			PlayerPrefs.SetInt("SavedScene", SceneManager.GetActiveScene().buildIndex);
+			savefunction();
 			Timer = 0f;
 		}
 	}
 
-	public void function()
+	public void savefunction()
     {
 		Manualsave.SavePlayerFunc();
 
@@ -85,13 +85,17 @@ public class Manualsave : MonoBehaviour
 
 		if (System.IO.File.Exists(path))
 		{
-			Debug.Log("File exists...");
+			//Debug.Log("File exists...");
 		}
 		else
 		{
 			Debug.Log("File does not exist in the current directory!");
 		}
 
+		
+			
+
+		
 	}
 	
 	public static void load()
