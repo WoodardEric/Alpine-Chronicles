@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -30,11 +31,15 @@ public class SoundManager : AudioManager
 
     protected override void ReadClips()
     {
-        clips.Add(SoundEffect.Coin, Resources.Load("Sounds/coin") as AudioClip);
+        foreach (SoundEffect effect in Enum.GetValues(typeof(SoundEffect)))
+        {
+            clips.Add(effect, Resources.Load("Sounds/" + effect.ToString()) as AudioClip);
+        }
     }
 
     public enum SoundEffect
     {
-        Coin
+        Coin,
+        DoorOpen
     }
 }
