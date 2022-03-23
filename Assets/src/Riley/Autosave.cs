@@ -19,10 +19,7 @@ public class Autosave : MonoBehaviour
 	{
 		Timer = Timer + 1 * Time.deltaTime;
 
-		//loop auto saveusing coroutine if needed
-		//StartCoroutine(Countdown3());
 	}
-
 	// Update is called once per frame
 	void Update()
 	{
@@ -36,33 +33,28 @@ public class Autosave : MonoBehaviour
 		if (SaveGame == true)
 		{
 			Debug.Log("AutoSaving Data...");
-			PlayerPrefs.SetInt("SavedScene", SceneManager.GetActiveScene().buildIndex);
+			savelevel();
 			savefunction();
 			Timer = 0f;
 		}
 	}
 
 	public void savefunction()
-    {
-		Manualsave.SavePlayerFunc();
+	{   //Create the same thing here as save load manager, you have to pass in data to auto save. 
+		//SaveLoadManager.SavePlayerFunc(PlayerClass, player);
+	}
+
+	public void savelevel()
+	{   //Get active scene
+		PlayerPrefs.SetInt("SavedScene", SceneManager.GetActiveScene().buildIndex);
 
 	}
-	//coroutine if using will continue to loop forever. 
-	/*
-	private IEnumerator Countdown3()
-	{
-		while (true)
-		{
-			yield return new WaitForSeconds(3); //wait 3 seconds
-												//do other thing
-			Debug.Log("AutoSaving Data...");
-		}
-	}*/
+
 }
 
-public class Manualsave : MonoBehaviour
-{ 
-	public static void SavePlayerFunc() 
+public class SaveLoadManager : MonoBehaviour
+{
+	public static void SavePlayerFunc(PlayerClass _player)
 	{
 		//save the data in binary, more secure
 		BinaryFormatter formatter = new BinaryFormatter();
@@ -75,9 +67,9 @@ public class Manualsave : MonoBehaviour
 
 		//set the stream to the new gameobject, for PlayerData script.
 
-		//PlayerData data = new PlayerData(_player);
-		//formatter.Serialize(stream, _player);
-		
+		Playerinfo data = new Playerinfo(_player);
+		formatter.Serialize(stream, data);
+
 		//print out file location
 		Debug.Log(Application.persistentDataPath);
 
@@ -92,12 +84,8 @@ public class Manualsave : MonoBehaviour
 			Debug.Log("File does not exist in the current directory!");
 		}
 
-		
-			
-
-		
 	}
-	
+
 	public static void load()
 	{
 		string path = Application.persistentDataPath + "/data.ap";
@@ -105,11 +93,22 @@ public class Manualsave : MonoBehaviour
 		//Create a stream
 		FileStream stream = new FileStream(path, FileMode.Open);
 		//cast it as a playerClass
-		//_player = (PlayerData)formatter.Deserialize(stream);
+		Playerinfo data = (Playerinfo)formatter.Deserialize(stream);
 		//_player = formatter.Deserialize(stream) as PlayerData;
 		Debug.Log("file loaded");
 		stream.Close();
 	}
+}
 
+[System.Serializable]
+public class Playerinfo
+{
+	public int[] stats;
 
+	public Playerinfo(PlayerClass player)
+	{
+		stats = new int[4];
+		//stats[0] = player.health; 
+
+	}
 }
