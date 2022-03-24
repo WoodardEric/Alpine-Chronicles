@@ -3958,12 +3958,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.30764794
+      objectReference: {fileID: 0}
+    - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3373236
+      objectReference: {fileID: 0}
+    - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.97
+      value: -9.7819
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.17
+      value: -0.3417
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4001,6 +4009,22 @@ PrefabInstance:
       propertyPath: sound
       value: 
       objectReference: {fileID: 2015582158}
+    - target: {fileID: 1611846423835125437, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
+      propertyPath: m_Size.x
+      value: 0.8537027
+      objectReference: {fileID: 0}
+    - target: {fileID: 1611846423835125437, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
+      propertyPath: m_Size.y
+      value: 0.8816233
+      objectReference: {fileID: 0}
+    - target: {fileID: 1611846423835125437, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.025282454
+      objectReference: {fileID: 0}
+    - target: {fileID: 1611846423835125437, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.019729447
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
 --- !u!1001 &2375990702012247571
