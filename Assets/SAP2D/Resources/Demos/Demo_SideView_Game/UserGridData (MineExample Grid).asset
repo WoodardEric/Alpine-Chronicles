@@ -1,0 +1,4155 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97b56a97472cc504ea0ac1a89a218d45, type: 3}
+  m_Name: UserGridData (MineExample Grid)
+  m_EditorClassIdentifier: 
+  UnwalkableTiles:
+  - worldPosition: {x: -100.70001, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 0
+    gridY: 0
+  - worldPosition: {x: -84.70001, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 1
+    gridY: 0
+  - worldPosition: {x: -68.70001, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 2
+    gridY: 0
+  - worldPosition: {x: -52.700012, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 3
+    gridY: 0
+  - worldPosition: {x: -36.700012, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 4
+    gridY: 0
+  - worldPosition: {x: -20.700012, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 5
+    gridY: 0
+  - worldPosition: {x: -4.700012, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 6
+    gridY: 0
+  - worldPosition: {x: 11.299988, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 7
+    gridY: 0
+  - worldPosition: {x: 27.299988, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 8
+    gridY: 0
+  - worldPosition: {x: 43.299988, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 9
+    gridY: 0
+  - worldPosition: {x: 59.299988, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 10
+    gridY: 0
+  - worldPosition: {x: 75.29999, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 11
+    gridY: 0
+  - worldPosition: {x: 91.29999, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 12
+    gridY: 0
+  - worldPosition: {x: 107.29999, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 13
+    gridY: 0
+  - worldPosition: {x: 123.29999, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 14
+    gridY: 0
+  - worldPosition: {x: 139.29999, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 15
+    gridY: 0
+  - worldPosition: {x: 155.29999, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 16
+    gridY: 0
+  - worldPosition: {x: 171.29999, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 17
+    gridY: 0
+  - worldPosition: {x: 187.29999, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 18
+    gridY: 0
+  - worldPosition: {x: 203.29999, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 19
+    gridY: 0
+  - worldPosition: {x: 219.29999, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 20
+    gridY: 0
+  - worldPosition: {x: 235.29999, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 21
+    gridY: 0
+  - worldPosition: {x: 251.29999, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 22
+    gridY: 0
+  - worldPosition: {x: 267.3, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 23
+    gridY: 0
+  - worldPosition: {x: 283.3, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 24
+    gridY: 0
+  - worldPosition: {x: 299.3, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 25
+    gridY: 0
+  - worldPosition: {x: 315.3, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 26
+    gridY: 0
+  - worldPosition: {x: 331.3, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 27
+    gridY: 0
+  - worldPosition: {x: 347.3, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 28
+    gridY: 0
+  - worldPosition: {x: 363.3, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 29
+    gridY: 0
+  - worldPosition: {x: 379.3, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 30
+    gridY: 0
+  - worldPosition: {x: 395.3, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 31
+    gridY: 0
+  - worldPosition: {x: 411.3, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 32
+    gridY: 0
+  - worldPosition: {x: 427.3, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 33
+    gridY: 0
+  - worldPosition: {x: 443.3, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 34
+    gridY: 0
+  - worldPosition: {x: 459.3, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 35
+    gridY: 0
+  - worldPosition: {x: 475.3, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 36
+    gridY: 0
+  - worldPosition: {x: 491.3, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 37
+    gridY: 0
+  - worldPosition: {x: 507.3, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 38
+    gridY: 0
+  - worldPosition: {x: 523.3, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 39
+    gridY: 0
+  - worldPosition: {x: 539.3, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 40
+    gridY: 0
+  - worldPosition: {x: 555.3, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 41
+    gridY: 0
+  - worldPosition: {x: 571.3, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 42
+    gridY: 0
+  - worldPosition: {x: 587.3, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 43
+    gridY: 0
+  - worldPosition: {x: 603.3, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 44
+    gridY: 0
+  - worldPosition: {x: 619.3, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 45
+    gridY: 0
+  - worldPosition: {x: 635.3, y: -0.30000305, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 46
+    gridY: 0
+  - worldPosition: {x: -100.70001, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 0
+    gridY: 2
+  - worldPosition: {x: -100.70001, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 0
+    gridY: 3
+  - worldPosition: {x: -100.70001, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 0
+    gridY: 4
+  - worldPosition: {x: -100.70001, y: 79.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 0
+    gridY: 5
+  - worldPosition: {x: -100.70001, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 0
+    gridY: 6
+  - worldPosition: {x: -84.70001, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 1
+    gridY: 2
+  - worldPosition: {x: -84.70001, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 1
+    gridY: 3
+  - worldPosition: {x: -84.70001, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 1
+    gridY: 4
+  - worldPosition: {x: -84.70001, y: 79.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 1
+    gridY: 5
+  - worldPosition: {x: -84.70001, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 1
+    gridY: 6
+  - worldPosition: {x: -68.70001, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 2
+    gridY: 2
+  - worldPosition: {x: -68.70001, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 2
+    gridY: 3
+  - worldPosition: {x: -68.70001, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 2
+    gridY: 4
+  - worldPosition: {x: -68.70001, y: 79.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 2
+    gridY: 5
+  - worldPosition: {x: -68.70001, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 2
+    gridY: 6
+  - worldPosition: {x: -52.700012, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 3
+    gridY: 2
+  - worldPosition: {x: -52.700012, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 3
+    gridY: 3
+  - worldPosition: {x: -52.700012, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 3
+    gridY: 4
+  - worldPosition: {x: -52.700012, y: 79.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 3
+    gridY: 5
+  - worldPosition: {x: -52.700012, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 3
+    gridY: 6
+  - worldPosition: {x: -36.700012, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 4
+    gridY: 2
+  - worldPosition: {x: -36.700012, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 4
+    gridY: 3
+  - worldPosition: {x: -36.700012, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 4
+    gridY: 4
+  - worldPosition: {x: -36.700012, y: 79.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 4
+    gridY: 5
+  - worldPosition: {x: -36.700012, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 4
+    gridY: 6
+  - worldPosition: {x: -20.700012, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 5
+    gridY: 2
+  - worldPosition: {x: -20.700012, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 5
+    gridY: 3
+  - worldPosition: {x: -20.700012, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 5
+    gridY: 4
+  - worldPosition: {x: -20.700012, y: 79.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 5
+    gridY: 5
+  - worldPosition: {x: -20.700012, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 5
+    gridY: 6
+  - worldPosition: {x: -4.700012, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 6
+    gridY: 2
+  - worldPosition: {x: -4.700012, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 6
+    gridY: 3
+  - worldPosition: {x: -4.700012, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 6
+    gridY: 4
+  - worldPosition: {x: -4.700012, y: 79.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 6
+    gridY: 5
+  - worldPosition: {x: -4.700012, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 6
+    gridY: 6
+  - worldPosition: {x: 11.299988, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 7
+    gridY: 2
+  - worldPosition: {x: 11.299988, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 7
+    gridY: 3
+  - worldPosition: {x: 11.299988, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 7
+    gridY: 4
+  - worldPosition: {x: 11.299988, y: 79.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 7
+    gridY: 5
+  - worldPosition: {x: 11.299988, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 7
+    gridY: 6
+  - worldPosition: {x: 27.299988, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 8
+    gridY: 2
+  - worldPosition: {x: 27.299988, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 8
+    gridY: 3
+  - worldPosition: {x: 27.299988, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 8
+    gridY: 4
+  - worldPosition: {x: 27.299988, y: 79.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 8
+    gridY: 5
+  - worldPosition: {x: 27.299988, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 8
+    gridY: 6
+  - worldPosition: {x: 43.299988, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 9
+    gridY: 2
+  - worldPosition: {x: 43.299988, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 9
+    gridY: 3
+  - worldPosition: {x: 43.299988, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 9
+    gridY: 4
+  - worldPosition: {x: 43.299988, y: 79.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 9
+    gridY: 5
+  - worldPosition: {x: 43.299988, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 9
+    gridY: 6
+  - worldPosition: {x: -100.70001, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 0
+    gridY: 7
+  - worldPosition: {x: -100.70001, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 0
+    gridY: 8
+  - worldPosition: {x: -100.70001, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 0
+    gridY: 9
+  - worldPosition: {x: -100.70001, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 0
+    gridY: 10
+  - worldPosition: {x: -100.70001, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 0
+    gridY: 11
+  - worldPosition: {x: -100.70001, y: 191.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 0
+    gridY: 12
+  - worldPosition: {x: -100.70001, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 0
+    gridY: 13
+  - worldPosition: {x: -84.70001, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 1
+    gridY: 7
+  - worldPosition: {x: -84.70001, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 1
+    gridY: 8
+  - worldPosition: {x: -84.70001, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 1
+    gridY: 9
+  - worldPosition: {x: -84.70001, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 1
+    gridY: 10
+  - worldPosition: {x: -84.70001, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 1
+    gridY: 11
+  - worldPosition: {x: -84.70001, y: 191.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 1
+    gridY: 12
+  - worldPosition: {x: -84.70001, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 1
+    gridY: 13
+  - worldPosition: {x: -68.70001, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 2
+    gridY: 7
+  - worldPosition: {x: -68.70001, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 2
+    gridY: 8
+  - worldPosition: {x: -68.70001, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 2
+    gridY: 9
+  - worldPosition: {x: -68.70001, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 2
+    gridY: 10
+  - worldPosition: {x: -68.70001, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 2
+    gridY: 11
+  - worldPosition: {x: -68.70001, y: 191.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 2
+    gridY: 12
+  - worldPosition: {x: -68.70001, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 2
+    gridY: 13
+  - worldPosition: {x: -52.700012, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 3
+    gridY: 7
+  - worldPosition: {x: -52.700012, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 3
+    gridY: 8
+  - worldPosition: {x: -52.700012, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 3
+    gridY: 9
+  - worldPosition: {x: -52.700012, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 3
+    gridY: 10
+  - worldPosition: {x: -52.700012, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 3
+    gridY: 11
+  - worldPosition: {x: -52.700012, y: 191.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 3
+    gridY: 12
+  - worldPosition: {x: -52.700012, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 3
+    gridY: 13
+  - worldPosition: {x: -36.700012, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 4
+    gridY: 7
+  - worldPosition: {x: -36.700012, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 4
+    gridY: 8
+  - worldPosition: {x: -36.700012, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 4
+    gridY: 9
+  - worldPosition: {x: -36.700012, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 4
+    gridY: 10
+  - worldPosition: {x: -36.700012, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 4
+    gridY: 11
+  - worldPosition: {x: -36.700012, y: 191.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 4
+    gridY: 12
+  - worldPosition: {x: -36.700012, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 4
+    gridY: 13
+  - worldPosition: {x: -20.700012, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 5
+    gridY: 7
+  - worldPosition: {x: -20.700012, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 5
+    gridY: 8
+  - worldPosition: {x: -20.700012, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 5
+    gridY: 9
+  - worldPosition: {x: -20.700012, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 5
+    gridY: 10
+  - worldPosition: {x: -20.700012, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 5
+    gridY: 11
+  - worldPosition: {x: -20.700012, y: 191.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 5
+    gridY: 12
+  - worldPosition: {x: -20.700012, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 5
+    gridY: 13
+  - worldPosition: {x: -4.700012, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 6
+    gridY: 7
+  - worldPosition: {x: -4.700012, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 6
+    gridY: 8
+  - worldPosition: {x: -4.700012, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 6
+    gridY: 9
+  - worldPosition: {x: -4.700012, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 6
+    gridY: 10
+  - worldPosition: {x: -4.700012, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 6
+    gridY: 11
+  - worldPosition: {x: -4.700012, y: 191.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 6
+    gridY: 12
+  - worldPosition: {x: -4.700012, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 6
+    gridY: 13
+  - worldPosition: {x: 11.299988, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 7
+    gridY: 7
+  - worldPosition: {x: 11.299988, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 7
+    gridY: 8
+  - worldPosition: {x: 11.299988, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 7
+    gridY: 9
+  - worldPosition: {x: 11.299988, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 7
+    gridY: 10
+  - worldPosition: {x: 11.299988, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 7
+    gridY: 11
+  - worldPosition: {x: 11.299988, y: 191.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 7
+    gridY: 12
+  - worldPosition: {x: 11.299988, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 7
+    gridY: 13
+  - worldPosition: {x: 27.299988, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 8
+    gridY: 7
+  - worldPosition: {x: 27.299988, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 8
+    gridY: 8
+  - worldPosition: {x: 27.299988, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 8
+    gridY: 9
+  - worldPosition: {x: 27.299988, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 8
+    gridY: 10
+  - worldPosition: {x: 27.299988, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 8
+    gridY: 11
+  - worldPosition: {x: 27.299988, y: 191.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 8
+    gridY: 12
+  - worldPosition: {x: 27.299988, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 8
+    gridY: 13
+  - worldPosition: {x: 43.299988, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 9
+    gridY: 7
+  - worldPosition: {x: 43.299988, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 9
+    gridY: 8
+  - worldPosition: {x: 43.299988, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 9
+    gridY: 9
+  - worldPosition: {x: 43.299988, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 9
+    gridY: 10
+  - worldPosition: {x: 43.299988, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 9
+    gridY: 11
+  - worldPosition: {x: 43.299988, y: 191.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 9
+    gridY: 12
+  - worldPosition: {x: 43.299988, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 9
+    gridY: 13
+  - worldPosition: {x: 331.3, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 27
+    gridY: 8
+  - worldPosition: {x: -100.70001, y: 223.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 0
+    gridY: 14
+  - worldPosition: {x: -100.70001, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 0
+    gridY: 15
+  - worldPosition: {x: -100.70001, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 0
+    gridY: 16
+  - worldPosition: {x: -100.70001, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 0
+    gridY: 17
+  - worldPosition: {x: -100.70001, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 0
+    gridY: 18
+  - worldPosition: {x: -100.70001, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 0
+    gridY: 19
+  - worldPosition: {x: -84.70001, y: 223.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 1
+    gridY: 14
+  - worldPosition: {x: -84.70001, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 1
+    gridY: 15
+  - worldPosition: {x: -84.70001, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 1
+    gridY: 16
+  - worldPosition: {x: -84.70001, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 1
+    gridY: 17
+  - worldPosition: {x: -84.70001, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 1
+    gridY: 18
+  - worldPosition: {x: -84.70001, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 1
+    gridY: 19
+  - worldPosition: {x: -68.70001, y: 223.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 2
+    gridY: 14
+  - worldPosition: {x: -68.70001, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 2
+    gridY: 15
+  - worldPosition: {x: -68.70001, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 2
+    gridY: 16
+  - worldPosition: {x: -68.70001, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 2
+    gridY: 17
+  - worldPosition: {x: -68.70001, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 2
+    gridY: 18
+  - worldPosition: {x: -68.70001, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 2
+    gridY: 19
+  - worldPosition: {x: -52.700012, y: 223.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 3
+    gridY: 14
+  - worldPosition: {x: -52.700012, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 3
+    gridY: 15
+  - worldPosition: {x: -52.700012, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 3
+    gridY: 16
+  - worldPosition: {x: -52.700012, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 3
+    gridY: 17
+  - worldPosition: {x: -52.700012, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 3
+    gridY: 18
+  - worldPosition: {x: -52.700012, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 3
+    gridY: 19
+  - worldPosition: {x: -36.700012, y: 223.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 4
+    gridY: 14
+  - worldPosition: {x: -36.700012, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 4
+    gridY: 15
+  - worldPosition: {x: -36.700012, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 4
+    gridY: 16
+  - worldPosition: {x: -36.700012, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 4
+    gridY: 17
+  - worldPosition: {x: -36.700012, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 4
+    gridY: 18
+  - worldPosition: {x: -36.700012, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 4
+    gridY: 19
+  - worldPosition: {x: -20.700012, y: 223.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 5
+    gridY: 14
+  - worldPosition: {x: -20.700012, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 5
+    gridY: 15
+  - worldPosition: {x: -20.700012, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 5
+    gridY: 16
+  - worldPosition: {x: -20.700012, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 5
+    gridY: 17
+  - worldPosition: {x: -20.700012, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 5
+    gridY: 18
+  - worldPosition: {x: -20.700012, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 5
+    gridY: 19
+  - worldPosition: {x: -4.700012, y: 223.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 6
+    gridY: 14
+  - worldPosition: {x: -4.700012, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 6
+    gridY: 15
+  - worldPosition: {x: -4.700012, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 6
+    gridY: 16
+  - worldPosition: {x: -4.700012, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 6
+    gridY: 17
+  - worldPosition: {x: -4.700012, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 6
+    gridY: 18
+  - worldPosition: {x: -4.700012, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 6
+    gridY: 19
+  - worldPosition: {x: 11.299988, y: 223.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 7
+    gridY: 14
+  - worldPosition: {x: 11.299988, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 7
+    gridY: 15
+  - worldPosition: {x: 11.299988, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 7
+    gridY: 16
+  - worldPosition: {x: 11.299988, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 7
+    gridY: 17
+  - worldPosition: {x: 11.299988, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 7
+    gridY: 18
+  - worldPosition: {x: 11.299988, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 7
+    gridY: 19
+  - worldPosition: {x: 27.299988, y: 223.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 8
+    gridY: 14
+  - worldPosition: {x: 27.299988, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 8
+    gridY: 15
+  - worldPosition: {x: 27.299988, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 8
+    gridY: 16
+  - worldPosition: {x: 27.299988, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 8
+    gridY: 17
+  - worldPosition: {x: 27.299988, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 8
+    gridY: 18
+  - worldPosition: {x: 27.299988, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 8
+    gridY: 19
+  - worldPosition: {x: 43.299988, y: 223.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 9
+    gridY: 14
+  - worldPosition: {x: 43.299988, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 9
+    gridY: 15
+  - worldPosition: {x: 43.299988, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 9
+    gridY: 16
+  - worldPosition: {x: 43.299988, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 9
+    gridY: 17
+  - worldPosition: {x: 43.299988, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 9
+    gridY: 18
+  - worldPosition: {x: 43.299988, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 9
+    gridY: 19
+  - worldPosition: {x: 59.299988, y: 223.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 10
+    gridY: 14
+  - worldPosition: {x: 59.299988, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 10
+    gridY: 15
+  - worldPosition: {x: 59.299988, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 10
+    gridY: 16
+  - worldPosition: {x: 59.299988, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 10
+    gridY: 17
+  - worldPosition: {x: 59.299988, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 10
+    gridY: 18
+  - worldPosition: {x: 59.299988, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 10
+    gridY: 19
+  - worldPosition: {x: 75.29999, y: 223.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 11
+    gridY: 14
+  - worldPosition: {x: 75.29999, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 11
+    gridY: 15
+  - worldPosition: {x: 75.29999, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 11
+    gridY: 16
+  - worldPosition: {x: 75.29999, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 11
+    gridY: 17
+  - worldPosition: {x: 75.29999, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 11
+    gridY: 18
+  - worldPosition: {x: 75.29999, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 11
+    gridY: 19
+  - worldPosition: {x: 91.29999, y: 223.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 12
+    gridY: 14
+  - worldPosition: {x: 91.29999, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 12
+    gridY: 15
+  - worldPosition: {x: 91.29999, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 12
+    gridY: 16
+  - worldPosition: {x: 91.29999, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 12
+    gridY: 17
+  - worldPosition: {x: 91.29999, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 12
+    gridY: 18
+  - worldPosition: {x: 91.29999, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 12
+    gridY: 19
+  - worldPosition: {x: 107.29999, y: 223.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 13
+    gridY: 14
+  - worldPosition: {x: 107.29999, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 13
+    gridY: 15
+  - worldPosition: {x: 107.29999, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 13
+    gridY: 16
+  - worldPosition: {x: 107.29999, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 13
+    gridY: 17
+  - worldPosition: {x: 107.29999, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 13
+    gridY: 18
+  - worldPosition: {x: 107.29999, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 13
+    gridY: 19
+  - worldPosition: {x: 123.29999, y: 223.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 14
+    gridY: 14
+  - worldPosition: {x: 123.29999, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 14
+    gridY: 15
+  - worldPosition: {x: 123.29999, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 14
+    gridY: 16
+  - worldPosition: {x: 123.29999, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 14
+    gridY: 17
+  - worldPosition: {x: 123.29999, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 14
+    gridY: 18
+  - worldPosition: {x: 123.29999, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 14
+    gridY: 19
+  - worldPosition: {x: 139.29999, y: 223.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 15
+    gridY: 14
+  - worldPosition: {x: 139.29999, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 15
+    gridY: 15
+  - worldPosition: {x: 139.29999, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 15
+    gridY: 16
+  - worldPosition: {x: 139.29999, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 15
+    gridY: 17
+  - worldPosition: {x: 139.29999, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 15
+    gridY: 18
+  - worldPosition: {x: 139.29999, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 15
+    gridY: 19
+  - worldPosition: {x: 155.29999, y: 223.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 16
+    gridY: 14
+  - worldPosition: {x: 155.29999, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 16
+    gridY: 15
+  - worldPosition: {x: 155.29999, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 16
+    gridY: 16
+  - worldPosition: {x: 155.29999, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 16
+    gridY: 17
+  - worldPosition: {x: 155.29999, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 16
+    gridY: 18
+  - worldPosition: {x: 155.29999, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 16
+    gridY: 19
+  - worldPosition: {x: 171.29999, y: 223.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 17
+    gridY: 14
+  - worldPosition: {x: 171.29999, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 17
+    gridY: 15
+  - worldPosition: {x: 171.29999, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 17
+    gridY: 16
+  - worldPosition: {x: 171.29999, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 17
+    gridY: 17
+  - worldPosition: {x: 171.29999, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 17
+    gridY: 18
+  - worldPosition: {x: 171.29999, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 17
+    gridY: 19
+  - worldPosition: {x: 187.29999, y: 223.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 18
+    gridY: 14
+  - worldPosition: {x: 187.29999, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 18
+    gridY: 15
+  - worldPosition: {x: 187.29999, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 18
+    gridY: 16
+  - worldPosition: {x: 187.29999, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 18
+    gridY: 17
+  - worldPosition: {x: 187.29999, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 18
+    gridY: 18
+  - worldPosition: {x: 187.29999, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 18
+    gridY: 19
+  - worldPosition: {x: 203.29999, y: 223.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 19
+    gridY: 14
+  - worldPosition: {x: 203.29999, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 19
+    gridY: 15
+  - worldPosition: {x: 203.29999, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 19
+    gridY: 16
+  - worldPosition: {x: 203.29999, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 19
+    gridY: 17
+  - worldPosition: {x: 203.29999, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 19
+    gridY: 18
+  - worldPosition: {x: 203.29999, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 19
+    gridY: 19
+  - worldPosition: {x: 219.29999, y: 223.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 20
+    gridY: 14
+  - worldPosition: {x: 219.29999, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 20
+    gridY: 15
+  - worldPosition: {x: 219.29999, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 20
+    gridY: 16
+  - worldPosition: {x: 219.29999, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 20
+    gridY: 17
+  - worldPosition: {x: 219.29999, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 20
+    gridY: 18
+  - worldPosition: {x: 219.29999, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 20
+    gridY: 19
+  - worldPosition: {x: 235.29999, y: 223.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 21
+    gridY: 14
+  - worldPosition: {x: 235.29999, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 21
+    gridY: 15
+  - worldPosition: {x: 235.29999, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 21
+    gridY: 16
+  - worldPosition: {x: 235.29999, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 21
+    gridY: 17
+  - worldPosition: {x: 235.29999, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 21
+    gridY: 18
+  - worldPosition: {x: 235.29999, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 21
+    gridY: 19
+  - worldPosition: {x: 251.29999, y: 223.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 22
+    gridY: 14
+  - worldPosition: {x: 251.29999, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 22
+    gridY: 15
+  - worldPosition: {x: 251.29999, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 22
+    gridY: 16
+  - worldPosition: {x: 251.29999, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 22
+    gridY: 17
+  - worldPosition: {x: 251.29999, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 22
+    gridY: 18
+  - worldPosition: {x: 251.29999, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 22
+    gridY: 19
+  - worldPosition: {x: 59.299988, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 10
+    gridY: 13
+  - worldPosition: {x: 75.29999, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 11
+    gridY: 13
+  - worldPosition: {x: 91.29999, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 12
+    gridY: 13
+  - worldPosition: {x: 107.29999, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 13
+    gridY: 13
+  - worldPosition: {x: 123.29999, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 14
+    gridY: 13
+  - worldPosition: {x: 139.29999, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 15
+    gridY: 13
+  - worldPosition: {x: 155.29999, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 16
+    gridY: 13
+  - worldPosition: {x: 171.29999, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 17
+    gridY: 13
+  - worldPosition: {x: 187.29999, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 18
+    gridY: 13
+  - worldPosition: {x: 203.29999, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 19
+    gridY: 13
+  - worldPosition: {x: 219.29999, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 20
+    gridY: 13
+  - worldPosition: {x: 235.29999, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 21
+    gridY: 13
+  - worldPosition: {x: 251.29999, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 22
+    gridY: 13
+  - worldPosition: {x: 267.3, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 23
+    gridY: 13
+  - worldPosition: {x: 267.3, y: 223.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 23
+    gridY: 14
+  - worldPosition: {x: 267.3, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 23
+    gridY: 15
+  - worldPosition: {x: 267.3, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 23
+    gridY: 16
+  - worldPosition: {x: 267.3, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 23
+    gridY: 17
+  - worldPosition: {x: 267.3, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 23
+    gridY: 18
+  - worldPosition: {x: 267.3, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 23
+    gridY: 19
+  - worldPosition: {x: 283.3, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 24
+    gridY: 13
+  - worldPosition: {x: 283.3, y: 223.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 24
+    gridY: 14
+  - worldPosition: {x: 283.3, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 24
+    gridY: 15
+  - worldPosition: {x: 283.3, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 24
+    gridY: 16
+  - worldPosition: {x: 283.3, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 24
+    gridY: 17
+  - worldPosition: {x: 283.3, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 24
+    gridY: 18
+  - worldPosition: {x: 283.3, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 24
+    gridY: 19
+  - worldPosition: {x: 299.3, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 25
+    gridY: 13
+  - worldPosition: {x: 299.3, y: 223.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 25
+    gridY: 14
+  - worldPosition: {x: 299.3, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 25
+    gridY: 15
+  - worldPosition: {x: 299.3, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 25
+    gridY: 16
+  - worldPosition: {x: 299.3, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 25
+    gridY: 17
+  - worldPosition: {x: 299.3, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 25
+    gridY: 18
+  - worldPosition: {x: 299.3, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 25
+    gridY: 19
+  - worldPosition: {x: 315.3, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 26
+    gridY: 13
+  - worldPosition: {x: 315.3, y: 223.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 26
+    gridY: 14
+  - worldPosition: {x: 315.3, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 26
+    gridY: 15
+  - worldPosition: {x: 315.3, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 26
+    gridY: 16
+  - worldPosition: {x: 315.3, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 26
+    gridY: 17
+  - worldPosition: {x: 315.3, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 26
+    gridY: 18
+  - worldPosition: {x: 315.3, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 26
+    gridY: 19
+  - worldPosition: {x: 331.3, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 27
+    gridY: 13
+  - worldPosition: {x: 331.3, y: 223.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 27
+    gridY: 14
+  - worldPosition: {x: 331.3, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 27
+    gridY: 15
+  - worldPosition: {x: 331.3, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 27
+    gridY: 16
+  - worldPosition: {x: 331.3, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 27
+    gridY: 17
+  - worldPosition: {x: 331.3, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 27
+    gridY: 18
+  - worldPosition: {x: 331.3, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 27
+    gridY: 19
+  - worldPosition: {x: 347.3, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 28
+    gridY: 15
+  - worldPosition: {x: 347.3, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 28
+    gridY: 16
+  - worldPosition: {x: 347.3, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 28
+    gridY: 17
+  - worldPosition: {x: 347.3, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 28
+    gridY: 18
+  - worldPosition: {x: 347.3, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 28
+    gridY: 19
+  - worldPosition: {x: 363.3, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 29
+    gridY: 15
+  - worldPosition: {x: 363.3, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 29
+    gridY: 16
+  - worldPosition: {x: 363.3, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 29
+    gridY: 17
+  - worldPosition: {x: 363.3, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 29
+    gridY: 18
+  - worldPosition: {x: 363.3, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 29
+    gridY: 19
+  - worldPosition: {x: 379.3, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 30
+    gridY: 15
+  - worldPosition: {x: 379.3, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 30
+    gridY: 16
+  - worldPosition: {x: 379.3, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 30
+    gridY: 17
+  - worldPosition: {x: 379.3, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 30
+    gridY: 18
+  - worldPosition: {x: 379.3, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 30
+    gridY: 19
+  - worldPosition: {x: 395.3, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 31
+    gridY: 15
+  - worldPosition: {x: 395.3, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 31
+    gridY: 16
+  - worldPosition: {x: 395.3, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 31
+    gridY: 17
+  - worldPosition: {x: 395.3, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 31
+    gridY: 18
+  - worldPosition: {x: 395.3, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 31
+    gridY: 19
+  - worldPosition: {x: 411.3, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 32
+    gridY: 15
+  - worldPosition: {x: 411.3, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 32
+    gridY: 16
+  - worldPosition: {x: 411.3, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 32
+    gridY: 17
+  - worldPosition: {x: 411.3, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 32
+    gridY: 18
+  - worldPosition: {x: 411.3, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 32
+    gridY: 19
+  - worldPosition: {x: 427.3, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 33
+    gridY: 15
+  - worldPosition: {x: 427.3, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 33
+    gridY: 16
+  - worldPosition: {x: 427.3, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 33
+    gridY: 17
+  - worldPosition: {x: 427.3, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 33
+    gridY: 18
+  - worldPosition: {x: 427.3, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 33
+    gridY: 19
+  - worldPosition: {x: 443.3, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 34
+    gridY: 15
+  - worldPosition: {x: 443.3, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 34
+    gridY: 16
+  - worldPosition: {x: 443.3, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 34
+    gridY: 17
+  - worldPosition: {x: 443.3, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 34
+    gridY: 18
+  - worldPosition: {x: 443.3, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 34
+    gridY: 19
+  - worldPosition: {x: 459.3, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 35
+    gridY: 15
+  - worldPosition: {x: 459.3, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 35
+    gridY: 16
+  - worldPosition: {x: 459.3, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 35
+    gridY: 17
+  - worldPosition: {x: 459.3, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 35
+    gridY: 18
+  - worldPosition: {x: 459.3, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 35
+    gridY: 19
+  - worldPosition: {x: 475.3, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 36
+    gridY: 15
+  - worldPosition: {x: 475.3, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 36
+    gridY: 16
+  - worldPosition: {x: 475.3, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 36
+    gridY: 17
+  - worldPosition: {x: 475.3, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 36
+    gridY: 18
+  - worldPosition: {x: 475.3, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 36
+    gridY: 19
+  - worldPosition: {x: 491.3, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 37
+    gridY: 15
+  - worldPosition: {x: 491.3, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 37
+    gridY: 16
+  - worldPosition: {x: 491.3, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 37
+    gridY: 17
+  - worldPosition: {x: 491.3, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 37
+    gridY: 18
+  - worldPosition: {x: 491.3, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 37
+    gridY: 19
+  - worldPosition: {x: 507.3, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 38
+    gridY: 15
+  - worldPosition: {x: 507.3, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 38
+    gridY: 16
+  - worldPosition: {x: 507.3, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 38
+    gridY: 17
+  - worldPosition: {x: 507.3, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 38
+    gridY: 18
+  - worldPosition: {x: 507.3, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 38
+    gridY: 19
+  - worldPosition: {x: 523.3, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 39
+    gridY: 15
+  - worldPosition: {x: 523.3, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 39
+    gridY: 16
+  - worldPosition: {x: 523.3, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 39
+    gridY: 17
+  - worldPosition: {x: 523.3, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 39
+    gridY: 18
+  - worldPosition: {x: 523.3, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 39
+    gridY: 19
+  - worldPosition: {x: 539.3, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 40
+    gridY: 15
+  - worldPosition: {x: 539.3, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 40
+    gridY: 16
+  - worldPosition: {x: 539.3, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 40
+    gridY: 17
+  - worldPosition: {x: 539.3, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 40
+    gridY: 18
+  - worldPosition: {x: 539.3, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 40
+    gridY: 19
+  - worldPosition: {x: 555.3, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 41
+    gridY: 15
+  - worldPosition: {x: 555.3, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 41
+    gridY: 16
+  - worldPosition: {x: 555.3, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 41
+    gridY: 17
+  - worldPosition: {x: 555.3, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 41
+    gridY: 18
+  - worldPosition: {x: 555.3, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 41
+    gridY: 19
+  - worldPosition: {x: 571.3, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 42
+    gridY: 15
+  - worldPosition: {x: 571.3, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 42
+    gridY: 16
+  - worldPosition: {x: 571.3, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 42
+    gridY: 17
+  - worldPosition: {x: 571.3, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 42
+    gridY: 18
+  - worldPosition: {x: 571.3, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 42
+    gridY: 19
+  - worldPosition: {x: 587.3, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 43
+    gridY: 15
+  - worldPosition: {x: 587.3, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 43
+    gridY: 16
+  - worldPosition: {x: 587.3, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 43
+    gridY: 17
+  - worldPosition: {x: 587.3, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 43
+    gridY: 18
+  - worldPosition: {x: 587.3, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 43
+    gridY: 19
+  - worldPosition: {x: 603.3, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 44
+    gridY: 15
+  - worldPosition: {x: 603.3, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 44
+    gridY: 16
+  - worldPosition: {x: 603.3, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 44
+    gridY: 17
+  - worldPosition: {x: 603.3, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 44
+    gridY: 18
+  - worldPosition: {x: 603.3, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 44
+    gridY: 19
+  - worldPosition: {x: 619.3, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 45
+    gridY: 15
+  - worldPosition: {x: 619.3, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 45
+    gridY: 16
+  - worldPosition: {x: 619.3, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 45
+    gridY: 17
+  - worldPosition: {x: 619.3, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 45
+    gridY: 18
+  - worldPosition: {x: 619.3, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 45
+    gridY: 19
+  - worldPosition: {x: 635.3, y: 239.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 46
+    gridY: 15
+  - worldPosition: {x: 635.3, y: 255.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 46
+    gridY: 16
+  - worldPosition: {x: 635.3, y: 271.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 46
+    gridY: 17
+  - worldPosition: {x: 635.3, y: 287.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 46
+    gridY: 18
+  - worldPosition: {x: 635.3, y: 303.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 46
+    gridY: 19
+  - worldPosition: {x: 363.3, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 29
+    gridY: 7
+  - worldPosition: {x: 363.3, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 29
+    gridY: 8
+  - worldPosition: {x: 363.3, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 29
+    gridY: 9
+  - worldPosition: {x: 363.3, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 29
+    gridY: 10
+  - worldPosition: {x: 363.3, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 29
+    gridY: 11
+  - worldPosition: {x: 363.3, y: 191.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 29
+    gridY: 12
+  - worldPosition: {x: 363.3, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 29
+    gridY: 13
+  - worldPosition: {x: 379.3, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 30
+    gridY: 7
+  - worldPosition: {x: 379.3, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 30
+    gridY: 8
+  - worldPosition: {x: 379.3, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 30
+    gridY: 9
+  - worldPosition: {x: 379.3, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 30
+    gridY: 10
+  - worldPosition: {x: 379.3, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 30
+    gridY: 11
+  - worldPosition: {x: 379.3, y: 191.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 30
+    gridY: 12
+  - worldPosition: {x: 379.3, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 30
+    gridY: 13
+  - worldPosition: {x: 395.3, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 31
+    gridY: 7
+  - worldPosition: {x: 395.3, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 31
+    gridY: 8
+  - worldPosition: {x: 395.3, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 31
+    gridY: 9
+  - worldPosition: {x: 395.3, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 31
+    gridY: 10
+  - worldPosition: {x: 395.3, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 31
+    gridY: 11
+  - worldPosition: {x: 395.3, y: 191.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 31
+    gridY: 12
+  - worldPosition: {x: 395.3, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 31
+    gridY: 13
+  - worldPosition: {x: 411.3, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 32
+    gridY: 7
+  - worldPosition: {x: 411.3, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 32
+    gridY: 8
+  - worldPosition: {x: 411.3, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 32
+    gridY: 9
+  - worldPosition: {x: 411.3, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 32
+    gridY: 10
+  - worldPosition: {x: 411.3, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 32
+    gridY: 11
+  - worldPosition: {x: 411.3, y: 191.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 32
+    gridY: 12
+  - worldPosition: {x: 411.3, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 32
+    gridY: 13
+  - worldPosition: {x: 427.3, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 33
+    gridY: 7
+  - worldPosition: {x: 427.3, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 33
+    gridY: 8
+  - worldPosition: {x: 427.3, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 33
+    gridY: 9
+  - worldPosition: {x: 427.3, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 33
+    gridY: 10
+  - worldPosition: {x: 427.3, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 33
+    gridY: 11
+  - worldPosition: {x: 427.3, y: 191.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 33
+    gridY: 12
+  - worldPosition: {x: 427.3, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 33
+    gridY: 13
+  - worldPosition: {x: 443.3, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 34
+    gridY: 7
+  - worldPosition: {x: 443.3, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 34
+    gridY: 8
+  - worldPosition: {x: 443.3, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 34
+    gridY: 9
+  - worldPosition: {x: 443.3, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 34
+    gridY: 10
+  - worldPosition: {x: 443.3, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 34
+    gridY: 11
+  - worldPosition: {x: 443.3, y: 191.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 34
+    gridY: 12
+  - worldPosition: {x: 443.3, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 34
+    gridY: 13
+  - worldPosition: {x: 459.3, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 35
+    gridY: 7
+  - worldPosition: {x: 459.3, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 35
+    gridY: 8
+  - worldPosition: {x: 459.3, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 35
+    gridY: 9
+  - worldPosition: {x: 459.3, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 35
+    gridY: 10
+  - worldPosition: {x: 459.3, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 35
+    gridY: 11
+  - worldPosition: {x: 459.3, y: 191.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 35
+    gridY: 12
+  - worldPosition: {x: 459.3, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 35
+    gridY: 13
+  - worldPosition: {x: 491.3, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 37
+    gridY: 2
+  - worldPosition: {x: 491.3, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 37
+    gridY: 3
+  - worldPosition: {x: 491.3, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 37
+    gridY: 4
+  - worldPosition: {x: 491.3, y: 79.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 37
+    gridY: 5
+  - worldPosition: {x: 491.3, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 37
+    gridY: 6
+  - worldPosition: {x: 491.3, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 37
+    gridY: 7
+  - worldPosition: {x: 491.3, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 37
+    gridY: 8
+  - worldPosition: {x: 491.3, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 37
+    gridY: 9
+  - worldPosition: {x: 491.3, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 37
+    gridY: 10
+  - worldPosition: {x: 491.3, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 37
+    gridY: 11
+  - worldPosition: {x: 491.3, y: 191.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 37
+    gridY: 12
+  - worldPosition: {x: 491.3, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 37
+    gridY: 13
+  - worldPosition: {x: 491.3, y: 223.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 37
+    gridY: 14
+  - worldPosition: {x: 507.3, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 38
+    gridY: 2
+  - worldPosition: {x: 507.3, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 38
+    gridY: 3
+  - worldPosition: {x: 507.3, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 38
+    gridY: 4
+  - worldPosition: {x: 507.3, y: 79.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 38
+    gridY: 5
+  - worldPosition: {x: 507.3, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 38
+    gridY: 6
+  - worldPosition: {x: 507.3, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 38
+    gridY: 7
+  - worldPosition: {x: 507.3, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 38
+    gridY: 8
+  - worldPosition: {x: 507.3, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 38
+    gridY: 9
+  - worldPosition: {x: 507.3, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 38
+    gridY: 10
+  - worldPosition: {x: 507.3, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 38
+    gridY: 11
+  - worldPosition: {x: 507.3, y: 191.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 38
+    gridY: 12
+  - worldPosition: {x: 507.3, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 38
+    gridY: 13
+  - worldPosition: {x: 507.3, y: 223.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 38
+    gridY: 14
+  - worldPosition: {x: 523.3, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 39
+    gridY: 2
+  - worldPosition: {x: 523.3, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 39
+    gridY: 3
+  - worldPosition: {x: 523.3, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 39
+    gridY: 4
+  - worldPosition: {x: 523.3, y: 79.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 39
+    gridY: 5
+  - worldPosition: {x: 523.3, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 39
+    gridY: 6
+  - worldPosition: {x: 523.3, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 39
+    gridY: 7
+  - worldPosition: {x: 523.3, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 39
+    gridY: 8
+  - worldPosition: {x: 523.3, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 39
+    gridY: 9
+  - worldPosition: {x: 523.3, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 39
+    gridY: 10
+  - worldPosition: {x: 523.3, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 39
+    gridY: 11
+  - worldPosition: {x: 523.3, y: 191.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 39
+    gridY: 12
+  - worldPosition: {x: 523.3, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 39
+    gridY: 13
+  - worldPosition: {x: 523.3, y: 223.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 39
+    gridY: 14
+  - worldPosition: {x: 539.3, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 40
+    gridY: 2
+  - worldPosition: {x: 539.3, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 40
+    gridY: 3
+  - worldPosition: {x: 539.3, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 40
+    gridY: 4
+  - worldPosition: {x: 539.3, y: 79.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 40
+    gridY: 5
+  - worldPosition: {x: 539.3, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 40
+    gridY: 6
+  - worldPosition: {x: 539.3, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 40
+    gridY: 7
+  - worldPosition: {x: 539.3, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 40
+    gridY: 8
+  - worldPosition: {x: 539.3, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 40
+    gridY: 9
+  - worldPosition: {x: 539.3, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 40
+    gridY: 10
+  - worldPosition: {x: 539.3, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 40
+    gridY: 11
+  - worldPosition: {x: 539.3, y: 191.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 40
+    gridY: 12
+  - worldPosition: {x: 539.3, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 40
+    gridY: 13
+  - worldPosition: {x: 539.3, y: 223.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 40
+    gridY: 14
+  - worldPosition: {x: 555.3, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 41
+    gridY: 2
+  - worldPosition: {x: 555.3, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 41
+    gridY: 3
+  - worldPosition: {x: 555.3, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 41
+    gridY: 4
+  - worldPosition: {x: 555.3, y: 79.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 41
+    gridY: 5
+  - worldPosition: {x: 555.3, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 41
+    gridY: 6
+  - worldPosition: {x: 555.3, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 41
+    gridY: 7
+  - worldPosition: {x: 555.3, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 41
+    gridY: 8
+  - worldPosition: {x: 555.3, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 41
+    gridY: 9
+  - worldPosition: {x: 555.3, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 41
+    gridY: 10
+  - worldPosition: {x: 555.3, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 41
+    gridY: 11
+  - worldPosition: {x: 555.3, y: 191.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 41
+    gridY: 12
+  - worldPosition: {x: 555.3, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 41
+    gridY: 13
+  - worldPosition: {x: 555.3, y: 223.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 41
+    gridY: 14
+  - worldPosition: {x: 571.3, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 42
+    gridY: 2
+  - worldPosition: {x: 571.3, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 42
+    gridY: 3
+  - worldPosition: {x: 571.3, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 42
+    gridY: 4
+  - worldPosition: {x: 571.3, y: 79.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 42
+    gridY: 5
+  - worldPosition: {x: 571.3, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 42
+    gridY: 6
+  - worldPosition: {x: 571.3, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 42
+    gridY: 7
+  - worldPosition: {x: 571.3, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 42
+    gridY: 8
+  - worldPosition: {x: 571.3, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 42
+    gridY: 9
+  - worldPosition: {x: 571.3, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 42
+    gridY: 10
+  - worldPosition: {x: 571.3, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 42
+    gridY: 11
+  - worldPosition: {x: 571.3, y: 191.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 42
+    gridY: 12
+  - worldPosition: {x: 571.3, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 42
+    gridY: 13
+  - worldPosition: {x: 571.3, y: 223.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 42
+    gridY: 14
+  - worldPosition: {x: 587.3, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 43
+    gridY: 2
+  - worldPosition: {x: 587.3, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 43
+    gridY: 3
+  - worldPosition: {x: 587.3, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 43
+    gridY: 4
+  - worldPosition: {x: 587.3, y: 79.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 43
+    gridY: 5
+  - worldPosition: {x: 587.3, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 43
+    gridY: 6
+  - worldPosition: {x: 587.3, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 43
+    gridY: 7
+  - worldPosition: {x: 587.3, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 43
+    gridY: 8
+  - worldPosition: {x: 587.3, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 43
+    gridY: 9
+  - worldPosition: {x: 587.3, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 43
+    gridY: 10
+  - worldPosition: {x: 587.3, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 43
+    gridY: 11
+  - worldPosition: {x: 587.3, y: 191.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 43
+    gridY: 12
+  - worldPosition: {x: 587.3, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 43
+    gridY: 13
+  - worldPosition: {x: 587.3, y: 223.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 43
+    gridY: 14
+  - worldPosition: {x: 603.3, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 44
+    gridY: 2
+  - worldPosition: {x: 603.3, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 44
+    gridY: 3
+  - worldPosition: {x: 603.3, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 44
+    gridY: 4
+  - worldPosition: {x: 603.3, y: 79.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 44
+    gridY: 5
+  - worldPosition: {x: 603.3, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 44
+    gridY: 6
+  - worldPosition: {x: 603.3, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 44
+    gridY: 7
+  - worldPosition: {x: 603.3, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 44
+    gridY: 8
+  - worldPosition: {x: 603.3, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 44
+    gridY: 9
+  - worldPosition: {x: 603.3, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 44
+    gridY: 10
+  - worldPosition: {x: 603.3, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 44
+    gridY: 11
+  - worldPosition: {x: 603.3, y: 191.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 44
+    gridY: 12
+  - worldPosition: {x: 603.3, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 44
+    gridY: 13
+  - worldPosition: {x: 603.3, y: 223.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 44
+    gridY: 14
+  - worldPosition: {x: 619.3, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 45
+    gridY: 2
+  - worldPosition: {x: 619.3, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 45
+    gridY: 3
+  - worldPosition: {x: 619.3, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 45
+    gridY: 4
+  - worldPosition: {x: 619.3, y: 79.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 45
+    gridY: 5
+  - worldPosition: {x: 619.3, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 45
+    gridY: 6
+  - worldPosition: {x: 619.3, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 45
+    gridY: 7
+  - worldPosition: {x: 619.3, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 45
+    gridY: 8
+  - worldPosition: {x: 619.3, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 45
+    gridY: 9
+  - worldPosition: {x: 619.3, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 45
+    gridY: 10
+  - worldPosition: {x: 619.3, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 45
+    gridY: 11
+  - worldPosition: {x: 619.3, y: 191.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 45
+    gridY: 12
+  - worldPosition: {x: 619.3, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 45
+    gridY: 13
+  - worldPosition: {x: 619.3, y: 223.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 45
+    gridY: 14
+  - worldPosition: {x: 635.3, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 46
+    gridY: 2
+  - worldPosition: {x: 635.3, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 46
+    gridY: 3
+  - worldPosition: {x: 635.3, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 46
+    gridY: 4
+  - worldPosition: {x: 635.3, y: 79.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 46
+    gridY: 5
+  - worldPosition: {x: 635.3, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 46
+    gridY: 6
+  - worldPosition: {x: 635.3, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 46
+    gridY: 7
+  - worldPosition: {x: 635.3, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 46
+    gridY: 8
+  - worldPosition: {x: 635.3, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 46
+    gridY: 9
+  - worldPosition: {x: 635.3, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 46
+    gridY: 10
+  - worldPosition: {x: 635.3, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 46
+    gridY: 11
+  - worldPosition: {x: 635.3, y: 191.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 46
+    gridY: 12
+  - worldPosition: {x: 635.3, y: 207.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 46
+    gridY: 13
+  - worldPosition: {x: 635.3, y: 223.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 46
+    gridY: 14
+  - worldPosition: {x: 363.3, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 29
+    gridY: 2
+  - worldPosition: {x: 363.3, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 29
+    gridY: 3
+  - worldPosition: {x: 363.3, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 29
+    gridY: 4
+  - worldPosition: {x: 363.3, y: 79.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 29
+    gridY: 5
+  - worldPosition: {x: 363.3, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 29
+    gridY: 6
+  - worldPosition: {x: 379.3, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 30
+    gridY: 2
+  - worldPosition: {x: 379.3, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 30
+    gridY: 3
+  - worldPosition: {x: 379.3, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 30
+    gridY: 4
+  - worldPosition: {x: 379.3, y: 79.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 30
+    gridY: 5
+  - worldPosition: {x: 379.3, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 30
+    gridY: 6
+  - worldPosition: {x: 395.3, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 31
+    gridY: 2
+  - worldPosition: {x: 395.3, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 31
+    gridY: 3
+  - worldPosition: {x: 395.3, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 31
+    gridY: 4
+  - worldPosition: {x: 395.3, y: 79.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 31
+    gridY: 5
+  - worldPosition: {x: 395.3, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 31
+    gridY: 6
+  - worldPosition: {x: 411.3, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 32
+    gridY: 2
+  - worldPosition: {x: 411.3, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 32
+    gridY: 3
+  - worldPosition: {x: 411.3, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 32
+    gridY: 4
+  - worldPosition: {x: 411.3, y: 79.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 32
+    gridY: 5
+  - worldPosition: {x: 411.3, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 32
+    gridY: 6
+  - worldPosition: {x: 427.3, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 33
+    gridY: 2
+  - worldPosition: {x: 427.3, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 33
+    gridY: 3
+  - worldPosition: {x: 427.3, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 33
+    gridY: 4
+  - worldPosition: {x: 427.3, y: 79.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 33
+    gridY: 5
+  - worldPosition: {x: 427.3, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 33
+    gridY: 6
+  - worldPosition: {x: 443.3, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 34
+    gridY: 2
+  - worldPosition: {x: 443.3, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 34
+    gridY: 3
+  - worldPosition: {x: 443.3, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 34
+    gridY: 4
+  - worldPosition: {x: 443.3, y: 79.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 34
+    gridY: 5
+  - worldPosition: {x: 443.3, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 34
+    gridY: 6
+  - worldPosition: {x: 459.3, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 35
+    gridY: 2
+  - worldPosition: {x: 459.3, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 35
+    gridY: 3
+  - worldPosition: {x: 459.3, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 35
+    gridY: 4
+  - worldPosition: {x: 459.3, y: 79.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 35
+    gridY: 5
+  - worldPosition: {x: 459.3, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 35
+    gridY: 6
+  - worldPosition: {x: 139.29999, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 15
+    gridY: 2
+  - worldPosition: {x: 139.29999, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 15
+    gridY: 3
+  - worldPosition: {x: 139.29999, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 15
+    gridY: 4
+  - worldPosition: {x: 155.29999, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 16
+    gridY: 2
+  - worldPosition: {x: 155.29999, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 16
+    gridY: 3
+  - worldPosition: {x: 155.29999, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 16
+    gridY: 4
+  - worldPosition: {x: 171.29999, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 17
+    gridY: 2
+  - worldPosition: {x: 171.29999, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 17
+    gridY: 3
+  - worldPosition: {x: 171.29999, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 17
+    gridY: 4
+  - worldPosition: {x: 187.29999, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 18
+    gridY: 2
+  - worldPosition: {x: 187.29999, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 18
+    gridY: 3
+  - worldPosition: {x: 187.29999, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 18
+    gridY: 4
+  - worldPosition: {x: 203.29999, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 19
+    gridY: 2
+  - worldPosition: {x: 203.29999, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 19
+    gridY: 3
+  - worldPosition: {x: 203.29999, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 19
+    gridY: 4
+  - worldPosition: {x: 219.29999, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 20
+    gridY: 2
+  - worldPosition: {x: 219.29999, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 20
+    gridY: 3
+  - worldPosition: {x: 219.29999, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 20
+    gridY: 4
+  - worldPosition: {x: 235.29999, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 21
+    gridY: 2
+  - worldPosition: {x: 235.29999, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 21
+    gridY: 3
+  - worldPosition: {x: 235.29999, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 21
+    gridY: 4
+  - worldPosition: {x: 251.29999, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 22
+    gridY: 2
+  - worldPosition: {x: 251.29999, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 22
+    gridY: 3
+  - worldPosition: {x: 251.29999, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 22
+    gridY: 4
+  - worldPosition: {x: 267.3, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 23
+    gridY: 2
+  - worldPosition: {x: 267.3, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 23
+    gridY: 3
+  - worldPosition: {x: 267.3, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 23
+    gridY: 4
+  - worldPosition: {x: 283.3, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 24
+    gridY: 2
+  - worldPosition: {x: 283.3, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 24
+    gridY: 3
+  - worldPosition: {x: 283.3, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 24
+    gridY: 4
+  - worldPosition: {x: 299.3, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 25
+    gridY: 2
+  - worldPosition: {x: 299.3, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 25
+    gridY: 3
+  - worldPosition: {x: 299.3, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 25
+    gridY: 4
+  - worldPosition: {x: 315.3, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 26
+    gridY: 2
+  - worldPosition: {x: 315.3, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 26
+    gridY: 3
+  - worldPosition: {x: 315.3, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 26
+    gridY: 4
+  - worldPosition: {x: 331.3, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 27
+    gridY: 2
+  - worldPosition: {x: 331.3, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 27
+    gridY: 3
+  - worldPosition: {x: 331.3, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 27
+    gridY: 4
+  - worldPosition: {x: 347.3, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 28
+    gridY: 2
+  - worldPosition: {x: 347.3, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 28
+    gridY: 3
+  - worldPosition: {x: 347.3, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 28
+    gridY: 4
+  - worldPosition: {x: 75.29999, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 11
+    gridY: 2
+  - worldPosition: {x: 75.29999, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 11
+    gridY: 3
+  - worldPosition: {x: 75.29999, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 11
+    gridY: 4
+  - worldPosition: {x: 91.29999, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 12
+    gridY: 2
+  - worldPosition: {x: 91.29999, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 12
+    gridY: 3
+  - worldPosition: {x: 91.29999, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 12
+    gridY: 4
+  - worldPosition: {x: 107.29999, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 13
+    gridY: 2
+  - worldPosition: {x: 107.29999, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 13
+    gridY: 3
+  - worldPosition: {x: 107.29999, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 13
+    gridY: 4
+  - worldPosition: {x: 123.29999, y: 31.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 14
+    gridY: 2
+  - worldPosition: {x: 123.29999, y: 47.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 14
+    gridY: 3
+  - worldPosition: {x: 123.29999, y: 63.699997, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 14
+    gridY: 4
+  - worldPosition: {x: 75.29999, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 11
+    gridY: 6
+  - worldPosition: {x: 75.29999, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 11
+    gridY: 7
+  - worldPosition: {x: 75.29999, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 11
+    gridY: 8
+  - worldPosition: {x: 75.29999, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 11
+    gridY: 9
+  - worldPosition: {x: 75.29999, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 11
+    gridY: 10
+  - worldPosition: {x: 75.29999, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 11
+    gridY: 11
+  - worldPosition: {x: 91.29999, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 12
+    gridY: 6
+  - worldPosition: {x: 91.29999, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 12
+    gridY: 7
+  - worldPosition: {x: 91.29999, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 12
+    gridY: 8
+  - worldPosition: {x: 91.29999, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 12
+    gridY: 9
+  - worldPosition: {x: 91.29999, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 12
+    gridY: 10
+  - worldPosition: {x: 91.29999, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 12
+    gridY: 11
+  - worldPosition: {x: 107.29999, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 13
+    gridY: 6
+  - worldPosition: {x: 107.29999, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 13
+    gridY: 7
+  - worldPosition: {x: 107.29999, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 13
+    gridY: 8
+  - worldPosition: {x: 107.29999, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 13
+    gridY: 9
+  - worldPosition: {x: 107.29999, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 13
+    gridY: 10
+  - worldPosition: {x: 107.29999, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 13
+    gridY: 11
+  - worldPosition: {x: 123.29999, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 14
+    gridY: 6
+  - worldPosition: {x: 123.29999, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 14
+    gridY: 7
+  - worldPosition: {x: 123.29999, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 14
+    gridY: 8
+  - worldPosition: {x: 123.29999, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 14
+    gridY: 9
+  - worldPosition: {x: 123.29999, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 14
+    gridY: 10
+  - worldPosition: {x: 123.29999, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 14
+    gridY: 11
+  - worldPosition: {x: 139.29999, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 15
+    gridY: 6
+  - worldPosition: {x: 139.29999, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 15
+    gridY: 7
+  - worldPosition: {x: 139.29999, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 15
+    gridY: 8
+  - worldPosition: {x: 139.29999, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 15
+    gridY: 9
+  - worldPosition: {x: 139.29999, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 15
+    gridY: 10
+  - worldPosition: {x: 139.29999, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 15
+    gridY: 11
+  - worldPosition: {x: 155.29999, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 16
+    gridY: 6
+  - worldPosition: {x: 155.29999, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 16
+    gridY: 7
+  - worldPosition: {x: 155.29999, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 16
+    gridY: 8
+  - worldPosition: {x: 155.29999, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 16
+    gridY: 9
+  - worldPosition: {x: 155.29999, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 16
+    gridY: 10
+  - worldPosition: {x: 155.29999, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 16
+    gridY: 11
+  - worldPosition: {x: 171.29999, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 17
+    gridY: 6
+  - worldPosition: {x: 171.29999, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 17
+    gridY: 7
+  - worldPosition: {x: 171.29999, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 17
+    gridY: 8
+  - worldPosition: {x: 171.29999, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 17
+    gridY: 9
+  - worldPosition: {x: 171.29999, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 17
+    gridY: 10
+  - worldPosition: {x: 171.29999, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 17
+    gridY: 11
+  - worldPosition: {x: 59.299988, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 10
+    gridY: 7
+  - worldPosition: {x: 59.299988, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 10
+    gridY: 8
+  - worldPosition: {x: 59.299988, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 10
+    gridY: 9
+  - worldPosition: {x: 59.299988, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 10
+    gridY: 10
+  - worldPosition: {x: 59.299988, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 10
+    gridY: 11
+  - worldPosition: {x: 59.299988, y: 191.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 10
+    gridY: 12
+  - worldPosition: {x: 59.299988, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 10
+    gridY: 6
+  - worldPosition: {x: 203.29999, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 19
+    gridY: 6
+  - worldPosition: {x: 203.29999, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 19
+    gridY: 7
+  - worldPosition: {x: 203.29999, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 19
+    gridY: 8
+  - worldPosition: {x: 203.29999, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 19
+    gridY: 9
+  - worldPosition: {x: 203.29999, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 19
+    gridY: 10
+  - worldPosition: {x: 203.29999, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 19
+    gridY: 11
+  - worldPosition: {x: 203.29999, y: 191.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 19
+    gridY: 12
+  - worldPosition: {x: 219.29999, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 20
+    gridY: 6
+  - worldPosition: {x: 219.29999, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 20
+    gridY: 7
+  - worldPosition: {x: 219.29999, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 20
+    gridY: 8
+  - worldPosition: {x: 219.29999, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 20
+    gridY: 9
+  - worldPosition: {x: 219.29999, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 20
+    gridY: 10
+  - worldPosition: {x: 219.29999, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 20
+    gridY: 11
+  - worldPosition: {x: 219.29999, y: 191.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 20
+    gridY: 12
+  - worldPosition: {x: 235.29999, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 21
+    gridY: 6
+  - worldPosition: {x: 235.29999, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 21
+    gridY: 7
+  - worldPosition: {x: 235.29999, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 21
+    gridY: 8
+  - worldPosition: {x: 235.29999, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 21
+    gridY: 9
+  - worldPosition: {x: 235.29999, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 21
+    gridY: 10
+  - worldPosition: {x: 235.29999, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 21
+    gridY: 11
+  - worldPosition: {x: 235.29999, y: 191.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 21
+    gridY: 12
+  - worldPosition: {x: 251.29999, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 22
+    gridY: 6
+  - worldPosition: {x: 251.29999, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 22
+    gridY: 7
+  - worldPosition: {x: 251.29999, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 22
+    gridY: 8
+  - worldPosition: {x: 251.29999, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 22
+    gridY: 9
+  - worldPosition: {x: 251.29999, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 22
+    gridY: 10
+  - worldPosition: {x: 251.29999, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 22
+    gridY: 11
+  - worldPosition: {x: 251.29999, y: 191.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 22
+    gridY: 12
+  - worldPosition: {x: 267.3, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 23
+    gridY: 6
+  - worldPosition: {x: 267.3, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 23
+    gridY: 7
+  - worldPosition: {x: 267.3, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 23
+    gridY: 8
+  - worldPosition: {x: 267.3, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 23
+    gridY: 9
+  - worldPosition: {x: 267.3, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 23
+    gridY: 10
+  - worldPosition: {x: 267.3, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 23
+    gridY: 11
+  - worldPosition: {x: 267.3, y: 191.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 23
+    gridY: 12
+  - worldPosition: {x: 283.3, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 24
+    gridY: 6
+  - worldPosition: {x: 283.3, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 24
+    gridY: 7
+  - worldPosition: {x: 283.3, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 24
+    gridY: 8
+  - worldPosition: {x: 283.3, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 24
+    gridY: 9
+  - worldPosition: {x: 283.3, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 24
+    gridY: 10
+  - worldPosition: {x: 283.3, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 24
+    gridY: 11
+  - worldPosition: {x: 283.3, y: 191.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 24
+    gridY: 12
+  - worldPosition: {x: 299.3, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 25
+    gridY: 6
+  - worldPosition: {x: 299.3, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 25
+    gridY: 7
+  - worldPosition: {x: 299.3, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 25
+    gridY: 8
+  - worldPosition: {x: 299.3, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 25
+    gridY: 9
+  - worldPosition: {x: 299.3, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 25
+    gridY: 10
+  - worldPosition: {x: 299.3, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 25
+    gridY: 11
+  - worldPosition: {x: 299.3, y: 191.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 25
+    gridY: 12
+  - worldPosition: {x: 315.3, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 26
+    gridY: 6
+  - worldPosition: {x: 315.3, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 26
+    gridY: 7
+  - worldPosition: {x: 315.3, y: 127.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 26
+    gridY: 8
+  - worldPosition: {x: 315.3, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 26
+    gridY: 9
+  - worldPosition: {x: 315.3, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 26
+    gridY: 10
+  - worldPosition: {x: 315.3, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 26
+    gridY: 11
+  - worldPosition: {x: 315.3, y: 191.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 26
+    gridY: 12
+  - worldPosition: {x: 331.3, y: 95.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 27
+    gridY: 6
+  - worldPosition: {x: 331.3, y: 111.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 27
+    gridY: 7
+  - worldPosition: {x: 331.3, y: 143.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 27
+    gridY: 9
+  - worldPosition: {x: 331.3, y: 159.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 27
+    gridY: 10
+  - worldPosition: {x: 331.3, y: 175.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 27
+    gridY: 11
+  - worldPosition: {x: 331.3, y: 191.7, z: 0}
+    isWalkable: 0
+    walkableLock: 1
+    gridX: 27
+    gridY: 12

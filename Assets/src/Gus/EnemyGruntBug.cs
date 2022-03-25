@@ -54,7 +54,9 @@ public class EnemyGruntBug : MonoBehaviour
         {
             StopCoroutine("IdleAction");
             waitForEvent = false;
-            this.transform.position += direction * moveSpeed * Time.deltaTime;
+            this.transform.position += direction * moveSpeed * 0.02f; // ensures that the enemy move speed is consistent across multiple framerates the game may be running at
+            float rot_z = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            this.transform.rotation = Quaternion.Euler(0f, 0f, rot_z);
             return true;
         }
         return false;

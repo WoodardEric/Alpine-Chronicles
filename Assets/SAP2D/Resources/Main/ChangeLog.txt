@@ -1,0 +1,4 @@
+SAP2D 1.0 changes:
+
+- Added code optimizations
+- Bug fixes

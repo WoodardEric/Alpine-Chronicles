@@ -10,11 +10,13 @@ TagManager:
   - AudioPlayer
   - Enemy
   - Fog
+  - Miner
+  - Zombie
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Obstacle
   - Water
   - UI
   - 
