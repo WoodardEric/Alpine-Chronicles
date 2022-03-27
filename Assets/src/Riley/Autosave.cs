@@ -12,13 +12,14 @@ public class Autosave : MonoBehaviour
 	public float Timer = 0;
 	public bool SaveGame = false;
 	public float Timecheck = 1800f;
-
+	public PlayerClass _player = null;
 	public int heart; 
-	public PlayerClass _player = PlayerClass.Instance;
+	
 
 	// Start is called before the first frame update
 	void Start()
 	{
+		_player = PlayerClass.Instance;
 		//public int heart;
 
 	    heart = _player.getHealth(); 
