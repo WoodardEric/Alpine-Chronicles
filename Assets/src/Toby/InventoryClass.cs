@@ -20,7 +20,7 @@ public class InventoryClass : MonoBehaviour
         
     }
 
-    public bool addItem(ItemClass addedItem)
+    public bool AddItem(ItemClass addedItem)
     {
         if (currentAmt < MAX_INV_SIZE)
         {
@@ -32,8 +32,9 @@ public class InventoryClass : MonoBehaviour
         return false;
     }
 
-    public bool removeItem(int index)
+    public bool RemoveItem(int index)
     {
+        Debug.Log(currentAmt);
         if (currentAmt <= 0)
         {
             return false;
@@ -59,17 +60,17 @@ public class InventoryClass : MonoBehaviour
         return true;
     }
 
-    public int getNumItems()
+    public int GetNumItems()
     {
         return currentAmt;
     }
 
-    public int getMaxItems()
+    public int GetMaxItems()
     {
         return MAX_INV_SIZE;
     }
 
-    public ItemClass getItem(int index)
+    public ItemClass GetItem(int index)
     {
         return items[index];
     }

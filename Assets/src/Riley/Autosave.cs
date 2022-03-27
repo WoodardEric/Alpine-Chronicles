@@ -20,7 +20,7 @@ public class Autosave : MonoBehaviour
 	void Start()
 	{
 		_player = PlayerClass.Instance;
-		heart = _player.getHealth();
+		heart = _player.GetHealth();
 		Timer = Timer + 1 * Time.deltaTime;
 
 	}
@@ -89,7 +89,7 @@ public class Autosave : MonoBehaviour
 		Debug.Log("Loading scene");
 		SceneManager.LoadScene(PlayerPrefs.GetInt("SavedScene"));
 		PlayerClass player = PlayerClass.Instance;
-		player.setPlayerPos(new Vector2(-5.18f, -2.87f));
+		player.SetPlayerPos(new Vector2(-5.18f, -2.87f));
 
 		string path = Application.persistentDataPath + "/data.ap";
 		BinaryFormatter formatter = new BinaryFormatter();

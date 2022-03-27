@@ -28,10 +28,11 @@ public class HealthBoundsTest
 
         // Act
         // Add 2 to the players health to see if it will go over 100
-        player.updateHealth(2);
+        player.UpdateHealth(2);
+        player.setUpdateNum();
 
         // Assert
-        Assert.AreEqual(100, player.getHealth());
+        Assert.AreEqual(100, player.GetHealth());
 
         // Arrange
         // Checking same as above, but on the boundary of 100
@@ -39,10 +40,11 @@ public class HealthBoundsTest
 
         // Act
         // Add 1 to player health
-        player.updateHealth(1);
+        player.UpdateHealth(1);
+        player.setUpdateNum();
 
         // Assert
-        Assert.AreEqual(100, player.getHealth());
+        Assert.AreEqual(100, player.GetHealth());
 
         // Arrange
         // Checking same as above, but just outside the boundary
@@ -50,10 +52,11 @@ public class HealthBoundsTest
 
         // Act
         // Add 1 to player health
-        player.updateHealth(1);
+        player.UpdateHealth(1);
+        player.setUpdateNum();
 
         // Assert
-        Assert.AreEqual(100, player.getHealth());
+        Assert.AreEqual(100, player.GetHealth());
     }
 
     [Test]
@@ -63,110 +66,121 @@ public class HealthBoundsTest
         player.setHealth(1);
 
         // Act
-        player.updateHealth(-2);
+        player.UpdateHealth(-2);
+        player.setUpdateNum();
 
         // Assert
-        Assert.AreEqual(0, player.getHealth());
+        Assert.AreEqual(0, player.GetHealth());
 
         // Arrange
         player.setHealth(0);
 
         // Act
-        player.updateHealth(-1);
+        player.UpdateHealth(-1);
+        player.setUpdateNum();
 
         // Assert
-        Assert.AreEqual(0, player.getHealth());
+        Assert.AreEqual(0, player.GetHealth());
 
         // Arrange
         player.setHealth(-1);
 
         // Act
-        player.updateHealth(-1);
+        player.UpdateHealth(-1);
+        player.setUpdateNum();
 
         // Assert
-        Assert.AreEqual(0, player.getHealth());
+        Assert.AreEqual(0, player.GetHealth());
     }
 
     [Test]
     public void bcModeHealTest()
     {
-        player.startBCMode("GoBig");
+        player.StartBCMode("GoBig");
         // Arrange
         player.setHealth(99);
 
         // Act
-        player.updateHealth(2);
+        player.UpdateHealth(2);
+        player.setUpdateNum();
 
         // Assert
-        Assert.AreEqual(100, player.getHealth());
+        Assert.AreEqual(100, player.GetHealth());
 
         // Arrange
         player.setHealth(100);
 
         // Act
-        player.updateHealth(1);
+        player.UpdateHealth(1);
+        player.setUpdateNum();
 
         // Assert
-        Assert.AreEqual(100, player.getHealth());
+        Assert.AreEqual(100, player.GetHealth());
 
         // Arrange
         player.setHealth(101);
 
         // Act
-        player.updateHealth(1);
+        player.UpdateHealth(1);
+        player.setUpdateNum();
 
         // Assert
-        Assert.AreEqual(100, player.getHealth());
+        Assert.AreEqual(100, player.GetHealth());
     }
 
     [Test]
     public void bcModeDamageTest()
     {
-        player.startBCMode("GoBig");
+        player.StartBCMode("GoBig");
         // Arrange
         player.setHealth(1);
 
         // Act
-        player.updateHealth(-2);
+        player.UpdateHealth(-2);
+        player.setUpdateNum();
 
         // Assert
-        Assert.AreEqual(-1, player.getHealth());
+        Assert.AreEqual(-1, player.GetHealth());
 
         // Arrange
         player.setHealth(0);
 
         // Act
-        player.updateHealth(-1);
+        player.UpdateHealth(-1);
+        player.setUpdateNum();
 
         // Assert
-        Assert.AreEqual(-1, player.getHealth());
+        Assert.AreEqual(-1, player.GetHealth());
 
         // Arrange
         player.setHealth(Int32.MinValue + 1);
 
         // Act
-        player.updateHealth(-1);
+        player.UpdateHealth(-1);
+        player.setUpdateNum();
 
         // Assert
-        Assert.AreEqual(Int32.MinValue, player.getHealth());
+        Assert.AreEqual(Int32.MinValue, player.GetHealth());
 
         // Arrange
         player.setHealth(Int32.MinValue);
 
         // Act
-        player.updateHealth(-1);
+        player.UpdateHealth(-1);
+        player.setUpdateNum();
 
         // Assert
-        Assert.AreEqual(Int32.MinValue, player.getHealth());
+        Assert.AreEqual(Int32.MinValue, player.GetHealth());
 
         // Arrange
         player.setHealth(Int32.MinValue);
 
         // Act
-        player.updateHealth(-50);
+        player.UpdateHealth(-50);
+        player.setUpdateNum();
 
         // Assert
-        Assert.AreEqual(Int32.MinValue, player.getHealth());
+        Assert.AreEqual(Int32.MinValue, player.GetHealth());
     }
 
     [TearDown]

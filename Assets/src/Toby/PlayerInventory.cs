@@ -16,7 +16,7 @@ public class PlayerInventory : InventoryClass
         
     }
 
-    public void switchItems(int itemOne, int itemTwo)
+    public void SwitchItems(int itemOne, int itemTwo)
     {
         ItemClass temp = items[itemOne];
         items[itemOne] = items[itemTwo];

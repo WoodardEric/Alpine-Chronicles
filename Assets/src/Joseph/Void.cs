@@ -44,16 +44,16 @@ public class Void : MonoBehaviour
         {
             position.x = -9f;
             position.y = 3.75f;
-            player.setPlayerPos(position);
+            player.SetPlayerPos(position);
         }
         else if(scene == 2)
         {
             position.x = 9.125f;
 		    position.y = -32.5f;
-		    player.setPlayerPos(position);
+		    player.SetPlayerPos(position);
         }
         //Damage the player
-        player.updateHealth(damage);
+        player.UpdateHealth(damage);
     }
 
 

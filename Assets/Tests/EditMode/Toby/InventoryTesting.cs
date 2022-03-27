@@ -15,32 +15,30 @@ public class InventoryTesting
     {
         // Create game object with player script
         gameObject = new GameObject();
-        gameObject.AddComponent<InventoryClass>();
+        gameObject.AddComponent<PlayerInventory>();
         player = gameObject.AddComponent<PlayerClass>();
-        player.setComponents();
+        player.SetComponents();
     }
     
     [Test]
     public void InvSizeTest()
     {
-        Assert.IsFalse(player.removeInvItem(0));
+        Assert.IsFalse(player.RemoveInvItem(0));
 
-        Assert.AreEqual(0, player.getNumInvItems());
-
-        for (int i = 0; i < player.getMaxItems(); ++i)
+        Assert.AreEqual(0, player.GetNumInvItems());
+        //ItemFactory factory = new KatanaFactory();
+        for (int i = 0; i < player.GetMaxItems(); ++i)
         {
-            GameObject obj = new GameObject();
-            ItemClass item = obj.AddComponent<ItemClass>();
-            player.addInvItem(item);
+            //ItemClass item = factory.GetItemClass();
+            //player.AddInvItem(item);
         }
 
-        Assert.AreEqual(20, player.getNumInvItems());
+        Assert.AreEqual(20, player.GetNumInvItems());
 
-        GameObject outsideObj = new GameObject();
-        ItemClass outsideItem = outsideObj.AddComponent<ItemClass>();
-        Assert.IsFalse(player.addInvItem(outsideItem));
+        //ItemClass outsideItem = factory.GetItemClass();
+        //Assert.IsFalse(player.AddInvItem(outsideItem));
 
-        Assert.AreEqual(20, player.getNumInvItems());
+        Assert.AreEqual(20, player.GetNumInvItems());
     }
 
     [TearDown]

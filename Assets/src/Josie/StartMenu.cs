@@ -11,7 +11,7 @@ public class StartMenu : MonoBehaviour
             Debug.Log("change to level_0 scene");
             SceneManager.LoadScene("Level_0");
             PlayerClass player = PlayerClass.Instance;
-            player.setPlayerPos(new Vector2(-5.18f, -2.87f));
+            player.SetPlayerPos(new Vector2(-5.18f, -2.87f));
         }
 
         public void drBcMode()

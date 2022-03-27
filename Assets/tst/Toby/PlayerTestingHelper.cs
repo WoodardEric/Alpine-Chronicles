@@ -8,4 +8,10 @@ public class PlayerTestingHelper : PlayerClass
     {
         health = num;
     }
+
+    public void setUpdateNum()
+    {
+        updateNum = 0;
+    }
 }
+

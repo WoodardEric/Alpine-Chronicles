@@ -86,7 +86,7 @@ public class LevelManager : MonoBehaviour
         {
             loadPos.x = -9f;
             loadPos.y = -3.9f;
-            player.setPlayerPos(loadPos);
+            player.SetPlayerPos(loadPos);
         }
         else if(toScene == 2)
         {
@@ -94,13 +94,13 @@ public class LevelManager : MonoBehaviour
             {
                 loadPos.x = -9f;
                 loadPos.y = 3.75f;
-                player.setPlayerPos(loadPos);
+                player.SetPlayerPos(loadPos);
             }
             else if(fromScene == 3)
 		    {
                 loadPos.x = 7.5f;
 			    loadPos.y = -106f;
-                player.setPlayerPos(loadPos);
+                player.SetPlayerPos(loadPos);
 		    }
         }
 	    else if(toScene == 3)
@@ -109,7 +109,7 @@ public class LevelManager : MonoBehaviour
 		    {
                 loadPos.x = -6f;
 			    loadPos.y = 16f;
-			    player.setPlayerPos(loadPos);
+			    player.SetPlayerPos(loadPos);
 		    }
 	    }
     }
