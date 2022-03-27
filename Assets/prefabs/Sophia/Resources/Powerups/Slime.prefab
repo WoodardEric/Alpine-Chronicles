@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1257421632059187363}
   - component: {fileID: 36458568973520531}
   - component: {fileID: 5763141393856961202}
+  - component: {fileID: 3244168247867739098}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Untagged
@@ -99,3 +100,15 @@ CircleCollider2D:
   m_Offset: {x: 0.02067241, y: -0.06201765}
   serializedVersion: 2
   m_Radius: 0.45865503
+--- !u!114 &3244168247867739098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5626049343173740273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba28f1ebad9ef4fc5b1e77665200aae2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
