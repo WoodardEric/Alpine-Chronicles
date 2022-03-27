@@ -295,6 +295,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2113303940370879784, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
   m_PrefabInstance: {fileID: 1867798967}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &176434391 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8687036562821598951, guid: 0aabc12a6a0c34ef58f39f66975be4d1, type: 3}
+  m_PrefabInstance: {fileID: 8687036562391337311}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &176434392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176434391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eb1edfd4cbcf8046a65278185c411ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Timer: 0
+  SaveGame: 0
+  Timecheck: 1800
+  _player: {fileID: 0}
 --- !u!1 &218738020
 GameObject:
   m_ObjectHideFlags: 0
@@ -3569,6 +3590,7 @@ MonoBehaviour:
   Timer: 0
   SaveGame: 0
   Timecheck: 1800
+  _player: {fileID: 0}
 --- !u!1 &1974895909
 GameObject:
   m_ObjectHideFlags: 0
@@ -4072,6 +4094,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8687036562220982268, guid: 0aabc12a6a0c34ef58f39f66975be4d1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 176434392}
+    - target: {fileID: 8687036562220982268, guid: 0aabc12a6a0c34ef58f39f66975be4d1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SavePlayerFunc
+      objectReference: {fileID: 0}
+    - target: {fileID: 8687036562220982268, guid: 0aabc12a6a0c34ef58f39f66975be4d1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Autosave, RileySrc
+      objectReference: {fileID: 0}
     - target: {fileID: 8687036562821598947, guid: 0aabc12a6a0c34ef58f39f66975be4d1, type: 3}
       propertyPath: m_Pivot.x
       value: 0

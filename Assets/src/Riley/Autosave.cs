@@ -37,8 +37,8 @@ public class Autosave : MonoBehaviour
 		if (SaveGame == true)
 		{
 			Debug.Log("AutoSaving Data...");
-			savelevel();
-			SavePlayerFunc();
+			//savelevel();
+			//SavePlayerFunc();
 			Timer = 0f;
 		}
 	}
@@ -51,6 +51,8 @@ public class Autosave : MonoBehaviour
 
 	public static void SavePlayerFunc()
 	{
+
+		PlayerPrefs.SetInt("SavedScene", SceneManager.GetActiveScene().buildIndex);
 		//save the data in binary, more secure
 		BinaryFormatter formatter = new BinaryFormatter();
 
