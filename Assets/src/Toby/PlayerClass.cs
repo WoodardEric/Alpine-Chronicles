@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+
 public class PlayerClass : MonoBehaviour
 {
+    
     public static PlayerClass Instance { get; private set; }
     [SerializeField] float moveSpeed;
-    //protected int health;
-
-    public int health; 
+    protected int health;
     bool BCMode;
     Rigidbody2D rgdb;
     Vector2 newPos;
@@ -208,8 +208,11 @@ public class PlayerClass : MonoBehaviour
         else
         {
             this.health += change;
+            
         }
+        
         Debug.Log("Player health is now " + this.health);
+        
     }
 
     public int getHealth()
