@@ -8,15 +8,20 @@ using UnityEngine.SceneManagement;
 
 public class Autosave : MonoBehaviour
 {
+
 	public float Timer = 0;
 	public bool SaveGame = false;
 	public float Timecheck = 1800f;
 
-	public PlayerData _player;
+	public int heart; 
+	public PlayerClass _player = PlayerClass.Instance;
 
 	// Start is called before the first frame update
 	void Start()
 	{
+		//public int heart;
+
+	    heart = _player.getHealth(); 
 		Timer = Timer + 1 * Time.deltaTime;
 
 	}

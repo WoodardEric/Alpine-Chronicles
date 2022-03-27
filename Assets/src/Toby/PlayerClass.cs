@@ -6,9 +6,10 @@ using System;
 public class PlayerClass : MonoBehaviour
 {
     public static PlayerClass Instance { get; private set; }
-
     [SerializeField] float moveSpeed;
-    protected int health;
+    //protected int health;
+
+    public int health; 
     bool BCMode;
     Rigidbody2D rgdb;
     Vector2 newPos;
