@@ -54,6 +54,8 @@ public class Autosave : MonoBehaviour
 
 		PlayerPrefs.SetInt("SavedScene", SceneManager.GetActiveScene().buildIndex);
 		//save the data in binary, more secure
+
+		//PlayerData data = null;
 		BinaryFormatter formatter = new BinaryFormatter();
 
 		//create a path using application.p...
@@ -63,7 +65,7 @@ public class Autosave : MonoBehaviour
 		FileStream stream = new FileStream(path, FileMode.Create);
 
 		//set the stream to the new gameobject, for PlayerData script.
-		Debug.Log("Health is " +heart);
+		//Debug.Log("Health is " +heart);
 		PlayerData data = new PlayerData();
 		formatter.Serialize(stream, data);
 
@@ -92,12 +94,13 @@ public class Autosave : MonoBehaviour
 		player.IsInteracting(false);
 		player.SetPlayerPos(new Vector2(-5.18f, -2.87f));
 
+		PlayerData data = null; 
 		string path = Application.persistentDataPath + "/data.ap";
 		BinaryFormatter formatter = new BinaryFormatter();
 		//Create a stream
 		FileStream stream = new FileStream(path, FileMode.Open);
 		//cast it as a playerClass
-		PlayerData data = (PlayerData)formatter.Deserialize(stream);
+	     data = (PlayerData)formatter.Deserialize(stream);
 		//_player = formatter.Deserialize(stream) as PlayerData;
 		//formatter.Deserialize(stream);
 		Debug.Log(data);
@@ -106,16 +109,3 @@ public class Autosave : MonoBehaviour
 
 }
 
-[System.Serializable]
-public class PlayerData
-{
-	public static int heartt;
-
-	public PlayerData()
-	{
-		heartt = Autosave.heart;
-	}
-
-
-
-}
