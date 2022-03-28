@@ -24,10 +24,12 @@ public class SoundManager : AudioManager
         }
     }
 
+
     public void Play(SoundEffect soundEffect)
     {
         audioSource.PlayOneShot(clips[soundEffect]);
     }
+
 
     protected override void ReadClips()
     {
@@ -36,6 +38,7 @@ public class SoundManager : AudioManager
             clips.Add(effect, Resources.Load("Sounds/" + effect.ToString()) as AudioClip);
         }
     }
+
 
     public enum SoundEffect
     {
