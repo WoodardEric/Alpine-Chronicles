@@ -19,6 +19,8 @@ public class Door : MonoBehaviour, IInteractable
     public void interact()
     {
         Open();
+        PlayerClass player = PlayerClass.Instance;
+        player.IsInteracting(false);
     }
 
     /*
