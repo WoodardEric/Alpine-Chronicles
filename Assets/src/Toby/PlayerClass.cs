@@ -21,7 +21,7 @@ public class PlayerClass : MonoBehaviour
     bool compSet;
     protected int updateNum;
 
-    [SerializeField] Animator animator;
+    public Animator animator;
     bool isMoving;
     float horizontalMov;
     float verticalMov;
@@ -73,26 +73,29 @@ public class PlayerClass : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetAxisRaw("Horizontal") != 0) && (Input.GetAxisRaw("Vertical") != 0))
+        if (!IsInteracting())
         {
-            verticalMov = Input.GetAxisRaw("Vertical");
-            horizontalMov = 0;
-            
-            isMoving = true;
+            if ((Input.GetAxisRaw("Horizontal") != 0) && (Input.GetAxisRaw("Vertical") != 0))
+            {
+                verticalMov = Input.GetAxisRaw("Vertical");
+                horizontalMov = 0;
+                
+                isMoving = true;
+            }
+            else if ((Input.GetAxisRaw("Horizontal") != 0) || (Input.GetAxisRaw("Vertical") != 0))
+            {
+                horizontalMov = Input.GetAxisRaw("Horizontal");
+                verticalMov = Input.GetAxisRaw("Vertical");
+                isMoving = true;
+            }
+            else
+            {
+                isMoving = false;
+            }
+            animator.SetFloat("Horizontal", horizontalMov);
+            animator.SetFloat("Vertical", verticalMov);
+            animator.SetBool("isMoving", isMoving);
         }
-        else if ((Input.GetAxisRaw("Horizontal") != 0) || (Input.GetAxisRaw("Vertical") != 0))
-        {
-            horizontalMov = Input.GetAxisRaw("Horizontal");
-            verticalMov = Input.GetAxisRaw("Vertical");
-            isMoving = true;
-        }
-        else
-        {
-            isMoving = false;
-        }
-        animator.SetFloat("Horizontal", horizontalMov);
-        animator.SetFloat("Vertical", verticalMov);
-        animator.SetBool("isMoving", isMoving);
     }
 
     void OnValidate()

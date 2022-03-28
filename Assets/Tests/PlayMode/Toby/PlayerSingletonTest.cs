@@ -14,7 +14,9 @@ public class PlayerSingletonTest
         // Create one instance of player
         GameObject player1 = new GameObject();
         player1.AddComponent<Rigidbody2D>();
+        Animator animator1 = player1.AddComponent<Animator>();
         PlayerClass player = player1.AddComponent<PlayerClass>();
+        player.animator = animator1;
 
         // Skip frame
         yield return null;
@@ -22,7 +24,9 @@ public class PlayerSingletonTest
         // Attempt to create a second instance of player
         GameObject player2 = new GameObject();
         player2.AddComponent<Rigidbody2D>();
+        Animator animator2 = player2.AddComponent<Animator>();
         PlayerClass secondInstance = player2.AddComponent<PlayerClass>();
+        secondInstance.animator = animator2;
 
 
         // Skip a frame
