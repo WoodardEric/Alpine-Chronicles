@@ -89,6 +89,7 @@ public class Autosave : MonoBehaviour
 		Debug.Log("Loading scene");
 		SceneManager.LoadScene(PlayerPrefs.GetInt("SavedScene"));
 		PlayerClass player = PlayerClass.Instance;
+		player.IsInteracting(false);
 		player.SetPlayerPos(new Vector2(-5.18f, -2.87f));
 
 		string path = Application.persistentDataPath + "/data.ap";

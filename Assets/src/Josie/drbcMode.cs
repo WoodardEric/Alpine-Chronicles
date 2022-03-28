@@ -33,6 +33,7 @@ public class drbcMode : MonoBehaviour
                 SceneManager.LoadScene("Level_0");
                 PlayerClass player = PlayerClass.Instance;
                 player.SetPlayerPos(new Vector2(-5.18f, -2.87f));
+                player.IsInteracting(false);
                 isValid = true; 
             }
             else
