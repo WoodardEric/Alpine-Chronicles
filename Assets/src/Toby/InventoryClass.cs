@@ -24,7 +24,13 @@ public class InventoryClass : MonoBehaviour
     {
         if (currentAmt < MAX_INV_SIZE)
         {
-            items[currentAmt] = addedItem;
+            for (int i = 0; i <= currentAmt; ++i)
+            {
+                if (items[i] == null)
+                {
+                    items[i] = addedItem;
+                }
+            }
             ++currentAmt;
             return true;
         }
@@ -34,28 +40,23 @@ public class InventoryClass : MonoBehaviour
 
     public bool RemoveItem(int index)
     {
-        Debug.Log(currentAmt);
         if (currentAmt <= 0)
         {
             return false;
         }
 
-        if (index < 0 || index > (currentAmt - 1))
+        if (index < 0 || index >= MAX_INV_SIZE)
         {
             return false;
         }
 
-        if (index == (currentAmt - 1))
+        if (items[index] == null)
         {
-            items[--currentAmt] = null;
-            return true;
+            return false;
         }
 
-        for (int i = index; i < (currentAmt - 1); ++i)
-        {
-            items[i] = items[i + 1];
-        }
-        items[--currentAmt] = null;
+        items[index] = null;
+        --currentAmt;
 
         return true;
     }

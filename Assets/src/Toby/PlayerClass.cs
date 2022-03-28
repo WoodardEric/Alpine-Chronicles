@@ -6,7 +6,6 @@ using System;
 
 public class PlayerClass : MonoBehaviour
 {
-    
     public static PlayerClass Instance { get; private set; }
     [SerializeField] float moveSpeed;
     protected int health;
@@ -56,6 +55,7 @@ public class PlayerClass : MonoBehaviour
         this.isMoving = false;
         this.horizontalMov = 0;
         this.verticalMov = 0;
+        animator.SetFloat("animSpeed", moveSpeed / 5);
 
         SetComponents();
     }
@@ -108,6 +108,7 @@ public class PlayerClass : MonoBehaviour
         {
             moveSpeed = 5;
         }
+        animator.SetFloat("animSpeed", moveSpeed / 5);
     }
 
     private void FixedUpdate()
@@ -261,6 +262,7 @@ public class PlayerClass : MonoBehaviour
     public void SetSpd(float newSpd)
     {
         moveSpeed = newSpd;
+        animator.SetFloat("animSpeed", moveSpeed / 5);
     }
 
     public float GetSpd()
