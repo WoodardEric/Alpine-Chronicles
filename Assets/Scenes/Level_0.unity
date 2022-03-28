@@ -829,6 +829,10 @@ PrefabInstance:
       value: 0.48093593
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879784, guid: cf27ef728434a4c4b82f1175fc7065ea, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113303940370879784, guid: cf27ef728434a4c4b82f1175fc7065ea, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.44000006
       objectReference: {fileID: 0}
@@ -838,7 +842,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879784, guid: cf27ef728434a4c4b82f1175fc7065ea, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879784, guid: cf27ef728434a4c4b82f1175fc7065ea, type: 3}
       propertyPath: m_LocalRotation.w
@@ -874,7 +878,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879786, guid: cf27ef728434a4c4b82f1175fc7065ea, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5305277600787681461, guid: cf27ef728434a4c4b82f1175fc7065ea, type: 3}
+      propertyPath: dialogContentRollout.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5305277600787681461, guid: cf27ef728434a4c4b82f1175fc7065ea, type: 3}
+      propertyPath: dialogContentRollout.Array.data[0]
+      value: Welcome to Alpine Chronicles!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5305277600787681461, guid: cf27ef728434a4c4b82f1175fc7065ea, type: 3}
+      propertyPath: dialogContentRollout.Array.data[1]
+      value: Press E to play, pres powriuhgnjfko ugsh oivygrt bfht fonilksujntbgh
+        tirbkfnjlnbg i cjnvkbr igvdfjnng irfbhkdjnvcm,obfuhjn
+      objectReference: {fileID: 0}
+    - target: {fileID: 5305277600787681461, guid: cf27ef728434a4c4b82f1175fc7065ea, type: 3}
+      propertyPath: dialogContentRollout.Array.data[2]
+      value: oiunvoiuhybo56789yut9vnkjmo9458yo9458untumjfout50wv98utm0c9r8v5t89mjw409igj,cf0m9tu30v985tu5m9cw-9t8jmvjgpotigj430958ut-549mtuotkjmeoirtujy034985uy3powi5jmtlkrjvgtmoiy468u09yum54opvtho58u390tiwrupoijfkjon94irtuhj
       objectReference: {fileID: 0}
     - target: {fileID: 6699535382720247392, guid: cf27ef728434a4c4b82f1175fc7065ea, type: 3}
       propertyPath: m_Size.y
