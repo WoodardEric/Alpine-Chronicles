@@ -2,17 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemClass : MonoBehaviour
+public abstract class ItemClass
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public abstract string itemName{get;}
+    public abstract int strength{get;}
+    public abstract int health{get;}
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public abstract Sprite spriteImage{get;}
+    public abstract (int str, int len)tempStrength{get;}
+    public abstract (int spd, int len)tempSpeed{get;}
 }
