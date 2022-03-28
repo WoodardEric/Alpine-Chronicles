@@ -21,6 +21,11 @@ public class PlayerClass : MonoBehaviour
     bool compSet;
     protected int updateNum;
 
+    [SerializeField] Animator animator;
+    bool isMoving;
+    float horizontalMov;
+    float verticalMov;
+
     private void Awake()
     {
         // Ensure that only one instance of the player can exist
@@ -48,6 +53,10 @@ public class PlayerClass : MonoBehaviour
         this.frozen = false;
         this.interacting = false;
         this.compSet = false;
+        this.isMoving = false;
+        this.horizontalMov = 0;
+        this.verticalMov = 0;
+
         SetComponents();
     }
 
@@ -64,7 +73,26 @@ public class PlayerClass : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if ((Input.GetAxisRaw("Horizontal") != 0) && (Input.GetAxisRaw("Vertical") != 0))
+        {
+            verticalMov = Input.GetAxisRaw("Vertical");
+            horizontalMov = 0;
+            
+            isMoving = true;
+        }
+        else if ((Input.GetAxisRaw("Horizontal") != 0) || (Input.GetAxisRaw("Vertical") != 0))
+        {
+            horizontalMov = Input.GetAxisRaw("Horizontal");
+            verticalMov = Input.GetAxisRaw("Vertical");
+            isMoving = true;
+        }
+        else
+        {
+            isMoving = false;
+        }
+        animator.SetFloat("Horizontal", horizontalMov);
+        animator.SetFloat("Vertical", verticalMov);
+        animator.SetBool("isMoving", isMoving);
     }
 
     void OnValidate()

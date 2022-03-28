@@ -22,4 +22,17 @@ public class PlayerInventory : InventoryClass
         items[itemOne] = items[itemTwo];
         items[itemTwo] = temp;
     }
+
+    public ItemClass SwitchEquipped(int index, ItemClass item)
+    {
+        if (items[index] == null)
+        {
+            items[index] = item;
+            ++currentAmt;
+            return null;
+        }
+        ItemClass temp = items[index];
+        items[index] = item;
+        return temp;
+    }
 }

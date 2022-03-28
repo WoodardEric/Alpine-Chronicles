@@ -5,7 +5,7 @@ using UnityEngine;
 public class InventoryClass : MonoBehaviour
 {
     const int MAX_INV_SIZE = 20;
-    int currentAmt;
+    protected int currentAmt;
     protected ItemClass[] items = new ItemClass[MAX_INV_SIZE];
 
     // Start is called before the first frame update
