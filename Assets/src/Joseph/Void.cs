@@ -39,6 +39,11 @@ public class Void : MonoBehaviour
             return;
         }
 
+        if(other.isTrigger)
+        {
+            return;
+        }
+
         //Move Player to the start of the area
         if(scene == 1)
         {
