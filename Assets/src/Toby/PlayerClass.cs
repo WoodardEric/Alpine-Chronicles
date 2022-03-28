@@ -114,7 +114,6 @@ public class PlayerClass : MonoBehaviour
         {
             moveSpeed = 5;
         }
-        animator.SetFloat("animSpeed", moveSpeed / 5);
     }
 
     private void FixedUpdate()
@@ -310,6 +309,11 @@ public class PlayerClass : MonoBehaviour
         return this.BCMode;
     }
 
+    public Vector2 getPos()
+    {
+        return new Vector2(this.transform.position.x, this.transform.position.y);
+    }
+
     public void SetPlayerPos(Vector2 pos)
     {
         // Set the player's position
@@ -324,6 +328,11 @@ public class PlayerClass : MonoBehaviour
     public bool RemoveInvItem(int invIndex)
     {
         return this.inventory.RemoveItem(invIndex);
+    }
+
+    public bool RemoveInvItem(string itemName)
+    {
+        return this.inventory.RemoveItem(itemName);
     }
 
     public int GetNumInvItems()
