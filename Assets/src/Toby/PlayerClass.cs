@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+
 public class PlayerClass : MonoBehaviour
 {
     public static PlayerClass Instance { get; private set; }
-
     [SerializeField] float moveSpeed;
     protected int health;
+    protected int playerAtk;
     bool BCMode;
     Rigidbody2D rgdb;
     Vector2 newPos;
@@ -17,7 +18,12 @@ public class PlayerClass : MonoBehaviour
     bool gameOver;
     PlayerInventory inventory;
     bool compSet;
-    int updateNum;
+    protected int updateNum;
+
+    public Animator animator;
+    bool isMoving;
+    float horizontalMov;
+    float verticalMov;
 
     private void Awake()
     {
@@ -39,16 +45,22 @@ public class PlayerClass : MonoBehaviour
     {
         // Initialize player
         this.health = 100;
+        this.playerAtk = 1;
         this.updateNum = 0;
         this.BCMode = false;
         this.gameOver = false;
         this.frozen = false;
         this.interacting = false;
         this.compSet = false;
-        setComponents();
+        this.isMoving = false;
+        this.horizontalMov = 0;
+        this.verticalMov = 0;
+        animator.SetFloat("animSpeed", moveSpeed / 5);
+
+        SetComponents();
     }
 
-    public void setComponents()
+    public void SetComponents()
     {
         if (!compSet)
         {
@@ -61,7 +73,29 @@ public class PlayerClass : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (!IsInteracting())
+        {
+            if ((Input.GetAxisRaw("Horizontal") != 0) && (Input.GetAxisRaw("Vertical") != 0))
+            {
+                verticalMov = Input.GetAxisRaw("Vertical");
+                horizontalMov = 0;
+                
+                isMoving = true;
+            }
+            else if ((Input.GetAxisRaw("Horizontal") != 0) || (Input.GetAxisRaw("Vertical") != 0))
+            {
+                horizontalMov = Input.GetAxisRaw("Horizontal");
+                verticalMov = Input.GetAxisRaw("Vertical");
+                isMoving = true;
+            }
+            else
+            {
+                isMoving = false;
+            }
+            animator.SetFloat("Horizontal", horizontalMov);
+            animator.SetFloat("Vertical", verticalMov);
+            animator.SetBool("isMoving", isMoving);
+        }
     }
 
     void OnValidate()
@@ -74,6 +108,7 @@ public class PlayerClass : MonoBehaviour
         {
             moveSpeed = 5;
         }
+        animator.SetFloat("animSpeed", moveSpeed / 5);
     }
 
     private void FixedUpdate()
@@ -114,8 +149,14 @@ public class PlayerClass : MonoBehaviour
             return;
         }
         
-        pickupItem(other.gameObject.GetComponent<ItemClass>());
-        
+        //ItemFactory factory = null;
+        if (other.gameObject.name == "Katana")
+        {
+            //factory = new KatanaFactory();
+        }
+        //ItemClass item = factory.GetItemClass();
+        //PickupItem(item);
+        //Destroy(other.gameObject);
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -142,26 +183,26 @@ public class PlayerClass : MonoBehaviour
         this.updateNum = 0;
     }
 
-    private void pickupItem(ItemClass item)
+    private void PickupItem(ItemClass item)
     {
-        addInvItem(item);
-        Debug.Log("Player has picked up a " + item.name + " item.");
+        AddInvItem(item);
+        //Debug.Log("Player has picked up a " + item.name + " item.");
     }
 
-    public bool isInteracting()
+    public bool IsInteracting()
     {
         // Show whether use is interacting with something
         return this.interacting;
     }
 
-    public void isInteracting(bool isInteracting)
+    public void IsInteracting(bool isInteracting)
     {
         // Freeze the player and update interacting variables
         this.interacting = isInteracting;
         this.frozen = isInteracting;
     }
 
-    public void updateHealth(int change)
+    public void UpdateHealth(int change)
     {
         if (++this.updateNum > 1)
         {
@@ -199,39 +240,42 @@ public class PlayerClass : MonoBehaviour
         }
         // If user's health will be less than 0, set it to 0 and trigger game over
         else if ((this.health + change) <= 0)
-        {
+        {Debug.Log("MADE IT HERE");
             this.health = 0;
-            this.gameOverAct();
+            this.GameOverAct();
         }
         // Adjust health as normal
         else
         {
             this.health += change;
         }
+        
         Debug.Log("Player health is now " + this.health);
+        
     }
 
-    public int getHealth()
+    public int GetHealth()
     {
         return health;
     }
 
-    public void setSpd(float newSpd)
+    public void SetSpd(float newSpd)
     {
         moveSpeed = newSpd;
+        animator.SetFloat("animSpeed", moveSpeed / 5);
     }
 
-    public float getSpd()
+    public float GetSpd()
     {
         return moveSpeed;
     }
 
-    private void gameOverAct()
+    private void GameOverAct()
     {
 
     }
 
-    public bool startBCMode(string password)
+    public bool StartBCMode(string password)
     {
         // Check whether password is correct
         if (password.Equals("GoBig", StringComparison.Ordinal))
@@ -243,39 +287,39 @@ public class PlayerClass : MonoBehaviour
         return this.BCMode;
     }
 
-    public void setPlayerPos(Vector2 pos)
+    public void SetPlayerPos(Vector2 pos)
     {
         // Set the player's position
         this.transform.position = new Vector3(pos.x, pos.y, 0);
     }
 
-    public bool addInvItem(ItemClass addedItem)
+    public bool AddInvItem(ItemClass addedItem)
     {
-        return this.inventory.addItem(addedItem);
+        return this.inventory.AddItem(addedItem);
     }
 
-    public bool removeInvItem(int invIndex)
+    public bool RemoveInvItem(int invIndex)
     {
-        return this.inventory.removeItem(invIndex);
+        return this.inventory.RemoveItem(invIndex);
     }
 
-    public int getNumInvItems()
+    public int GetNumInvItems()
     {
-        return this.inventory.getNumItems();
+        return this.inventory.GetNumItems();
     }
 
-    public int getMaxItems()
+    public int GetMaxItems()
     {
-        return this.inventory.getMaxItems();
+        return this.inventory.GetMaxItems();
     }
 
-    public ItemClass getInvItem(int index)
+    public ItemClass GetInvItem(int index)
     {
-        return inventory.getItem(index);
+        return inventory.GetItem(index);
     }
 
-    public void switchInvItems(int InvitemOne, int InvitemTwo)
+    public void SwitchInvItems(int InvitemOne, int InvitemTwo)
     {
-        inventory.switchItems(InvitemOne, InvitemTwo);
+        inventory.SwitchItems(InvitemOne, InvitemTwo);
     }
 }

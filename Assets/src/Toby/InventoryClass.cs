@@ -5,7 +5,7 @@ using UnityEngine;
 public class InventoryClass : MonoBehaviour
 {
     const int MAX_INV_SIZE = 20;
-    int currentAmt;
+    protected int currentAmt;
     protected ItemClass[] items = new ItemClass[MAX_INV_SIZE];
 
     // Start is called before the first frame update
@@ -20,11 +20,17 @@ public class InventoryClass : MonoBehaviour
         
     }
 
-    public bool addItem(ItemClass addedItem)
+    public bool AddItem(ItemClass addedItem)
     {
         if (currentAmt < MAX_INV_SIZE)
         {
-            items[currentAmt] = addedItem;
+            for (int i = 0; i <= currentAmt; ++i)
+            {
+                if (items[i] == null)
+                {
+                    items[i] = addedItem;
+                }
+            }
             ++currentAmt;
             return true;
         }
@@ -32,44 +38,40 @@ public class InventoryClass : MonoBehaviour
         return false;
     }
 
-    public bool removeItem(int index)
+    public bool RemoveItem(int index)
     {
         if (currentAmt <= 0)
         {
             return false;
         }
 
-        if (index < 0 || index > (currentAmt - 1))
+        if (index < 0 || index >= MAX_INV_SIZE)
         {
             return false;
         }
 
-        if (index == (currentAmt - 1))
+        if (items[index] == null)
         {
-            items[--currentAmt] = null;
-            return true;
+            return false;
         }
 
-        for (int i = index; i < (currentAmt - 1); ++i)
-        {
-            items[i] = items[i + 1];
-        }
-        items[--currentAmt] = null;
+        items[index] = null;
+        --currentAmt;
 
         return true;
     }
 
-    public int getNumItems()
+    public int GetNumItems()
     {
         return currentAmt;
     }
 
-    public int getMaxItems()
+    public int GetMaxItems()
     {
         return MAX_INV_SIZE;
     }
 
-    public ItemClass getItem(int index)
+    public ItemClass GetItem(int index)
     {
         return items[index];
     }

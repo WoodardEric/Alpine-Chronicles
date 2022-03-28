@@ -11,7 +11,7 @@ public class LoadMenu : MonoBehaviour
         Debug.Log("Loading scene");
         SceneManager.LoadScene(PlayerPrefs.GetInt("SavedScene"));
         PlayerClass player = PlayerClass.Instance;
-        player.setPlayerPos(new Vector2(-5.18f, -2.87f));
+        player.SetPlayerPos(new Vector2(-5.18f, -2.87f));
     } 
         
 }

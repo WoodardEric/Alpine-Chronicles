@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3022360188257608767}
   - component: {fileID: -5508029284327070923}
   - component: {fileID: 3449590482529084681}
+  - component: {fileID: -4938616994018200509}
   m_Layer: 0
   m_Name: StrengthPotion
   m_TagString: Untagged
@@ -109,3 +110,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-4938616994018200509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2319419808930121189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba28f1ebad9ef4fc5b1e77665200aae2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

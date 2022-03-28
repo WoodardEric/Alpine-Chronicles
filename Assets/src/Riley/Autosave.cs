@@ -8,15 +8,19 @@ using UnityEngine.SceneManagement;
 
 public class Autosave : MonoBehaviour
 {
+	public static PlayerData Activesave; 
 	public float Timer = 0;
 	public bool SaveGame = false;
 	public float Timecheck = 1800f;
+	public PlayerClass _player = null;
+	public static int heart; 
 
-	public PlayerData _player;
 
 	// Start is called before the first frame update
 	void Start()
 	{
+		_player = PlayerClass.Instance;
+		heart = _player.GetHealth();
 		Timer = Timer + 1 * Time.deltaTime;
 
 	}
@@ -33,41 +37,36 @@ public class Autosave : MonoBehaviour
 		if (SaveGame == true)
 		{
 			Debug.Log("AutoSaving Data...");
-			savelevel();
-			savefunction();
+			//savelevel();
+			//SavePlayerFunc();
 			Timer = 0f;
 		}
 	}
-
-	public void savefunction()
-	{   //Create the same thing here as save load manager, you have to pass in data to auto save. 
-		//SaveLoadManager.SavePlayerFunc(PlayerClass, player);
-	}
-
+	
 	public void savelevel()
 	{   //Get active scene
 		PlayerPrefs.SetInt("SavedScene", SceneManager.GetActiveScene().buildIndex);
 
 	}
 
-}
-
-public class SaveLoadManager : MonoBehaviour
-{
-	public static void SavePlayerFunc(PlayerClass _player)
+	public static void SavePlayerFunc()
 	{
+
+		PlayerPrefs.SetInt("SavedScene", SceneManager.GetActiveScene().buildIndex);
 		//save the data in binary, more secure
+
+		//PlayerData data = null;
 		BinaryFormatter formatter = new BinaryFormatter();
 
 		//create a path using application.p...
 		string path = Application.persistentDataPath + "/data.ap";
 
 		//Create a stream
-		FileStream stream = new FileStream(path, FileMode.OpenOrCreate);
+		FileStream stream = new FileStream(path, FileMode.Create);
 
 		//set the stream to the new gameobject, for PlayerData script.
-
-		Playerinfo data = new Playerinfo(_player);
+		//Debug.Log("Health is " +heart);
+		PlayerData data = new PlayerData();
 		formatter.Serialize(stream, data);
 
 		//print out file location
@@ -88,27 +87,25 @@ public class SaveLoadManager : MonoBehaviour
 
 	public static void load()
 	{
+		//Load the level using player prefs. 
+		Debug.Log("Loading scene");
+		SceneManager.LoadScene(PlayerPrefs.GetInt("SavedScene"));
+		PlayerClass player = PlayerClass.Instance;
+		player.IsInteracting(false);
+		player.SetPlayerPos(new Vector2(-5.18f, -2.87f));
+
+		PlayerData data = null; 
 		string path = Application.persistentDataPath + "/data.ap";
 		BinaryFormatter formatter = new BinaryFormatter();
 		//Create a stream
 		FileStream stream = new FileStream(path, FileMode.Open);
 		//cast it as a playerClass
-		Playerinfo data = (Playerinfo)formatter.Deserialize(stream);
+	     data = (PlayerData)formatter.Deserialize(stream);
 		//_player = formatter.Deserialize(stream) as PlayerData;
-		Debug.Log("file loaded");
+		//formatter.Deserialize(stream);
+		Debug.Log(data);
 		stream.Close();
 	}
+
 }
 
-[System.Serializable]
-public class Playerinfo
-{
-	public int[] stats;
-
-	public Playerinfo(PlayerClass player)
-	{
-		stats = new int[4];
-		//stats[0] = player.health; 
-
-	}
-}

@@ -32,7 +32,8 @@ public class drbcMode : MonoBehaviour
             {
                 SceneManager.LoadScene("Level_0");
                 PlayerClass player = PlayerClass.Instance;
-                player.setPlayerPos(new Vector2(-5.18f, -2.87f));
+                player.SetPlayerPos(new Vector2(-5.18f, -2.87f));
+                player.IsInteracting(false);
                 isValid = true; 
             }
             else
@@ -48,7 +49,7 @@ public class drbcMode : MonoBehaviour
     {
         PlayerClass player = PlayerClass.Instance;
         
-        bool correct = player.startBCMode(s); //GoBig 
+        bool correct = player.StartBCMode(s); //GoBig 
 
         if(correct == true)
         {

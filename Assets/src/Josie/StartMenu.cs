@@ -5,13 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour
 {
+    PlayerClass player = null;
         public void PlayGame()
         {
+            player.IsInteracting(false);
             //to load the next scene in the queue
             Debug.Log("change to level_0 scene");
             SceneManager.LoadScene("Level_0");
-            PlayerClass player = PlayerClass.Instance;
-            player.setPlayerPos(new Vector2(-5.18f, -2.87f));
+            player.SetPlayerPos(new Vector2(-5.18f, -2.87f));
         }
 
         public void drBcMode()
@@ -27,7 +28,8 @@ public class StartMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = PlayerClass.Instance;
+        player.IsInteracting(true);
     }
 
     // Update is called once per frame
