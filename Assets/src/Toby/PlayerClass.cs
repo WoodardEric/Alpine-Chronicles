@@ -96,6 +96,12 @@ public class PlayerClass : MonoBehaviour
             animator.SetFloat("Vertical", verticalMov);
             animator.SetBool("isMoving", isMoving);
         }
+        else
+        {
+            animator.SetFloat("Horizontal", horizontalMov);
+            animator.SetFloat("Vertical", verticalMov);
+            animator.SetBool("isMoving", false);
+        }
     }
 
     void OnValidate()
@@ -113,6 +119,15 @@ public class PlayerClass : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (this.IsInteracting())
+        {
+            this.rgdb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
+        }
+        else if (!IsInteracting() && ((rgdb.constraints & RigidbodyConstraints2D.FreezePosition) != RigidbodyConstraints2D.None))
+        {
+            this.rgdb.constraints &= ~RigidbodyConstraints2D.FreezePositionX;
+            this.rgdb.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
+        }
         // If the player is not currently interacting with something
         if(!this.frozen)
         {
@@ -149,14 +164,14 @@ public class PlayerClass : MonoBehaviour
             return;
         }
         
-        //ItemFactory factory = null;
+        ItemFactory factory = null;
         if (other.gameObject.name == "Katana")
         {
-            //factory = new KatanaFactory();
+            factory = new KatanaFactory();
         }
-        //ItemClass item = factory.GetItemClass();
-        //PickupItem(item);
-        //Destroy(other.gameObject);
+        ItemClass item = factory.GetItemClass();
+        PickupItem(item);
+        Destroy(other.gameObject);
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -240,7 +255,7 @@ public class PlayerClass : MonoBehaviour
         }
         // If user's health will be less than 0, set it to 0 and trigger game over
         else if ((this.health + change) <= 0)
-        {Debug.Log("MADE IT HERE");
+        {
             this.health = 0;
             this.GameOverAct();
         }
@@ -261,6 +276,14 @@ public class PlayerClass : MonoBehaviour
 
     public void SetSpd(float newSpd)
     {
+        if (newSpd > 15)
+        {
+            newSpd = 15;
+        }
+        else if (newSpd < 2.5f)
+        {
+            newSpd = 2.5f;
+        }
         moveSpeed = newSpd;
         animator.SetFloat("animSpeed", moveSpeed / 5);
     }
