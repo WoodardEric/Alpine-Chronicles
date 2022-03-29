@@ -164,13 +164,89 @@ public class PlayerClass : MonoBehaviour
         }
         
         ItemFactory factory = null;
-        if (other.gameObject.name == "Katana")
+        factory = getFactory(other.gameObject.name);
+
+        if (factory != null)
         {
-            factory = new KatanaFactory();
+            ItemClass item = factory.GetItemClass();
+            if (PickupItem(item))
+            {
+                Destroy(other.gameObject);
+            }
         }
-        ItemClass item = factory.GetItemClass();
-        PickupItem(item);
-        Destroy(other.gameObject);
+    }
+
+    public ItemFactory getFactory(string val)
+    {
+        if (val == "Katana")
+        {
+            return new KatanaFactory();
+        }
+        else if (val == "Weapon2")
+        {
+            return new Weapon2Factory();
+        }
+        else if (val == "Weapon3")
+        {
+            return new Weapon3Factory();
+        }
+        else if (val == "Weapon4")
+        {
+            return new Weapon4Factory();
+        }
+        else if (val == "Weapon5")
+        {
+            return new Weapon5Factory();
+        }
+        else if (val == "Weapon6")
+        {
+            return new Weapon6Factory();
+        }
+        else if (val == "Weapon7")
+        {
+            return new Weapon7Factory();
+        }
+        else if (val == "Weapon8")
+        {
+            return new Weapon8Factory();
+        }
+        else if (val == "Weapon9")
+        {
+            return new Weapon9Factory();
+        }
+        else if (val == "HealthApple")
+        {
+            return new HealthAppleFactory();
+        }
+        else if (val == "HealthCheese")
+        {
+            return new HealthCheeseFactory();
+        }
+        else if (val == "HealthPotion")
+        {
+            return new HealthPotionFactory();
+        }
+        else if (val == "SpeedPotion")
+        {
+            return new SpeedPotionFactory();
+        }
+        else if (val == "StrengthPotion")
+        {
+            return new StrengthPotionFactory();
+        }
+        else if (val == "BossKey")
+        {
+            return new BossKeyFactory();
+        }
+        else if (val == "RoomKey1")
+        {
+            return new RoomKey1Factory();
+        }
+        else if (val == "RoomKey2")
+        {
+            return new RoomKey2Factory();
+        }
+        return null;
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -197,10 +273,9 @@ public class PlayerClass : MonoBehaviour
         this.updateNum = 0;
     }
 
-    private void PickupItem(ItemClass item)
+    private bool PickupItem(ItemClass item)
     {
-        AddInvItem(item);
-        //Debug.Log("Player has picked up a " + item.name + " item.");
+        return AddInvItem(item);
     }
 
     public bool IsInteracting()
@@ -350,8 +425,18 @@ public class PlayerClass : MonoBehaviour
         return inventory.GetItem(index);
     }
 
+    public ItemClass GetInvItem(string name)
+    {
+        return inventory.GetItem(name);
+    }
+
     public void SwitchInvItems(int InvitemOne, int InvitemTwo)
     {
         inventory.SwitchItems(InvitemOne, InvitemTwo);
+    }
+
+    public void TestingList()
+    {
+        inventory.CreateTestList();
     }
 }

@@ -26,6 +26,7 @@ public class InventoryTesting
     [Test]
     public void InvSizeTest()
     {
+        player.TestingList();
         Assert.IsFalse(player.RemoveInvItem(0));
 
         Assert.AreEqual(0, player.GetNumInvItems());
