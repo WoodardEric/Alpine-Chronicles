@@ -4,51 +4,51 @@ using UnityEngine;
 
 public class Weapon6 : ItemClass
 {
-    private readonly string _itemName;
-    private int _strength;
-    private int _health;
+    private readonly string subItemName;
+    private int subStrength;
+    private int subHealth;
 
-    private Sprite _spriteImage;
-    private (int str, int len) _tempStrength;
-    private (int spd, int len) _tempSpeed;
+    private Sprite subSpriteImage;
+    private (int str, int len) subTempStrength;
+    private (int spd, int len) subTempSpeed;
 
     public Weapon6()
     {
-        _itemName = "Weapon6";
-        _strength = 3;
-        _health = -1; // error state, if the thing doesnt change it
-        _tempStrength = (-1, -1);
-        _tempSpeed = (-1, -1); //if speed, first number is increase by how much, and second is for how long in seconds
-        _spriteImage = Resources.Load<Sprite>("Items Pack/Pixel Art Icon Pack - RPG/Texture/Weapon & Tool/Emerald Staff.png");
+        subItemName = "Weapon6";
+        subStrength = 3;
+        subHealth = -1; // error state, if the thing doesnt change it
+        subTempStrength = (-1, -1);
+        subTempSpeed = (-1, -1); //if speed, first number is increase by how much, and second is for how long in seconds
+        subSpriteImage = Resources.Load<Sprite>("Items Pack/Pixel Art Icon Pack - RPG/Texture/Weapon & Tool/Emerald Staff.png");
 
     }
 
     public override string itemName
     {
-        get {return _itemName;}
+        get {return subItemName;}
     }
 
     public override Sprite spriteImage
     {
-        get {return _spriteImage;}
+        get {return subSpriteImage;}
     }
     public override int strength
     {
-        get {return _strength;}
+        get {return subStrength;}
     }
     public override int health
     {
-        get {return _health;}
+        get {return subHealth;}
     }
 
 
     public override (int, int) tempStrength
     {
-        get {return _tempStrength;}
+        get {return subTempStrength;}
     }
 
     public override (int, int) tempSpeed
     {
-        get {return _tempSpeed;}
+        get {return subTempSpeed;}
     }
 }

@@ -16,6 +16,7 @@ public class InventoryClass : MonoBehaviour
         itemsTest = new ConcreteAggregate();
     }
 
+
     public bool AddItem(ItemClass addedItem)
     {
         if (itemsTest.Count >= MAX_INV_SIZE)
@@ -28,6 +29,7 @@ public class InventoryClass : MonoBehaviour
         return true;
     }
 
+
     public bool RemoveItem(int index)
     {
         bool isDeleted = itemsTest.DeleteItem(index);
@@ -38,6 +40,7 @@ public class InventoryClass : MonoBehaviour
         }
         return isDeleted;
     }
+
 
     public bool RemoveItem(string nameOfItem)
     {
@@ -60,15 +63,18 @@ public class InventoryClass : MonoBehaviour
         return isDeleted;
     }
 
+
     public int GetNumItems()
     {
         return currentAmt;
     }
 
+
     public int GetMaxItems()
     {
         return MAX_INV_SIZE;
     }
+
 
     public ItemClass GetItem(int index)
     {
@@ -78,6 +84,7 @@ public class InventoryClass : MonoBehaviour
         }
         return (ItemClass) itemsTest[index];
     }
+
 
     public ItemClass GetItem(string name)
     {

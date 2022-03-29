@@ -11,6 +11,7 @@ public class PlayerInventory : InventoryClass
         itemsTest = new ConcreteAggregate();
     }
 
+
     public bool SwitchItems(int itemOne, int itemTwo)
     {
         if (itemOne < 0 || itemOne >= itemsTest.Count)
@@ -33,6 +34,7 @@ public class PlayerInventory : InventoryClass
         items[itemTwo] = temp;
         return true;
     }
+
 
     public (bool, ItemClass) SwitchEquipped(int index, ItemClass item)
     {
@@ -59,6 +61,7 @@ public class PlayerInventory : InventoryClass
         itemsTest[index] = item;
         return (true, temp);
     }
+
 
     public void CreateTestList()
     {

@@ -9,17 +9,22 @@ public class ConcreteAggregate : Aggregate
     {
         return new ConcreteIterator(this);
     }
+
+    
     // Get item count
     public int Count
     {
         get { return items.Count; }
     }
+
+
     // Indexer
     public object this[int index]
     {
         get { return items[index]; }
         set { items.Insert(index, value); }
     }
+
 
     public bool DeleteItem(int index)
     {

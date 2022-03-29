@@ -39,6 +39,7 @@ public class PlayerClass : MonoBehaviour
         }
     }
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -59,6 +60,7 @@ public class PlayerClass : MonoBehaviour
         SetComponents();
     }
 
+
     public void SetComponents()
     {
         if (!compSet)
@@ -68,6 +70,7 @@ public class PlayerClass : MonoBehaviour
             compSet = true;
         }
     }
+
 
     // Update is called once per frame
     void Update()
@@ -103,6 +106,7 @@ public class PlayerClass : MonoBehaviour
         }
     }
 
+
     void OnValidate()
     {
         if (moveSpeed > 15)
@@ -114,6 +118,7 @@ public class PlayerClass : MonoBehaviour
             moveSpeed = 5;
         }
     }
+
 
     private void FixedUpdate()
     {
@@ -149,6 +154,7 @@ public class PlayerClass : MonoBehaviour
         }
     }
 
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         // Check if user is interacting with something interactable or an item
@@ -174,6 +180,7 @@ public class PlayerClass : MonoBehaviour
             }
         }
     }
+
 
     public ItemFactory getFactory(string val)
     {
@@ -248,6 +255,7 @@ public class PlayerClass : MonoBehaviour
         return null;
     }
 
+
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.tag != "interactable")
@@ -265,6 +273,7 @@ public class PlayerClass : MonoBehaviour
         }
     }
 
+
     private void OnTriggerExit2D(Collider2D other)
     {
         // Reset the player interaction
@@ -272,10 +281,12 @@ public class PlayerClass : MonoBehaviour
         this.updateNum = 0;
     }
 
+
     private bool PickupItem(ItemClass item)
     {
         return AddInvItem(item);
     }
+
 
     public bool IsInteracting()
     {
@@ -283,12 +294,14 @@ public class PlayerClass : MonoBehaviour
         return this.interacting;
     }
 
+
     public void IsInteracting(bool isInteracting)
     {
         // Freeze the player and update interacting variables
         this.interacting = isInteracting;
         this.frozen = isInteracting;
     }
+
 
     public void UpdateHealth(int change)
     {
@@ -342,6 +355,7 @@ public class PlayerClass : MonoBehaviour
         
     }
 
+
     public int GetHealth()
     {
         return health;
@@ -361,15 +375,18 @@ public class PlayerClass : MonoBehaviour
         animator.SetFloat("animSpeed", moveSpeed / 5);
     }
 
+
     public float GetSpd()
     {
         return moveSpeed;
     }
 
+
     private void GameOverAct()
     {
 
     }
+
 
     public bool StartBCMode(string password)
     {
@@ -383,10 +400,12 @@ public class PlayerClass : MonoBehaviour
         return this.BCMode;
     }
 
+
     public Vector2 getPos()
     {
         return new Vector2(this.transform.position.x, this.transform.position.y);
     }
+
 
     public void SetPlayerPos(Vector2 pos)
     {
@@ -394,45 +413,54 @@ public class PlayerClass : MonoBehaviour
         this.transform.position = new Vector3(pos.x, pos.y, 0);
     }
 
+
     public bool AddInvItem(ItemClass addedItem)
     {
         return this.inventory.AddItem(addedItem);
     }
+
 
     public bool RemoveInvItem(int invIndex)
     {
         return this.inventory.RemoveItem(invIndex);
     }
 
+
     public bool RemoveInvItem(string itemName)
     {
         return this.inventory.RemoveItem(itemName);
     }
+
 
     public int GetNumInvItems()
     {
         return this.inventory.GetNumItems();
     }
 
+
     public int GetMaxItems()
     {
         return this.inventory.GetMaxItems();
     }
+
 
     public ItemClass GetInvItem(int index)
     {
         return inventory.GetItem(index);
     }
 
+
     public ItemClass GetInvItem(string name)
     {
         return inventory.GetItem(name);
     }
 
+
     public void SwitchInvItems(int InvitemOne, int InvitemTwo)
     {
         inventory.SwitchItems(InvitemOne, InvitemTwo);
     }
+
 
     public void TestingList()
     {
