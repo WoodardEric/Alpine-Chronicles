@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class InventoryClass : MonoBehaviour
 {
@@ -59,6 +60,20 @@ public class InventoryClass : MonoBehaviour
         --currentAmt;
 
         return true;
+    }
+
+    public bool RemoveItem(string nameOfItem)
+    {
+        for (int i = 0; i < this.GetMaxItems(); ++i)
+        {
+            if (items[i].itemName.Equals(nameOfItem, StringComparison.Ordinal))
+            {
+                items[i] = null;
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public int GetNumItems()

@@ -8,6 +8,7 @@ public class InventoryTesting
 {
     GameObject gameObject;
     PlayerClass player;
+    Animator animator;
 
     // Arrange
     [SetUp]
@@ -17,6 +18,8 @@ public class InventoryTesting
         gameObject = new GameObject();
         gameObject.AddComponent<PlayerInventory>();
         player = gameObject.AddComponent<PlayerClass>();
+        animator = gameObject.AddComponent<Animator>();
+        player.animator = animator;
         player.SetComponents();
     }
     
@@ -26,17 +29,17 @@ public class InventoryTesting
         Assert.IsFalse(player.RemoveInvItem(0));
 
         Assert.AreEqual(0, player.GetNumInvItems());
-        //ItemFactory factory = new KatanaFactory();
+        ItemFactory factory = new KatanaFactory();
         for (int i = 0; i < player.GetMaxItems(); ++i)
         {
-            //ItemClass item = factory.GetItemClass();
-            //player.AddInvItem(item);
+            ItemClass item = factory.GetItemClass();
+            player.AddInvItem(item);
         }
 
         Assert.AreEqual(20, player.GetNumInvItems());
 
-        //ItemClass outsideItem = factory.GetItemClass();
-        //Assert.IsFalse(player.AddInvItem(outsideItem));
+        ItemClass outsideItem = factory.GetItemClass();
+        Assert.IsFalse(player.AddInvItem(outsideItem));
 
         Assert.AreEqual(20, player.GetNumInvItems());
     }
