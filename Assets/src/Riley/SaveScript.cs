@@ -8,13 +8,14 @@ using UnityEngine.SceneManagement;
 
 public class SaveScript : MonoBehaviour
 {
-    public int healthy;
+    //public int healthy;
     public PlayerClass player = null;
+    public Slider slider;
     //public HealthBar Slider; 
     // Start is called before the first frame update
     void Start()
     {
-        
+       
         player = PlayerClass.Instance;
         //healthy = myObject.GetHealth();
         //PlayerPrefs.GetInt("health");
@@ -23,7 +24,8 @@ public class SaveScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        healthy = player.health;
+        //int i = player.GetHealth();
+        //SetHealth(i);
         //int sethealth = player.GetHealth();
         //savelevel(sethealth);
 
@@ -38,9 +40,11 @@ public class SaveScript : MonoBehaviour
 
     public void savelevel()
     {   //Get active scene
+        //PlayerClass myObject = GameObject.FindObjectOfType<PlayerClass>();
         PlayerClass myObject = GameObject.FindObjectOfType<PlayerClass>();
         PlayerPrefs.SetInt("SavedScene", SceneManager.GetActiveScene().buildIndex);
-      
+        //public int healthy = player.health;
+        int healthy = player.GetHealth();
         PlayerPrefs.SetInt("health",healthy);
        
         Debug.Log("saving..."+healthy);
@@ -55,7 +59,27 @@ public class SaveScript : MonoBehaviour
         player.IsInteracting(false);
         player.SetPlayerPos(new Vector2(-5.18f, -2.87f));
 
-        healthy =  PlayerPrefs.GetInt("health");
+        int healthy = PlayerPrefs.GetInt("health");
+        //player.UpdateHealth(healthy);
+        player.health = healthy; 
+        //healthy =  PlayerPrefs.GetInt("health");
         Debug.Log("Loading..." + healthy);
+      
     }
+
+    public void setMaxHealth(int health)
+    {
+        slider.maxValue = health;
+        slider.value = health;
+    }
+
+    //move slider on health bar 
+    public void SetHealth(int health)
+    {
+        slider.value = health;
+    }
+
+
+
+
 }
