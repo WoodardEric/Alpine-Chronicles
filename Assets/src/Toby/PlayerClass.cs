@@ -8,7 +8,7 @@ public class PlayerClass : MonoBehaviour
 {
     public static PlayerClass Instance { get; private set; }
     [SerializeField] float moveSpeed;
-    protected int health;
+    public int health;
     protected int playerAtk;
     bool BCMode;
     Rigidbody2D rgdb;
