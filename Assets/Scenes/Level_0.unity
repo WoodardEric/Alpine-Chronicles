@@ -315,7 +315,21 @@ MonoBehaviour:
   Timer: 0
   SaveGame: 0
   Timecheck: 1800
-  _player: {fileID: 0}
+  player: {fileID: 0}
+  Select: {fileID: 0}
+--- !u!114 &176434398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176434391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea1b7a2d4041b4941b4ab16831bb8e8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!1 &218738020
 GameObject:
   m_ObjectHideFlags: 0
@@ -3934,7 +3948,8 @@ MonoBehaviour:
   Timer: 0
   SaveGame: 0
   Timecheck: 1800
-  _player: {fileID: 0}
+  player: {fileID: 0}
+  Select: {fileID: 0}
 --- !u!1 &1974895909
 GameObject:
   m_ObjectHideFlags: 0
@@ -4554,14 +4569,14 @@ PrefabInstance:
     - target: {fileID: 8687036562220982268, guid: 0aabc12a6a0c34ef58f39f66975be4d1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 176434392}
+      objectReference: {fileID: 176434398}
     - target: {fileID: 8687036562220982268, guid: 0aabc12a6a0c34ef58f39f66975be4d1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SavePlayerFunc
+      value: SaveGame
       objectReference: {fileID: 0}
     - target: {fileID: 8687036562220982268, guid: 0aabc12a6a0c34ef58f39f66975be4d1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Autosave, RileySrc
+      value: SaveScript, RileySrc
       objectReference: {fileID: 0}
     - target: {fileID: 8687036562821598947, guid: 0aabc12a6a0c34ef58f39f66975be4d1, type: 3}
       propertyPath: m_Pivot.x

@@ -761,7 +761,8 @@ MonoBehaviour:
   Timer: 0
   SaveGame: 0
   Timecheck: 1800
-  _player: {fileID: 0}
+  player: {fileID: 0}
+  Select: {fileID: 0}
 --- !u!114 &547387428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -774,6 +775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea1b7a2d4041b4941b4ab16831bb8e8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!1 &810703781
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,7 +789,7 @@ GameObject:
   - component: {fileID: 810703784}
   - component: {fileID: 810703783}
   m_Layer: 5
-  m_Name: Laod
+  m_Name: Load
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -859,7 +861,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 547387428}
         m_TargetAssemblyTypeName: SaveScript, RileySrc
-        m_MethodName: LoadNumber
+        m_MethodName: LoadGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1084,7 +1086,8 @@ MonoBehaviour:
   Timer: 0
   SaveGame: 0
   Timecheck: 1800
-  _player: {fileID: 0}
+  player: {fileID: 0}
+  Select: {fileID: 0}
 --- !u!1 &1166013481
 GameObject:
   m_ObjectHideFlags: 0
