@@ -1,14 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
-
 
 public class PlayerClass : MonoBehaviour
 {
     public static PlayerClass Instance { get; private set; }
     [SerializeField] float moveSpeed;
-    protected int health;
+    public int health;
     protected int playerAtk;
     bool BCMode;
     Rigidbody2D rgdb;
@@ -40,6 +39,7 @@ public class PlayerClass : MonoBehaviour
         }
     }
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -60,6 +60,7 @@ public class PlayerClass : MonoBehaviour
         SetComponents();
     }
 
+
     public void SetComponents()
     {
         if (!compSet)
@@ -69,6 +70,7 @@ public class PlayerClass : MonoBehaviour
             compSet = true;
         }
     }
+
 
     // Update is called once per frame
     void Update()
@@ -104,6 +106,7 @@ public class PlayerClass : MonoBehaviour
         }
     }
 
+
     void OnValidate()
     {
         if (moveSpeed > 15)
@@ -114,8 +117,8 @@ public class PlayerClass : MonoBehaviour
         {
             moveSpeed = 5;
         }
-        animator.SetFloat("animSpeed", moveSpeed / 5);
     }
+
 
     private void FixedUpdate()
     {
@@ -151,6 +154,7 @@ public class PlayerClass : MonoBehaviour
         }
     }
 
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         // Check if user is interacting with something interactable or an item
@@ -165,14 +169,92 @@ public class PlayerClass : MonoBehaviour
         }
         
         ItemFactory factory = null;
-        if (other.gameObject.name == "Katana")
+        factory = getFactory(other.gameObject.name);
+
+        if (factory != null)
         {
-            factory = new KatanaFactory();
+            ItemClass item = factory.GetItemClass();
+            if (PickupItem(item))
+            {
+                Destroy(other.gameObject);
+            }
         }
-        ItemClass item = factory.GetItemClass();
-        PickupItem(item);
-        Destroy(other.gameObject);
     }
+
+
+    public ItemFactory getFactory(string val)
+    {
+        if (val == "Katana")
+        {
+            return new KatanaFactory();
+        }
+        else if (val == "Weapon2")
+        {
+            return new Weapon2Factory();
+        }
+        else if (val == "Weapon3")
+        {
+            return new Weapon3Factory();
+        }
+        else if (val == "Weapon4")
+        {
+            return new Weapon4Factory();
+        }
+        else if (val == "Weapon5")
+        {
+            return new Weapon5Factory();
+        }
+        else if (val == "Weapon6")
+        {
+            return new Weapon6Factory();
+        }
+        else if (val == "Weapon7")
+        {
+            return new Weapon7Factory();
+        }
+        else if (val == "Weapon8")
+        {
+            return new Weapon8Factory();
+        }
+        else if (val == "Weapon9")
+        {
+            return new Weapon9Factory();
+        }
+        else if (val == "HealthApple")
+        {
+            return new HealthAppleFactory();
+        }
+        else if (val == "HealthCheese")
+        {
+            return new HealthCheeseFactory();
+        }
+        else if (val == "HealthPotion")
+        {
+            return new HealthPotionFactory();
+        }
+        else if (val == "SpeedPotion")
+        {
+            return new SpeedPotionFactory();
+        }
+        else if (val == "StrengthPotion")
+        {
+            return new StrengthPotionFactory();
+        }
+        else if (val == "BossKey")
+        {
+            return new BossKeyFactory();
+        }
+        else if (val == "RoomKey1")
+        {
+            return new RoomKey1Factory();
+        }
+        else if (val == "RoomKey2")
+        {
+            return new RoomKey2Factory();
+        }
+        return null;
+    }
+
 
     private void OnTriggerStay2D(Collider2D other)
     {
@@ -191,6 +273,7 @@ public class PlayerClass : MonoBehaviour
         }
     }
 
+
     private void OnTriggerExit2D(Collider2D other)
     {
         // Reset the player interaction
@@ -198,11 +281,12 @@ public class PlayerClass : MonoBehaviour
         this.updateNum = 0;
     }
 
-    private void PickupItem(ItemClass item)
+
+    private bool PickupItem(ItemClass item)
     {
-        AddInvItem(item);
-        //Debug.Log("Player has picked up a " + item.name + " item.");
+        return AddInvItem(item);
     }
+
 
     public bool IsInteracting()
     {
@@ -210,12 +294,14 @@ public class PlayerClass : MonoBehaviour
         return this.interacting;
     }
 
+
     public void IsInteracting(bool isInteracting)
     {
         // Freeze the player and update interacting variables
         this.interacting = isInteracting;
         this.frozen = isInteracting;
     }
+
 
     public void UpdateHealth(int change)
     {
@@ -269,6 +355,7 @@ public class PlayerClass : MonoBehaviour
         
     }
 
+
     public int GetHealth()
     {
         return health;
@@ -288,15 +375,18 @@ public class PlayerClass : MonoBehaviour
         animator.SetFloat("animSpeed", moveSpeed / 5);
     }
 
+
     public float GetSpd()
     {
         return moveSpeed;
     }
 
+
     private void GameOverAct()
     {
 
     }
+
 
     public bool StartBCMode(string password)
     {
@@ -310,39 +400,70 @@ public class PlayerClass : MonoBehaviour
         return this.BCMode;
     }
 
+
+    public Vector2 getPos()
+    {
+        return new Vector2(this.transform.position.x, this.transform.position.y);
+    }
+
+
     public void SetPlayerPos(Vector2 pos)
     {
         // Set the player's position
         this.transform.position = new Vector3(pos.x, pos.y, 0);
     }
 
+
     public bool AddInvItem(ItemClass addedItem)
     {
         return this.inventory.AddItem(addedItem);
     }
+
 
     public bool RemoveInvItem(int invIndex)
     {
         return this.inventory.RemoveItem(invIndex);
     }
 
+
+    public bool RemoveInvItem(string itemName)
+    {
+        return this.inventory.RemoveItem(itemName);
+    }
+
+
     public int GetNumInvItems()
     {
         return this.inventory.GetNumItems();
     }
+
 
     public int GetMaxItems()
     {
         return this.inventory.GetMaxItems();
     }
 
+
     public ItemClass GetInvItem(int index)
     {
         return inventory.GetItem(index);
     }
 
+
+    public ItemClass GetInvItem(string name)
+    {
+        return inventory.GetItem(name);
+    }
+
+
     public void SwitchInvItems(int InvitemOne, int InvitemTwo)
     {
         inventory.SwitchItems(InvitemOne, InvitemTwo);
+    }
+
+
+    public void TestingList()
+    {
+        inventory.CreateTestList();
     }
 }

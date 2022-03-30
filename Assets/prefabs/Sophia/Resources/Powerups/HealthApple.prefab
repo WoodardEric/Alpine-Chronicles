@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 182256644020326776}
   - component: {fileID: 7673442552099316945}
   - component: {fileID: -7679807616504296625}
-  - component: {fileID: -5367409821980044385}
   m_Layer: 0
   m_Name: HealthApple
-  m_TagString: Untagged
+  m_TagString: item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,15 +99,3 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.06953496}
   serializedVersion: 2
   m_Radius: 0.43046504
---- !u!114 &-5367409821980044385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7246034663335893907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba28f1ebad9ef4fc5b1e77665200aae2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

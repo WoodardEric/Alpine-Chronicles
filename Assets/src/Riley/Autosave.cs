@@ -7,22 +7,18 @@ using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine.SceneManagement;
 
 public class Autosave : MonoBehaviour
-{
-	public static PlayerData Activesave; 
+{ 
 	public float Timer = 0;
 	public bool SaveGame = false;
 	public float Timecheck = 1800f;
-	public PlayerClass _player = null;
-	public static int heart; 
-
+	public PlayerClass player = null;
+	public SaveAll Select = null; 
 
 	// Start is called before the first frame update
 	void Start()
 	{
-		_player = PlayerClass.Instance;
-		heart = _player.GetHealth();
+		player = PlayerClass.Instance;
 		Timer = Timer + 1 * Time.deltaTime;
-
 	}
 	// Update is called once per frame
 	void Update()
@@ -37,75 +33,42 @@ public class Autosave : MonoBehaviour
 		if (SaveGame == true)
 		{
 			Debug.Log("AutoSaving Data...");
-			//savelevel();
-			//SavePlayerFunc();
+            Select.Save(); 
 			Timer = 0f;
 		}
 	}
-	
-	public void savelevel()
-	{   //Get active scene
-		PlayerPrefs.SetInt("SavedScene", SceneManager.GetActiveScene().buildIndex);
-
-	}
-
-	public static void SavePlayerFunc()
-	{
-
-		PlayerPrefs.SetInt("SavedScene", SceneManager.GetActiveScene().buildIndex);
-		//save the data in binary, more secure
-
-		//PlayerData data = null;
-		BinaryFormatter formatter = new BinaryFormatter();
-
-		//create a path using application.p...
-		string path = Application.persistentDataPath + "/data.ap";
-
-		//Create a stream
-		FileStream stream = new FileStream(path, FileMode.Create);
-
-		//set the stream to the new gameobject, for PlayerData script.
-		//Debug.Log("Health is " +heart);
-		PlayerData data = new PlayerData();
-		formatter.Serialize(stream, data);
-
-		//print out file location
-		Debug.Log(Application.persistentDataPath);
-
-		stream.Close();
-
-		if (System.IO.File.Exists(path))
-		{
-			//Debug.Log("File exists...");
-		}
-		else
-		{
-			Debug.Log("File does not exist in the current directory!");
-		}
-
-	}
-
-	public static void load()
-	{
-		//Load the level using player prefs. 
-		Debug.Log("Loading scene");
-		SceneManager.LoadScene(PlayerPrefs.GetInt("SavedScene"));
-		PlayerClass player = PlayerClass.Instance;
-		player.IsInteracting(false);
-		player.SetPlayerPos(new Vector2(-5.18f, -2.87f));
-
-		PlayerData data = null; 
-		string path = Application.persistentDataPath + "/data.ap";
-		BinaryFormatter formatter = new BinaryFormatter();
-		//Create a stream
-		FileStream stream = new FileStream(path, FileMode.Open);
-		//cast it as a playerClass
-	     data = (PlayerData)formatter.Deserialize(stream);
-		//_player = formatter.Deserialize(stream) as PlayerData;
-		//formatter.Deserialize(stream);
-		Debug.Log(data);
-		stream.Close();
-	}
-
+       
 }
 
+public class SaveAll : MonoBehaviour
+{
+	public PlayerClass pplayer = null;
+	// Start is called before the first frame update
+	void Start()
+	{
+		pplayer = PlayerClass.Instance;
+	}
+
+
+	public void Save()
+	{
+		PlayerClass myObject = GameObject.FindObjectOfType<PlayerClass>();
+		//SaveWorld();
+		//public int healthy = player.health;
+		int healthyy = pplayer.GetHealth();
+		PlayerPrefs.SetInt("health", healthyy);
+		Debug.Log("saving..." + healthyy);
+
+	}
+
+
+	public void SaveWorld()
+	{   //Get active scene
+		//PlayerClass myObject = GameObject.FindObjectOfType<PlayerClass>();
+		//PlayerClass myObject = GameObject.FindObjectOfType<PlayerClass>();
+		PlayerPrefs.SetInt("SavedScene", SceneManager.GetActiveScene().buildIndex);
+	}
+
+
+
+}

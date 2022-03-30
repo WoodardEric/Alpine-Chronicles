@@ -9,6 +9,7 @@ public class HealthBoundsTest
 {
     GameObject gameObject;
     PlayerTestingHelper player;
+    Animator animator;
 
     // Arrange
     [SetUp]
@@ -17,6 +18,8 @@ public class HealthBoundsTest
         // Create game object with player script
         gameObject = new GameObject();
         player = gameObject.AddComponent<PlayerTestingHelper>();
+        animator = gameObject.AddComponent<Animator>();
+        player.animator = animator;
     }
     
     [Test]
