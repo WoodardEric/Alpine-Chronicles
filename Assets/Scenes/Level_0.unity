@@ -179,16 +179,24 @@ PrefabInstance:
       value: NPC_Riley_(TL1)
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5432b6372b47a354ea3d87f03dd3ab1b, type: 3}
+    - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_Color.b
-      value: 0.8431373
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_Color.g
-      value: 0.5294118
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_Color.r
-      value: 0.45882356
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113303940370879787, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
+      propertyPath: m_Radius
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 5305277600787681461, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: dialogContentRollout.Array.size
@@ -789,16 +797,24 @@ PrefabInstance:
       value: NPC_Sophia_(TL2)
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a8f2e669ef45c5546b0ddfa6e5e9fcf2, type: 3}
+    - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_Color.b
-      value: 0.26666668
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_Color.g
-      value: 0.26666668
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_Color.r
-      value: 0.92549026
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113303940370879787, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
+      propertyPath: m_Radius
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 5305277600787681461, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: dialogContentRollout.Array.size
@@ -1135,11 +1151,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879784, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.0700002
+      value: -1.1
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879784, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.74
+      value: -6.95
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879784, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1178,16 +1194,24 @@ PrefabInstance:
       value: Test NPC
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5c474952da1621f4ba0a04ae77d81d19, type: 3}
+    - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_Color.b
-      value: 0.29813507
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_Color.g
-      value: 0.7169812
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_Color.r
-      value: 0.1724813
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113303940370879787, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
+      propertyPath: m_Radius
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 5305277600787681461, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: dialogContentRollout.Array.size
@@ -1415,16 +1439,24 @@ PrefabInstance:
       value: NPC_Toby_(TL3)
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b9debd8e204267e45b267c3fc2bd9b38, type: 3}
+    - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_Color.b
-      value: 0.19607845
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_Color.g
-      value: 0.29411766
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_Color.r
-      value: 0.4666667
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113303940370879787, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
+      propertyPath: m_Radius
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 5305277600787681461, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: dialogContentRollout.Array.size
@@ -2358,16 +2390,24 @@ PrefabInstance:
       value: NPC_Josie_(TL6)
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 135a512a334b8d2489fdf0c4edd34319, type: 3}
+    - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_Color.b
-      value: 0.22352943
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_Color.g
-      value: 0.21568629
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_Color.r
-      value: 0.28235295
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113303940370879787, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
+      propertyPath: m_Radius
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 5305277600787681461, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: dialogContentRollout.Array.size
@@ -3261,16 +3301,24 @@ PrefabInstance:
       value: 'NPC_Gus_(TL5) '
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5c474952da1621f4ba0a04ae77d81d19, type: 3}
+    - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_Color.b
-      value: 0.95686275
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_Color.g
-      value: 0.5254902
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_Color.r
-      value: 0.25882354
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113303940370879787, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
+      propertyPath: m_Radius
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 5305277600787681461, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: dialogContentRollout.Array.size
@@ -3412,11 +3460,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879784, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.5700002
+      value: -1.38
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879784, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.7400002
+      value: -1.63
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879784, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3455,16 +3503,24 @@ PrefabInstance:
       value: NPC_Joseph_(TL4)
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8e7b86fef8c92fd488b2b38a30e89354, type: 3}
+    - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_Color.b
-      value: 0.75294125
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_Color.g
-      value: 0.03137255
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_Color.r
-      value: 0.3019608
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113303940370879787, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
+      propertyPath: m_Radius
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 5305277600787681461, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: dialogContentRollout.Array.size
@@ -3793,16 +3849,24 @@ PrefabInstance:
       value: NPC_Eric_(TL1)
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1957d72f4ebda7342b5cd8d8982405a0, type: 3}
+    - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_Color.b
-      value: 0.9686275
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_Color.g
-      value: 0.03529412
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_Color.r
-      value: 0.49803925
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113303940370879787, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
+      propertyPath: m_Radius
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 5305277600787681461, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: dialogContentRollout.Array.size
