@@ -12,11 +12,13 @@ public class Autosave : MonoBehaviour
 	public bool SaveGame = false;
 	public float Timecheck = 1800f;
 	public PlayerClass player = null;
-	public SaveAll Select = null; 
+	public SaveAll Select;
+	public GameObject Player; 
 
 	// Start is called before the first frame update
 	void Start()
 	{
+		Select = Player.GetComponent<SaveAll>();
 		player = PlayerClass.Instance;
 		Timer = Timer + 1 * Time.deltaTime;
 	}
@@ -27,7 +29,7 @@ public class Autosave : MonoBehaviour
 		if (Timer >= Timecheck)
 		{
 			SaveGame = true;
-
+			
 		}
 
 		if (SaveGame == true)
@@ -52,7 +54,7 @@ public class SaveAll : MonoBehaviour
 
 	public void Save()
 	{
-		PlayerClass myObject = GameObject.FindObjectOfType<PlayerClass>();
+		//PlayerClass myObject = GameObject.FindObjectOfType<PlayerClass>();
 		//SaveWorld();
 		//public int healthy = player.health;
 		int healthyy = pplayer.GetHealth();

@@ -325,6 +325,7 @@ MonoBehaviour:
   Timecheck: 1800
   player: {fileID: 0}
   Select: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!114 &176434398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1192,6 +1193,10 @@ PrefabInstance:
     - target: {fileID: 2113303940370879785, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_Name
       value: Test NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113303940370879785, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_Sprite
@@ -3910,6 +3915,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1966815743}
   - component: {fileID: 1966815744}
+  - component: {fileID: 1966815745}
   m_Layer: 0
   m_Name: Room
   m_TagString: Untagged
@@ -3952,6 +3958,20 @@ MonoBehaviour:
   Timecheck: 1800
   player: {fileID: 0}
   Select: {fileID: 0}
+  Player: {fileID: 0}
+--- !u!114 &1966815745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966815742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9273b7ec5950ec4d829911a68a46d68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  savy: {fileID: 0}
 --- !u!1 &1974895909
 GameObject:
   m_ObjectHideFlags: 0
