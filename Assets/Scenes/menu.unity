@@ -264,6 +264,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5110615368001428870, guid: 10f74e0386e1c454792d1338392723ae, type: 3}
+      propertyPath: attackAngle
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5110615368001428871, guid: 10f74e0386e1c454792d1338392723ae, type: 3}
       propertyPath: m_RootOrder
       value: 3

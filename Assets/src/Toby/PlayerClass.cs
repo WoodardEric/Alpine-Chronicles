@@ -24,6 +24,11 @@ public class PlayerClass : MonoBehaviour
     float horizontalMov;
     float verticalMov;
 
+    public Transform attackArea;
+    public Vector2 attackRange;
+    public LayerMask enemyLayers;
+    public float attackAngle;
+
     private void Awake()
     {
         // Ensure that only one instance of the player can exist
@@ -55,6 +60,7 @@ public class PlayerClass : MonoBehaviour
         this.isMoving = false;
         this.horizontalMov = 0;
         this.verticalMov = 0;
+        this.attackRange = new Vector2(0.75f, 1.5f);
         animator.SetFloat("animSpeed", moveSpeed / 5);
 
         SetComponents();
@@ -77,18 +83,49 @@ public class PlayerClass : MonoBehaviour
     {
         if (!IsInteracting())
         {
+            if (Input.GetMouseButtonDown(0))
+            {
+                Attack();
+            }
             if ((Input.GetAxisRaw("Horizontal") != 0) && (Input.GetAxisRaw("Vertical") != 0))
             {
                 verticalMov = Input.GetAxisRaw("Vertical");
                 horizontalMov = 0;
                 
                 isMoving = true;
+
+                if (Input.GetAxisRaw("Vertical") > 0)
+                {
+                    this.attackArea.position = new Vector2(this.transform.position.x, this.transform.position.y + (1.25f * Input.GetAxisRaw("Vertical")));
+                    this.attackRange = new Vector2(1.5f, 0.75f);
+                }
+                else if (Input.GetAxisRaw("Vertical") < 0)
+                {
+                    this.attackArea.position = new Vector2(this.transform.position.x, this.transform.position.y + (0.25f * Input.GetAxisRaw("Vertical")));
+                    this.attackRange = new Vector2(1.5f, 0.75f);
+                }
             }
             else if ((Input.GetAxisRaw("Horizontal") != 0) || (Input.GetAxisRaw("Vertical") != 0))
             {
                 horizontalMov = Input.GetAxisRaw("Horizontal");
                 verticalMov = Input.GetAxisRaw("Vertical");
                 isMoving = true;
+
+                if (Input.GetAxisRaw("Horizontal") != 0)
+                {
+                    this.attackArea.position = new Vector2(this.transform.position.x + (0.5f * Input.GetAxisRaw("Horizontal")), this.transform.position.y + 0.5f);
+                    this.attackRange = new Vector2(0.75f, 1.5f);
+                }
+                else if (Input.GetAxisRaw("Vertical") > 0)
+                {
+                    this.attackArea.position = new Vector2(this.transform.position.x, this.transform.position.y + (1.25f * Input.GetAxisRaw("Vertical")));
+                    this.attackRange = new Vector2(1.5f, 0.75f);
+                }
+                else if (Input.GetAxisRaw("Vertical") < 0)
+                {
+                    this.attackArea.position = new Vector2(this.transform.position.x, this.transform.position.y + (0.25f * Input.GetAxisRaw("Vertical")));
+                    this.attackRange = new Vector2(1.5f, 0.75f);
+                }
             }
             else
             {
@@ -152,6 +189,27 @@ public class PlayerClass : MonoBehaviour
             // Apply any position adjustments made to the player
             this.rgdb.MovePosition(newPos);
         }
+    }
+
+    void Attack()
+    {
+        Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(attackArea.position, attackRange, attackAngle, enemyLayers);
+
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            Debug.Log("Enemy " + enemy.name + " Hit");
+            IHitEnemies enemyHit = enemy.gameObject.GetComponent<IHitEnemies>();
+            enemyHit.DamageEnemy();
+        }
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        if (attackArea == null)
+        {
+            return;
+        }
+        Gizmos.DrawWireCube(attackArea.position, attackRange);
     }
 
 

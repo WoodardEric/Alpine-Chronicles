@@ -1177,6 +1177,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Test NPC
       objectReference: {fileID: 0}
+    - target: {fileID: 2113303940370879785, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_Color.b
       value: 0.29813507
