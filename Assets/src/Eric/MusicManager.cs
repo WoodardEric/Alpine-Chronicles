@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,7 +16,7 @@ public class MusicManager : AudioManager
         else
         {
             audioSource = gameObject.AddComponent<AudioSource>();
-            Volume = 0.4f;
+            Volume = 0.5f;
             Instance = this;
             ReadClips();
             DontDestroyOnLoad(this);
@@ -25,21 +24,25 @@ public class MusicManager : AudioManager
         }
     }
 
+
     public void Play(MusicTrack track)
     {
         audioSource.clip = tracks[track];
         audioSource.Play();
     }
 
+
     protected override void ReadClips()
     {
         tracks.Add(MusicTrack.menu, Resources.Load("Music/menu") as AudioClip);
     }
 
+
     void Update()
     {
         
     }
+
 
     public enum MusicTrack
     {

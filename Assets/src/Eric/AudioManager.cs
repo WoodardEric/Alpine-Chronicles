@@ -2,12 +2,15 @@ using UnityEngine;
 
 public abstract class AudioManager : MonoBehaviour
 {
+    abstract protected void Awake();
+    protected abstract void ReadClips();
+
+
     public void Mute()
     {
         audioSource.mute = !audioSource.mute;
     }
 
-    abstract protected void Awake();
 
     public float Volume
     {
@@ -21,13 +24,11 @@ public abstract class AudioManager : MonoBehaviour
         }
     }
 
+
     protected AudioSource audioSource;
 
     public void SetVolume(float vol)
     {
         Volume = Mathf.Clamp01(vol);
     }
-
-    protected abstract void ReadClips();
-
 }

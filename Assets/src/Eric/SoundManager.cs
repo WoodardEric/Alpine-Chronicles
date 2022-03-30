@@ -42,7 +42,12 @@ public class SoundManager : AudioManager
 
     public enum SoundEffect
     {
+        Attack,
         Coin,
-        DoorOpen
+        Damage,
+        DoorOpen,
+        Key,
+        LockedDoor,
+        Void
     }
 }
