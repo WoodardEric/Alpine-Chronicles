@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: -733706248022692889}
   - component: {fileID: -8621476364346837721}
   - component: {fileID: 4345404079381405719}
-  - component: {fileID: 8127434388972707092}
   - component: {fileID: 8906037095912004984}
   m_Layer: 0
   m_Name: Player
@@ -123,6 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  health: 0
   animator: {fileID: 8906037095912004984}
 --- !u!114 &-733706248022692889
 MonoBehaviour:
@@ -188,22 +188,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.42, y: 0.47}
   m_EdgeRadius: 0
---- !u!114 &8127434388972707092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5110615368001428875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eb1edfd4cbcf8046a65278185c411ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Timer: 0
-  SaveGame: 0
-  Timecheck: 20000
-  _player: {fileID: 0}
 --- !u!95 &8906037095912004984
 Animator:
   serializedVersion: 3

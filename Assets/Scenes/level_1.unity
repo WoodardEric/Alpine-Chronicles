@@ -9922,7 +9922,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0
   SaveGame: 0
-  Timecheck: 7
+  Timecheck: 1800
   player: {fileID: 0}
   Select: {fileID: 0}
 --- !u!1001 &243519101
