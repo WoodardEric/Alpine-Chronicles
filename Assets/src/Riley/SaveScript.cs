@@ -58,14 +58,14 @@ public class SaveScript : MonoBehaviour
     public void savelevel()
     {   //Get active scene
         //PlayerClass myObject = GameObject.FindObjectOfType<PlayerClass>();
-        PlayerClass myObject = GameObject.FindObjectOfType<PlayerClass>();
+        //PlayerClass myObject = GameObject.FindObjectOfType<PlayerClass>();
         PlayerPrefs.SetInt("SavedScene", SceneManager.GetActiveScene().buildIndex);
     }
 
 
     public void LoadLevel()
     {
-        PlayerClass myObject = GameObject.FindObjectOfType<PlayerClass>();
+        //PlayerClass myObject = GameObject.FindObjectOfType<PlayerClass>();
         SceneManager.LoadScene(PlayerPrefs.GetInt("SavedScene"));
         PlayerClass player = PlayerClass.Instance;
         player.IsInteracting(false);

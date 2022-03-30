@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class testt : MonoBehaviour
 {
-    public SaveScript savy; 
+    public SaveA savy; 
     // Start is called before the first frame update
     void Start()
     {
-        savy.SaveGame(); 
+        savy.idk(); 
     }
 
     // Update is called once per frame
