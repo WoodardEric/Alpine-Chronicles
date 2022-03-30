@@ -3700,7 +3700,8 @@ MonoBehaviour:
   Timer: 0
   SaveGame: 0
   Timecheck: 7
-  _player: {fileID: 0}
+  player: {fileID: 0}
+  Select: {fileID: 0}
 --- !u!1 &247021405
 GameObject:
   m_ObjectHideFlags: 0
@@ -14034,7 +14035,7 @@ GameObject:
   - component: {fileID: 827848673}
   - component: {fileID: 827848672}
   - component: {fileID: 827848671}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: void
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16339,7 +16340,7 @@ GameObject:
   - component: {fileID: 989249713}
   - component: {fileID: 989249712}
   - component: {fileID: 989249711}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: void (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28636,7 +28637,7 @@ GameObject:
   - component: {fileID: 1722285279}
   - component: {fileID: 1722285278}
   - component: {fileID: 1722285277}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: void (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
