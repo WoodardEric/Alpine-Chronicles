@@ -131,6 +131,7 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 64
+  attackAngle: 0
 --- !u!114 &-733706248022692889
 MonoBehaviour:
   m_ObjectHideFlags: 0
