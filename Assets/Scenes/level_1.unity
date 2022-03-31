@@ -45418,7 +45418,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7437678252556647846, guid: 8c150705022b7428cb56282e36a279ed, type: 3}
       propertyPath: m_Name
-      value: HealthPotion_5
+      value: HealthPotion
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c150705022b7428cb56282e36a279ed, type: 3}
