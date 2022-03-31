@@ -29,6 +29,7 @@ public class AsTimer : MonoBehaviour
 
 		if (SaveGame == true)
 		{
+			SaveGame = false;
 			Saveit.SavePlayer();
 			Saveit.SaveLevel();
 

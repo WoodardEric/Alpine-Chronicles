@@ -146,13 +146,22 @@ public class PlayerClass : MonoBehaviour
 
     void OnValidate()
     {
-        if (moveSpeed > 15)
+        if (this.moveSpeed > 15)
         {
-            moveSpeed = 15;
+            this.moveSpeed = 15;
         }
         else if (moveSpeed < 5)
         {
-            moveSpeed = 5;
+            this.moveSpeed = 5;
+        }
+
+        if (this.health > 100)
+        {
+            this.health = 100;
+        }
+        else if (this.health < 0)
+        {
+            this.health = 0;
         }
     }
 

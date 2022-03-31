@@ -758,11 +758,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb1edfd4cbcf8046a65278185c411ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Timer: 0
-  SaveGame: 0
-  Timecheck: 1800
-  player: {fileID: 0}
-  Select: {fileID: 0}
 --- !u!114 &547387428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1083,11 +1078,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb1edfd4cbcf8046a65278185c411ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Timer: 0
-  SaveGame: 0
-  Timecheck: 1800
-  player: {fileID: 0}
-  Select: {fileID: 0}
 --- !u!1 &1166013481
 GameObject:
   m_ObjectHideFlags: 0
