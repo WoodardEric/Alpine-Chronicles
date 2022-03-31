@@ -371,6 +371,10 @@ public class PlayerClass : MonoBehaviour
             return;
         }
         
+        if (++updateNum > 1)
+        {
+            return;
+        }
         // Set up an ItemFactory and get the type of ItemFactory needed
         ItemFactory factory = null;
         factory = getFactory(other.gameObject.name);
@@ -385,6 +389,8 @@ public class PlayerClass : MonoBehaviour
                 Destroy(other.gameObject);
             }
         }
+        Debug.Log("CURRENT INV SIZE: " + GetNumInvItems());
+        updateNum = 0;
     }
 
 
