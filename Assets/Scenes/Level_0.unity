@@ -181,7 +181,7 @@ PrefabInstance:
     - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 5432b6372b47a354ea3d87f03dd3ab1b, type: 3}
+      objectReference: {fileID: 21300000, guid: 5521a7557b46b4a429c7a6826015411a, type: 3}
     - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -2574,13 +2574,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1374850455}
-  m_LocalRotation: {x: 0.0023633577, y: -0.00237564, z: 0.7089331, w: 0.7052678}
-  m_LocalPosition: {x: -1.48, y: 2.22, z: 0.13}
+  m_LocalRotation: {x: 0.0023695068, y: -0.0023695068, z: 0.70710284, w: 0.70710284}
+  m_LocalPosition: {x: -1.48, y: 1.85, z: 0}
   m_LocalScale: {x: 0.47430003, y: 0.29820004, z: 1}
   m_Children: []
   m_Father: {fileID: 1723534403}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0.384, y: 0, z: 90.297}
+  m_LocalEulerAnglesHint: {x: 0.384, y: 0, z: 90}
 --- !u!61 &1374850457
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2744,11 +2744,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879784, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.23
+      value: -10.204
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879784, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.21000004
+      value: -0.004
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879784, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2787,16 +2787,20 @@ PrefabInstance:
       value: NPC_Dr.BC
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6749ebd55f8da814c94aa4f462937d83, type: 3}
+    - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_Color.b
-      value: 0.34901962
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_Color.g
-      value: 0.14509805
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_Color.r
-      value: 0.04705883
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5305277600787681461, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: dialogContentRollout.Array.size
@@ -2849,13 +2853,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1445782120}
-  m_LocalRotation: {x: 0.0023633577, y: -0.00237564, z: 0.7089331, w: 0.7052678}
-  m_LocalPosition: {x: -0.3, y: 2.22, z: 0.13}
+  m_LocalRotation: {x: 0.0023695068, y: -0.0023695068, z: 0.70710284, w: 0.70710284}
+  m_LocalPosition: {x: -0.3, y: 1.85, z: 0.13}
   m_LocalScale: {x: 0.47430003, y: 0.29820004, z: 1}
   m_Children: []
   m_Father: {fileID: 1723534403}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0.384, y: 0, z: 90.297}
+  m_LocalEulerAnglesHint: {x: 0.384, y: 0, z: 90}
 --- !u!61 &1445782122
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3381,7 +3385,7 @@ PrefabInstance:
     - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 5c474952da1621f4ba0a04ae77d81d19, type: 3}
+      objectReference: {fileID: 21300000, guid: 5432b6372b47a354ea3d87f03dd3ab1b, type: 3}
     - target: {fileID: 2113303940370879786, guid: 9632186bf528678409f39fdfd52ba37a, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -3644,7 +3648,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1811041668}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.9028959, y: 2.1219678, z: 0.13244042}
+  m_LocalPosition: {x: -0.9028959, y: 1.76, z: 0.13244042}
   m_LocalScale: {x: 1, y: 0.2982, z: 1}
   m_Children: []
   m_Father: {fileID: 1723534403}
