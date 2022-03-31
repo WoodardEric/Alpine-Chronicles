@@ -505,7 +505,7 @@ GameObject:
   - component: {fileID: 19043919}
   m_Layer: 0
   m_Name: fog0d
-  m_TagString: Fog
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3255,7 +3255,7 @@ GameObject:
   - component: {fileID: 91889032}
   m_Layer: 0
   m_Name: fog0c
-  m_TagString: Fog
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15413,7 +15413,7 @@ GameObject:
   - component: {fileID: 322123287}
   m_Layer: 0
   m_Name: fog1c
-  m_TagString: Fog
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18494,7 +18494,7 @@ GameObject:
   - component: {fileID: 388999888}
   m_Layer: 0
   m_Name: fog1
-  m_TagString: Untagged
+  m_TagString: Fog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22282,7 +22282,7 @@ GameObject:
   - component: {fileID: 463965259}
   m_Layer: 0
   m_Name: fog0a
-  m_TagString: Fog
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29515,7 +29515,7 @@ GameObject:
   - component: {fileID: 625333372}
   m_Layer: 0
   m_Name: fog0e
-  m_TagString: Fog
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38167,7 +38167,7 @@ GameObject:
   - component: {fileID: 792835656}
   m_Layer: 0
   m_Name: fog4
-  m_TagString: Untagged
+  m_TagString: Fog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51652,7 +51652,7 @@ GameObject:
   - component: {fileID: 1033335888}
   m_Layer: 0
   m_Name: fog0b
-  m_TagString: Fog
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59479,7 +59479,7 @@ GameObject:
   - component: {fileID: 1188156776}
   m_Layer: 0
   m_Name: fog0
-  m_TagString: Untagged
+  m_TagString: Fog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70438,7 +70438,7 @@ GameObject:
   - component: {fileID: 1438940291}
   m_Layer: 0
   m_Name: fog1b
-  m_TagString: Fog
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71021,7 +71021,7 @@ GameObject:
   - component: {fileID: 1444765601}
   m_Layer: 0
   m_Name: fog4a
-  m_TagString: Fog
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73533,7 +73533,7 @@ GameObject:
   - component: {fileID: 1489987263}
   m_Layer: 0
   m_Name: fog1a
-  m_TagString: Fog
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78991,7 +78991,7 @@ GameObject:
   - component: {fileID: 1593960596}
   m_Layer: 0
   m_Name: fog4b
-  m_TagString: Fog
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81522,7 +81522,7 @@ GameObject:
   - component: {fileID: 1641672449}
   m_Layer: 0
   m_Name: fog2a
-  m_TagString: Fog
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103450,7 +103450,7 @@ GameObject:
   - component: {fileID: 2075925102}
   m_Layer: 0
   m_Name: fog2b
-  m_TagString: Fog
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103531,7 +103531,7 @@ GameObject:
   - component: {fileID: 2078115374}
   m_Layer: 0
   m_Name: fog2
-  m_TagString: Untagged
+  m_TagString: Fog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

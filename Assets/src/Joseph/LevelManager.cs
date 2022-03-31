@@ -20,6 +20,8 @@ public class LevelManager : MonoBehaviour
 {
     public int goodScene;
     public bool test = false;
+    GameObject[] levelOneFog;
+    GameObject[] levelTwoFog;
 
 	/*
 	 * Summary: Set up this class as a Singleton
@@ -80,6 +82,14 @@ public class LevelManager : MonoBehaviour
             return;
         }
 
+        if((fromScene == 2) && (levelOneFog == null))
+        {
+            levelOneFog = GameObject.FindGameObjectsWithTag("Fog");
+        }
+        else if ((fromScene == 3) && (levelTwoFog == null))
+        {
+            levelTwoFog = GameObject.FindGameObjectsWithTag("Fog");
+        }
         //Change scene and move the player to the proper location
         SceneManager.LoadScene(toScene);
         if(toScene == 1)
