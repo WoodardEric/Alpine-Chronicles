@@ -6,7 +6,6 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine.SceneManagement;
 
-
 public class AutoSave : MonoBehaviour
 {
     public PlayerClass player = null;
@@ -14,24 +13,17 @@ public class AutoSave : MonoBehaviour
     void Start()
     {
         player = PlayerClass.Instance;
-        //healthy = myObject.GetHealth();
-        //PlayerPrefs.GetInt("health");
     }
 
-    public void SaveGame()
+    public void SavePlayer()
     {
-        savelevel();
-        //public int healthy = player.health;
         int healthy = player.GetHealth();
         PlayerPrefs.SetInt("health", healthy);
-        Debug.Log("saving..." + healthy);
-
+        Debug.Log("Saving...");
     }
 
-    public void savelevel()
-    {   //Get active scene
-        //PlayerClass myObject = GameObject.FindObjectOfType<PlayerClass>();
-        //PlayerClass myObject = GameObject.FindObjectOfType<PlayerClass>();
+    public void SaveLevel()
+    {   
         PlayerPrefs.SetInt("SavedScene", SceneManager.GetActiveScene().buildIndex);
     }
 

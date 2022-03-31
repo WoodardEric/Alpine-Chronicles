@@ -29,7 +29,9 @@ public class AsTimer : MonoBehaviour
 
 		if (SaveGame == true)
 		{
-			Saveit.SaveGame(); 
+			Saveit.SavePlayer();
+			Saveit.SaveLevel();
+
 			Debug.Log("AutoSaving Data...");
 			Timer = 0f;
 		}
