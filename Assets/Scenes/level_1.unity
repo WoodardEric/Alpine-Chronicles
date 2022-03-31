@@ -1577,7 +1577,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7443443193846770276, guid: 22fd96ab088a043a39878f283354193f, type: 3}
       propertyPath: m_Name
-      value: HealthCheese_1
+      value: HealthCheese
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22fd96ab088a043a39878f283354193f, type: 3}
@@ -2061,7 +2061,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_3
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -2459,7 +2459,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7437678252556647846, guid: 8c150705022b7428cb56282e36a279ed, type: 3}
       propertyPath: m_Name
-      value: HealthPotion_2
+      value: HealthPotion
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c150705022b7428cb56282e36a279ed, type: 3}
@@ -2583,7 +2583,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5626049343173740273, guid: b3d5485982db14d71a489758745211fa, type: 3}
       propertyPath: m_Name
-      value: Slime_12
+      value: Slime
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d5485982db14d71a489758745211fa, type: 3}
@@ -5064,7 +5064,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_9
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -5382,7 +5382,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_24
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -5444,7 +5444,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_8
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -5751,7 +5751,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_13
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -6084,7 +6084,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_7
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -6267,7 +6267,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7246034663335893907, guid: 14c90fac18b1344e59267546ab3e1d46, type: 3}
       propertyPath: m_Name
-      value: HealthApple_3
+      value: HealthApple
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14c90fac18b1344e59267546ab3e1d46, type: 3}
@@ -6705,7 +6705,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_4
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -10615,7 +10615,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_6
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -11036,7 +11036,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5626049343173740273, guid: b3d5485982db14d71a489758745211fa, type: 3}
       propertyPath: m_Name
-      value: Slime_17
+      value: Slime
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d5485982db14d71a489758745211fa, type: 3}
@@ -12351,7 +12351,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_26
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -12895,7 +12895,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5626049343173740273, guid: b3d5485982db14d71a489758745211fa, type: 3}
       propertyPath: m_Name
-      value: Slime_18
+      value: Slime
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d5485982db14d71a489758745211fa, type: 3}
@@ -13347,7 +13347,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5626049343173740273, guid: b3d5485982db14d71a489758745211fa, type: 3}
       propertyPath: m_Name
-      value: Slime_15
+      value: Slime
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d5485982db14d71a489758745211fa, type: 3}
@@ -15897,7 +15897,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5626049343173740273, guid: b3d5485982db14d71a489758745211fa, type: 3}
       propertyPath: m_Name
-      value: Slime_6
+      value: Slime
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d5485982db14d71a489758745211fa, type: 3}
@@ -16336,7 +16336,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7443443193846770276, guid: 22fd96ab088a043a39878f283354193f, type: 3}
       propertyPath: m_Name
-      value: HealthCheese_4
+      value: HealthCheese
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22fd96ab088a043a39878f283354193f, type: 3}
@@ -16653,7 +16653,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_4
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -17335,7 +17335,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_31
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -17628,7 +17628,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_6
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -20182,7 +20182,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_33
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -23662,7 +23662,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7443443193846770276, guid: 22fd96ab088a043a39878f283354193f, type: 3}
       propertyPath: m_Name
-      value: HealthCheese_2
+      value: HealthCheese
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22fd96ab088a043a39878f283354193f, type: 3}
@@ -26224,7 +26224,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5626049343173740273, guid: b3d5485982db14d71a489758745211fa, type: 3}
       propertyPath: m_Name
-      value: Slime_7
+      value: Slime
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d5485982db14d71a489758745211fa, type: 3}
@@ -26581,7 +26581,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5626049343173740273, guid: b3d5485982db14d71a489758745211fa, type: 3}
       propertyPath: m_Name
-      value: Slime_20
+      value: Slime
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d5485982db14d71a489758745211fa, type: 3}
@@ -27646,7 +27646,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5626049343173740273, guid: b3d5485982db14d71a489758745211fa, type: 3}
       propertyPath: m_Name
-      value: Slime_11
+      value: Slime
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d5485982db14d71a489758745211fa, type: 3}
@@ -29432,7 +29432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5626049343173740273, guid: b3d5485982db14d71a489758745211fa, type: 3}
       propertyPath: m_Name
-      value: Slime_16
+      value: Slime
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d5485982db14d71a489758745211fa, type: 3}
@@ -30314,7 +30314,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5626049343173740273, guid: b3d5485982db14d71a489758745211fa, type: 3}
       propertyPath: m_Name
-      value: Slime_26
+      value: Slime
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d5485982db14d71a489758745211fa, type: 3}
@@ -31225,7 +31225,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_39
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -33028,7 +33028,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_30
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -33444,7 +33444,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5626049343173740273, guid: b3d5485982db14d71a489758745211fa, type: 3}
       propertyPath: m_Name
-      value: Slime_3
+      value: Slime
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d5485982db14d71a489758745211fa, type: 3}
@@ -33572,7 +33572,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5626049343173740273, guid: b3d5485982db14d71a489758745211fa, type: 3}
       propertyPath: m_Name
-      value: Slime_13
+      value: Slime
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d5485982db14d71a489758745211fa, type: 3}
@@ -34060,7 +34060,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_17
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -36399,7 +36399,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5626049343173740273, guid: b3d5485982db14d71a489758745211fa, type: 3}
       propertyPath: m_Name
-      value: Slime_19
+      value: Slime
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d5485982db14d71a489758745211fa, type: 3}
@@ -36523,7 +36523,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2405872981440635100, guid: 0b2c26353a5114d64a2875d242bb8c60, type: 3}
       propertyPath: m_Name
-      value: SpeedPotion_2
+      value: SpeedPotion
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b2c26353a5114d64a2875d242bb8c60, type: 3}
@@ -36683,7 +36683,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7246034663335893907, guid: 14c90fac18b1344e59267546ab3e1d46, type: 3}
       propertyPath: m_Name
-      value: HealthApple_4
+      value: HealthApple
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14c90fac18b1344e59267546ab3e1d46, type: 3}
@@ -42171,7 +42171,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5626049343173740273, guid: b3d5485982db14d71a489758745211fa, type: 3}
       propertyPath: m_Name
-      value: Slime_5
+      value: Slime
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d5485982db14d71a489758745211fa, type: 3}
@@ -43768,7 +43768,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_38
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -45079,7 +45079,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_34
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -45250,7 +45250,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_28
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -46334,7 +46334,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2405872981440635100, guid: 0b2c26353a5114d64a2875d242bb8c60, type: 3}
       propertyPath: m_Name
-      value: SpeedPotion_1
+      value: SpeedPotion
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b2c26353a5114d64a2875d242bb8c60, type: 3}
@@ -46555,7 +46555,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2405872981440635100, guid: 0b2c26353a5114d64a2875d242bb8c60, type: 3}
       propertyPath: m_Name
-      value: SpeedPotion_3
+      value: SpeedPotion
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b2c26353a5114d64a2875d242bb8c60, type: 3}
@@ -47213,7 +47213,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_32
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -47636,7 +47636,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_25
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -48989,7 +48989,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_22
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -49398,7 +49398,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7437678252556647846, guid: 8c150705022b7428cb56282e36a279ed, type: 3}
       propertyPath: m_Name
-      value: HealthPotion_4
+      value: HealthPotion
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c150705022b7428cb56282e36a279ed, type: 3}
@@ -49460,7 +49460,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5626049343173740273, guid: b3d5485982db14d71a489758745211fa, type: 3}
       propertyPath: m_Name
-      value: Slime_29
+      value: Slime
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d5485982db14d71a489758745211fa, type: 3}
@@ -50022,7 +50022,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5626049343173740273, guid: b3d5485982db14d71a489758745211fa, type: 3}
       propertyPath: m_Name
-      value: Slime_24
+      value: Slime
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d5485982db14d71a489758745211fa, type: 3}
@@ -51240,7 +51240,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_35
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -51525,7 +51525,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_16
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -51587,7 +51587,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_23
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -52399,7 +52399,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5626049343173740273, guid: b3d5485982db14d71a489758745211fa, type: 3}
       propertyPath: m_Name
-      value: Slime_23
+      value: Slime
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d5485982db14d71a489758745211fa, type: 3}
@@ -53837,7 +53837,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7437678252556647846, guid: 8c150705022b7428cb56282e36a279ed, type: 3}
       propertyPath: m_Name
-      value: HealthPotion_1
+      value: HealthPotion
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c150705022b7428cb56282e36a279ed, type: 3}
@@ -53961,7 +53961,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5626049343173740273, guid: b3d5485982db14d71a489758745211fa, type: 3}
       propertyPath: m_Name
-      value: Slime_25
+      value: Slime
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d5485982db14d71a489758745211fa, type: 3}
@@ -54165,7 +54165,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_7
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -54701,7 +54701,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_11
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -55001,7 +55001,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5626049343173740273, guid: b3d5485982db14d71a489758745211fa, type: 3}
       propertyPath: m_Name
-      value: Slime_8
+      value: Slime
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d5485982db14d71a489758745211fa, type: 3}
@@ -56720,7 +56720,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7246034663335893907, guid: 14c90fac18b1344e59267546ab3e1d46, type: 3}
       propertyPath: m_Name
-      value: HealthApple_1
+      value: HealthApple
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14c90fac18b1344e59267546ab3e1d46, type: 3}
@@ -57756,7 +57756,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_29
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -58066,7 +58066,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_5
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -58354,7 +58354,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5626049343173740273, guid: b3d5485982db14d71a489758745211fa, type: 3}
       propertyPath: m_Name
-      value: Slime_14
+      value: Slime
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d5485982db14d71a489758745211fa, type: 3}
@@ -64319,7 +64319,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_21
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -64571,7 +64571,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_37
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -65796,7 +65796,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5626049343173740273, guid: b3d5485982db14d71a489758745211fa, type: 3}
       propertyPath: m_Name
-      value: Slime_27
+      value: Slime
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d5485982db14d71a489758745211fa, type: 3}
@@ -66086,7 +66086,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_12
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -66649,7 +66649,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_3
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -66766,7 +66766,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5626049343173740273, guid: b3d5485982db14d71a489758745211fa, type: 3}
       propertyPath: m_Name
-      value: Slime_30
+      value: Slime
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d5485982db14d71a489758745211fa, type: 3}
@@ -66828,7 +66828,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5626049343173740273, guid: b3d5485982db14d71a489758745211fa, type: 3}
       propertyPath: m_Name
-      value: Slime_21
+      value: Slime
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d5485982db14d71a489758745211fa, type: 3}
@@ -69135,7 +69135,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_19
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -69609,7 +69609,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5626049343173740273, guid: b3d5485982db14d71a489758745211fa, type: 3}
       propertyPath: m_Name
-      value: Slime_1
+      value: Slime
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d5485982db14d71a489758745211fa, type: 3}
@@ -73337,7 +73337,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5626049343173740273, guid: b3d5485982db14d71a489758745211fa, type: 3}
       propertyPath: m_Name
-      value: Slime_4
+      value: Slime
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d5485982db14d71a489758745211fa, type: 3}
@@ -74603,7 +74603,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5626049343173740273, guid: b3d5485982db14d71a489758745211fa, type: 3}
       propertyPath: m_Name
-      value: Slime_10
+      value: Slime
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d5485982db14d71a489758745211fa, type: 3}
@@ -77419,7 +77419,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_1
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -79198,7 +79198,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_2
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -79737,7 +79737,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_10
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -83355,7 +83355,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_36
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -85235,7 +85235,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_5
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -85487,7 +85487,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_27
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -88325,7 +88325,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2319419808930121189, guid: d159fcd1fb11d41beb721ca90f7c537c, type: 3}
       propertyPath: m_Name
-      value: StrengthPotion_1
+      value: StrengthPotion
       objectReference: {fileID: 0}
     - target: {fileID: 3022360188257608767, guid: d159fcd1fb11d41beb721ca90f7c537c, type: 3}
       propertyPath: m_RootOrder
@@ -90171,7 +90171,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5626049343173740273, guid: b3d5485982db14d71a489758745211fa, type: 3}
       propertyPath: m_Name
-      value: Slime_2
+      value: Slime
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d5485982db14d71a489758745211fa, type: 3}
@@ -90997,7 +90997,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_1
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -91355,7 +91355,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7246034663335893907, guid: 14c90fac18b1344e59267546ab3e1d46, type: 3}
       propertyPath: m_Name
-      value: HealthApple_2
+      value: HealthApple
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14c90fac18b1344e59267546ab3e1d46, type: 3}
@@ -96242,7 +96242,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_14
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -96627,7 +96627,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7437678252556647846, guid: 8c150705022b7428cb56282e36a279ed, type: 3}
       propertyPath: m_Name
-      value: HealthPotion_3
+      value: HealthPotion
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c150705022b7428cb56282e36a279ed, type: 3}
@@ -96769,7 +96769,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_18
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -98181,7 +98181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5626049343173740273, guid: b3d5485982db14d71a489758745211fa, type: 3}
       propertyPath: m_Name
-      value: Slime_28
+      value: Slime
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d5485982db14d71a489758745211fa, type: 3}
@@ -101735,7 +101735,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5626049343173740273, guid: b3d5485982db14d71a489758745211fa, type: 3}
       propertyPath: m_Name
-      value: Slime_9
+      value: Slime
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d5485982db14d71a489758745211fa, type: 3}
@@ -102492,7 +102492,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_15
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -102678,7 +102678,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_40
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -103008,7 +103008,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_2
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -104909,7 +104909,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611846423835125434, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_Name
-      value: Coin_20
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 1611846423835125435, guid: 5e82e4bf3b3554d4bb64a8625fd2a0ff, type: 3}
       propertyPath: m_RootOrder
@@ -106258,7 +106258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7443443193846770276, guid: 22fd96ab088a043a39878f283354193f, type: 3}
       propertyPath: m_Name
-      value: HealthCheese_3
+      value: HealthCheese
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22fd96ab088a043a39878f283354193f, type: 3}
@@ -106692,7 +106692,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5626049343173740273, guid: b3d5485982db14d71a489758745211fa, type: 3}
       propertyPath: m_Name
-      value: Slime_22
+      value: Slime
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d5485982db14d71a489758745211fa, type: 3}
