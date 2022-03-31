@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 933890984845606832}
   - component: {fileID: 3758834606072519089}
   - component: {fileID: 3291788552363947850}
-  - component: {fileID: -3554412047488174278}
   m_Layer: 0
   m_Name: SpeedPotion
   m_TagString: Untagged
@@ -110,15 +109,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &-3554412047488174278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2405872981440635100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba28f1ebad9ef4fc5b1e77665200aae2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

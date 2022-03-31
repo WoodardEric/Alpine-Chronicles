@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7730855141761080754}
   - component: {fileID: -1255339202766832785}
   - component: {fileID: -3683710164070192608}
-  - component: {fileID: 148717922632409901}
   m_Layer: 0
   m_Name: Weapon3
   m_TagString: Untagged
@@ -100,15 +99,3 @@ CapsuleCollider2D:
   m_Offset: {x: 0.068104506, y: 0}
   m_Size: {x: 1.2451761, y: 1.2451761}
   m_Direction: 0
---- !u!114 &148717922632409901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8157349768834550534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87c218824f26642c895e35b5c4754873, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
