@@ -9,15 +9,19 @@ using UnityEngine.SceneManagement;
 public class SaveScript : MonoBehaviour
 {
     public PlayerClass player = null;
-    
+    public float x, y, z; 
     void Start()
     {
+ 
+
         player = PlayerClass.Instance;
     }
 
     public void SaveGame()
     {
-        SaveLevel(); 
+        
+        SaveLevel();
+
         int healthy = player.GetHealth();
         PlayerPrefs.SetInt("health", healthy);
         Debug.Log("Saving...");
@@ -33,20 +37,27 @@ public class SaveScript : MonoBehaviour
     }
 
     public void SaveLevel()
-    {   
-        PlayerPrefs.SetInt("SavedScene", SceneManager.GetActiveScene().buildIndex);
+    {           
+        PlayerPrefs.SetInt("SavedScene", SceneManager.GetActiveScene().buildIndex); 
     }
 
 
     public void LoadLevel()
     {
-        
-        SceneManager.LoadScene(PlayerPrefs.GetInt("SavedScene"));     
         PlayerClass player = PlayerClass.Instance;
         player.IsInteracting(false);
-        player.SetPlayerPos(new Vector2(-5.18f, -2.87f));
-        
-        
+
+        SceneManager.LoadScene(PlayerPrefs.GetInt("SavedScene"));
+
+        //This loads the player position of 0, which is automatically set to 0 in everygame, through other player scripts.. 
+        // I cannot set the players position in save, due to other scripts setting to 0. 
+        PlayerPrefs.GetFloat("x", x);
+        PlayerPrefs.GetFloat("y", y);
+        PlayerPrefs.GetFloat("z", z);
+
+        Vector3 LoadPosition = new Vector3(x, y, z);
+        player.transform.position = LoadPosition; 
+
         
     }
 
