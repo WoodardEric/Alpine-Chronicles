@@ -296,6 +296,18 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5110615368001428872, guid: 10f74e0386e1c454792d1338392723ae, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110615368001428872, guid: 10f74e0386e1c454792d1338392723ae, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110615368001428872, guid: 10f74e0386e1c454792d1338392723ae, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1162861235
+      objectReference: {fileID: 0}
     - target: {fileID: 5110615368001428875, guid: 10f74e0386e1c454792d1338392723ae, type: 3}
       propertyPath: m_Name
       value: Player

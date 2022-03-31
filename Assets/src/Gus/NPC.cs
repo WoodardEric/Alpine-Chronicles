@@ -7,6 +7,7 @@ public class NPC : MonoBehaviour, IInteractable
     [SerializeField]
     private NPCDialogue dialogue = null;
     private PlayerClass playerController = null;
+    SpriteRenderer sprite;
 
     private void Start()
     {
@@ -17,6 +18,20 @@ public class NPC : MonoBehaviour, IInteractable
             Debug.LogError("No player class script was found on the player");
             this.gameObject.SetActive(false);
             return;
+        }
+
+        sprite = this.GetComponent<SpriteRenderer>();
+    }
+
+    void Update()
+    {
+        if (playerController.transform.position.y > this.transform.position.y - 0.5)
+        {
+            sprite.sortingLayerName = "NPCInFront";
+        }
+        else
+        {
+            sprite.sortingLayerName = "NPCBehind";
         }
     }
 
