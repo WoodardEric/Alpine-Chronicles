@@ -370,11 +370,14 @@ public class PlayerClass : MonoBehaviour
         {
             return;
         }
-        
-        if (++updateNum > 1)
+
+        if (++this.updateNum > 1)
         {
+            this.updateNum = 0;
             return;
         }
+       
+
         // Set up an ItemFactory and get the type of ItemFactory needed
         ItemFactory factory = null;
         factory = getFactory(other.gameObject.name);
@@ -384,13 +387,14 @@ public class PlayerClass : MonoBehaviour
         {
             // Pick up the item that the factory produces and destroy the object in the world
             ItemClass item = factory.GetItemClass();
+            
             if (PickupItem(item))
             {
                 Destroy(other.gameObject);
             }
         }
         Debug.Log("CURRENT INV SIZE: " + GetNumInvItems());
-        updateNum = 0;
+        
     }
 
 
@@ -512,7 +516,7 @@ public class PlayerClass : MonoBehaviour
     {
         // Reset the player interaction
         this.interacting = false;
-        this.updateNum = 0;
+        //this.updateNum = 0;
     }
 
 
@@ -569,6 +573,7 @@ public class PlayerClass : MonoBehaviour
         // Increment semaphore
         if (++this.updateNum > 1)
         {
+            this.updateNum = 0;
             return;
         }
         // Check if BC mode is active

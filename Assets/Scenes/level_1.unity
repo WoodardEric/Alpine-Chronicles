@@ -92769,6 +92769,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  x: 0
+  y: 0
+  z: 0
 --- !u!114 &1845259904
 MonoBehaviour:
   m_ObjectHideFlags: 0
