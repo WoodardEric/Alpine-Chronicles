@@ -23,71 +23,33 @@ public class StressRiley
 	[UnityTest]
 	public IEnumerator StressRileyWithEnumeratorPasses()
 	{
-
-		int count = 0;
-		//float timer = 0.0f;
-	   
-		//timer += Time.deltaTime;
-	    //float seconds = timer % 60;
-	   // Debug.Log("Time "+seconds);
-
 		int timer = 0;
-		int max = 10000;
 
+		//change max value to run longer, or add more values to save in order to crash.
+		int max = 5;
+		//int max = 100;
+	
 		while (timer < max)
 		{
 			timer += 1;
+
+			//change sleep value to milliseconds to try crashing system. 
 			System.Threading.Thread.Sleep(1000);
+			//System.Threading.Thread.Sleep(500);
+			//System.Threading.Thread.Sleep(100);
 		}
-	
-		Debug.Log("Count " + timer);
-		//Debug.Log("testing");
-		/*
-		while (true)
-        {		
-			bool exist;
 
-			//save the data in binary, more secure.
-			BinaryFormatter formatter = new BinaryFormatter();
-			string loc = Application.persistentDataPath + "/newtest.ap";
-			FileStream file = new FileStream(loc, FileMode.OpenOrCreate);
-
-			// Fill the File with player/level data here//
-
-			file.Close();
-
-			//check if file was created, to confirm save works. 
-			if (System.IO.File.Exists(loc))
-			{
-				Debug.Log("File exists, forever saving...");
-				exist = true;
-
-			}
-
-			else
-			{
-				exist = false;
-				Debug.Log("File does not exist in the current directory!");
-			}
-
-			Assert.IsTrue(exist, "The File exists");
-			
-			//!! Deleting sleep could cause your computer to crash!!//
-			//Change the sleep number slowly i.e 3 seconds, 2 secs, 1.//
-
-			Thread.Sleep(5000);
-			yield return null;
-		}
+		PlayerPrefs.SetInt("Score", timer);
 		
-	}	
-	[TearDown]
-	public void teardown()
-    {
-		SceneManager.UnloadSceneAsync("StressLevel");
+		if (PlayerPrefs.HasKey("Score"))
+		{
+			Debug.Log("Score saved every Second/millisecond, the score is: " + timer);
+		}
 
-    }*/
-
-		Thread.Sleep(6000);
+		else
+		{
+			Debug.Log("Score doesn't exist");
+		}
 		yield return null;
 	}
 }
