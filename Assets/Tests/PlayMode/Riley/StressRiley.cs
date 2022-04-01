@@ -25,18 +25,22 @@ public class StressRiley
 	{
 
 		int count = 0;
-		float timer = 0.0f;
+		//float timer = 0.0f;
 	   
-		timer += Time.deltaTime;
-	    float seconds = timer % 60;
-	    Debug.Log("Time "+seconds);
+		//timer += Time.deltaTime;
+	    //float seconds = timer % 60;
+	   // Debug.Log("Time "+seconds);
 
-		while (timer != 0) 
+		int timer = 0;
+		int max = 10000;
+
+		while (timer < max)
 		{
-			count++;
-
+			timer += 1;
+			System.Threading.Thread.Sleep(1000);
 		}
-		Debug.Log("Count " + count);
+	
+		Debug.Log("Count " + timer);
 		//Debug.Log("testing");
 		/*
 		while (true)
