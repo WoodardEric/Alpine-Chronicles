@@ -12,16 +12,34 @@ using UnityEngine.SceneManagement;
 //Change sleep() down below to make this crash// 
 public class StressRiley
 {
+
 	[SetUp]
-	public void setup() {
+	public void setup()
+	{
 		SceneManager.LoadScene("StressLevel");
-	
+
 	}
 
-    [UnityTest]
-    public IEnumerator StressRileyWithEnumeratorPasses()
-    {
-        while (true)
+	[UnityTest]
+	public IEnumerator StressRileyWithEnumeratorPasses()
+	{
+
+		int count = 0;
+		float timer = 0.0f;
+	   
+		timer += Time.deltaTime;
+	    float seconds = timer % 60;
+	    Debug.Log("Time "+seconds);
+
+		while (timer != 0) 
+		{
+			count++;
+
+		}
+		Debug.Log("Count " + count);
+		//Debug.Log("testing");
+		/*
+		while (true)
         {		
 			bool exist;
 
@@ -63,5 +81,9 @@ public class StressRiley
     {
 		SceneManager.UnloadSceneAsync("StressLevel");
 
-    }
+    }*/
+
+		Thread.Sleep(6000);
+		yield return null;
+	}
 }
