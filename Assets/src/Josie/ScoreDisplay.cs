@@ -7,18 +7,19 @@ public class ScoreDisplay : MonoBehaviour
 {
     public Text ScoreText;
     
-    int Score = 0;
+    public PlayerClass Player = null;
 
     // Start is called before the first frame update
     void Start()
     {
-        ScoreText.text = Score.ToString();
+        Player = PlayerClass.Instance;
     }
 
     // Update is called once per frame
+    
     void Update()
     {
-        //get score 
-        //ScoreText.text = Score.ToString();
+        int Score = Player.GetScore();
+        ScoreText.text = Score.ToString();
     }
 }
