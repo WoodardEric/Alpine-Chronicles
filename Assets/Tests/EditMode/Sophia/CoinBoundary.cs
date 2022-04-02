@@ -17,15 +17,15 @@ public class CoinBoundary
          CoinPickup coin = obj.AddComponent<CoinPickup>();
          coin.SetScore(499);
          coin.AdjustScore();
-         Assert.AreEqual(500, coin.GetScore());
+         Assert.AreEqual(500, CoinPickup.GetScore());
 
          coin.SetScore(500);
          coin.AdjustScore();
-         Assert.AreEqual(500, coin.GetScore());
+         Assert.AreEqual(500, CoinPickup.GetScore());
 
          coin.SetScore(501);
          coin.AdjustScore();
-         Assert.AreEqual(500, coin.GetScore());
+         Assert.AreEqual(500, CoinPickup.GetScore());
         
             
     }
