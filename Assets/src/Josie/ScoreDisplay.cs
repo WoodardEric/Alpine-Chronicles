@@ -7,7 +7,7 @@ public class ScoreDisplay : MonoBehaviour
 {
     public Text ScoreText;
     
-    int Score = 50;
+    int Score = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +18,7 @@ public class ScoreDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //get score 
+        //ScoreText.text = Score.ToString();
     }
 }
