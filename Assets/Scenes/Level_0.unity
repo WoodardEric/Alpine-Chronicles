@@ -236,6 +236,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  x: 0
+  y: 0
+  z: 0
 --- !u!114 &176434399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1798,7 +1801,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1211508958
 PrefabInstance:
@@ -3877,7 +3880,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5549972461191775715, guid: cc839055e84b94bd59437d1bc9bf8e11, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5549972461191775715, guid: cc839055e84b94bd59437d1bc9bf8e11, type: 3}
       propertyPath: m_AnchorMax.x
