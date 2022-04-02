@@ -17,7 +17,6 @@ using UnityEngine;
  * health - An integer defining how much health the player currently has
  * playerAtk - An integer holding the player's current attack power
  * BCMode - A bool variable that defines whether the game is in BC mode or not
- * currentScore - An integer variable that holds the current score
  * rgdb - The player's rigidbody component
  * newPos - A Vector2 variable that holds the amount of change in player movement
  * interacting - A bool variable defining if player is currently interacting with an NPC or object
@@ -46,7 +45,6 @@ public class PlayerClass : MonoBehaviour
     public int health;
     protected int playerAtk;
     bool BCMode;
-    int currentScore;
 
     // Player position and rigidbody
     Rigidbody2D rgdb;
@@ -116,7 +114,6 @@ public class PlayerClass : MonoBehaviour
         this.verticalMov = 0;
         this.attackRange = new Vector2(0.75f, 1.5f);
         this.secondsSinceDodge = 0;
-        this.currentScore = 0;
         animator.SetFloat("animSpeed", moveSpeed / 5);
 
         SetComponents();
