@@ -860,6 +860,10 @@ public class PlayerClass : MonoBehaviour
         inventory.CreateTestList();
     }
 
+
+    /*
+     * Summary: Resets the player to a default state
+     */
     public void ResetPlayer()
     {
         this.health = 100;

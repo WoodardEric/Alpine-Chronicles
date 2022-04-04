@@ -190,6 +190,10 @@ public class InventoryClass : MonoBehaviour
         return null;
     }
 
+
+    /*
+     * Summary: Resets the player's inventory
+     */
     public void ResetInventory()
     {
         for (int i = 0; i < currentAmt;)
