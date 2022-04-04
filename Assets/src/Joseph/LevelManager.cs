@@ -206,6 +206,7 @@ public class LevelManager : MonoBehaviour
         if(level == 2)
         {
             //IEnumerator for waiting for screen load
+            //yield return new WaitForSeconds(3f);
             fogArray = GameObject.FindGameObjectsWithTag("Fog");
 
             Debug.Log("Please work this time "+fogArray.Length);
