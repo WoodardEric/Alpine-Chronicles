@@ -101,19 +101,8 @@ public class PlayerClass : MonoBehaviour
     void Start()
     {
         // Initialize player
-        //this.health = 100;
-        //this.playerAtk = 1;
-        //this.updateNum = 0;
-        //this.BCMode = false;
-        //this.gameOver = false;
         this.frozen = false;
         this.interacting = false;
-        this.compSet = false;
-        //this.isMoving = false;
-        //this.horizontalMov = 0;
-        //this.verticalMov = 0;
-        //this.attackRange = new Vector2(0.75f, 1.5f);
-        //this.secondsSinceDodge = 0;
         SetComponents();
         ResetPlayer();
         animator.SetFloat("animSpeed", moveSpeed / 5);
