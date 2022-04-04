@@ -9,6 +9,9 @@ using UnityEngine.SceneManagement;
 public class SaveScript : MonoBehaviour
 {
     public PlayerClass player = null;
+    public CoinPickup Scored;
+   
+    GameObject something; 
     public float x, y, z; 
     void Start()
     {
@@ -23,7 +26,10 @@ public class SaveScript : MonoBehaviour
         SaveLevel();
 
         int healthy = player.GetHealth();
+        int HighScore = player.GetScore();
+
         PlayerPrefs.SetInt("health", healthy);
+        PlayerPrefs.SetInt("score", HighScore);
         Debug.Log("Saving...");
 
     }
@@ -32,7 +38,11 @@ public class SaveScript : MonoBehaviour
     {
         LoadLevel(); 
         int healthy = PlayerPrefs.GetInt("health");
+        int HighScore = PlayerPrefs.GetInt("score");
+
         player.health = healthy;
+        CoinPickup.score = HighScore; 
+       
         Debug.Log("Loading...");
     }
 
