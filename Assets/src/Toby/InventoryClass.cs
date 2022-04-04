@@ -15,13 +15,13 @@ using UnityEngine;
  *
  * Member Variables: 
  * inventory - The aggregate data structure defined in the ConcreteAggregate class
- * MAX_INV_SIZE - A constant integer which holds the maximum number of items allow in the inventory
+ * constMaxInvSize - A constant integer which holds the maximum number of items allow in the inventory
  * currentAmt - An integer which holds the current number of items in the inventory
  */
 public class InventoryClass : MonoBehaviour
 {
     protected ConcreteAggregate inventory = null;
-    const int MAX_INV_SIZE = 20;
+    const int constMaxInvSize = 20;
     protected int currentAmt;
 
 
@@ -48,7 +48,7 @@ public class InventoryClass : MonoBehaviour
     public bool AddItem(ItemClass addedItem)
     {
         // If the inventory is at max capacity, item can't be added
-        if (inventory.count >= MAX_INV_SIZE)
+        if (inventory.count >= constMaxInvSize)
         {
             return false;
         }
@@ -140,7 +140,7 @@ public class InventoryClass : MonoBehaviour
      */
     public int GetMaxItems()
     {
-        return MAX_INV_SIZE;
+        return constMaxInvSize;
     }
 
 
@@ -176,7 +176,7 @@ public class InventoryClass : MonoBehaviour
     public ItemClass GetItem(string name)
     {
         // Search for item in inventory
-        for (int i = 0; i < MAX_INV_SIZE; ++i)
+        for (int i = 0; i < constMaxInvSize; ++i)
         {
             ItemClass temp = (ItemClass) inventory[i];
             if (temp.itemName.Equals(name, StringComparison.Ordinal))

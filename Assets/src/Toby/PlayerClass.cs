@@ -16,7 +16,7 @@ using UnityEngine;
  * moveSpeed - A float defining how quickly the player moves in the world
  * health - An integer defining how much health the player currently has
  * playerAtk - An integer holding the player's current attack power
- * BCMode - A bool variable that defines whether the game is in BC mode or not
+ * modeBC - A bool variable that defines whether the game is in BC mode or not
  * rgdb - The player's rigidbody component
  * newPos - A Vector2 variable that holds the amount of change in player movement
  * interacting - A bool variable defining if player is currently interacting with an NPC or object
@@ -33,7 +33,7 @@ using UnityEngine;
  * attackArea - A Transform that defines a center point for the player's attack
  * attackRange - A Vector2 that defines the area of a box that represents the players attack area
  * enemyLayers - A LayerMask that defines which layer to look for enemies on
- * ATTACK_ANGLE - a constant float defining the player's attack angle to be 0
+ * constAttackAngle - a constant float defining the player's attack angle to be 0
  */
 public class PlayerClass : MonoBehaviour
 {
@@ -44,7 +44,7 @@ public class PlayerClass : MonoBehaviour
     [SerializeField] float moveSpeed;
     public int health;
     protected int playerAtk;
-    bool BCMode;
+    bool modeBC;
 
     // Player position and rigidbody
     Rigidbody2D rgdb;
@@ -73,7 +73,7 @@ public class PlayerClass : MonoBehaviour
     public Transform attackArea;
     public Vector2 attackRange;
     public LayerMask enemyLayers;
-    const float ATTACK_ANGLE = 0;
+    const float constAttackAngle = 0;
 
 
     /*
@@ -318,7 +318,7 @@ public class PlayerClass : MonoBehaviour
     void Attack()
     {
         // Get an array of all enemies in the player's attack range during attack
-        Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(attackArea.position, attackRange, ATTACK_ANGLE, enemyLayers);
+        Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(attackArea.position, attackRange, constAttackAngle, enemyLayers);
 
         // For each of the enemies, call their damage function
         foreach (Collider2D enemy in hitEnemies)
@@ -568,7 +568,7 @@ public class PlayerClass : MonoBehaviour
             return;
         }
         // Check if BC mode is active
-        if (BCMode)
+        if (modeBC)
         {
             // Create a temporary long variable to hold the health's value (to prevent underflow)
             long rangeExp = (long)this.health + (long)change;
@@ -696,10 +696,10 @@ public class PlayerClass : MonoBehaviour
         if (password.Equals("GoBig", StringComparison.Ordinal))
         {
             // If correct passowrd, activate BC mode
-            this.BCMode = true;
+            this.modeBC = true;
         }
 
-        return this.BCMode;
+        return this.modeBC;
     }
 
 
@@ -858,7 +858,7 @@ public class PlayerClass : MonoBehaviour
         this.health = 100;
         this.playerAtk = 1;
         this.updateNum = 0;
-        this.BCMode = false;
+        this.modeBC = false;
         this.gameOver = false;
         this.isMoving = false;
         this.horizontalMov = 0.0f;
