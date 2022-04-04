@@ -101,22 +101,24 @@ public class PlayerClass : MonoBehaviour
     void Start()
     {
         // Initialize player
-        this.health = 100;
-        this.playerAtk = 1;
-        this.updateNum = 0;
-        this.BCMode = false;
-        this.gameOver = false;
+        //this.health = 100;
+        //this.playerAtk = 1;
+        //this.updateNum = 0;
+        //this.BCMode = false;
+        //this.gameOver = false;
         this.frozen = false;
         this.interacting = false;
         this.compSet = false;
-        this.isMoving = false;
-        this.horizontalMov = 0;
-        this.verticalMov = 0;
-        this.attackRange = new Vector2(0.75f, 1.5f);
-        this.secondsSinceDodge = 0;
+        //this.isMoving = false;
+        //this.horizontalMov = 0;
+        //this.verticalMov = 0;
+        //this.attackRange = new Vector2(0.75f, 1.5f);
+        //this.secondsSinceDodge = 0;
+        SetComponents();
+        ResetPlayer();
         animator.SetFloat("animSpeed", moveSpeed / 5);
 
-        SetComponents();
+        
     }
 
 
@@ -856,5 +858,20 @@ public class PlayerClass : MonoBehaviour
     public void TestingList()
     {
         inventory.CreateTestList();
+    }
+
+    public void ResetPlayer()
+    {
+        this.health = 100;
+        this.playerAtk = 1;
+        this.updateNum = 0;
+        this.BCMode = false;
+        this.gameOver = false;
+        this.isMoving = false;
+        this.horizontalMov = 0.0f;
+        this.verticalMov = -1.0f;
+        this.attackRange = new Vector2(0.75f, 1.5f);
+        this.secondsSinceDodge = 0;
+        inventory.ResetInventory();
     }
 }

@@ -189,4 +189,12 @@ public class InventoryClass : MonoBehaviour
         // If item was not found, return null
         return null;
     }
+
+    public void ResetInventory()
+    {
+        for (int i = 0; i < currentAmt;)
+        {
+            RemoveItem(i);
+        }
+    }
 }
