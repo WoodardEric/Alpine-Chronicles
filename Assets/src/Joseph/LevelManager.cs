@@ -92,8 +92,8 @@ public class LevelManager : MonoBehaviour
 
         SceneManager.LoadScene(toScene);
 
-        //Debug.Log("SetLevelFog");
-        //SetLevelFog(toScene);
+        Debug.Log("SetLevelFog");
+        SetLevelFog(toScene);
 
         //Put the player at the proper position
         if(toScene == 1)
@@ -127,8 +127,8 @@ public class LevelManager : MonoBehaviour
 		    }
 	    }
 
-        Debug.Log("SetLevelFog");
-        SetLevelFog(toScene);
+        //Debug.Log("SetLevelFog");
+        //SetLevelFog(toScene);
     }
 
 
@@ -173,10 +173,21 @@ public class LevelManager : MonoBehaviour
         {
             fogArray = GameObject.FindGameObjectsWithTag("Fog");
 
-            for(i = 0; i < fogArray.Length; i++)
+            if(levelOneFog.Count == 0)
             {
-                Debug.Log("Found "+fogArray[i].name);
-                levelOneFog.Add(fogArray[i].activeSelf);
+                for(i = 0; i < fogArray.Length; i++)
+                {
+                    Debug.Log("Found " + fogArray[i].name);
+                    levelOneFog.Add(fogArray[i].activeSelf);
+                }
+            }
+            else
+            {
+                for(i = 0; i < fogArray.Length; i++)
+                {
+                    Debug.Log("Update " + fogArray[i].name);
+                    levelOneFog[i] = fogArray[i].activeSelf;
+                }
             }
         }
         else if(level == 3)
@@ -203,13 +214,19 @@ public class LevelManager : MonoBehaviour
         GameObject[] fogArray;
         int i;
 
-        if(level == 2)
+        if((level == 2) && (levelOneFog.Count != 0))
         {
             //IEnumerator for waiting for screen load
             //yield return new WaitForSeconds(3f);
             fogArray = GameObject.FindGameObjectsWithTag("Fog");
-
-            Debug.Log("Please work this time "+fogArray.Length);
+/*
+            while(fogArray.Length == 0)
+            {
+                Wait();
+                fogArray = GameObject.FindGameObjectsWithTag("Fog");
+            }
+*/
+            Debug.Log("Please work this time " + fogArray.Length + " " + levelOneFog.Count);
             for(i = 0; i < fogArray.Length; i++)
             {
                 Debug.Log("Set "+fogArray[i].name);
@@ -226,5 +243,10 @@ public class LevelManager : MonoBehaviour
                 fogArray[i].SetActive(levelTwoFog[i]);
             }
         }
+    }
+
+    private IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(1.5f);
     }
 }
