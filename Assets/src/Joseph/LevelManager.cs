@@ -92,8 +92,8 @@ public class LevelManager : MonoBehaviour
 
         SceneManager.LoadScene(toScene);
 
-        Debug.Log("SetLevelFog");
-        SetLevelFog(toScene);
+        //Debug.Log("SetLevelFog");
+        //SetLevelFog(toScene);
 
         //Put the player at the proper position
         if(toScene == 1)
@@ -216,16 +216,8 @@ public class LevelManager : MonoBehaviour
 
         if((level == 2) && (levelOneFog.Count != 0))
         {
-            //IEnumerator for waiting for screen load
-            //yield return new WaitForSeconds(3f);
             fogArray = GameObject.FindGameObjectsWithTag("Fog");
-/*
-            while(fogArray.Length == 0)
-            {
-                Wait();
-                fogArray = GameObject.FindGameObjectsWithTag("Fog");
-            }
-*/
+
             Debug.Log("Please work this time " + fogArray.Length + " " + levelOneFog.Count);
             for(i = 0; i < fogArray.Length; i++)
             {
@@ -245,8 +237,17 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    private IEnumerator Wait()
+/*
+    public void Update()
     {
-        yield return new WaitForSeconds(1.5f);
+        Scene currScene;
+
+        if(SceneManager.activeSceneChanged)
+        {
+            currScene = SceneManager.GetActiveScene();
+            Debug.Log("SetLevelFog " + currScene.buildIndex);
+            SetLevelFog(currScene.buildIndex);
+        }
     }
+*/
 }
