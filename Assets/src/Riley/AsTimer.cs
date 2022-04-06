@@ -15,6 +15,7 @@ public class AsTimer : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
+		//Saveit = this.AddComponent<AutoSave>();
 		Timer = Timer + 1 * Time.deltaTime;
 	}
 	// Update is called once per frame
@@ -30,8 +31,8 @@ public class AsTimer : MonoBehaviour
 		if (SaveGame == true)
 		{
 			SaveGame = false;
-			//Saveit.SavePlayer();
-			//Saveit.SaveLevel();
+			Saveit.SavePlayer();
+			Saveit.SaveLevel();
 
 			Debug.Log("AutoSaving Data...");
 			Timer = 0f;

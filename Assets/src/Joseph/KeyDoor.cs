@@ -7,6 +7,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /*
  * Summary: Only open the door if the player has the correct key
@@ -33,6 +34,7 @@ public class KeyDoor : Door
         {
             this.gameObject.SetActive(false);
             fog.SetActive(false);
+            LevelManager.Instance.UpdateLevelFog(SceneManager.GetActiveScene().buildIndex, fog.name);
             Debug.Log("Open the door");
         }
         else
