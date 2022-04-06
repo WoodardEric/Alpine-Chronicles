@@ -7,6 +7,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /*
  * Summary: Set the fog and door to false
@@ -24,8 +25,9 @@ public class FogDoor : Door
     override public void Open()
     {
 	    //Remove associated fog
-        Debug.Log("Remove Fog");
+        Debug.Log("Remove " + fog.name);
         fog.SetActive(false);
+        LevelManager.Instance.UpdateLevelFog(SceneManager.GetActiveScene().buildIndex, fog.name);
         //Open the Door
         this.gameObject.SetActive(false);
     }

@@ -22,8 +22,10 @@ public class LevelManager : MonoBehaviour
 {
     public int goodScene;
     public bool test = false;
-    List<bool> levelOneFog = new List<bool>();
-    List<bool> levelTwoFog = new List<bool>();
+    List<string> levelOneFog = new List<string>();
+    List<string> levelTwoFog = new List<string>();
+    Scene prevScene;
+    Scene currScene;
 
 	/*
 	 * Summary: Set up this class as a Singleton
@@ -87,13 +89,7 @@ public class LevelManager : MonoBehaviour
             return;
         }
 
-        Debug.Log("UpdateLevelFog");
-        UpdateLevelFog(fromScene);
-
         SceneManager.LoadScene(toScene);
-
-        //Debug.Log("SetLevelFog");
-        //SetLevelFog(toScene);
 
         //Put the player at the proper position
         if(toScene == 1)
@@ -126,9 +122,6 @@ public class LevelManager : MonoBehaviour
 			    player.SetPlayerPos(loadPos);
 		    }
 	    }
-
-        //Debug.Log("SetLevelFog");
-        //SetLevelFog(toScene);
     }
 
 
@@ -141,7 +134,7 @@ public class LevelManager : MonoBehaviour
      * Returns:
      * GameObject[] - return the level fog array requested, return null if invalid input
      */
-    public List<bool> GetLevelFog(int level)
+    public List<string> GetLevelFog(int level)
     {
         if(level == 2)
         {
@@ -159,45 +152,36 @@ public class LevelManager : MonoBehaviour
 
 
     /*
-     * Summary: Update the proper fog level array with the current true/false values
+     * Summary: Update the proper fog level array with the disabled fog
      *
      * Parameter:
      * level - integer representing the scene number of the level wanted
+     * name - string representing the name of the fog to be added
      */
-    public void UpdateLevelFog(int level)
+    public void UpdateLevelFog(int level, string name)
     {
-        GameObject[] fogArray;
-        int i;
-
         if(level == 2)
         {
-            fogArray = GameObject.FindGameObjectsWithTag("Fog");
-
-            if(levelOneFog.Count == 0)
+            if(levelOneFog.Contains(name))
             {
-                for(i = 0; i < fogArray.Length; i++)
-                {
-                    Debug.Log("Found " + fogArray[i].name);
-                    levelOneFog.Add(fogArray[i].activeSelf);
-                }
+                Debug.Log(name + " already exists in levelOneFog");
             }
             else
             {
-                for(i = 0; i < fogArray.Length; i++)
-                {
-                    Debug.Log("Update " + fogArray[i].name);
-                    levelOneFog[i] = fogArray[i].activeSelf;
-                }
+                levelOneFog.Add(name);
+                Debug.Log("Added " + name + " to levelOneFog");
             }
         }
         else if(level == 3)
         {
-            fogArray = GameObject.FindGameObjectsWithTag("Fog");
-
-            for(i = 0; i < fogArray.Length; i++)
+            if(levelTwoFog.Contains(name))
             {
-                Debug.Log("Found "+fogArray[i].name);
-                levelTwoFog.Add(fogArray[i].activeSelf);
+                Debug.Log(name + " already exists in levelTwoFog");
+            }
+            else
+            {
+                levelTwoFog.Add(name);
+                Debug.Log("Added " + name + " to levelTwoFog");
             }
         }
     }
@@ -218,11 +202,13 @@ public class LevelManager : MonoBehaviour
         {
             fogArray = GameObject.FindGameObjectsWithTag("Fog");
 
-            Debug.Log("Please work this time " + fogArray.Length + " " + levelOneFog.Count);
             for(i = 0; i < fogArray.Length; i++)
             {
-                Debug.Log("Set "+fogArray[i].name);
-                fogArray[i].SetActive(levelOneFog[i]);
+                if(levelOneFog.Contains(fogArray[i].name))
+                {
+                    fogArray[i].SetActive(false);
+                    Debug.Log("Disabled " + fogArray[i].name);
+                }
             }
         }
         else if(level == 3)
@@ -231,23 +217,30 @@ public class LevelManager : MonoBehaviour
 
             for(i = 0; i < fogArray.Length; i++)
             {
-                Debug.Log("Set "+fogArray[i].name);
-                fogArray[i].SetActive(levelTwoFog[i]);
+                if(levelTwoFog.Contains(fogArray[i].name))
+                {
+                    fogArray[i].SetActive(false);
+                    Debug.Log("Disabled " + fogArray[i].name);
+                }
             }
         }
     }
 
-/*
+
     public void Update()
     {
-        Scene currScene;
+        currScene = SceneManager.GetActiveScene();
 
-        if(SceneManager.activeSceneChanged)
+        if(currScene != prevScene)
         {
-            currScene = SceneManager.GetActiveScene();
+            prevScene = currScene;
             Debug.Log("SetLevelFog " + currScene.buildIndex);
             SetLevelFog(currScene.buildIndex);
         }
+        else
+        {
+            prevScene = currScene;
+        }
     }
-*/
+
 }
