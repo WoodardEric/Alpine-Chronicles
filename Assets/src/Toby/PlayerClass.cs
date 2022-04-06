@@ -638,6 +638,12 @@ public class PlayerClass : MonoBehaviour
     }
 
 
+    public void SetScore(int newScore)
+    {
+        CoinPickup.SetScore(newScore);
+    }
+
+
     /*
      * Summary: Changes player's current speed
      *
@@ -866,5 +872,6 @@ public class PlayerClass : MonoBehaviour
         this.attackRange = new Vector2(0.75f, 1.5f);
         this.secondsSinceDodge = 0;
         inventory.ResetInventory();
+        SetScore(0);
     }
 }

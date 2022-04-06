@@ -24,7 +24,7 @@ public class CoinPickup : MonoBehaviour
         return score;
     }
 
-    public void SetScore(int change){
+    public static void SetScore(int change){
         score = change;
     }
     void OnTriggerEnter2D (Collider2D col){
