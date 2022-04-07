@@ -9112,6 +9112,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 859328154}
     m_Modifications:
+    - target: {fileID: 1672775435921940505, guid: fd36367c6e1ee482dbd63ea3fd6caa8b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4580277632865812990, guid: fd36367c6e1ee482dbd63ea3fd6caa8b, type: 3}
       propertyPath: m_RootOrder
       value: 92
@@ -92781,7 +92785,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c651434c9de6d464899a45b00a3efff0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
 --- !u!1001 &1850792951
 PrefabInstance:
   m_ObjectHideFlags: 0

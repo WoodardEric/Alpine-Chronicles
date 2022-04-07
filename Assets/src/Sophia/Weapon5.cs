@@ -15,7 +15,7 @@ public class Weapon5 : ItemClass
     public Weapon5()
     {
         subItemName = "Weapon5";
-        subStrength = 1;
+        subStrength = 2;
         subHealth = -1; // error state, if the thing doesnt change it
         subTempStrength = (-1, -1);
         subTempSpeed = (-1, -1); //if speed, first number is increase by how much, and second is for how long in seconds
