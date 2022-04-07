@@ -324,7 +324,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -733706248022692889, guid: 10f74e0386e1c454792d1338392723ae, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 10f74e0386e1c454792d1338392723ae, type: 3}
 --- !u!1 &183361174
 GameObject:
@@ -795,6 +796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  Scored: {fileID: 0}
   x: 0
   y: 0
   z: 0

@@ -42,7 +42,7 @@ public class PlayerClass : MonoBehaviour
 
     // Player basic stat variables
     [SerializeField] float moveSpeed;
-    public int health;
+    protected int health;
     protected int playerAtk;
     bool modeBC;
 
@@ -119,7 +119,8 @@ public class PlayerClass : MonoBehaviour
         if (!compSet)
         {
             this.rgdb = this.GetComponent<Rigidbody2D>();
-            this.inventory = this.GetComponent<PlayerInventory>();
+            this.inventory = new PlayerInventory();
+            this.attackRange = new Vector2(0.75f, 1.5f);
             compSet = true;
         }
     }
@@ -625,6 +626,11 @@ public class PlayerClass : MonoBehaviour
         return health;
     }
 
+    public void SetHealth(int value)
+    {
+        health = value;
+    }
+
 
     /*
      * Summary: Gets the current score
@@ -715,7 +721,7 @@ public class PlayerClass : MonoBehaviour
      * Returns:
      * Vector2 - The player's current x and y positions
      */
-    public Vector2 getPos()
+    public Vector2 GetPos()
     {
         return new Vector2(this.transform.position.x, this.transform.position.y);
     }
@@ -869,7 +875,6 @@ public class PlayerClass : MonoBehaviour
         this.isMoving = false;
         this.horizontalMov = 0.0f;
         this.verticalMov = -1.0f;
-        this.attackRange = new Vector2(0.75f, 1.5f);
         this.secondsSinceDodge = 0;
         inventory.ResetInventory();
         SetScore(0);

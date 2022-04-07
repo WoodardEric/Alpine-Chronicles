@@ -8,7 +8,7 @@ public class CoinPickup : MonoBehaviour
 {
 
     public GameObject sound;
-    public static int score = 0;
+    static int score = 0;
 
     public void AdjustScore(){
       if(score <= 450){

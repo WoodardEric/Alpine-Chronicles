@@ -18,7 +18,7 @@ using UnityEngine;
  * constMaxInvSize - A constant integer which holds the maximum number of items allow in the inventory
  * currentAmt - An integer which holds the current number of items in the inventory
  */
-public class InventoryClass : MonoBehaviour
+public class InventoryClass
 {
     protected ConcreteAggregate inventory = null;
     const int constMaxInvSize = 20;
@@ -28,7 +28,7 @@ public class InventoryClass : MonoBehaviour
     /*
      * Summary: initilizes class instance variables
      */
-    void Start()
+    public InventoryClass()
     {
         // Initialize variables
         currentAmt = 0;

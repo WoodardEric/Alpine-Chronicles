@@ -16,7 +16,6 @@ public class InventoryTesting
     {
         // Create game object with player script
         gameObject = new GameObject();
-        gameObject.AddComponent<PlayerInventory>();
         player = gameObject.AddComponent<PlayerClass>();
         animator = gameObject.AddComponent<Animator>();
         player.animator = animator;

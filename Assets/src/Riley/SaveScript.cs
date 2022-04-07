@@ -27,9 +27,12 @@ public class SaveScript : MonoBehaviour
 
         int healthy = player.GetHealth();
         int HighScore = player.GetScore();
+        Vector2 pos = player.GetPos();
 
         PlayerPrefs.SetInt("health", healthy);
         PlayerPrefs.SetInt("score", HighScore);
+        PlayerPrefs.SetFloat("xPos", pos.x);
+        PlayerPrefs.SetFloat("yPos", pos.y);
         Debug.Log("Saving...");
 
     }
@@ -40,8 +43,9 @@ public class SaveScript : MonoBehaviour
         int healthy = PlayerPrefs.GetInt("health");
         int HighScore = PlayerPrefs.GetInt("score");
 
-        player.health = healthy;
-        CoinPickup.score = HighScore; 
+        player.SetHealth(healthy);
+        CoinPickup.SetScore(HighScore); 
+        player.SetPlayerPos(new Vector2(PlayerPrefs.GetFloat("xPos"), PlayerPrefs.GetFloat("yPos")));
        
         Debug.Log("Loading...");
     }
