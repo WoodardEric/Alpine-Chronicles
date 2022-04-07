@@ -258,7 +258,7 @@ GameObject:
   - component: {fileID: 11576780}
   - component: {fileID: 11576779}
   m_Layer: 0
-  m_Name: fog4
+  m_Name: fog4F1
   m_TagString: Fog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8005,7 +8005,7 @@ GameObject:
   - component: {fileID: 185213369}
   - component: {fileID: 185213370}
   m_Layer: 0
-  m_Name: fog9
+  m_Name: fog9F2
   m_TagString: Fog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9182,7 +9182,7 @@ GameObject:
   - component: {fileID: 209929421}
   - component: {fileID: 209929420}
   m_Layer: 0
-  m_Name: fog5
+  m_Name: fog5F1
   m_TagString: Fog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12275,7 +12275,7 @@ GameObject:
   - component: {fileID: 273912737}
   - component: {fileID: 273912738}
   m_Layer: 0
-  m_Name: fog8
+  m_Name: fog8F2
   m_TagString: Fog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16154,7 +16154,7 @@ GameObject:
   - component: {fileID: 328644091}
   - component: {fileID: 328644092}
   m_Layer: 0
-  m_Name: fog11
+  m_Name: fog11F2
   m_TagString: Fog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18497,7 +18497,7 @@ GameObject:
   m_Component:
   - component: {fileID: 388999888}
   m_Layer: 0
-  m_Name: fog1
+  m_Name: fog1F2
   m_TagString: Fog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19035,7 +19035,7 @@ GameObject:
   - component: {fileID: 398065659}
   - component: {fileID: 398065658}
   m_Layer: 0
-  m_Name: fog2
+  m_Name: fog2F1
   m_TagString: Fog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22367,7 +22367,7 @@ GameObject:
   - component: {fileID: 465561503}
   - component: {fileID: 465561502}
   m_Layer: 0
-  m_Name: fog3
+  m_Name: fog3F1
   m_TagString: Fog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25287,7 +25287,7 @@ GameObject:
   - component: {fileID: 524559870}
   - component: {fileID: 524559871}
   m_Layer: 0
-  m_Name: fog6
+  m_Name: fog6F2
   m_TagString: Fog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30462,7 +30462,7 @@ GameObject:
   - component: {fileID: 642495241}
   - component: {fileID: 642495242}
   m_Layer: 0
-  m_Name: fog5
+  m_Name: fog5F2
   m_TagString: Fog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31909,7 +31909,7 @@ GameObject:
   - component: {fileID: 673174010}
   - component: {fileID: 673174009}
   m_Layer: 0
-  m_Name: fog1
+  m_Name: fog1F1
   m_TagString: Fog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38170,7 +38170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 792835656}
   m_Layer: 0
-  m_Name: fog4
+  m_Name: fog4F2
   m_TagString: Fog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52540,6 +52540,103 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1978189285038401347, guid: eff8b40eb944c5f438b4993e23210fc5, type: 3}
   m_PrefabInstance: {fileID: 1049367797}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1049615825
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3994099839942715776, guid: 337e490470ddd45e5985b676fe50aab6, type: 3}
+      propertyPath: m_Name
+      value: Score
+      objectReference: {fileID: 0}
+    - target: {fileID: 3994099839942715803, guid: 337e490470ddd45e5985b676fe50aab6, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3994099839942715803, guid: 337e490470ddd45e5985b676fe50aab6, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3994099839942715803, guid: 337e490470ddd45e5985b676fe50aab6, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3994099839942715803, guid: 337e490470ddd45e5985b676fe50aab6, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3994099839942715803, guid: 337e490470ddd45e5985b676fe50aab6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3994099839942715803, guid: 337e490470ddd45e5985b676fe50aab6, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3994099839942715803, guid: 337e490470ddd45e5985b676fe50aab6, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3994099839942715803, guid: 337e490470ddd45e5985b676fe50aab6, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3994099839942715803, guid: 337e490470ddd45e5985b676fe50aab6, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3994099839942715803, guid: 337e490470ddd45e5985b676fe50aab6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3994099839942715803, guid: 337e490470ddd45e5985b676fe50aab6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3994099839942715803, guid: 337e490470ddd45e5985b676fe50aab6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3994099839942715803, guid: 337e490470ddd45e5985b676fe50aab6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3994099839942715803, guid: 337e490470ddd45e5985b676fe50aab6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3994099839942715803, guid: 337e490470ddd45e5985b676fe50aab6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3994099839942715803, guid: 337e490470ddd45e5985b676fe50aab6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3994099839942715803, guid: 337e490470ddd45e5985b676fe50aab6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3994099839942715803, guid: 337e490470ddd45e5985b676fe50aab6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3994099839942715803, guid: 337e490470ddd45e5985b676fe50aab6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3994099839942715803, guid: 337e490470ddd45e5985b676fe50aab6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3994099839942715803, guid: 337e490470ddd45e5985b676fe50aab6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 337e490470ddd45e5985b676fe50aab6, type: 3}
 --- !u!1 &1049766221
 GameObject:
   m_ObjectHideFlags: 0
@@ -59211,7 +59308,7 @@ GameObject:
   - component: {fileID: 1186087397}
   - component: {fileID: 1186087396}
   m_Layer: 0
-  m_Name: fog7
+  m_Name: fog7F1
   m_TagString: Fog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59482,7 +59579,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1188156776}
   m_Layer: 0
-  m_Name: fog0
+  m_Name: fog0F2
   m_TagString: Fog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65882,7 +65979,7 @@ GameObject:
   - component: {fileID: 1343420095}
   - component: {fileID: 1343420094}
   m_Layer: 0
-  m_Name: fog0
+  m_Name: fog0F1
   m_TagString: Fog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76451,7 +76548,7 @@ GameObject:
   - component: {fileID: 1543825958}
   - component: {fileID: 1543825959}
   m_Layer: 0
-  m_Name: fog10
+  m_Name: fog10F2
   m_TagString: Fog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76719,7 +76816,7 @@ GameObject:
   - component: {fileID: 1548233619}
   - component: {fileID: 1548233618}
   m_Layer: 0
-  m_Name: fog6
+  m_Name: fog6F1
   m_TagString: Fog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86842,7 +86939,7 @@ GameObject:
   - component: {fileID: 1742259541}
   - component: {fileID: 1742259542}
   m_Layer: 0
-  m_Name: fog7
+  m_Name: fog7F2
   m_TagString: Fog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -92773,6 +92870,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  x: 0
+  y: 0
+  z: 0
 --- !u!114 &1845259904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97252,7 +97352,7 @@ GameObject:
   - component: {fileID: 1950816884}
   - component: {fileID: 1950816883}
   m_Layer: 0
-  m_Name: fog8
+  m_Name: fog8F1
   m_TagString: Fog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98437,7 +98537,7 @@ GameObject:
   - component: {fileID: 1964326434}
   - component: {fileID: 1964326435}
   m_Layer: 0
-  m_Name: fog3
+  m_Name: fog3F2
   m_TagString: Fog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103533,7 +103633,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2078115374}
   m_Layer: 0
-  m_Name: fog2
+  m_Name: fog2F2
   m_TagString: Fog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

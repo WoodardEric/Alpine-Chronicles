@@ -13,6 +13,7 @@ public class StartMenu : MonoBehaviour
             Debug.Log("change to level_0 scene");
             SceneManager.LoadScene("Level_0");
             player.SetPlayerPos(new Vector2(-5.18f, -2.87f));
+            player.ResetPlayer();
         }
 
         public void drBcMode()

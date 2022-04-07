@@ -15,13 +15,17 @@ using UnityEngine.SceneManagement;
  * Member Variables:
  * goodScene - integer value used to test if an input is good
  * test - boolean value used to access code only avalible during tests
+ * levelOneFog - boolean list for the fog for level one
+ * levelTwoFog - boolean list for the for for level two
  */
 public class LevelManager : MonoBehaviour
 {
     public int goodScene;
     public bool test = false;
-    GameObject[] levelOneFog;
-    GameObject[] levelTwoFog;
+    List<string> levelOneFog = new List<string>();
+    List<string> levelTwoFog = new List<string>();
+    Scene prevScene;
+    Scene currScene;
 
 	/*
 	 * Summary: Set up this class as a Singleton
@@ -32,8 +36,9 @@ public class LevelManager : MonoBehaviour
 		private set;
 	}
 
+
     /*
-	 * Summary: Ensure only one instance of this class exists at a time
+	 * Summary: Ensure only one instance of this class exists at a time and set the arrays to null
 	 */
     private void Awake()
     {
@@ -41,6 +46,7 @@ public class LevelManager : MonoBehaviour
         if (Instance != null && Instance != this)
         {
             Destroy(this.gameObject);
+            return;
         }
         else
         {
@@ -49,6 +55,7 @@ public class LevelManager : MonoBehaviour
             DontDestroyOnLoad(this);
         }
     }
+
 
     /*
 	 * Summary: Change scenes if the inputs are within a correct range
@@ -82,16 +89,9 @@ public class LevelManager : MonoBehaviour
             return;
         }
 
-        if((fromScene == 2) && (levelOneFog == null))
-        {
-            levelOneFog = GameObject.FindGameObjectsWithTag("Fog");
-        }
-        else if ((fromScene == 3) && (levelTwoFog == null))
-        {
-            levelTwoFog = GameObject.FindGameObjectsWithTag("Fog");
-        }
-        //Change scene and move the player to the proper location
         SceneManager.LoadScene(toScene);
+
+        //Put the player at the proper position
         if(toScene == 1)
         {
             loadPos.x = -9f;
@@ -123,4 +123,124 @@ public class LevelManager : MonoBehaviour
 		    }
 	    }
     }
+
+
+    /*
+     * Summary: Return the array of fog for the corresponding level
+     *
+     * Parameter:
+     * level - integer meant to represent the scene in the build order
+     *
+     * Returns:
+     * GameObject[] - return the level fog array requested, return null if invalid input
+     */
+    public List<string> GetLevelFog(int level)
+    {
+        if(level == 2)
+        {
+            return levelOneFog;
+        }
+        else if(level == 3)
+        {
+            return levelTwoFog;
+        }
+        else
+        {
+            return null;
+        }
+    }
+
+
+    /*
+     * Summary: Update the proper fog level array with the disabled fog
+     *
+     * Parameter:
+     * level - integer representing the scene number of the level wanted
+     * name - string representing the name of the fog to be added
+     */
+    public void UpdateLevelFog(int level, string name)
+    {
+        if(level == 2)
+        {
+            if(levelOneFog.Contains(name))
+            {
+                Debug.Log(name + " already exists in levelOneFog");
+            }
+            else
+            {
+                levelOneFog.Add(name);
+                Debug.Log("Added " + name + " to levelOneFog");
+            }
+        }
+        else if(level == 3)
+        {
+            if(levelTwoFog.Contains(name))
+            {
+                Debug.Log(name + " already exists in levelTwoFog");
+            }
+            else
+            {
+                levelTwoFog.Add(name);
+                Debug.Log("Added " + name + " to levelTwoFog");
+            }
+        }
+    }
+
+
+    /*
+     * Summary: Set the fog in a scene to the values stored in the proper level fog array
+     *
+     * Parameter:
+     * level - integer representing the scene number of the level wanted
+     */
+    public void SetLevelFog(int level)
+    {
+        GameObject[] fogArray;
+        int i;
+
+        if((level == 2) && (levelOneFog.Count != 0))
+        {
+            fogArray = GameObject.FindGameObjectsWithTag("Fog");
+
+            for(i = 0; i < fogArray.Length; i++)
+            {
+                if(levelOneFog.Contains(fogArray[i].name))
+                {
+                    fogArray[i].SetActive(false);
+                    Debug.Log("Disabled " + fogArray[i].name);
+                }
+            }
+        }
+        else if(level == 3)
+        {
+            fogArray = GameObject.FindGameObjectsWithTag("Fog");
+
+            for(i = 0; i < fogArray.Length; i++)
+            {
+                if(levelTwoFog.Contains(fogArray[i].name))
+                {
+                    fogArray[i].SetActive(false);
+                    Debug.Log("Disabled " + fogArray[i].name);
+                }
+            }
+        }
+    }
+
+
+    public void Update()
+    {
+        currScene = SceneManager.GetActiveScene();
+
+        if(currScene != prevScene)
+        {
+            prevScene = currScene;
+            Debug.Log("SetLevelFog " + currScene.buildIndex);
+            SetLevelFog(currScene.buildIndex);
+        }
+        else
+        {
+            prevScene = currScene;
+        }
+    }
+
 }

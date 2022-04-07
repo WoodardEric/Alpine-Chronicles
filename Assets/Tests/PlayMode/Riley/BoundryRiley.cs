@@ -12,33 +12,23 @@ public class TestRiley
     [UnityTest, Order(1)]
     public IEnumerator TestRileyWithEnumeratorPasses()
     {
-			bool exist; 
-		
-			//save the data in binary, more secure.
-			BinaryFormatter formatter = new BinaryFormatter();
-			string loc = Application.persistentDataPath + "/test.ap";
-			FileStream file = new FileStream(loc, FileMode.Create);
-		 
-			// Fill the File with player/level data here//
+	    int Highscore;
+		Highscore = 500; 
+		PlayerPrefs.SetInt("score", Highscore); 
+		bool exist;
 
-			file.Close();
-
-		//check if file was created, to confirm save works. 
-		if (System.IO.File.Exists(loc))
+		if (PlayerPrefs.HasKey("score"))
 		{
-			Debug.Log("File exists, saving...");
 			exist = true;
-
-			//print out file location
-			Debug.Log(Application.persistentDataPath);
+			Debug.Log("Score exists Saved: " + Highscore);
+			//Highscore = PlayerPrefs.GetInt("score");
 		}
 
 		else
 		{
-			exist = false; 
+			exist = false;
 			Debug.Log("File does not exist in the current directory!");
 		}
-
 
 		Assert.IsTrue(exist, "The File exists");
 		yield return new WaitForSeconds(1f); 
@@ -48,33 +38,25 @@ public class TestRiley
 	[UnityTest, Order(2)]
 	public IEnumerator LoadRileyWithEnumeratorPasses()
 	{
+		int score = 1000; 
 		bool alive;
+		PlayerPrefs.SetInt("score", score);
 
-		string loc = Application.persistentDataPath + "/test.ap";
-		BinaryFormatter formatter = new BinaryFormatter();
-		FileStream stream = new FileStream(loc, FileMode.Open);
-
-		//deserialize data here and load it.// 
-
-		//Check if stream has truly opened the file, it shouldn't be null. 
-		if(stream != null){
-			Debug.Log("File Opened");
-			alive = true;
-			stream.Close();
-		}
-		else 
+		if (PlayerPrefs.HasKey("score"))
 		{
-			Debug.Log("File does not exist in the current directory!");
-			alive = false;
+			alive = true;
+			score = PlayerPrefs.GetInt("score");
+			Debug.Log("Score exists Loaded: " + score);
 		}
+
+		else
+		{
+			alive = false;
+			Debug.Log("File does not exist in the current directory!");
+		}	
+
 		Assert.IsTrue(alive, "The File has opened.");
 		yield return new WaitForSeconds(2f);
 	}
 	//Delete file and start over
-	[TearDown]
-	public void TearDown()
-	{
-		File.Delete(Application.persistentDataPath + "test.ap");
-		UnityEditor.AssetDatabase.Refresh();
-	}
 }

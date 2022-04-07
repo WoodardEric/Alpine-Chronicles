@@ -16,7 +16,7 @@ using UnityEngine;
  * moveSpeed - A float defining how quickly the player moves in the world
  * health - An integer defining how much health the player currently has
  * playerAtk - An integer holding the player's current attack power
- * BCMode - A bool variable that defines whether the game is in BC mode or not
+ * modeBC - A bool variable that defines whether the game is in BC mode or not
  * rgdb - The player's rigidbody component
  * newPos - A Vector2 variable that holds the amount of change in player movement
  * interacting - A bool variable defining if player is currently interacting with an NPC or object
@@ -33,7 +33,7 @@ using UnityEngine;
  * attackArea - A Transform that defines a center point for the player's attack
  * attackRange - A Vector2 that defines the area of a box that represents the players attack area
  * enemyLayers - A LayerMask that defines which layer to look for enemies on
- * ATTACK_ANGLE - a constant float defining the player's attack angle to be 0
+ * constAttackAngle - a constant float defining the player's attack angle to be 0
  */
 public class PlayerClass : MonoBehaviour
 {
@@ -42,9 +42,9 @@ public class PlayerClass : MonoBehaviour
 
     // Player basic stat variables
     [SerializeField] float moveSpeed;
-    public int health;
+    protected int health;
     protected int playerAtk;
-    bool BCMode;
+    bool modeBC;
 
     // Player position and rigidbody
     Rigidbody2D rgdb;
@@ -73,7 +73,7 @@ public class PlayerClass : MonoBehaviour
     public Transform attackArea;
     public Vector2 attackRange;
     public LayerMask enemyLayers;
-    const float ATTACK_ANGLE = 0;
+    const float constAttackAngle = 0;
 
 
     /*
@@ -101,22 +101,13 @@ public class PlayerClass : MonoBehaviour
     void Start()
     {
         // Initialize player
-        this.health = 100;
-        this.playerAtk = 1;
-        this.updateNum = 0;
-        this.BCMode = false;
-        this.gameOver = false;
         this.frozen = false;
         this.interacting = false;
-        this.compSet = false;
-        this.isMoving = false;
-        this.horizontalMov = 0;
-        this.verticalMov = 0;
-        this.attackRange = new Vector2(0.75f, 1.5f);
-        this.secondsSinceDodge = 0;
+        SetComponents();
+        ResetPlayer();
         animator.SetFloat("animSpeed", moveSpeed / 5);
 
-        SetComponents();
+        
     }
 
 
@@ -128,7 +119,8 @@ public class PlayerClass : MonoBehaviour
         if (!compSet)
         {
             this.rgdb = this.GetComponent<Rigidbody2D>();
-            this.inventory = this.GetComponent<PlayerInventory>();
+            this.inventory = new PlayerInventory();
+            this.attackRange = new Vector2(0.75f, 1.5f);
             compSet = true;
         }
     }
@@ -327,7 +319,7 @@ public class PlayerClass : MonoBehaviour
     void Attack()
     {
         // Get an array of all enemies in the player's attack range during attack
-        Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(attackArea.position, attackRange, ATTACK_ANGLE, enemyLayers);
+        Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(attackArea.position, attackRange, constAttackAngle, enemyLayers);
 
         // For each of the enemies, call their damage function
         foreach (Collider2D enemy in hitEnemies)
@@ -370,7 +362,14 @@ public class PlayerClass : MonoBehaviour
         {
             return;
         }
-        
+
+        if (++this.updateNum > 1)
+        {
+            this.updateNum = 0;
+            return;
+        }
+       
+
         // Set up an ItemFactory and get the type of ItemFactory needed
         ItemFactory factory = null;
         factory = getFactory(other.gameObject.name);
@@ -380,11 +379,14 @@ public class PlayerClass : MonoBehaviour
         {
             // Pick up the item that the factory produces and destroy the object in the world
             ItemClass item = factory.GetItemClass();
+            
             if (PickupItem(item))
             {
                 Destroy(other.gameObject);
             }
         }
+        Debug.Log("CURRENT INV SIZE: " + GetNumInvItems());
+        
     }
 
 
@@ -506,7 +508,7 @@ public class PlayerClass : MonoBehaviour
     {
         // Reset the player interaction
         this.interacting = false;
-        this.updateNum = 0;
+        //this.updateNum = 0;
     }
 
 
@@ -563,10 +565,11 @@ public class PlayerClass : MonoBehaviour
         // Increment semaphore
         if (++this.updateNum > 1)
         {
+            this.updateNum = 0;
             return;
         }
         // Check if BC mode is active
-        if (BCMode)
+        if (modeBC)
         {
             // Create a temporary long variable to hold the health's value (to prevent underflow)
             long rangeExp = (long)this.health + (long)change;
@@ -613,7 +616,7 @@ public class PlayerClass : MonoBehaviour
 
 
     /*
-     * Summary: Switches the currently equipped item with an item from the inventory
+     * Summary: Gets the player's current health
      *
      * Returns:
      * int - Return player's current health
@@ -621,6 +624,29 @@ public class PlayerClass : MonoBehaviour
     public int GetHealth()
     {
         return health;
+    }
+
+    public void SetHealth(int value)
+    {
+        health = value;
+    }
+
+
+    /*
+     * Summary: Gets the current score
+     *
+     * Returns:
+     * int - Returns the current score
+     */
+    public int GetScore()
+    {
+        return CoinPickup.GetScore();
+    }
+
+
+    public void SetScore(int newScore)
+    {
+        CoinPickup.SetScore(newScore);
     }
 
 
@@ -682,10 +708,10 @@ public class PlayerClass : MonoBehaviour
         if (password.Equals("GoBig", StringComparison.Ordinal))
         {
             // If correct passowrd, activate BC mode
-            this.BCMode = true;
+            this.modeBC = true;
         }
 
-        return this.BCMode;
+        return this.modeBC;
     }
 
 
@@ -695,7 +721,7 @@ public class PlayerClass : MonoBehaviour
      * Returns:
      * Vector2 - The player's current x and y positions
      */
-    public Vector2 getPos()
+    public Vector2 GetPos()
     {
         return new Vector2(this.transform.position.x, this.transform.position.y);
     }
@@ -833,5 +859,24 @@ public class PlayerClass : MonoBehaviour
     public void TestingList()
     {
         inventory.CreateTestList();
+    }
+
+
+    /*
+     * Summary: Resets the player to a default state
+     */
+    public void ResetPlayer()
+    {
+        this.health = 100;
+        this.playerAtk = 1;
+        this.updateNum = 0;
+        this.modeBC = false;
+        this.gameOver = false;
+        this.isMoving = false;
+        this.horizontalMov = 0.0f;
+        this.verticalMov = -1.0f;
+        this.secondsSinceDodge = 0;
+        inventory.ResetInventory();
+        SetScore(0);
     }
 }

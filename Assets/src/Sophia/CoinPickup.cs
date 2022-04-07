@@ -8,7 +8,7 @@ public class CoinPickup : MonoBehaviour
 {
 
     public GameObject sound;
-    int score = 0;
+    static int score = 0;
 
     public void AdjustScore(){
       if(score <= 450){
@@ -20,11 +20,11 @@ public class CoinPickup : MonoBehaviour
 
     }
 
-    public int GetScore(){
+    public static int GetScore(){
         return score;
     }
 
-    public void SetScore(int change){
+    public static void SetScore(int change){
         score = change;
     }
     void OnTriggerEnter2D (Collider2D col){

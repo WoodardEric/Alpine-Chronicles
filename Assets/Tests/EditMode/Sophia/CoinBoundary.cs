@@ -15,17 +15,17 @@ public class CoinBoundary
         // Use the Assert class to test conditions
         //GameObject.Instantiate(Resources.Load("Coin")) as GameObject;
          CoinPickup coin = obj.AddComponent<CoinPickup>();
-         coin.SetScore(499);
+         CoinPickup.SetScore(499);
          coin.AdjustScore();
-         Assert.AreEqual(500, coin.GetScore());
+         Assert.AreEqual(500, CoinPickup.GetScore());
 
-         coin.SetScore(500);
+         CoinPickup.SetScore(500);
          coin.AdjustScore();
-         Assert.AreEqual(500, coin.GetScore());
+         Assert.AreEqual(500, CoinPickup.GetScore());
 
-         coin.SetScore(501);
+         CoinPickup.SetScore(501);
          coin.AdjustScore();
-         Assert.AreEqual(500, coin.GetScore());
+         Assert.AreEqual(500, CoinPickup.GetScore());
         
             
     }

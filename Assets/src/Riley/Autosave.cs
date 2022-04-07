@@ -19,6 +19,10 @@ public class AutoSave : MonoBehaviour
     {
         int healthy = player.GetHealth();
         PlayerPrefs.SetInt("health", healthy);
+        PlayerPrefs.SetInt("score", player.GetScore());
+        Vector2 pos = player.GetPos();
+        PlayerPrefs.SetFloat("xPos", pos.x);
+        PlayerPrefs.SetFloat("yPos", pos.y);
         Debug.Log("Saving...");
     }
 
