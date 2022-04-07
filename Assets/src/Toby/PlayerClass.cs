@@ -16,6 +16,7 @@ using UnityEngine;
  * moveSpeed - A float defining how quickly the player moves in the world
  * health - An integer defining how much health the player currently has
  * playerAtk - An integer holding the player's current attack power
+ * totalStr - An integer holding the players current strength with the current weapon strength
  * modeBC - A bool variable that defines whether the game is in BC mode or not
  * rgdb - The player's rigidbody component
  * newPos - A Vector2 variable that holds the amount of change in player movement
@@ -35,7 +36,7 @@ using UnityEngine;
  * enemyLayers - A LayerMask that defines which layer to look for enemies on
  * constAttackAngle - a constant float defining the player's attack angle to be 0
  */
-public class PlayerClass : MonoBehaviour, IHitEnemies
+public class PlayerClass : MonoBehaviour
 {
     // Player singleton instance
     public static PlayerClass Instance { get; private set; }
@@ -43,7 +44,8 @@ public class PlayerClass : MonoBehaviour, IHitEnemies
     // Player basic stat variables
     [SerializeField] float moveSpeed;
     protected int health;
-    protected int playerAtk;
+    protected const int playerAtk = 1;
+    protected int totalStr;
     bool modeBC;
 
     // Player position and rigidbody
@@ -326,7 +328,7 @@ public class PlayerClass : MonoBehaviour, IHitEnemies
         {
             Debug.Log("Enemy " + enemy.name + " Hit");
             IHitEnemies enemyHit = enemy.gameObject.GetComponent<IHitEnemies>();
-            enemyHit.DamageEnemy(40.0f);  // TODO: Set a variable for attack and reference as the parameter for DamageEnemy()
+            enemyHit.DamageEnemy(playerAtk);  // TODO: Set a variable for attack and reference as the parameter for DamageEnemy()
         }
     }
 
@@ -685,6 +687,18 @@ public class PlayerClass : MonoBehaviour, IHitEnemies
 
 
     /*
+     * Summary: Gets the player's current strength
+     *
+     * Returns:
+     * float - Return player's current strength
+     */
+    public int GetStr()
+    {
+        return totalStr;
+    }
+
+
+    /*
      * Summary: Determines game over state if player dies
      */
     private void GameOverAct()
@@ -868,7 +882,7 @@ public class PlayerClass : MonoBehaviour, IHitEnemies
     public void ResetPlayer()
     {
         this.health = 100;
-        this.playerAtk = 1;
+        this.totalStr = playerAtk;
         this.updateNum = 0;
         this.modeBC = false;
         this.gameOver = false;
@@ -878,17 +892,5 @@ public class PlayerClass : MonoBehaviour, IHitEnemies
         this.secondsSinceDodge = 0;
         inventory.ResetInventory();
         SetScore(0);
-    }
-
-    public void DamageEnemy(float damage)
-    {
-        Debug.Log("Player took (" + damage + ") damage");
-        health -= Mathf.CeilToInt(damage);
-
-        if(health <= 0)
-        {
-            Debug.Log("PLAYER HAS DIED");
-            // PLAYER IS DEAD!!!
-        }
     }
 }

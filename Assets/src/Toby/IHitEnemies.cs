@@ -8,13 +8,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
- * Summary: This Class serves as an interface for the enemy NPS's to implement to process damage
+ * Summary: This Class serves as an interface for the enemy NPC's to implement to process damage
  */
 public interface IHitEnemies
 {
-    /// <summary>
-    /// Function that when called deals damage to the enemy
-    /// </summary>
-    /// <param name="damage"></param>
-    void DamageEnemy(float damage);
+    void DamageEnemy(int damage);
 }

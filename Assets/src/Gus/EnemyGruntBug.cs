@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class EnemyGruntBug : MonoBehaviour, IHitEnemies
 {
-    public float EnemyHealth = 100.0f;
-    public float EnemyDamage = 10.0f;
+    int EnemyHealth = 3;
+    public int EnemyDamage = 10;
 
     [SerializeField]
     private float moveSpeed = 1.0f;
@@ -18,7 +18,6 @@ public class EnemyGruntBug : MonoBehaviour, IHitEnemies
     private Vector3 playerTrackingOverride = new Vector3(0.0f, 0.15f, 0.0f);
 
     private PlayerClass player = null;
-    private IHitEnemies playerHit = null;
     private bool alert = false;
     private bool waitForEvent = false;
     private bool hitCooldown = true;
@@ -32,8 +31,6 @@ public class EnemyGruntBug : MonoBehaviour, IHitEnemies
             Debug.LogError("The ENEMY can't find an active player");
             this.gameObject.SetActive(false);
         }
-
-        playerHit = player.gameObject.GetComponent<IHitEnemies>();
 
         UnityEngine.Random.InitState(DateTime.Now.Minute + Mathf.FloorToInt(this.transform.position.magnitude * 4)); // ensures that every enemy has a completley randomly generated number for it's initialization
         StartCoroutine(IdleSequence());
@@ -57,7 +54,7 @@ public class EnemyGruntBug : MonoBehaviour, IHitEnemies
         {
             if(hitCooldown) // If true, it means the enemy CAN attack
             {
-                playerHit.DamageEnemy(EnemyDamage);
+                player.UpdateHealth(-EnemyDamage);
                 hitCooldown = false;
                 StartCoroutine(AttackCooldown());
             }
@@ -180,11 +177,11 @@ public class EnemyGruntBug : MonoBehaviour, IHitEnemies
         yield break;
     }
 
-    public void DamageEnemy(float damage)
+    public void DamageEnemy(int damage)
     {
         EnemyHealth -= damage;
 
-        if(EnemyHealth <= 0.0f)
+        if(EnemyHealth <= 0)
         {
             EnemyDeath();
         }
@@ -196,5 +193,10 @@ public class EnemyGruntBug : MonoBehaviour, IHitEnemies
     private void EnemyDeath()
     {
         Destroy(this.gameObject);
+    }
+
+    public int GetEnemyHealth()
+    {
+        return EnemyHealth;
     }
 }

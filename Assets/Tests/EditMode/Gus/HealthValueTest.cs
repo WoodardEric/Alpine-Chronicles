@@ -15,7 +15,7 @@ namespace Tests
 
             for(int i = 0; i < enemyArray.Length; i++)
             {
-                Assert.AreEqual(true, enemyArray[i].EnemyHealth >= Mathf.Min(min, max) && enemyArray[i].EnemyHealth <= Mathf.Max(min, max));
+                Assert.AreEqual(true, enemyArray[i].GetEnemyHealth() >= Mathf.Min(min, max) && enemyArray[i].GetEnemyHealth() <= Mathf.Max(min, max));
             }
         }
     }
