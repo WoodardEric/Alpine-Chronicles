@@ -46,15 +46,7 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = true;
         player.IsInteracting(true);
     }
-
-    //save game
-    public void Save()
-    {
-        Debug.Log("save button pressed");
-    }
-
-    //tempory function going to put into other class
-    public void Quit()
+       public void Quit()
     {
         Debug.Log("Quit Game");
         Application.Quit();
