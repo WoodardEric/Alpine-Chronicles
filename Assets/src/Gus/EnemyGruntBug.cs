@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyGruntBug : MonoBehaviour
+public class EnemyGruntBug : MonoBehaviour, IHitEnemies
 {
     public float EnemyHealth = 100.0f;
     public float EnemyDamage = 10.0f;
@@ -11,9 +11,17 @@ public class EnemyGruntBug : MonoBehaviour
     [SerializeField]
     private float moveSpeed = 1.0f;
 
+    [SerializeField]
+    private float attackTimer = 1.0f;
+
+    // Remember to keep this correct
+    private Vector3 playerTrackingOverride = new Vector3(0.0f, 0.15f, 0.0f);
+
     private PlayerClass player = null;
+    private IHitEnemies playerHit = null;
     private bool alert = false;
     private bool waitForEvent = false;
+    private bool hitCooldown = true;
 
     // Start is called before the first frame update
     void Start()
@@ -25,8 +33,15 @@ public class EnemyGruntBug : MonoBehaviour
             this.gameObject.SetActive(false);
         }
 
+        playerHit = player.gameObject.GetComponent<IHitEnemies>();
+
         UnityEngine.Random.InitState(DateTime.Now.Minute + Mathf.FloorToInt(this.transform.position.magnitude * 4)); // ensures that every enemy has a completley randomly generated number for it's initialization
         StartCoroutine(IdleSequence());
+    }
+
+    private void Update()
+    {
+        //alert = GoOnAlert();
     }
 
     // Update is called once per frame
@@ -35,29 +50,63 @@ public class EnemyGruntBug : MonoBehaviour
         alert = GoOnAlert();
     }
 
+    public void OnTriggerStay2D(Collider2D collision)
+    {
+        //Debug.Log("Bug OnStay: " + collision.gameObject);
+        if(collision.gameObject.CompareTag("Player"))
+        {
+            if(hitCooldown) // If true, it means the enemy CAN attack
+            {
+                playerHit.DamageEnemy(EnemyDamage);
+                hitCooldown = false;
+                StartCoroutine(AttackCooldown());
+            }
+        }
+    }
+
     private bool GoOnAlert()
     {
-        Vector3 direction = (player.transform.position - this.transform.position).normalized;
+        Vector3 modifiedPlayerPosition = player.transform.position + playerTrackingOverride;
+        Vector3 direction = (modifiedPlayerPosition - this.transform.position).normalized;
         //RaycastHit2D hit = Physics2D.Raycast(this.transform.position, direction, 10.0f);
         int maximumCollisions = 16;
         RaycastHit2D[] hitResults = new RaycastHit2D[maximumCollisions]; // maximum number of detected collisions
         ContactFilter2D filter2D = new ContactFilter2D();
         int hit = Physics2D.Raycast(this.transform.position, direction, filter2D, hitResults, 100.0f);
 
-        Debug.DrawLine(this.transform.position, player.transform.position, Color.red, 1.0f);
+        Debug.DrawLine(this.transform.position, modifiedPlayerPosition, Color.red, 1.0f);
         int count = 0;
-        while(hitResults[count].collider.gameObject.tag == "Enemy" && (count < maximumCollisions - 1))
+        if(hit != 0)
         {
-            count++;
-        }
-        if (hitResults[count].collider.gameObject.tag == "Player")
-        {
-            StopCoroutine("IdleAction");
-            waitForEvent = false;
-            this.transform.position += direction * moveSpeed * 0.02f; // ensures that the enemy move speed is consistent across multiple framerates the game may be running at
-            float rot_z = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            this.transform.rotation = Quaternion.Euler(0f, 0f, rot_z);
-            return true;
+            while (hitResults[count].collider != null && (count < maximumCollisions - 1))
+            {
+                if (hitResults[count].collider.gameObject.tag == "Player")
+                {
+                    StopCoroutine("IdleAction");
+                    waitForEvent = false;
+                    this.transform.position += direction * moveSpeed * 0.02f; // ensures that the enemy move speed is consistent across multiple framerates the game may be running at
+                    float rot_z = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                    this.transform.rotation = Quaternion.Euler(0f, 0f, rot_z);
+                    return true;
+                }
+                if (hitResults[count].collider.gameObject.CompareTag("Enemy"))
+                {
+                    count++;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            //if (hitResults[count].collider.gameObject.tag == "Player")
+            //{
+            //    StopCoroutine("IdleAction");
+            //    waitForEvent = false;
+            //    this.transform.position += direction * moveSpeed * 0.02f; // ensures that the enemy move speed is consistent across multiple framerates the game may be running at
+            //    float rot_z = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            //    this.transform.rotation = Quaternion.Euler(0f, 0f, rot_z);
+            //    return true;
+            //}
         }
         return false;
     }
@@ -122,5 +171,30 @@ public class EnemyGruntBug : MonoBehaviour
 
         waitForEvent = false;
         yield break;
+    }
+
+    private IEnumerator AttackCooldown()
+    {
+        yield return new WaitForSecondsRealtime(attackTimer);
+        hitCooldown = true;
+        yield break;
+    }
+
+    public void DamageEnemy(float damage)
+    {
+        EnemyHealth -= damage;
+
+        if(EnemyHealth <= 0.0f)
+        {
+            EnemyDeath();
+        }
+    }
+
+    /// <summary>
+    /// Calling this kills the enemy this script is attached to
+    /// </summary>
+    private void EnemyDeath()
+    {
+        Destroy(this.gameObject);
     }
 }

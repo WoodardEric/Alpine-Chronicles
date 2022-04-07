@@ -12,5 +12,9 @@ using UnityEngine;
  */
 public interface IHitEnemies
 {
-    void DamageEnemy();
+    /// <summary>
+    /// Function that when called deals damage to the enemy
+    /// </summary>
+    /// <param name="damage"></param>
+    void DamageEnemy(float damage);
 }

@@ -35,7 +35,7 @@ using UnityEngine;
  * enemyLayers - A LayerMask that defines which layer to look for enemies on
  * constAttackAngle - a constant float defining the player's attack angle to be 0
  */
-public class PlayerClass : MonoBehaviour
+public class PlayerClass : MonoBehaviour, IHitEnemies
 {
     // Player singleton instance
     public static PlayerClass Instance { get; private set; }
@@ -326,7 +326,7 @@ public class PlayerClass : MonoBehaviour
         {
             Debug.Log("Enemy " + enemy.name + " Hit");
             IHitEnemies enemyHit = enemy.gameObject.GetComponent<IHitEnemies>();
-            enemyHit.DamageEnemy();
+            enemyHit.DamageEnemy(40.0f);  // TODO: Set a variable for attack and reference as the parameter for DamageEnemy()
         }
     }
 
@@ -878,5 +878,17 @@ public class PlayerClass : MonoBehaviour
         this.secondsSinceDodge = 0;
         inventory.ResetInventory();
         SetScore(0);
+    }
+
+    public void DamageEnemy(float damage)
+    {
+        Debug.Log("Player took (" + damage + ") damage");
+        health -= Mathf.CeilToInt(damage);
+
+        if(health <= 0)
+        {
+            Debug.Log("PLAYER HAS DIED");
+            // PLAYER IS DEAD!!!
+        }
     }
 }
