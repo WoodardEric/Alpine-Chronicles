@@ -1,4 +1,10 @@
-using System.Collections;
+/*
+ * Filename:  PlayerClass.cs
+ * Developer: Toby Mclenon
+ * Purpose:   This file contains a class definition for the player
+ */
+ 
+ using System.Collections;
 using System;
 using System.Collections.Generic;
 using UnityEngine;

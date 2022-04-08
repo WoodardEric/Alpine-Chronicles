@@ -26,6 +26,13 @@ public class StartMenu : MonoBehaviour
     {
         SceneManager.LoadScene(PlayerPrefs.GetInt("SavedScene"));
     }   
+
+
+    public void SettingsMenu()
+    {
+        Debug.Log("Opens settings scene");
+        //change scenes 
+    }   
     
     // Start is called before the first frame update
     void Start()
