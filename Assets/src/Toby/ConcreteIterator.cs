@@ -37,7 +37,12 @@ public class ConcreteIterator : Iterator
      */
     public override object First()
     {
-        return aggregate[0];
+        if (aggregate.count > 0)
+        {
+            return aggregate[0];
+        }
+        
+        return null;
     }
 
 
@@ -50,9 +55,15 @@ public class ConcreteIterator : Iterator
     public override object Next()
     {
         object ret = null;
-        if (current < aggregate.count - 1)
+        if (aggregate.count == 0)
         {
-            ret = aggregate[++current];
+            return ret;
+        }
+
+        
+        if (++current < aggregate.count)
+        {
+            ret = aggregate[current];
         }
         return ret;
     }
@@ -66,6 +77,11 @@ public class ConcreteIterator : Iterator
      */
     public override object CurrentItem()
     {
+        if (IsDone())
+        {
+            return null;
+        }
+
         return aggregate[current];
     }
 

@@ -11,19 +11,8 @@ using UnityEngine;
  * Summary: This Class acts is a subclass of InventoryClass and acts as a definition
  *          for the player's inventory
  */
-public class PlayerInventory : InventoryClass
+public class PlayerInventory : ConcreteAggregate
 {
-    /*
-     * Summary: initilizes class instance variables
-     */
-    void Start()
-    {
-        // Initialize variables
-        currentAmt = 0;
-        inventory = new ConcreteAggregate();
-    }
-
-
     /*
      * Summary: Switches the positions of two items in the inventory
      *
@@ -37,27 +26,27 @@ public class PlayerInventory : InventoryClass
     public bool SwitchItems(int itemOne, int itemTwo)
     {
         // Check bounds of first index
-        if (itemOne < 0 || itemOne >= inventory.count)
+        if (itemOne < 0 || itemOne >= this.count)
         {
             return false;
         }
         
         // Check bounds of second index
-        if (itemTwo < 0 || itemTwo >= inventory.count)
+        if (itemTwo < 0 || itemTwo >= this.count)
         {
             return false;
         }
 
         // Check if either item doesn't exist
-        if (inventory[itemOne] == null || inventory[itemTwo] == null)
+        if (this[itemOne] == null || this[itemTwo] == null)
         {
             return false;
         }
 
         // Swap the items
-        ItemClass temp = (ItemClass) inventory[itemOne];
-        inventory[itemOne] = inventory[itemTwo];
-        inventory[itemTwo] = temp;
+        ItemClass temp = (ItemClass) this[itemOne];
+        this[itemOne] = this[itemTwo];
+        this[itemTwo] = temp;
         return true;
     }
 
@@ -81,39 +70,43 @@ public class PlayerInventory : InventoryClass
             return (false, null);
         }
 
+
         // Check if player is putting equipped item into inventory without swapping another item in
-        if (index >= inventory.count)
+        if (index >= this.count)
         {
-            inventory[inventory.count] = item;
-            ++currentAmt;
+            if ((this.count >= GetMaxItems()) || (item == null))
+            {
+                return (false, null);
+            }
+
+            this[this.count] = item;
             return (true, null);
+        }
+
+        if (item == null)
+        {
+            if (this[index] == null)
+            {
+                return (false, null);
+            }
+
+            ItemClass tempItem = (ItemClass) this[index];
+            RemoveItem(index);
+            return (true, tempItem);
         }
 
         // Check if player is placing equipped item into empty inventory slot
-        if (inventory[index] == null)
+        if (this[index] == null)
         {
-            inventory[index] = item;
-            ++currentAmt;
+            this[index] = item;
             return (true, null);
         }
 
+        
+
         // If item swapped exists, swap it to equip slot of player
-        ItemClass temp = (ItemClass) inventory[index];
-        inventory[index] = item;
+        ItemClass temp = (ItemClass) this[index];
+        this[index] = item;
         return (true, temp);
-    }
-
-
-    /*
-     * Summary: A function to make testing easier. Creates an inventory since the start function
-     *          is not called in edit mode tests. But in the even of it being used in production
-     *          it first checks whether an inventory already exists.
-     */
-    public void CreateTestList()
-    {
-        if (inventory == null)
-        {
-            inventory = new ConcreteAggregate();
-        }
     }
 }

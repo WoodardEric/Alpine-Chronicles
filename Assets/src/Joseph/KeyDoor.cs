@@ -29,7 +29,7 @@ public class KeyDoor : Door
         PlayerClass player = PlayerClass.Instance;
         bool hasKey;
 
-        hasKey = player.RemoveInvItem(key);
+        hasKey = player.inventory.RemoveItem(key);
         if(hasKey)
         {
             this.gameObject.SetActive(false);

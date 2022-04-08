@@ -58,7 +58,9 @@ public class PlayerClass : MonoBehaviour
     bool gameOver;
 
     // Player inventory
-    PlayerInventory inventory;
+    public PlayerInventory inventory;
+    public ItemClass equippedWeapon;
+    public ItemClass equippedUtil;
 
     // Safety variables
     bool compSet;
@@ -108,8 +110,6 @@ public class PlayerClass : MonoBehaviour
         SetComponents();
         ResetPlayer();
         animator.SetFloat("animSpeed", moveSpeed / 5);
-
-        
     }
 
 
@@ -320,6 +320,15 @@ public class PlayerClass : MonoBehaviour
      */
     void Attack()
     {
+        if (equippedWeapon == null)
+        {
+            totalStr = 1;
+        }
+        else
+        {
+            totalStr = playerAtk + equippedWeapon.strength;
+        }
+
         // Get an array of all enemies in the player's attack range during attack
         Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(attackArea.position, attackRange, constAttackAngle, enemyLayers);
 
@@ -328,7 +337,7 @@ public class PlayerClass : MonoBehaviour
         {
             Debug.Log("Enemy " + enemy.name + " Hit");
             IHitEnemies enemyHit = enemy.gameObject.GetComponent<IHitEnemies>();
-            enemyHit.DamageEnemy(playerAtk);  // TODO: Set a variable for attack and reference as the parameter for DamageEnemy()
+            enemyHit.DamageEnemy(totalStr);  // TODO: Set a variable for attack and reference as the parameter for DamageEnemy()
         }
     }
 
@@ -382,12 +391,12 @@ public class PlayerClass : MonoBehaviour
             // Pick up the item that the factory produces and destroy the object in the world
             ItemClass item = factory.GetItemClass();
             
-            if (PickupItem(item))
+            if (this.inventory.AddItem(item))
             {
                 Destroy(other.gameObject);
             }
         }
-        Debug.Log("CURRENT INV SIZE: " + GetNumInvItems());
+        Debug.Log("CURRENT INV SIZE: " + this.inventory.count);
         
     }
 
@@ -511,21 +520,6 @@ public class PlayerClass : MonoBehaviour
         // Reset the player interaction
         this.interacting = false;
         //this.updateNum = 0;
-    }
-
-
-    /*
-     * Summary: Adds an item to the player's inventory
-     *
-     * Parameters:
-     * item - The ItemClass item to be added to the player's inventory
-     *
-     * Returns:
-     * bool - Return true if the item was added and false if not
-     */
-    private bool PickupItem(ItemClass item)
-    {
-        return AddInvItem(item);
     }
 
 
@@ -751,128 +745,6 @@ public class PlayerClass : MonoBehaviour
     {
         // Set the player's position
         this.transform.position = new Vector3(pos.x, pos.y, 0);
-    }
-
-
-    /*
-     * Summary: Adds an item to the inventory
-     *
-     * Parameters:
-     * addedItem - The ItemClass item to be added to the inventory
-     *
-     * Returns:
-     * bool - Return true if the item was added and false if not
-     */
-    public bool AddInvItem(ItemClass addedItem)
-    {
-        return this.inventory.AddItem(addedItem);
-    }
-
-
-    /*
-     * Summary: Removes an item from the player's inventory
-     *
-     * Parameters:
-     * index - The index of the item in inventory to be removed
-     *
-     * Returns:
-     * bool - Return true if the item was removed and false if not
-     */
-    public bool RemoveInvItem(int invIndex)
-    {
-        return this.inventory.RemoveItem(invIndex);
-    }
-
-
-    /*
-     * Summary: Removes an item from the player's inventory
-     *
-     * Parameters:
-     * itemName - The name of the item in inventory to be removed
-     *
-     * Returns:
-     * bool - Return true if the item was removed and false if not
-     */
-    public bool RemoveInvItem(string itemName)
-    {
-        return this.inventory.RemoveItem(itemName);
-    }
-
-
-    /*
-     * Summary: Gets the number of items currently in the item's inventory
-     *
-     * Returns:
-     * int - Return the number of items currently in the player's inventory
-     */
-    public int GetNumInvItems()
-    {
-        return this.inventory.GetNumItems();
-    }
-
-
-    /*
-     * Summary: Gets the maximum number of items allowed in the player inventory
-     *
-     * Returns:
-     * int - Return the maximum number of items allowed in the player inventory
-     */
-    public int GetMaxItems()
-    {
-        return this.inventory.GetMaxItems();
-    }
-
-
-    /*
-     * Summary: Retrieves an item from the player's inventory
-     *
-     * Parameters:
-     * index - The index of the item in inventory to be retrieved
-     *
-     * Returns:
-     * ItemClass - The Item that was found in the inventory. Null if none found
-     */
-    public ItemClass GetInvItem(int index)
-    {
-        return inventory.GetItem(index);
-    }
-
-
-    /*
-     * Summary: Retrieves an item from the player's inventory
-     *
-     * Parameters:
-     * name - The name of the item in inventory to be retrieved
-     *
-     * Returns:
-     * ItemClass - The Item that was found in the inventory. Null if none found
-     */
-    public ItemClass GetInvItem(string name)
-    {
-        return inventory.GetItem(name);
-    }
-
-
-    /*
-     * Summary: Switches the positions of two items in the inventory
-     *
-     * Parameters:
-     * invItemOne - The index of the first item in inventory to be swapped
-     * invItemTwo - The index of the second item in inventory to be swapped
-     */
-    public void SwitchInvItems(int invItemOne, int invItemTwo)
-    {
-        inventory.SwitchItems(invItemOne, invItemTwo);
-    }
-
-
-    /*
-     * Summary: Function solely used for testing. Creates a player inventory since the start
-     *          function is not called in edit mode tests
-     */
-    public void TestingList()
-    {
-        inventory.CreateTestList();
     }
 
 
