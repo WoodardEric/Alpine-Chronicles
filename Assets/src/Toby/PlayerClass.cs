@@ -322,7 +322,7 @@ public class PlayerClass : MonoBehaviour
     {
         if (equippedWeapon == null)
         {
-            totalStr = 1;
+            totalStr = playerAtk;
         }
         else
         {
@@ -624,6 +624,11 @@ public class PlayerClass : MonoBehaviour
 
     public void SetHealth(int value)
     {
+        if (value > 100)
+        {
+            value = 100;
+        }
+
         health = value;
     }
 
