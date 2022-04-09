@@ -11,7 +11,7 @@ public class AsTimer : MonoBehaviour
 	public float Timer = 0;
 	public bool SaveGame = false;
 	public float Timecheck = 1800f;
-	public AutoSave Saveit; 
+	public Autosaveyy Saveit; 
 	// Start is called before the first frame update
 	void Start()
 	{

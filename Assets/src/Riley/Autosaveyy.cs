@@ -1,4 +1,4 @@
-/*using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,7 +6,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine.SceneManagement;
 
-public class AutoSave : MonoBehaviour
+public class Autosaveyy : MonoBehaviour
 {
     public PlayerClass player = null;
 
@@ -27,8 +27,8 @@ public class AutoSave : MonoBehaviour
     }
 
     public void SaveLevel()
-    {   
+    {
         PlayerPrefs.SetInt("SavedScene", SceneManager.GetActiveScene().buildIndex);
     }
 
-}*/
+}
