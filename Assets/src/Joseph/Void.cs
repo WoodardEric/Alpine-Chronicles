@@ -11,14 +11,12 @@ using UnityEngine;
 /*
  * Summary: Move the player to the beginning of the area when entering the Void collider
  *
- * Member Variables:
- * triggered - an integer which is 0 if the player is not in the collider and 1 if they area
+ * Member Variables:a
  * scene - integer that determines where the player is teleported to on collision
  * damage - integer that denotes how much damage the player takes when enetering the collider
  */
 public class Void : MonoBehaviour
 {
-    public int triggered = 0;
     public int scene;
     public int damage = -5;
 
@@ -30,7 +28,6 @@ public class Void : MonoBehaviour
 	 */
     void OnTriggerStay2D(Collider2D other)
     {
-        triggered=1;
         Vector2 position = new Vector2(0f,0f);
         PlayerClass player = PlayerClass.Instance;
 	  
@@ -57,19 +54,13 @@ public class Void : MonoBehaviour
 		    position.y = -32.5f;
 		    player.SetPlayerPos(position);
         }
+        else if(scene == 3)
+        {
+            position.x = -6f;
+            position.y = 16f;
+            player.SetPlayerPos(position);
+        }
         //Damage the player
         player.UpdateHealth(damage);
-    }
-
-
-    /*
-	 * Summary: Set triggered to 0
-	 *
-	 * Parameters:
-	 * other - the Collider2D that just exited the trigger
-	 */
-    void OnTriggerExit2D(Collider2D other)
-    {
-        triggered=0;
     }
 }
