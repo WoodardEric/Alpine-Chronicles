@@ -27,7 +27,7 @@ public class FogDoor : Door
 	    //Remove associated fog
         Debug.Log("Remove " + fog.name);
         fog.SetActive(false);
-        LevelManager.Instance.UpdateLevelFog(SceneManager.GetActiveScene().buildIndex, fog.name);
+        LevelManager.Instance.UpdateLevel(SceneManager.GetActiveScene().buildIndex, fog.name);
         //Open the Door
         this.gameObject.SetActive(false);
     }

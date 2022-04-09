@@ -34,7 +34,8 @@ public class KeyDoor : Door
         {
             this.gameObject.SetActive(false);
             fog.SetActive(false);
-            LevelManager.Instance.UpdateLevelFog(SceneManager.GetActiveScene().buildIndex, fog.name);
+            LevelManager.Instance.UpdateLevel(SceneManager.GetActiveScene().buildIndex, fog.name);
+            LevelManager.Instance.UpdateLevel(this.name);
             Debug.Log("Open the door");
         }
         else

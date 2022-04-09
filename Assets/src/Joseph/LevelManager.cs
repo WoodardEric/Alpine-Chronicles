@@ -15,8 +15,10 @@ using UnityEngine.SceneManagement;
  * Member Variables:
  * goodScene - integer value used to test if an input is good
  * test - boolean value used to access code only avalible during tests
- * levelOneFog - boolean list for the fog for level one
- * levelTwoFog - boolean list for the for for level two
+ * levelOneFog - string list for the fog for level one
+ * levelTwoFog - string list for the for for level two
+ * prevScene - the scene of the last frame call
+ * currScene - the scene of the current frame call
  */
 public class LevelManager : MonoBehaviour
 {
@@ -24,6 +26,7 @@ public class LevelManager : MonoBehaviour
     public bool test = false;
     List<string> levelOneFog = new List<string>();
     List<string> levelTwoFog = new List<string>();
+    List<string> keyDoors = new List<string>();
     Scene prevScene;
     Scene currScene;
 
@@ -132,7 +135,7 @@ public class LevelManager : MonoBehaviour
      * level - integer meant to represent the scene in the build order
      *
      * Returns:
-     * GameObject[] - return the level fog array requested, return null if invalid input
+     * List<string> - return the level fog array requested, return null if invalid input
      */
     public List<string> GetLevelFog(int level)
     {
@@ -151,6 +154,12 @@ public class LevelManager : MonoBehaviour
     }
 
 
+    public List<string> GetKeyDoors()
+    {
+        return keyDoors;
+    }
+
+
     /*
      * Summary: Update the proper fog level array with the disabled fog
      *
@@ -158,7 +167,7 @@ public class LevelManager : MonoBehaviour
      * level - integer representing the scene number of the level wanted
      * name - string representing the name of the fog to be added
      */
-    public void UpdateLevelFog(int level, string name)
+    public void UpdateLevel(int level, string name)
     {
         if(level == 2)
         {
@@ -186,6 +195,25 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    /*
+     * Summary: Attempt to add a KeyDoor name to keyDoors
+     *
+     * Parameters:
+     * name - a string representing the name of the door
+     */
+    public void UpdateLevel(string name)
+    {
+        if(keyDoors.Contains(name))
+        {
+            Debug.Log(name + " already exists in keyDoors");
+        }
+        else
+        {
+            keyDoors.Add(name);
+            Debug.Log("Added " + name + " to keyDoors");
+        }
+    }
+
 
     /*
      * Summary: Set the fog in a scene to the values stored in the proper level fog array
@@ -193,9 +221,10 @@ public class LevelManager : MonoBehaviour
      * Parameter:
      * level - integer representing the scene number of the level wanted
      */
-    public void SetLevelFog(int level)
+    public void SetLevel(int level)
     {
         GameObject[] fogArray;
+        GameObject door;
         int i;
 
         if((level == 2) && (levelOneFog.Count != 0))
@@ -224,9 +253,22 @@ public class LevelManager : MonoBehaviour
                 }
             }
         }
+
+        for(i = 0; i < keyDoors.Count; i++)
+        {
+            door = GameObject.Find(keyDoors[i]);
+
+            if(door != null)
+            {
+                door.SetActive(false);
+            }
+        }
     }
 
 
+    /*
+     * Summary: Check to see if a new scene has loaded and set the fog if it has
+     */
     public void Update()
     {
         currScene = SceneManager.GetActiveScene();
@@ -235,7 +277,7 @@ public class LevelManager : MonoBehaviour
         {
             prevScene = currScene;
             Debug.Log("SetLevelFog " + currScene.buildIndex);
-            SetLevelFog(currScene.buildIndex);
+            SetLevel(currScene.buildIndex);
         }
         else
         {
