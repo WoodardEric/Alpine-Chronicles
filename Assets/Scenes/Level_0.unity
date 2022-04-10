@@ -240,19 +240,6 @@ MonoBehaviour:
   x: 0
   y: 0
   z: 0
---- !u!114 &176434399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 176434391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5ede974ffb1d85459eeb6a12d59b496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pplayer: {fileID: 0}
 --- !u!1 &218738020
 GameObject:
   m_ObjectHideFlags: 0
@@ -3089,7 +3076,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1966815743}
-  - component: {fileID: 1966815744}
   - component: {fileID: 1966815745}
   m_Layer: 0
   m_Name: Room
@@ -3116,19 +3102,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1966815744
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1966815742}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9273b7ec5950ec4d829911a68a46d68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  savy: {fileID: 176434399}
 --- !u!114 &1966815745
 MonoBehaviour:
   m_ObjectHideFlags: 0
