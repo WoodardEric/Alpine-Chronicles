@@ -235,11 +235,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea1b7a2d4041b4941b4ab16831bb8e8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  screen: {fileID: 0}
   player: {fileID: 0}
-  Scored: {fileID: 0}
-  x: 0
-  y: 0
-  z: 0
+  track: 0
 --- !u!1 &218738020
 GameObject:
   m_ObjectHideFlags: 0
@@ -3115,9 +3113,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9f9d0ed6a6b852478c7f4a3f54a7b8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Timer: 0
-  SaveGame: 0
-  Timecheck: 7
+  timer: 0
+  saveGame: 0
+  timeCheck: 7
   Saveit: {fileID: 176434392}
 --- !u!1 &1974895909
 GameObject:
