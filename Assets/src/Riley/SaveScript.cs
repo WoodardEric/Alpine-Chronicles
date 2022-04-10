@@ -63,8 +63,6 @@ public class SaveScript : MonoBehaviour
 
         SceneManager.LoadScene(PlayerPrefs.GetInt("SavedScene"));
 
-        //This loads the player position of 0, which is automatically set to 0 in everygame, through other player scripts.. 
-        // I cannot set the players position in save, due to other scripts setting to 0. 
         PlayerPrefs.GetFloat("x", x);
         PlayerPrefs.GetFloat("y", y);
         PlayerPrefs.GetFloat("z", z);
