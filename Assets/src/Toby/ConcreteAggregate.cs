@@ -68,42 +68,6 @@ public class ConcreteAggregate : Aggregate
 
 
     /*
-     * Summary: Removes an item to the inventory data structure and indicates success or failure
-     *
-     * Parameters:
-     * nameOfItem - The name of the item to be removed from the inventory
-     *
-     * Returns:
-     * bool - Return true if the item was removed and false if it was not
-     */
-    public bool RemoveItem(string nameOfItem)
-    {
-        if (count == 0)
-        {
-            return false;
-        }
-
-        Iterator it = this.CreateIterator();
-        int foundIndex = 0;
-
-        while (!it.IsDone())
-        {
-            ItemClass tempItem = (ItemClass) it.CurrentItem();
-            if (tempItem.itemName.Equals(nameOfItem, StringComparison.Ordinal))
-            {
-                items.RemoveAt(foundIndex);
-                Debug.Log("REMOVING ITEM: " + tempItem.itemName);
-                return true;
-            }
-            ++foundIndex;
-            it.Next();
-        }
-        // Initialize index of found item to eror value
-        return false;
-    }
-
-
-    /*
      * Summary: Returns the maximum size of the inventory
      *
      * Returns:
@@ -176,6 +140,11 @@ public class ConcreteAggregate : Aggregate
         {
             RemoveItem(i);
         }
+    }
+
+    public virtual string GetInvType()
+    {
+        return "Generic Inventory";
     }
 
 

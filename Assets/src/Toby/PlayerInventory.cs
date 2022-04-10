@@ -3,6 +3,7 @@
  * Developer: Toby Mclenon
  * Purpose:   This file contains a subclass of InventoryClass and defines the player's inventory
  */
+ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,54 @@ using UnityEngine;
  */
 public class PlayerInventory : ConcreteAggregate
 {
+    /*
+     * Summary: Shows the type of the inventory
+     *
+     * Returns:
+     * string - Returns the name of the type of inventory currently bound
+     */
+    public override string GetInvType()
+    {
+        return "Player Inventory";
+    }
+
+
+    /*
+     * Summary: Removes an item to the inventory data structure and indicates success or failure
+     *
+     * Parameters:
+     * nameOfItem - The name of the item to be removed from the inventory
+     *
+     * Returns:
+     * bool - Return true if the item was removed and false if it was not
+     */
+    public bool RemoveItem(string nameOfItem)
+    {
+        if (count == 0)
+        {
+            return false;
+        }
+
+        Iterator it = this.CreateIterator();
+        int foundIndex = 0;
+
+        while (!it.IsDone())
+        {
+            ItemClass tempItem = (ItemClass) it.CurrentItem();
+            if (tempItem.itemName.Equals(nameOfItem, StringComparison.Ordinal))
+            {
+                items.RemoveAt(foundIndex);
+                Debug.Log("REMOVING ITEM: " + tempItem.itemName);
+                return true;
+            }
+            ++foundIndex;
+            it.Next();
+        }
+        // Initialize index of found item to eror value
+        return false;
+    }
+
+
     /*
      * Summary: Switches the positions of two items in the inventory
      *
