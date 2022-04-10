@@ -2165,7 +2165,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6369509662998371804, guid: e96ceec77346d6d41997d94f8e4a007b, type: 3}
       propertyPath: m_Name
-      value: Coin_1
+      value: Rupee
       objectReference: {fileID: 0}
     - target: {fileID: 6369509662998371805, guid: e96ceec77346d6d41997d94f8e4a007b, type: 3}
       propertyPath: m_RootOrder
@@ -2219,7 +2219,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6369509662998371802, guid: e96ceec77346d6d41997d94f8e4a007b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e96ceec77346d6d41997d94f8e4a007b, type: 3}
 --- !u!1 &1445782120
 GameObject:
@@ -3349,6 +3350,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2118659249 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6369509662998371804, guid: e96ceec77346d6d41997d94f8e4a007b, type: 3}
+  m_PrefabInstance: {fileID: 1391335058}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2118659250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118659249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a3437156198a2b4e9aa89b0d8dc6643, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &458910844240666011
 PrefabInstance:
   m_ObjectHideFlags: 0
