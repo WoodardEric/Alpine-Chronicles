@@ -21,6 +21,7 @@ using UnityEngine.UI;
 public class Autosaveyy : MonoBehaviour
 {
     public PlayerClass player = null;
+    SaveScript save; 
 
 
   /*
@@ -35,24 +36,19 @@ public class Autosaveyy : MonoBehaviour
   /*
    * Summary: Saves the Player Data only. 
    */
-    public void SavePlayer()
+    public void BackupPlayer()
     {
-        int healthy = player.GetHealth();
-        PlayerPrefs.SetInt("health", healthy);
-        PlayerPrefs.SetInt("score", player.GetScore());
-        Vector2 pos = player.GetPos();
-        PlayerPrefs.SetFloat("xPos", pos.x);
-        PlayerPrefs.SetFloat("yPos", pos.y);
-        Debug.Log("Saving...");
+        save.SavePlayer(); 
+        
     }
 
 
   /*
    * Summary: Saves the Level Data only. 
    */
-    public void SaveLevel()
+    public void BackupLevel()
     {
-        PlayerPrefs.SetInt("SavedScene", SceneManager.GetActiveScene().buildIndex);
+        save.SaveLevel(); 
     }
 
 }

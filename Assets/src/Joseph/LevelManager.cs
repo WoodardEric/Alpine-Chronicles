@@ -35,7 +35,7 @@ public class LevelManager : MonoBehaviour
 	 */
     public static LevelManager Instance
 	{
-		get;
+        get;
 		private set;
 	}
 

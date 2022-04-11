@@ -11,6 +11,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+ 
 
 /*
 * Summary: This Class acts as both saving and loading of gamedata using playerprefs. 
@@ -20,14 +21,14 @@ using UnityEngine.SceneManagement;
 */
 public class SaveScript : MonoBehaviour
 {
-   public LoadScreen screen;  
-   public PlayerClass player = null;
+    public LoadScreen screen;  
+    public PlayerClass player = null;
     public int track = 0;
 
-  /*
-   * Summary: Get instance of Playerclass on start. 
-   */
-    void Start()
+   /*
+    * Summary: Get instance of Playerclass on start. 
+    */
+   void Start()
    {
        player = PlayerClass.Instance;
    }
@@ -36,29 +37,36 @@ public class SaveScript : MonoBehaviour
   /*
    * Summary: Saves the entire gamedata, player, level, etc. 
    */
-    public void SaveGame()
+   public void SaveGame()
    {
-
-       SaveLevel();
-
-       int healthy = player.GetHealth();
-       int HighScore = player.GetScore();
-       Vector2 pos = player.GetPos();
-
-       PlayerPrefs.SetInt("health", healthy);
-       PlayerPrefs.SetInt("score", HighScore);
-       PlayerPrefs.SetFloat("xPos", pos.x);
-       PlayerPrefs.SetFloat("yPos", pos.y);
-       Debug.Log("Saving...");
-
+       SavePlayer();
+       SaveLevel();   
    }
 
 
   /*
-   * Summary: Saves the level the player is on. 
+   * Summary: Saves the player data. 
    */
+    public void SavePlayer() 
+    {
+        int healthy = player.GetHealth();
+        int HighScore = player.GetScore();
+        Vector2 pos = player.GetPos();
+
+        PlayerPrefs.SetInt("health", healthy);
+        PlayerPrefs.SetInt("score", HighScore);
+        PlayerPrefs.SetFloat("xPos", pos.x);
+        PlayerPrefs.SetFloat("yPos", pos.y);
+        Debug.Log("Saving...");
+    }
+
+    /*
+     * Summary: Saves the level the player is on. 
+     */
     public void SaveLevel()
     {
+        
+        //LevelManager.GetLevelFog();
         PlayerPrefs.SetInt("SavedScene", SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -67,30 +75,39 @@ public class SaveScript : MonoBehaviour
    * Summary: Laods the entire gamedata, player, level, etc. 
    */
     public void LoadGame()
-   {
-       LoadLevel(); 
+    {
+        LoadPlayer();
+        LoadLevel(); 
+      
+    }
 
-       int healthy = PlayerPrefs.GetInt("health");
-       int HighScore = PlayerPrefs.GetInt("score");
 
-       player.SetHealth(healthy);
-       CoinPickup.SetScore(HighScore); 
-       player.SetPlayerPos(new Vector2(PlayerPrefs.GetFloat("xPos"), PlayerPrefs.GetFloat("yPos")));
+  /*
+   * Summary: Loads the player data 
+   */
+    public void LoadPlayer()
+    {
+        int healthy = PlayerPrefs.GetInt("health");
+        int HighScore = PlayerPrefs.GetInt("score");
 
-       Debug.Log("Loading...");
-   }
+        player.SetHealth(healthy);
+        CoinPickup.SetScore(HighScore);
+        player.SetPlayerPos(new Vector2(PlayerPrefs.GetFloat("xPos"), PlayerPrefs.GetFloat("yPos")));
 
+        Debug.Log("Loading...");
+
+    }
 
   /*
    * Summary: Loads the level the player is on. 
    */
     public void LoadLevel()
-   {
+    {
        PlayerClass player = PlayerClass.Instance;
        player.IsInteracting(false);
        SceneManager.LoadScene(PlayerPrefs.GetInt("SavedScene"));
        //screen.LoadLevel(SceneManager.LoadScene(PlayerPrefs.GetInt("SavedScene")));
        track = PlayerPrefs.GetInt("SavedScene");
 
-    }
+     }
 }
