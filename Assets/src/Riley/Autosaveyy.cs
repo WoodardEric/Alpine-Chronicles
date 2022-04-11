@@ -21,7 +21,7 @@ using UnityEngine.UI;
 public class Autosaveyy : MonoBehaviour
 {
     public PlayerClass player = null;
-    SaveScript save; 
+    public SaveScript save; 
 
 
   /*
