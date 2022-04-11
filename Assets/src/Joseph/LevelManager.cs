@@ -35,7 +35,7 @@ public class LevelManager : MonoBehaviour
 	 */
     public static LevelManager Instance
 	{
-		get;
+        get;
 		private set;
 	}
 
@@ -129,7 +129,7 @@ public class LevelManager : MonoBehaviour
 
 
     /*
-     * Summary: Return the array of fog for the corresponding level
+     * Summary: Return the list of fog for the corresponding level
      *
      * Parameter:
      * level - integer meant to represent the scene in the build order
@@ -154,6 +154,12 @@ public class LevelManager : MonoBehaviour
     }
 
 
+    /*
+     * Summary: Return the list of key doors
+     *
+     * Returns:
+     * List<string> - return the opened key doors
+     */
     public List<string> GetKeyDoors()
     {
         return keyDoors;
