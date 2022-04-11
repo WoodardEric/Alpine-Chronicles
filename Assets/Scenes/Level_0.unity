@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  function: {fileID: 176434398}
+  save: {fileID: 176434398}
 --- !u!114 &176434398
 MonoBehaviour:
   m_ObjectHideFlags: 0
