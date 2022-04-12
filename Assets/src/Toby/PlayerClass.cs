@@ -416,37 +416,37 @@ public class PlayerClass : MonoBehaviour
         {
             return new KatanaFactory();
         }
-        else if (val == "Weapon2")
+        else if (val == "WeaponTwo")
         {
-            return new Weapon2Factory();
+            return new WeaponTwoFactory();
         }
-        else if (val == "Weapon3")
+        else if (val == "WeaponThree")
         {
-            return new Weapon3Factory();
+            return new WeaponThreeFactory();
         }
-        else if (val == "Weapon4")
+        else if (val == "WeaponFour")
         {
-            return new Weapon4Factory();
+            return new WeaponFourFactory();
         }
-        else if (val == "Weapon5")
+        else if (val == "WeaponFive")
         {
-            return new Weapon5Factory();
+            return new WeaponFiveFactory();
         }
-        else if (val == "Weapon6")
+        else if (val == "WeaponSix")
         {
-            return new Weapon6Factory();
+            return new WeaponSixFactory();
         }
-        else if (val == "Weapon7")
+        else if (val == "WeaponSeven")
         {
-            return new Weapon7Factory();
+            return new WeaponSevenFactory();
         }
-        else if (val == "Weapon8")
+        else if (val == "WeaponEight")
         {
-            return new Weapon8Factory();
+            return new WeaponEightFactory();
         }
-        else if (val == "Weapon9")
+        else if (val == "WeaponNine")
         {
-            return new Weapon9Factory();
+            return new WeaponNineFactory();
         }
         else if (val == "HealthApple")
         {
@@ -472,13 +472,13 @@ public class PlayerClass : MonoBehaviour
         {
             return new BossKeyFactory();
         }
-        else if (val == "RoomKey1")
+        else if (val == "RoomKeyOne")
         {
-            return new RoomKey1Factory();
+            return new RoomKeyOneFactory();
         }
-        else if (val == "RoomKey2")
+        else if (val == "RoomKeyTwo")
         {
-            return new RoomKey2Factory();
+            return new RoomKeyTwoFactory();
         }
         return null;
     }
