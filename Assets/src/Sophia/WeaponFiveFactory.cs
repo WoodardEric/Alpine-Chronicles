@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RoomKey1Factory : ItemFactory
+public class WeaponFiveFactory : ItemFactory
 {
     public override ItemClass GetItemClass()
     {
-        return new RoomKey1();
+        return new WeaponFive();
     }
 }
