@@ -25,10 +25,10 @@ using UnityEngine.UI;
 
 public class AsTimer : MonoBehaviour
 {
-	public float timer = 0;
+    public float timer = 0;
 	public bool saveGame = false;
 	public float timeCheck = 1800f;
-	public Autosaveyy Saveit;
+	public  Autosaveyy Saveit;
 	 
 
   /*
@@ -55,8 +55,8 @@ public class AsTimer : MonoBehaviour
 		if (saveGame == true)
 		{
 			saveGame = false;
-			Saveit.SavePlayer();
-			Saveit.SaveLevel();
+			Saveit.BackupPlayer();
+			Saveit.BackupLevel();
 
 			Debug.Log("AutoSaving Data...");
 			timer = 0f;

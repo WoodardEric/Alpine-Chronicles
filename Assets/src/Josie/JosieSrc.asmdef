@@ -2,7 +2,8 @@
     "name": "JosieSrc",
     "rootNamespace": "",
     "references": [
-        "GUID:5bd2199bfcac83f4da8964a90f5905ed"
+        "GUID:5bd2199bfcac83f4da8964a90f5905ed",
+        "GUID:0e0bbc3a49dddf04aa391a885fe9037d"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
