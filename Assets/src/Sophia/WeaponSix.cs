@@ -1,7 +1,23 @@
+/*
+* Filename: WeaponSix.cs
+* Developer: Sophia Sivula
+* Purpose: This file applies attribute to the WeaponSix
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+* Summary: subclass of ItemClass for WeaponSix
+* Member Variables: 
+* subItemName - a string that stores the item name
+* subStrength - an integer that stores strength
+* subHealth - an int that stores health
+* subSpriteImage - a Sprite that stores the sprite image
+* subTempStrength - an int that stores the temporary strength with inputs strength and duration
+* subTempSpeed - an int that stores the temporary speed with inputs speed and duration
+*/
 public class WeaponSix : ItemClass
 {
     private readonly string subItemName;
@@ -12,6 +28,9 @@ public class WeaponSix : ItemClass
     private (int str, int len) subTempStrength;
     private (int spd, int len) subTempSpeed;
 
+    /*
+    * Summary: Assigns values to item variables, and sets sprite image
+    */
     public WeaponSix()
     {
         subItemName = "WeaponSix";

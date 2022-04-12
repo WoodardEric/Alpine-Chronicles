@@ -1,7 +1,23 @@
+/*
+* Filename: SpeedPotion.cs
+* Developer: Sophia Sivula
+* Purpose: This file applies attribute to the SpeedPotion
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+* Summary: subclass of ItemClass for SpeedPotion
+* Member Variables: 
+* subItemName - a string that stores the item name
+* subStrength - an integer that stores strength
+* subHealth - an int that stores health
+* subSpriteImage - a Sprite that stores the sprite image
+* subTempStrength - an int that stores the temporary strength with inputs strength and duration
+* subTempSpeed - an int that stores the temporary speed with inputs speed and duration
+*/
 public class SpeedPotion : ItemClass
 {
     private readonly string subItemName;
@@ -12,13 +28,18 @@ public class SpeedPotion : ItemClass
     private (int str, int len) subTempStrength;
     private (int spd, int len) subTempSpeed;
 
+    /*
+    * Summary: Assigns values to item variables, and sets sprite image
+    */
     public SpeedPotion()
     {
         subItemName = "SpeedPotion";
         subStrength = -1;
-        subHealth = -1; // error state, if the thing doesnt change it
+        // error state, if the thing doesnt change it
+        subHealth = -1; 
         subTempStrength = (-1, -1);
-        subTempSpeed = (10, 60); //if speed, first number is increase by how much, and second is for how long in seconds
+        //if speed, first number is increase by how much, and second is for how long in seconds
+        subTempSpeed = (10, 60); 
         subSpriteImage = Resources.Load<Sprite>("Items Pack/Pixel Art Icon Pack - RPG/Texture/Potion/Red Potion 2.png");
 
     }

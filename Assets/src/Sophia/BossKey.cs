@@ -1,7 +1,23 @@
+/*
+* Filename: BossKey.cs
+* Developer: Sophia Sivula
+* Purpose: This file applies attribute to the BossKey
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+* Summary: subclass of ItemClass for BossKey
+* Member Variables: 
+* subItemName - a string that stores the item name
+* subStrength - an integer that stores strength
+* subHealth - an int that stores health
+* subSpriteImage - a Sprite that stores the sprite image
+* subTempStrength - an int that stores the temporary strength with inputs strength and duration
+* subTempSpeed - an int that stores the temporary speed with inputs speed and duration
+*/
 public class BossKey : ItemClass
 {
     private readonly string subItemName;
@@ -12,30 +28,39 @@ public class BossKey : ItemClass
     private (int str, int len) subTempStrength;
     private (int spd, int len) subTempSpeed;
 
+    /*
+    * Summary: Assigns values to item variables, and sets sprite image
+    */
     public BossKey()
     {
         subItemName = "BossKey";
         subStrength = -1;
-        subHealth = -1; // error state, if the thing doesnt change it
+        // error state, if the thing doesnt change it
+        subHealth = -1; 
         subTempStrength = (-1, -1);
-        subTempSpeed = (-1, -1); //if speed, first number is increase by how much, and second is for how long in seconds
+        //if speed, first number is increase by how much, and second is for how long in seconds
+        subTempSpeed = (-1, -1); 
         subSpriteImage = Resources.Load<Sprite>("Items Pack/Pixel Art Icon Pack - RPG/Texture/Misc/Golden Key.png");
 
     }
+
 
     public override string itemName
     {
         get {return subItemName;}
     }
 
+
     public override Sprite spriteImage
     {
         get {return subSpriteImage;}
     }
+ 
     public override int strength
     {
         get {return subStrength;}
     }
+ 
     public override int health
     {
         get {return subHealth;}
@@ -46,6 +71,7 @@ public class BossKey : ItemClass
     {
         get {return subTempStrength;}
     }
+
 
     public override (int, int) tempSpeed
     {

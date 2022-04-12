@@ -1,7 +1,23 @@
+/*
+* Filename: Katana.cs
+* Developer: Sophia Sivula
+* Purpose: This file applies attribute to the Katana
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+* Summary: subclass of ItemClass for Katana
+* Member Variables: 
+* subItemName - a string that stores the item name
+* subStrength - an integer that stores strength
+* subHealth - an int that stores health
+* subSpriteImage - a Sprite that stores the sprite image
+* subTempStrength - an int that stores the temporary strength with inputs strength and duration
+* subTempSpeed - an int that stores the temporary speed with inputs speed and duration
+*/
 public class Katana : ItemClass
 {
     private readonly string subItemName;
@@ -16,9 +32,11 @@ public class Katana : ItemClass
     {
         subItemName = "Katana";
         subStrength = 5;
-        subHealth = -1; // error state, if the thing doesnt change it
+        // error state, if the thing doesnt change it
+        subHealth = -1; 
         subTempStrength = (-1, -1);
-        subTempSpeed = (-1, -1); //if speed, first number is increase by how much, and second is for how long in seconds
+        //if speed, first number is increase by how much, and second is for how long in seconds
+        subTempSpeed = (-1, -1); 
         subSpriteImage = Resources.Load<Sprite>("Items Pack/Pixel Art Icon Pack - RPG/Texture/Weapon & Tool/Golden Sword.png");
 
     }
