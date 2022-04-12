@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class worldInteractables : MonoBehaviour, IInteractable
+public class WorldInteractables : MonoBehaviour, IInteractable
 {
     public void interact()
     {

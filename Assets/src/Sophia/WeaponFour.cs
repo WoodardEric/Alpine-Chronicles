@@ -2,24 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Weapon9 : ItemClass
+public class WeaponFour : ItemClass
 {
     private readonly string subItemName;
     private int subStrength;
-    private int subHealth;
+    private int subHealh;
 
     private Sprite subSpriteImage;
     private (int str, int len) subTempStrength;
     private (int spd, int len) subTempSpeed;
 
-    public Weapon9()
+    public WeaponFour()
     {
-        subItemName = "Weapon9";
-        subStrength = 4;
-        subHealth = -1; // error state, if the thing doesnt change it
+        subItemName = "WeaponFour";
+        subStrength = 3;
+        subHealh = -1; // error state, if the thing doesnt change it
         subTempStrength = (-1, -1);
         subTempSpeed = (-1, -1); //if speed, first number is increase by how much, and second is for how long in seconds
-        subSpriteImage = Resources.Load<Sprite>("Items Pack/Pixel Art Icon Pack - RPG/Texture/Weapon & Tool/Wooden Staff.png");
+        subSpriteImage = Resources.Load<Sprite>("Items Pack/Pixel Art Icon Pack - RPG/Texture/Weapon & Tool/Silver Sword.png");
 
     }
 
@@ -38,7 +38,7 @@ public class Weapon9 : ItemClass
     }
     public override int health
     {
-        get {return subHealth;}
+        get {return subHealh;}
     }
 
 

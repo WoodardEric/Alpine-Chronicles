@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Weapon7 : ItemClass
+public class WeaponSeven : ItemClass
 {
     private readonly string subItemName;
     private int subStrength;
@@ -12,9 +12,9 @@ public class Weapon7 : ItemClass
     private (int str, int len) subTempStrength;
     private (int spd, int len) subTempSpeed;
 
-    public Weapon7()
+    public WeaponSeven()
     {
-        subItemName = "Weapon7";
+        subItemName = "WeaponSeven";
         subStrength = 2;
         subHealth = -1; // error state, if the thing doesnt change it
         subTempStrength = (-1, -1);

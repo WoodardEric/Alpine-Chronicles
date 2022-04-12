@@ -9,12 +9,16 @@ public class CoinPickup : MonoBehaviour
 
     public GameObject sound;
     static int score = 0;
+    static int maxScore = 100000;
 
-    public void AdjustScore(){
-      if(score <= 450){
+    public void AdjustScore()
+    {
+      if(score <= maxScore)
+      {
             score = score + 50;
         }
-        else{
+        else
+        {
             score = 500;
         }  
 
@@ -25,10 +29,23 @@ public class CoinPickup : MonoBehaviour
     }
 
     public static void SetScore(int change){
-        score = change;
+        if(change < 0)
+        {
+            score = 0;
+        }
+        if(change >= maxScore)
+        {
+            score = maxScore;
+        }
+        else
+        {
+            score = change;
+        }
     }
-    void OnTriggerEnter2D (Collider2D col){
-        if(col.gameObject.name == "Player"){
+    void OnTriggerEnter2D (Collider2D col)
+    {
+        if(col.gameObject.name == "Player")
+        {
             Debug.Log("Coin has been collected!");
             AdjustScore();
             //sound.SendMessage("PlaySound");

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Weapon5 : ItemClass
+public class RoomKeyOne : ItemClass
 {
     private readonly string subItemName;
     private int subStrength;
@@ -12,14 +12,15 @@ public class Weapon5 : ItemClass
     private (int str, int len) subTempStrength;
     private (int spd, int len) subTempSpeed;
 
-    public Weapon5()
+    public RoomKeyOne()
     {
-        subItemName = "Weapon5";
-        subStrength = 2;
+        subItemName = "RoomKeyOne";
+        subStrength = -1;
         subHealth = -1; // error state, if the thing doesnt change it
         subTempStrength = (-1, -1);
         subTempSpeed = (-1, -1); //if speed, first number is increase by how much, and second is for how long in seconds
-        subSpriteImage = Resources.Load<Sprite>("Items Pack/Pixel Art Icon Pack - RPG/Texture/Weapon & Tool/Axe.png");
+        subSpriteImage = Resources.Load<Sprite>("Items Pack/Pixel Art Icon Pack - RPG/Texture/Misc/Iron Key.png");
+
     }
 
     public override string itemName
