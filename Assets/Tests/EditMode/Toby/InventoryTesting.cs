@@ -178,7 +178,7 @@ public class InventoryTesting
 
         // Check whether items can be properly found
         Assert.IsTrue(player.inventory.RemoveItem("Katana"));
-        Assert.IsTrue(player.inventory.RemoveItem("Weapon4"));
+        Assert.IsTrue(player.inventory.RemoveItem("WeaponFour"));
     }
 
 
