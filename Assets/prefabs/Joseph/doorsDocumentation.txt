@@ -1,0 +1,29 @@
+A brown rectangle with a trigger collider following the border and an innner collider.
+
+Door:
+   Superclass for all doors, and requires an IInteractable interface with the interact() function.
+   When interacted with this door does nothing.
+
+UnlockedDoor:
+   Subclass of Door.
+   When interacted with this door will set its active state to false.
+
+FogDoor:
+   Subclass of Door, requires a singleton LevelManager with the funcition UpdateLevel(int,string).
+   When placed, the object needs to be provided with a game object.
+   When interacted with, the object will set both its and the provided object active states to false.
+
+StairDoor:
+   Subclass of Door, requires a singleton PlayerClass with the function SetPlayerPos(Vector2).
+   When placed the object needs to be provided with the X and Y coordinates to teleport the player to.
+   When interacted with, the player is teleported to the provided X,Y coordinates within the same scene.
+
+SceneDoor:
+   Subclass of Door, requires a singleton LevelManager with the function ChangeScene(int,int).
+   When placed, the object needs to be provided with the current scene build index and the build index of the scene to transition to.
+   When interacted with, the scene is changed from the current scene (fromScene) to the new toScene.
+
+KeyDoor:
+   Subclass of Door, requires a singleton LevelManager with the function UpdateLevel(string) and a singleton PlayerClass with an attribute of inventory, having itself the function RemoveItem(string).
+   When placed, the object requires a GameObject to set to false and a string.
+   When interacted with, the door attempts to remove an object with the name of the given string. If successful then the door will set its and the provided object active states to false.

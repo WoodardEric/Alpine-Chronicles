@@ -1,0 +1,5 @@
+A 2D box that is sized one unit by one unit.
+The box is light brown/tan with bodders and cross braces in a darker brown.
+
+Use:
+Place the box in the scene at a desired location and the attached collider will act as a barrier.
