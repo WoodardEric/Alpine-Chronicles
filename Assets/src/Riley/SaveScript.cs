@@ -68,6 +68,7 @@ public class SaveScript : MonoBehaviour
         
         //LevelManager.GetLevelFog();
         PlayerPrefs.SetInt("SavedScene", SceneManager.GetActiveScene().buildIndex);
+        track = SceneManager.GetActiveScene().buildIndex;
     }
 
 
