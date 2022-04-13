@@ -1,0 +1,3 @@
+Four rows and columns of ones and zeros that cover a one unit by one unit area.
+This object requires a singleton PlayerClass with the functions of SetPlayerPos(Vector2) and UpdateHealth(int).
+When the trigger is entered, if the an object of type PlayerClass, the object is teleported to a specific position specified by the given integer, and then the object health is modified by the given integer, damage.
