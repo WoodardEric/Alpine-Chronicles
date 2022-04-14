@@ -15,7 +15,7 @@ namespace SAP2D
 
                     if(instance == null)
                     {
-                        Debug.LogError("Singleton " + typeof(T) + " was't found.");
+                        Debug.Log("Singleton " + typeof(T) + " was't found.");
                     }
                 }
                 return instance;
