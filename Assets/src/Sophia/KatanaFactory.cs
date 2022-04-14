@@ -23,4 +23,12 @@ public class KatanaFactory : ItemFactory
     {
         return new Katana();
     }
+
+    /*
+    * Summary: static function to display debug log
+    */
+    private void StaticDebug()
+    {
+        Debug.Log("Katana, static.");    
+    }
 }

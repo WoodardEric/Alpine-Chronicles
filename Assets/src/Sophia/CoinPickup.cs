@@ -15,6 +15,7 @@ using UnityEngine;
 * sound - GameObject that attaches a sound to when a coin is picked up 
 * score - an int that stores the player score
 * maxScore - an int that stores the maximum score the player can reach
+* semaphor - an int to track the semaphor for making sure the player doesn't hit two colliders
 */
 public class CoinPickup : MonoBehaviour
 {
@@ -23,18 +24,24 @@ public class CoinPickup : MonoBehaviour
     static int score = 0;
     static int maxScore = 100000;
 
+    static int semaphor = 0;
+
     /*
     * Summary: Adjusts the player's score
     */
     public void AdjustScore()
     {
-      if(score <= maxScore)
+      if(score <= maxScore && score >= 0)
       {
             score = score + 50;
         }
-        else
+        else if(score < 0)
         {
-            score = 500;
+            score = 0;
+        }
+        else if(score > maxScore)
+        {
+            score = maxScore;
         }  
 
     }
@@ -57,6 +64,7 @@ public class CoinPickup : MonoBehaviour
     */
     public static void SetScore(int change)
     {
+        // for Riley, to access when loading score
         if(change < 0)
         {
             score = 0;
@@ -81,10 +89,26 @@ public class CoinPickup : MonoBehaviour
     {
         if(col.gameObject.name == "Player")
         {
+            if (++semaphor > 1)
+            {
+                semaphor = 0;
+                return;
+            }
             Debug.Log("Coin has been collected!");
             AdjustScore();
             //sound.SendMessage("PlaySound");
             Destroy(this.gameObject);
         }
+    }
+
+     /*
+    * Summary: Sets the semaphor to 0 so more coins can be properly counted
+    *
+    * Parameters:
+    * col - the player's Collider2D
+    */
+    void OnTriggerExit2D(Collider2D col)
+    {
+        semaphor = 0;
     }
 }

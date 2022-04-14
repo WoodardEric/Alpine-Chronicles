@@ -1,5 +1,5 @@
 /*
-* Filename: ItemClassFactory.cs
+* Filename: ItemFactory.cs
 * Developer: Sophia Sivula
 * Purpose: This file implements the factory pattern for the ItemClass
 */
@@ -11,7 +11,18 @@ using UnityEngine;
 /*
 * Summary: subclass of ItemFactory for the ItemClass, creating the factory pattern  
 */
-public abstract class ItemFactory
+public class ItemFactory
 {
-    public abstract ItemClass GetItemClass();
+    public virtual ItemClass GetItemClass()
+    {
+        return new ItemClass();
+    }
+
+    /*
+    * Summary: static function to display debug log
+    */
+    private void StaticDebug()
+    {
+        Debug.Log("ItemFactory, static.");    
+    }
 }
