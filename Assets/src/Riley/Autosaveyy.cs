@@ -21,8 +21,7 @@ using UnityEngine.UI;
 public class Autosaveyy : MonoBehaviour
 {
     public PlayerClass player = null;
-    public SaveScript save; 
-
+ 
 
   /*
    * Summary: Get instance of Playerclass on start. 
@@ -38,8 +37,16 @@ public class Autosaveyy : MonoBehaviour
    */
     public void BackupPlayer()
     {
-        save.SavePlayer(); 
-        
+        int healthy = player.GetHealth();
+        int HighScore = player.GetScore();
+        Vector2 pos = player.GetPos();
+
+        PlayerPrefs.SetInt("health", healthy);
+        PlayerPrefs.SetInt("score", HighScore);
+        PlayerPrefs.SetFloat("xPos", pos.x);
+        PlayerPrefs.SetFloat("yPos", pos.y);
+        Debug.Log("Saving...");
+
     }
 
 
@@ -48,7 +55,9 @@ public class Autosaveyy : MonoBehaviour
    */
     public void BackupLevel()
     {
-        save.SaveLevel(); 
+        PlayerClass player = PlayerClass.Instance;
+        player.IsInteracting(false);
+        SceneManager.LoadScene(PlayerPrefs.GetInt("SavedScene"));
     }
 
 }

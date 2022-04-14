@@ -480,6 +480,10 @@ public class PlayerClass : MonoBehaviour
         {
             return new RoomKeyTwoFactory();
         }
+        else if (val == "Rupee")
+        {
+            return new ZeldaRFactory();
+        }
         return null;
     }
 
