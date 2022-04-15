@@ -142,9 +142,28 @@ public class ConcreteAggregate : Aggregate
         }
     }
 
+
+    /*
+     * Summary: Get's the dynamic type of the current aggregate
+     *
+     * Returns:
+     * string - Return a string stating what the dynamic type of the aggregate is
+     */
     public virtual string GetInvType()
     {
         return "Generic Inventory";
+    }
+
+
+    /*
+     * Summary: Get's the static type of the current aggregate
+     *
+     * Returns:
+     * string - Return a string stating what the static type of the aggregate is
+     */
+    public string GetStaticType()
+    {
+        return "Static Aggregate";
     }
 
 
