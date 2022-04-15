@@ -25,7 +25,7 @@ using UnityEngine.UI;
 
 public class AsTimer : MonoBehaviour
 {
-    public float timer = 0;
+    public static float timer = 0;
 	public bool saveGame = false;
 	public float timeCheck = 1800f;
 	public  Autosaveyy Saveit;

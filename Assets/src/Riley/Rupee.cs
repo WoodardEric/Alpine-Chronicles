@@ -8,7 +8,7 @@ public abstract class Rupee : PrefabClass
 
     public Rupee()
     {
-        itemName = "ZeldaRupee";
+        itemName = "Rupee";
 
     }
 
