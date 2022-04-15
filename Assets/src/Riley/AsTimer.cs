@@ -8,10 +8,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
+
 
 /*
 * Summary: This Class sets a timer that is set to activate AutoSave. 

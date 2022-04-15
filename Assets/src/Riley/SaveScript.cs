@@ -4,6 +4,7 @@
  * Purpose:   This file contains a class that saves and loads gamedata. 
  */
 
+
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -21,9 +22,9 @@ using UnityEngine.SceneManagement;
 */
 public class SaveScript : MonoBehaviour
 {
-    public LoadScreen screen;  
     public PlayerClass player = null;
     public int track = 0;
+
 
    /*
     * Summary: Get instance of Playerclass on start. 
@@ -107,7 +108,6 @@ public class SaveScript : MonoBehaviour
        PlayerClass player = PlayerClass.Instance;
        player.IsInteracting(false);
        SceneManager.LoadScene(PlayerPrefs.GetInt("SavedScene"));
-       //screen.LoadLevel(SceneManager.LoadScene(PlayerPrefs.GetInt("SavedScene")));
        track = PlayerPrefs.GetInt("SavedScene");
 
      }

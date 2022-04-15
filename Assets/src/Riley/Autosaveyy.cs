@@ -4,13 +4,14 @@
  * Purpose:   This file contains a class that saves and loads gamedata. 
  */
 
+
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
+
 
 /*
 * Summary: This Class is for autosaving all the gamedata. 
