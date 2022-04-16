@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6369509662998371803}
   - component: {fileID: 6369509662998371802}
   m_Layer: 0
-  m_Name: Coin_1
+  m_Name: Rupee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

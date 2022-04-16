@@ -223,7 +223,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  save: {fileID: 176434398}
 --- !u!114 &176434398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3253,9 +3252,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9f9d0ed6a6b852478c7f4a3f54a7b8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 0
   saveGame: 0
-  timeCheck: 7
+  timeCheck: 1800
   Saveit: {fileID: 176434392}
 --- !u!1 &1974895909
 GameObject:

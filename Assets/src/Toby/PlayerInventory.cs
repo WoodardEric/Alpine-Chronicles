@@ -15,14 +15,26 @@ using UnityEngine;
 public class PlayerInventory : ConcreteAggregate
 {
     /*
-     * Summary: Shows the type of the inventory
+     * Summary: Shows the dynamic type of the inventory
      *
      * Returns:
-     * string - Returns the name of the type of inventory currently bound
+     * string - Returns the name of the dynamic type of inventory currently bound
      */
     public override string GetInvType()
     {
-        return "Player Inventory";
+        return "Dynamic Player Inventory";
+    }
+
+
+    /*
+     * Summary: Get's the static type of the current aggregate
+     *
+     * Returns:
+     * string - Return a string stating what the static type of the aggregate is
+     */
+    new public string GetStaticType()
+    {
+        return "Static Player Inventory";
     }
 
 

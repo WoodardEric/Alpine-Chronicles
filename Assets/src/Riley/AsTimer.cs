@@ -8,10 +8,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
+
 
 /*
 * Summary: This Class sets a timer that is set to activate AutoSave. 
@@ -25,7 +25,7 @@ using UnityEngine.UI;
 
 public class AsTimer : MonoBehaviour
 {
-    public float timer = 0;
+    public static float timer = 0;
 	public bool saveGame = false;
 	public float timeCheck = 1800f;
 	public  Autosaveyy Saveit;
