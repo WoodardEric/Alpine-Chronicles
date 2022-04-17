@@ -22,10 +22,6 @@ public class drbcMode : MenuManager
     public bool isValid;
     private string input;
     
-    void Update()
-    {
-        // random();
-    }
 
      /*
      * Summary: Reads string and checks input to enter into drbcmode 
@@ -88,9 +84,4 @@ public class drbcMode : MenuManager
         Debug.Log("Password is wrong");
         return false;
     }
-
-    // public override void random()
-    // {
-    //     DeBug.Log("drbcmode random");
-    // }
 }
