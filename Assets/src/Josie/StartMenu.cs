@@ -9,7 +9,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 /*
- * Summary: This Class is the class dealing with start menu UI 
+ * Summary: This Class is the start menu class dealing with  UI 
  *
  * Member Variables: 
  * Player: creates variable of type PlayerClass that is used to get score of player
@@ -61,5 +61,4 @@ public class StartMenu : MonoBehaviour
         player = PlayerClass.Instance;
         player.IsInteracting(true);
     }
-
 }
