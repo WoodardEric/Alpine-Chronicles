@@ -27,7 +27,7 @@ public class MusicManager : AudioManager
             Instance = this;
             ReadClips();
             DontDestroyOnLoad(this);
-            Play(MusicTrack.menu);
+            Play(MusicTrack.Menu);
         }
     }
 
@@ -49,7 +49,10 @@ public class MusicManager : AudioManager
 
     protected override void ReadClips()
     {
-        tracks.Add(MusicTrack.menu, Resources.Load("Music/menu") as AudioClip);
+        tracks.Add(MusicTrack.Menu, Resources.Load("Music/menu") as AudioClip);
+        tracks.Add(MusicTrack.SceneOne, Resources.Load("Music/menu") as AudioClip);
+        tracks.Add(MusicTrack.SceneTwo, Resources.Load("Music/menu") as AudioClip);
+        tracks.Add(MusicTrack.SceneThree, Resources.Load("Music/menu") as AudioClip);
     }
 
 
