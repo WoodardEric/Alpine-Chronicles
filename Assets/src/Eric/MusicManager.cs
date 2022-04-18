@@ -102,6 +102,9 @@ public class MusicManager : AudioManager
 
     public enum MusicTrack
     {
-        menu
+        menu,
+        SceneOne,
+        SceneTwo,
+        SceneThree,
     }
 }

@@ -76,18 +76,21 @@ public class SoundManager : AudioManager
 
         return clipVariants[Random.Range(0, clipVariants.Count)];
     }
+
     public enum SoundEffect
     {
         Attack,
         AttackOne,
         AttackTwo,
         Coin,
+        Item,
         Damage,
         DoorOpen,
         Fanfare,
         Key,
         LockedDoor,
         Select,
+        Void,
     }
 
 
