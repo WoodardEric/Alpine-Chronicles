@@ -27,6 +27,7 @@ public class SceneDoor : Door
      */
     override public void Open()
     {
+        SoundManager.Instance.Play(SoundManager.SoundEffect.DoorOpen);
         LevelManager.Instance.ChangeScene(toScene,fromScene);
         //LM.changeScene(toScene,fromScene);
         Debug.Log("Change Scene");
