@@ -1,26 +1,43 @@
+/*
+ * Filename:  PauseMenu.cs
+ * Developer: Josie Wicklund
+ * Purpose:   This file contains the class PauseMenu that deals with UI pause menu
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement; 
 
-public class PauseMenu : MonoBehaviour
+/*
+ * Summary: This Class is PauseMenu class, it activates and deactivates pause menu
+ *          It also contains the the button functions 
+ *
+ * Member Variables: 
+ * GameIsPaused: bool variable 
+ * pauseMenuUI: gameobject that is set active or not active like a popup screen
+ * player: PlayerClass type initiated variable
+ *
+ */
+public class PauseMenu : MenuManager
 {
     public static bool GameIsPaused = false;
 
     public GameObject pauseMenuUI;
     PlayerClass player = null;
+    
 
+    /*
+     * Summary: creates instance of player
+     */
     private void Start()
     {
         player = PlayerClass.Instance;
     }
+    
 
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
-
+    /*
+     * Summary: Resume button, sets game object to false 
+     */
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
@@ -29,8 +46,10 @@ public class PauseMenu : MonoBehaviour
         player.IsInteracting(false);
     }
 
-    //function temporarily here 
-    public void MainMenu()
+    /*
+     * Summary: main button, sets game object to false 
+     */
+    public override void MainMenu()
     {
         Debug.Log("load menu");
         Time.timeScale = 1f;
@@ -38,6 +57,9 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene("menu");
     }
 
+    /*
+     * Summary: pause button, sets Gameobject true 
+     */
     public void Pause()
     {
         Debug.Log("Pause Game");
@@ -46,7 +68,12 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = true;
         player.IsInteracting(true);
     }
-       public void Quit()
+
+
+    /*
+     * Summary: quit button, quits application
+     */
+    public void Quit()
     {
         Debug.Log("Quit Game");
         Application.Quit();

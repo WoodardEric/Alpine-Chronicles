@@ -13,6 +13,8 @@ public class LevelsTests
         SceneManager.LoadScene(0);
         SceneManager.LoadScene(1);
     }
+
+
     [UnityTest]
     public IEnumerator ChangeSceneToFrom()
     {
@@ -25,7 +27,7 @@ public class LevelsTests
         yield return null;
         Assert.AreEqual(1,LM.goodScene);
 
-        LM.ChangeScene(1,3);
+        LM.ChangeScene(1,4);
         yield return null;
         Assert.AreEqual(0,LM.goodScene);
  
@@ -37,8 +39,57 @@ public class LevelsTests
         yield return null;
         Assert.AreEqual(0,LM.goodScene);
 
-        LM.ChangeScene(3,2);
+        LM.ChangeScene(4,2);
         yield return null;
         Assert.AreEqual(0,LM.goodScene);
+    }
+
+    [UnityTest]
+    public IEnumerator UpdateLevels()
+    {
+        LevelManager LM = LevelManager.Instance;
+        List<string> Fog;
+
+        LM.UpdateLevel(0,"string");
+        yield return null;
+        Fog = LM.GetLevelFog(0);
+        yield return null;
+        Assert.IsNull(Fog);
+
+        LM.UpdateLevel(1,"string");
+        yield return null;
+        Fog = LM.GetLevelFog(1);
+        yield return null;
+        Assert.AreEqual(1,Fog.Count);
+
+        LM.UpdateLevel(1,"string");
+        yield return null;
+        Fog = LM.GetLevelFog(1);
+        yield return null;
+        Assert.AreEqual(1,Fog.Count);
+
+        LM.UpdateLevel(2,"string");
+        yield return null;
+        Fog = LM.GetLevelFog(2);
+        yield return null;
+        Assert.AreEqual(1,Fog.Count);
+
+        LM.UpdateLevel(2,"string");
+        yield return null;
+        Fog = LM.GetLevelFog(2);
+        yield return null;
+        Assert.AreEqual(1,Fog.Count);
+
+        LM.UpdateLevel("string");
+        yield return null;
+        Fog = LM.GetKeyDoors();
+        yield return null;
+        Assert.AreEqual(1,Fog.Count);
+
+        LM.UpdateLevel("string");
+        yield return null;
+        Fog = LM.GetKeyDoors();
+        yield return null;
+        Assert.AreEqual(1,Fog.Count);
     }
 }

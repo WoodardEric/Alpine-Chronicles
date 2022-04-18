@@ -2,6 +2,7 @@ using UnityEngine;
 
 public abstract class AudioManager : MonoBehaviour
 {
+    protected AudioSource audioSource;
     abstract protected void Awake();
     protected abstract void ReadClips();
 
@@ -24,8 +25,6 @@ public abstract class AudioManager : MonoBehaviour
         }
     }
 
-
-    protected AudioSource audioSource;
 
     public void SetVolume(float vol)
     {

@@ -1,20 +1,35 @@
 /*
- * Filename:  PlayerClass.cs
- * Developer: Toby Mclenon
- * Purpose:   This file contains a class definition for the player
+ * Filename:  drbcMode.cs
+ * Developer: Josie Wicklund
+ * Purpose:   This file contains drbcmode child class 
  */
  
- using System.Collections;
+using System.Collections;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class drbcMode : MonoBehaviour
+/*
+ * Summary: This Class is drBCmode sub class
+ *
+ * Member Variables: 
+ * isValid: bool variable checking for input password correctness
+ * input: private string that recieves input from text box
+ */
+public class drbcMode : MenuManager
 {
     public bool isValid;
     private string input;
+    
+    void Update()
+    {
+        // random();
+    }
 
+     /*
+     * Summary: Reads string and checks input to enter into drbcmode 
+     */
     public void readStringInput(string s)
     {
         input = s;
@@ -50,7 +65,14 @@ public class drbcMode : MonoBehaviour
             
         }
     }
+    
 
+     /*
+     * Summary: input validation
+     * 
+     * Parameters: 
+     *  s: string that contains the inpute 
+     */
     private bool checkPassword(string s)
     {
         PlayerClass player = PlayerClass.Instance;
@@ -66,17 +88,9 @@ public class drbcMode : MonoBehaviour
         Debug.Log("Password is wrong");
         return false;
     }
-    
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-    
-    }
+    // public override void random()
+    // {
+    //     DeBug.Log("drbcmode random");
+    // }
 }
