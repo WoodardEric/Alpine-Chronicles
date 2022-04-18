@@ -30,5 +30,6 @@ public class FogDoor : Door
         LevelManager.Instance.UpdateLevel(SceneManager.GetActiveScene().buildIndex, fog.name);
         //Open the Door
         this.gameObject.SetActive(false);
+        SoundManager.Instance.Play(SoundManager.SoundEffect.DoorOpen);
     }
 }

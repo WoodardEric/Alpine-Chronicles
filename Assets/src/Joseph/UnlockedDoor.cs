@@ -22,5 +22,6 @@ public class UnlockedDoor : Door
         //Destroy(this);
         //Still keeps the Door in the heirarchy
         this.gameObject.SetActive(false);
+        SoundManager.Instance.Play(SoundManager.SoundEffect.DoorOpen);
     }
 }

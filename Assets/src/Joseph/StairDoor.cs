@@ -26,6 +26,7 @@ public class StairDoor : Door
     override public void Open()
     {
 	    PlayerClass player = PlayerClass.Instance;
+        SoundManager.Instance.Play(SoundManager.SoundEffect.DoorOpen);
         Vector2 newPosition = new Vector2(newX,newY);
         Debug.Log("Teleporting Player");
         player.SetPlayerPos(newPosition);

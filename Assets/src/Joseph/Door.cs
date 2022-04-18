@@ -29,5 +29,6 @@ public class Door : MonoBehaviour, IInteractable
     public virtual void Open()
     {
         Debug.Log("The door appears to be locked.");
+        SoundManager.Instance.Play(SoundManager.SoundEffect.LockedDoor);
     }
 }
