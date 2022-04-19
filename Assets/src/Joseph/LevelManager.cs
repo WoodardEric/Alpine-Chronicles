@@ -273,7 +273,7 @@ public class LevelManager : MonoBehaviour
 
 
     /*
-     * Summary: Check to see if a new scene has loaded and set the fog if it has
+     * Summary: Check to see if a new scene has loaded and set the fog if it has, also set the level music
      */
     public void Update()
     {
@@ -284,6 +284,20 @@ public class LevelManager : MonoBehaviour
             prevScene = currScene;
             Debug.Log("SetLevelFog " + currScene.buildIndex);
             SetLevel(currScene.buildIndex);
+
+            //Level music
+            if(currScene.buildIndex == 1)
+            {
+                MusicManager.Instance.Play(MusicManager.MusicTrack.Menu);
+            }
+            else if(currScene.buildIndex == 2)
+            {
+                MusicManager.Instance.Play(MusicManager.MusicTrack.SceneTwo);
+            }
+            else if(currScene.buildIndex == 3)
+            {
+                MusicManager.Instance.Play(MusicManager.MusicTrack.SceneThree);
+            }
         }
         else
         {

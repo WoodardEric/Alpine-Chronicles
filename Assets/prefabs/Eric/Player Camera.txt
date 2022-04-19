@@ -1,0 +1,13 @@
+Name: Player Camera
+Summary: Camera made to follow the player’s position
+
+Components:
+Camera: basic unity camera component
+
+Audio Listener: unity component that will receive audio from an audio source
+
+Camera Follow: a script that will follow the given game object
+
+usage:
+Place the prefab in a scene then drag the player gameobject into the 
+Target Transform variable in the camera follow script component

@@ -1,0 +1,27 @@
+Name: SoundManager
+Summary: Manages playing sound effects
+
+Components:
+SoundManager: The SoundManager script
+
+Usage:
+Once placed will persists between scenes unless manually destroyed. To play a track call
+SoundManager.Instance.Play(SoundManager.SoundEffect.<name of effect>); in a script.
+IE: SoundManager.Instance.Play(SoundManager.SoundEffect.Menu);
+
+Current list of sounds:
+    public enum SoundEffect
+    {
+        Attack,
+        AttackOne,
+        AttackTwo,
+        Coin,
+        Item,
+        Damage,
+        DoorOpen,
+        Fanfare,
+        Key,
+        LockedDoor,
+        Select,
+        Void,
+    }

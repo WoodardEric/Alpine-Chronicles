@@ -36,11 +36,13 @@ public class KeyDoor : Door
             fog.SetActive(false);
             LevelManager.Instance.UpdateLevel(SceneManager.GetActiveScene().buildIndex, fog.name);
             LevelManager.Instance.UpdateLevel(this.name);
+            SoundManager.Instance.Play(SoundManager.SoundEffect.DoorOpen);
             Debug.Log("Open the door");
         }
         else
         {
             Debug.Log("Player is missing the key");
+            SoundManager.Instance.Play(SoundManager.SoundEffect.LockedDoor);
         }
     }
 }
