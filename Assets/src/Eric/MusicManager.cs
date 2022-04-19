@@ -35,7 +35,7 @@ public class MusicManager : AudioManager
     * creating for the first time. Else destory the MusicManager trying to
     * be created.
     */
-    protected override void Awake()
+    public override void Awake()
     {
         if (Instance != null)
         {
@@ -43,7 +43,7 @@ public class MusicManager : AudioManager
         }
         else
         {
-            audioSource = gameObject.AddComponent<AudioSource>();
+            Source = gameObject.AddComponent<AudioSource>();
             Volume = 0.5f;
             Instance = this;
             ReadClips();
@@ -63,14 +63,19 @@ public class MusicManager : AudioManager
     public void Play(MusicTrack track)
     {
         var clip = tracks[track];
-        if (audioSource.isPlaying)
+
+        if (clip == Source.clip)
+        {
+            return;
+        }
+        if (Source.isPlaying)
         {
             StartCoroutine(TransitionTrack(clip));
         }
         else
         {
-            audioSource.clip = clip;
-            audioSource.Play();
+            Source.clip = clip;
+            Source.Play();
         }
     }
 
@@ -129,9 +134,9 @@ public class MusicManager : AudioManager
         var currVolume  = Volume;
         StartCoroutine(Fade(0.5f, 0f));
         yield return new WaitForSeconds(0.48f);
-        audioSource.Stop();
-        audioSource.clip = track;
-        audioSource.Play();
+        Source.Stop();
+        Source.clip = track;
+        Source.Play();
         StartCoroutine(Fade(0.5f, currVolume));
     }
 

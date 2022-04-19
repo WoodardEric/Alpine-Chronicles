@@ -1,0 +1,20 @@
+Name: MusicManager
+Summary: Manages playing and switching music tracks
+
+Components:
+MusicManager: The musicmanager script
+
+Usage:
+Once placed will precisist between scenes unless manulally destoryed. To play a track call
+MusicManager.Instance.Play(MusicManager.MusicTrack.<name of track>); in a script.
+IE: MusicManager.Instance.Play(MusicManager.MusicTrack.Menu);
+
+Current list of tracks:
+    public enum MusicTrack
+    {
+        Boss,
+        Menu,
+        SceneOne,
+        SceneTwo,
+        SceneThree,
+    }

@@ -9,13 +9,11 @@ using UnityEngine;
 */
 public abstract class AudioManager : MonoBehaviour
 {
-    protected AudioSource audioSource;
-
     /*
     * Summary: Abstract method that should be defined to initilize the child class.
     * Unity calls this function at the start of a new scene.
     */
-    abstract protected void Awake();
+    abstract public void Awake();
     /*
     * Summary: Abstract method that should be defined to read sound files from the
     * resource folder into soundclips to be played by the audio source. 
@@ -27,7 +25,13 @@ public abstract class AudioManager : MonoBehaviour
      */
     public void Mute()
     {
-        audioSource.mute = !audioSource.mute;
+        Source.mute = !Source.mute;
+    }
+
+    public AudioSource Source
+    {
+        get;
+        protected set;
     }
 
     /*
@@ -43,11 +47,11 @@ public abstract class AudioManager : MonoBehaviour
     {
         get
         {
-            return audioSource.volume;
+            return Source.volume;
         }
         protected set
         {
-            audioSource.volume = value;
+            Source.volume = value;
         }
     }
 

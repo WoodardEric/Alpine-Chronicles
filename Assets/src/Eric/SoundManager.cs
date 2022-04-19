@@ -36,7 +36,7 @@ public class SoundManager : AudioManager
     * creating for the first time. Else destory the MusicManager trying to
     * be created.
     */
-    protected override void Awake()
+    public override void Awake()
     {
         if (Instance != null)
         {
@@ -44,7 +44,7 @@ public class SoundManager : AudioManager
         }
         else
         {
-            audioSource = gameObject.AddComponent<AudioSource>();
+            Source = gameObject.AddComponent<AudioSource>();
             Volume = 0.4f;
             Instance = this;
             ReadClips();
@@ -76,7 +76,7 @@ public class SoundManager : AudioManager
         {
             MusicManager.Instance.DuckMusic(clip.length);
         }
-        audioSource.PlayOneShot(clip);
+        Source.PlayOneShot(clip);
     }
 
 
