@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
-* Summary: class for items
+* Summary: class for items, includes virual 
 * Member Variables: 
 * itemName - a string that stores the item name
 * strength - an integer that stores strength
