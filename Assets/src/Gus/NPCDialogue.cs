@@ -1,8 +1,21 @@
+/*
+ * Filename: NPCDialogue.cs
+ * Developer: Gus
+ * Purpose: Provide dialogue for the player to read when interacting with an NPC.
+ */
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Define Awake(), Update(), AdvanceDialog(), AdvanceDialogSkip(), ShowText()
+/// 
+/// [Serielizefeild] is used extensively here in order to facilitate speedy edits
+/// through the Unity Editor instead of having to constantly go back into the 
+/// script to edit options for dialogue text that the NPCs have.
+/// </summary>
 public class NPCDialogue : MonoBehaviour
 {
     [Header("Public References")]
@@ -10,47 +23,50 @@ public class NPCDialogue : MonoBehaviour
     private NPC npcController;
     [Space]
     [SerializeField]
-    private Text textContainer;
+    private Text textContainer; // What dialogue text is displayed to the player.
     [Space]
     [SerializeField]
-    private bool cycleOnClick;
+    private bool cycleOnClick; // Toggle to progress the text forward if the programmer would like to set dialogue progression to the user's mouse click.
     [Space]
     [SerializeField]
-    private bool cycleOnButton;
+    private bool cycleOnButton; // Toggle to progress the text forward if the programmer would like to set dialogue progression to a "button" in untiy.
     private Button buttonToAdvanceDiaglog;
     [Header("Key Controls")]
     [Space]
     [SerializeField]
-    private bool cycleOnKey;
+    private bool cycleOnKey; // Toggle to progress the text forward if the programmer would like to set dialogue progression to a given key on the keyboard.
     [SerializeField]
-    private KeyCode keyPressToAdvance;
+    private KeyCode keyPressToAdvance; // Given key on the keyboard is defined here.
     [Space]
     [SerializeField]
-    private bool deactivateThisObjectAfterDialog = false;
+    private bool deactivateThisObjectAfterDialog = false; // Toggle to make the NPC not interactable once the dialogue has finished.
     [Space]
     [SerializeField]
-    private bool activateTargetObjectAfterDialog = false;
+    private bool activateTargetObjectAfterDialog = false; // Toggle to activate a certain object in the scene that the programmer may see fit once dialogue has progressed.
     [SerializeField]
-    private GameObject targetGameObject;
+    private GameObject targetGameObject; // Defines the target object in the scene related to the above variable.
     [Space]
     [SerializeField]
-    private bool resetAfterDialog = false;
+    private bool resetAfterDialog = false; // Resets the NPC once the dialogue has finished.
     [Space]
     [SerializeField]
-    private float textSpeed = 0.05f;  //The speed at which you'll see the game type the text
+    private float textSpeed = 0.05f;  // The speed at which you'll see the game type the text.
     [Space]
     [SerializeField]
-    private List<string> dialogContentRollout;
+    private List<string> dialogContentRollout; //Defines what dialogue text will be displayed to the player.
     [Space]
     int current = -1;
 
-    private string full_text;
-    private string current_text;
-    private bool text_done = true;
-    private int length = 0;  //Here because it needs to be stated throughout the script
+    private string full_text; 
+    private string current_text; 
+    private bool text_done = true; 
+    private int length = 0;
 
-    // Checking to make sure things are assigned properly
-    // Also adds a listner to the button if that is selected
+    /// <summary>
+    /// Checks to make sure all variables are assigned properly to the dialogue. 
+    /// Also adds a listener to the button if that is the desired method that the
+    /// programmer wants to use.
+    /// </summary>
     void Awake()
     {
         if (textContainer == null)
@@ -82,6 +98,12 @@ public class NPCDialogue : MonoBehaviour
         };
     }
 
+    /// <summary>
+    /// Syncs the text output to update so that text is consistent regardless of frame rate. 
+    /// This function also monitors the given key or mouse button to progress the dialogue faster
+    /// or at a normal rate.
+    /// This function also calls the appropriate child functions AdvanceDialogSkip(), AdvanceDialog().
+    /// </summary>
     void Update()
     {
         if (cycleOnClick && Input.GetMouseButtonDown(0) && text_done == false)
@@ -102,6 +124,10 @@ public class NPCDialogue : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Displays the text of the dialogue for the given NPC by calling the coroutine ShowText().
+    /// This function also unfreezes the player once dialogue has been finished.
+    /// </summary>
     public void AdvanceDialog()
     {
         current++;
@@ -132,12 +158,16 @@ public class NPCDialogue : MonoBehaviour
                     current = -1;
                 }
 
-                npcController.UnfreezePlayer();
+                npcController.UnfreezePlayer(); //Unfrezes the player once dialogue has finished
             }
         }
     }
 
-    void AdvanceDialogSkip() //This skips the typing effect and just pastes the message, it can only occur if the typing effect is currently occuring
+    /// <summary>
+    /// This skips the typing effect and just pastes the message.
+    /// It can only occur if the typing effect is currently occuring.
+    /// </summary>
+    void AdvanceDialogSkip() 
     {
         if (current < dialogContentRollout.Count)
         {
@@ -163,7 +193,9 @@ public class NPCDialogue : MonoBehaviour
         }
     }
 
-    // The coroutine for displaying the text one char at a time
+    /// <summary>
+    /// This is the coroutine for displaying the text one char at a time.
+    /// </summary>
     IEnumerator ShowText()
     {
         text_done = false;

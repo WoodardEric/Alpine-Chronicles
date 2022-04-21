@@ -1,7 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
+/*
+ * Filename: DemoPlayer.cs
+ * Developer: Gus
+ * Purpose: AI Player for the "demo mode" for the game to play itself. 
+ * Uses a Unity asset store asset called SAP2D. Still unfinished WIP.
+ * Defnines Start(), Update(), OnTriggerStay2D(), and NextCheckpoint().
+ */
+
 using UnityEngine;
 
+/// <summary>
+/// Uses an array of given checkpoints to move the “AI player” through the scene.
+/// </summary>
 public class DemoPlayer : MonoBehaviour
 {
     [SerializeField]
@@ -10,21 +19,26 @@ public class DemoPlayer : MonoBehaviour
     [Space(10)]
     [Header("Checkpoints")]
     [SerializeField]
-    private Vector2[] checkpoints;
+    private Vector2[] checkpoints; // Defines the Vector2 position of each checkpoint.
 
-    private int currentCP = 0;
+    private int currentCP = 0; // The index of the current given checkpoint.
 
-    private bool interacting = false;
-    private bool reachedCheckpoint = false;
+    private bool reachedCheckpoint = false; // If the “AI player” has reached the checkpoint.
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// This function sets the default values at runtime.
+    /// </summary>
     void Start()
     {
         target.position = checkpoints[currentCP];
         currentCP++;
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// Checks to see if the user has reached the given checkpoint in order
+    /// to progress to the next checkpoint.The distance check is present to 
+    /// determine if the AI player is close enough to the given checkpoint.
+    /// </summary>
     void Update()
     {
         if((Vector3.Distance(this.transform.position, target.position) < 0.1f) && !reachedCheckpoint)
@@ -33,6 +47,12 @@ public class DemoPlayer : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Function to artificially interact with and interactable object. For example: doors.
+    /// </summary>
+    /// <param name="other">
+    /// Is the new collider interacting with this object?
+    /// </param>
     public void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.tag != "interactable")
@@ -51,6 +71,9 @@ public class DemoPlayer : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Increments the array buy one to progress to the next given checkpoint.
+    /// </summary>
     private void NextCheckpoint()
     {
         if(currentCP < checkpoints.Length)
