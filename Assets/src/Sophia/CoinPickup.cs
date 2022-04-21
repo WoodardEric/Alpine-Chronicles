@@ -94,6 +94,7 @@ public class CoinPickup : MonoBehaviour
                 semaphor = 0;
                 return;
             }
+            //SoundManager.Instance.Play(SoundManager.SoundEffect.Coin);            
             Debug.Log("Coin has been collected!");
             AdjustScore();
             //sound.SendMessage("PlaySound");
