@@ -37,12 +37,12 @@ public class MenuManager : MonoBehaviour
     {
         Debug.Log("load menu");
         Time.timeScale = 1f;
-        player.SetPlayerPos(new Vector2(-38.5f, -2.67f));
-        SceneManager.LoadScene("menu");
+        //player.SetPlayerPos(new Vector2(-38.5f, -2.67f));
+        SceneManager.LoadScene("menu"); 
     }
 
-    // public virtual void random()
-    // {
-    //     DeBug.Log("menu manager random");
-    // }
+    public virtual void SayHello()
+    {
+        Debug.Log("Hello, from menu manager");
+    }
 }

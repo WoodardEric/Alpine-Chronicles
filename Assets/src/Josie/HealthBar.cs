@@ -17,10 +17,29 @@ using UnityEngine.UI;
  */
 public class HealthBar : MonoBehaviour
 {
-
+    
     public Slider slider;
     public PlayerClass player = null;
 
+    public static HealthBar Instance { get; private set; }
+
+    /*
+     * Summary: Ensures that only one instance of the healthbar is created
+     */
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            // Create healthbar and keep between scenes
+            Instance = this;
+            DontDestroyOnLoad(this);
+        }
+    }
     /*
      * Summary: creates instance of player class
      */

@@ -1,8 +1,17 @@
+/*
+ * Filename: EnemyGruntBug.cs
+ * Developer: Gus
+ * Purpose: Implements enemy bugs for the player to fight throught the given scene.
+ * Runs multiple checks to ensure optimal gameplay is achieved with the enemies and player throughout the scene.
+ */
+
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Runs multiple checks to ensure optimal gameplay is achieved with the enemies and player throughout the scene.
+/// </summary>
 public class EnemyGruntBug : MonoBehaviour, IHitEnemies
 {
     int EnemyHealth = 3;
@@ -22,7 +31,9 @@ public class EnemyGruntBug : MonoBehaviour, IHitEnemies
     private bool waitForEvent = false;
     private bool hitCooldown = true;
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// Searches and checks the scene for the Player.
+    /// </summary>
     void Start()
     {
         player = PlayerClass.Instance;
@@ -36,17 +47,20 @@ public class EnemyGruntBug : MonoBehaviour, IHitEnemies
         StartCoroutine(IdleSequence());
     }
 
-    private void Update()
-    {
-        //alert = GoOnAlert();
-    }
-
-    // Update is called once per frame
+    /// <summary>
+    /// If the enemy bug is alert of the player, call GoOnAlert().
+    /// </summary>
     void FixedUpdate()
     {
         alert = GoOnAlert();
     }
 
+    /// <summary>
+    /// Detects if the enemy bug can attack the player.
+    /// </summary>
+    /// <param name="collision">
+    /// The given collider that is detected.
+    /// </param>
     public void OnTriggerStay2D(Collider2D collision)
     {
         //Debug.Log("Bug OnStay: " + collision.gameObject);
@@ -61,6 +75,12 @@ public class EnemyGruntBug : MonoBehaviour, IHitEnemies
         }
     }
 
+    /// <summary>
+    /// Checks to see if the enemy needs to go into alert.
+    /// </summary>
+    /// <returns>
+    /// Returns true or false depending on if the enemy bug is alert of the player or not.
+    /// </returns>
     private bool GoOnAlert()
     {
         Vector3 modifiedPlayerPosition = player.transform.position + playerTrackingOverride;
@@ -108,12 +128,19 @@ public class EnemyGruntBug : MonoBehaviour, IHitEnemies
         return false;
     }
 
+    /// <summary>
+    /// Starts an Idleaction.
+    /// </summary>
     private void IdleStuff()
     {
         waitForEvent = true;
         StartCoroutine(IdleAction(Mathf.FloorToInt(UnityEngine.Random.Range(0.0f, 3.0f)), UnityEngine.Random.Range(1.0f, 3.0f)));
     }
 
+    /// <summary>
+    /// If nothing has passed in a certain amount of time, by extension, start an IdleAction.
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator IdleSequence()
     {
         float timer = 1.5f;
@@ -136,6 +163,16 @@ public class EnemyGruntBug : MonoBehaviour, IHitEnemies
         yield break;
     }
 
+    /// <summary>
+    /// The idle action that the enemy takes during its idle state when the player is not detected.
+    /// </summary>
+    /// <param name="idleType">
+    /// What type of idle action should be taken by the enemy.
+    /// </param>
+    /// <param name="idleLength">
+    /// How long the given actio is occuring.
+    /// </param>
+    /// <returns></returns>
     private IEnumerator IdleAction(int idleType, float idleLength)
     {
         float timer = (idleType == 0) ? idleLength/3.0f : idleLength;
@@ -170,6 +207,10 @@ public class EnemyGruntBug : MonoBehaviour, IHitEnemies
         yield break;
     }
 
+    /// <summary>
+    /// Checks to see if the cooldown is finished.
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator AttackCooldown()
     {
         yield return new WaitForSecondsRealtime(attackTimer);
@@ -177,6 +218,11 @@ public class EnemyGruntBug : MonoBehaviour, IHitEnemies
         yield break;
     }
 
+    /// <summary>
+    /// Takes a given value of damage and subtracts it from the enemy’s health. 
+    /// Calls EnemyDeath() once health is below zero.
+    /// </summary>
+    /// <param name="damage"></param>
     public void DamageEnemy(int damage)
     {
         EnemyHealth -= damage;
@@ -188,13 +234,17 @@ public class EnemyGruntBug : MonoBehaviour, IHitEnemies
     }
 
     /// <summary>
-    /// Calling this kills the enemy this script is attached to
+    /// Calling this kills the enemy this script is attached to.
     /// </summary>
     private void EnemyDeath()
     {
         Destroy(this.gameObject);
     }
 
+    /// <summary>
+    /// Returns the value of the EnemyHealth.
+    /// </summary>
+    /// <returns></returns>
     public int GetEnemyHealth()
     {
         return EnemyHealth;

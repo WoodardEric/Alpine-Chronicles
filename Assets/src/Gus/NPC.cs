@@ -1,7 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
+/*
+ * Filename: NPC.cs
+ * Developer: Gus
+ * Purpose: Defines the Basic NPC that the player can interact with.
+ */
 using UnityEngine;
 
+/// <summary>
+/// Defines the Basic NPC that the player can interact with.
+/// </summary>
 public class NPC : MonoBehaviour, IInteractable
 {
     [SerializeField]
@@ -9,9 +15,11 @@ public class NPC : MonoBehaviour, IInteractable
     private PlayerClass playerController = null;
     SpriteRenderer sprite;
 
+    /// <summary>
+    /// Searches the heirarchy for the "Player" and reports an error if the components looking for on the player are not found.
+    /// </summary>
     private void Start()
     {
-        // Searches the heirarchy for the "Player" and reports an error if the components looking for on the player are not found.
         playerController = PlayerClass.Instance;
         if (playerController == null)
         {
@@ -23,6 +31,9 @@ public class NPC : MonoBehaviour, IInteractable
         sprite = this.GetComponent<SpriteRenderer>();
     }
 
+    /// <summary>
+    /// Ensures that the sprite for the given NPC is rendered correctly.
+    /// </summary>
     void Update()
     {
         if (playerController.transform.position.y > this.transform.position.y - 0.5)
@@ -35,21 +46,21 @@ public class NPC : MonoBehaviour, IInteractable
         }
     }
 
+    /// <summary>
+    /// Unfrezes the player when not interacting with the NPC.
+    /// </summary>
     public void UnfreezePlayer()
     {
         playerController.IsInteracting(false);
     }
 
-    // public void OnInteract()
-    // {
-    //     dialogue.gameObject.SetActive(true);
-    //     dialogue.AdvanceDialog();  // Starts the first part of dialogue, since the dialogue box opens with no text initially
-    // }
-
+    /// <summary>
+    /// Starts the first part of dialogue, since the dialogue box opens with no text initially
+    /// </summary>
     public void interact()
     {
         playerController.IsInteracting(true);
         dialogue.gameObject.SetActive(true);
-        dialogue.AdvanceDialog();  // Starts the first part of dialogue, since the dialogue box opens with no text initially
+        dialogue.AdvanceDialog();
     }
 }
