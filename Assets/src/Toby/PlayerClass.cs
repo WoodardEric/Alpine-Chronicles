@@ -328,7 +328,7 @@ public class PlayerClass : MonoBehaviour
         {
             totalStr = playerAtk + equippedWeapon.strength;
         }
-
+        SoundManager.Instance.Play(SoundManager.SoundEffect.Attack);
         // Get an array of all enemies in the player's attack range during attack
         Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(attackArea.position, attackRange, constAttackAngle, enemyLayers);
 
@@ -338,6 +338,7 @@ public class PlayerClass : MonoBehaviour
             Debug.Log("Enemy " + enemy.name + " Hit");
             IHitEnemies enemyHit = enemy.gameObject.GetComponent<IHitEnemies>();
             enemyHit.DamageEnemy(totalStr);  // TODO: Set a variable for attack and reference as the parameter for DamageEnemy()
+            SoundManager.Instance.Play(SoundManager.SoundEffect.Damage);
         }
     }
 

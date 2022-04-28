@@ -1,7 +1,9 @@
 {
     "name": "SophiaSrc",
     "rootNamespace": "",
-    "references": [],
+    "references": [
+        "GUID:418fda6bf0261304b8002f88d2991414"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

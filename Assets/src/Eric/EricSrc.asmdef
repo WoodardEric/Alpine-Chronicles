@@ -2,7 +2,6 @@
     "name": "EricSrc",
     "rootNamespace": "",
     "references": [
-        "GUID:5bd2199bfcac83f4da8964a90f5905ed"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

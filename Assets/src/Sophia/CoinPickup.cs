@@ -96,7 +96,7 @@ public class CoinPickup : MonoBehaviour
             }
             Debug.Log("Coin has been collected!");
             AdjustScore();
-            //sound.SendMessage("PlaySound");
+            SoundManager.Instance.Play(SoundManager.SoundEffect.Coin);
             Destroy(this.gameObject);
         }
     }
