@@ -60,5 +60,13 @@ public class StartMenu : MonoBehaviour
     {
         player = PlayerClass.Instance;
         player.IsInteracting(true);
+
+        MenuManager menu = new MenuManager();
+
+        menu.SayHello();
+
+        drbcMode bc = new drbcMode();
+
+        bc.SayHello();
     }
 }
