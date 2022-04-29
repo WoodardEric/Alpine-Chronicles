@@ -61,6 +61,9 @@ public class PlayerClass : MonoBehaviour
     public PlayerInventory inventory;
     public ItemClass equippedWeapon;
     public ItemClass equippedUtil;
+    public bool key1, key2, key3;
+    public int numCheese, numApples, numHealthPots, numStrPots, numSpPots;
+    private bool _pickupItem;
 
     // Safety variables
     bool compSet;
@@ -96,6 +99,9 @@ public class PlayerClass : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(this);
         }
+        key1 = false;
+        key2 = false;
+        key3 = false;
     }
 
 
@@ -374,6 +380,7 @@ public class PlayerClass : MonoBehaviour
         {
             return;
         }
+        
 
         if (++this.updateNum > 1)
         {
@@ -398,6 +405,51 @@ public class PlayerClass : MonoBehaviour
             }
         }
         Debug.Log("CURRENT INV SIZE: " + this.inventory.count);
+        if (other.gameObject.tag == "item")
+        {
+            if(_pickupItem)
+            {
+                return;
+            }
+            if(other.gameObject.name == "HealthApple")
+            {
+                numApples++;
+                _pickupItem = true;
+            }
+            if(other.gameObject.name == "HealthCheese")
+            {
+                numCheese++;
+                _pickupItem = true;
+            }
+            if(other.gameObject.name == "HealthPotion")
+            {
+                numHealthPots++;
+                _pickupItem = true;
+            }
+            if(other.gameObject.name == "StrengthPotion")
+            {
+                numStrPots++;
+                _pickupItem = true;
+            }
+            if(other.gameObject.name == "SpeedPotion")
+            {
+                numSpPots++;
+                _pickupItem = true;
+            }
+
+            if(other.gameObject.name == "RoomKeyOne")
+            {
+                key1 = true;
+            }
+            if(other.gameObject.name == "RoomKeyTwo")
+            {
+                key2 = true;
+            }
+            if(other.gameObject.name == "BossKey")
+            {
+                key3 = true;
+            }
+        }
         
     }
 
@@ -522,9 +574,19 @@ public class PlayerClass : MonoBehaviour
      */
     private void OnTriggerExit2D(Collider2D other)
     {
+        
         // Reset the player interaction
         this.interacting = false;
         //this.updateNum = 0;
+        if(other.gameObject.tag == "item")
+        {
+            if(!_pickupItem)
+            {
+                return;
+                
+            }
+            _pickupItem = false;
+        }
     }
 
 
