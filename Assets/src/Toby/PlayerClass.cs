@@ -133,6 +133,10 @@ public class PlayerClass : MonoBehaviour
      */
     void Update()
     {
+        if (this.rgdb.IsSleeping())
+        {
+            this.rgdb.WakeUp();
+        }
         // Check if player is currently interacting, in which case the player shouldn't
         // be able to perform any action aside from the interaction
         if (!IsInteracting())
