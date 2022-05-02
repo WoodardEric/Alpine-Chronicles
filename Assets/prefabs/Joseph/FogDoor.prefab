@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FogDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 2375990701687366905, guid: 08abdaae6d521454baae15d04b9ae61a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2375990701687366907, guid: 08abdaae6d521454baae15d04b9ae61a, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -57,6 +61,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2375990701687366904, guid: 08abdaae6d521454baae15d04b9ae61a, type: 3}
+    - {fileID: 1331370545610032331, guid: 08abdaae6d521454baae15d04b9ae61a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 08abdaae6d521454baae15d04b9ae61a, type: 3}
 --- !u!1 &5713885578871717327 stripped
 GameObject:

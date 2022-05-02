@@ -7,6 +7,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 /*
  * Summary: This Class is the start menu class dealing with  UI 
@@ -18,7 +19,16 @@ using UnityEngine.SceneManagement;
 public class StartMenu : MonoBehaviour
 {
     PlayerClass player = null;
+    public GameObject loadingScreen;
+    public Slider slider;
+    public GameObject canvas;
 
+    private void Awake()
+    {
+        canvas = GameObject.Find("LoadingCanvas");
+        loadingScreen = canvas.transform.GetChild(0).gameObject;
+        slider = loadingScreen.GetComponentInChildren<Slider>();
+    }
 
     /*
      * Summary: sets player and chages scenes 
@@ -28,9 +38,41 @@ public class StartMenu : MonoBehaviour
         player.IsInteracting(false);
         //to load the next scene in the queue
         Debug.Log("change to level_0 scene");
-        SceneManager.LoadScene("Level_0");
+        
+        StartCoroutine(LoadAsyncronously("Level_0"));
+
         player.SetPlayerPos(new Vector2(-5.18f, -2.87f));
         player.ResetPlayer();
+    }
+
+    IEnumerator LoadAsyncronously(string scene)
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(scene);
+
+        loadingScreen.SetActive(true);
+
+        while (!operation.isDone)
+        {
+            float progress = Mathf.Clamp01(operation.progress / 0.9f);
+            slider.value = progress;
+
+            yield return null;
+        }
+    }
+
+    IEnumerator LoadAsyncronously(int scene)
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(scene);
+
+        loadingScreen.SetActive(true);
+
+        while (!operation.isDone)
+        {
+            float progress = Mathf.Clamp01(operation.progress / 0.9f);
+            slider.value = progress;
+
+            yield return null;
+        }
     }
 
 
@@ -49,7 +91,7 @@ public class StartMenu : MonoBehaviour
      */
     public void LoadGame()
     {
-        SceneManager.LoadScene(PlayerPrefs.GetInt("SavedScene"));
+        StartCoroutine(LoadAsyncronously(PlayerPrefs.GetInt("SavedScene")));
     }   
 
 

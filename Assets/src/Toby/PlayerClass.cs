@@ -282,13 +282,13 @@ public class PlayerClass : MonoBehaviour
     private void FixedUpdate()
     {
         // Check if player is currently interacting
-        if (this.IsInteracting())
+        if (this.IsFrozen())
         {
             // Set bitmasks to freeze the players position and rotation
             this.rgdb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
         }
         // If the player is frozen but not interacting with anything
-        else if (!IsInteracting() && ((rgdb.constraints & RigidbodyConstraints2D.FreezePosition) != RigidbodyConstraints2D.None))
+        else if (!IsFrozen() && ((rgdb.constraints & RigidbodyConstraints2D.FreezePosition) != RigidbodyConstraints2D.None))
         {
             // Get the complement of the bitmasks to unfreeze player
             this.rgdb.constraints &= ~RigidbodyConstraints2D.FreezePositionX;
@@ -556,6 +556,16 @@ public class PlayerClass : MonoBehaviour
         // Freeze the player and update interacting variables
         this.interacting = isInteracting;
         this.frozen = isInteracting;
+    }
+
+    public void IsFrozen(bool isFrozen)
+    {
+        this.frozen = isFrozen;
+    }
+
+    public bool IsFrozen()
+    {
+        return this.frozen;
     }
 
 
