@@ -22,7 +22,7 @@ public class WeaponPickup : MonoBehaviour
    void OnTriggerEnter2D (Collider2D col){
         if(col.gameObject.name == "Player"){
             Debug.Log("Weapon has been collected!");
-            //sound.SendMessage("PlaySound");
+            SoundManager.Instance.Play(SoundManager.SoundEffect.Fanfare);
             Destroy(this.gameObject);
 
         }

@@ -124,14 +124,12 @@ public class SoundManager : AudioManager
         AttackOne,
         AttackTwo,
         Coin,
-        Item,
         Damage,
         DoorOpen,
         Fanfare,
         Key,
         LockedDoor,
         Select,
-        Void,
     }
 
 

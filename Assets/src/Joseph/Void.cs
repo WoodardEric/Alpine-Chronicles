@@ -17,8 +17,9 @@ using UnityEngine;
  */
 public class Void : MonoBehaviour
 {
-    public int scene;
     public int damage = -5;
+    enum side{TOP, BOTTOM, LEFT, RIGHT}
+    public int sideVal;
 
     /*
 	 * Summary: Moves the player to the start of the area and causes damage if the player enters the Void Trigger
@@ -41,25 +42,30 @@ public class Void : MonoBehaviour
             return;
         }
 
+        if (sideVal == (int) side.TOP)
+        {
+            position.x = player.transform.position.x;
+            position.y = this.transform.position.y + 1.5f;
+        }
+        else if (sideVal == (int) side.BOTTOM)
+        {
+            position.x = player.transform.position.x;
+            position.y = this.transform.position.y - 1.5f;
+        }
+        else if (sideVal == (int) side.LEFT)
+        {
+            position.x = this.transform.position.x - 1.5f;
+            position.y = player.transform.position.y;
+        }
+        else if (sideVal == (int) side.RIGHT)
+        {
+            position.x = this.transform.position.x + 1.5f;
+            position.y = player.transform.position.y;
+        }
+
         //Move Player to the start of the area
-        if(scene == 1)
-        {
-            position.x = -9f;
-            position.y = 3.75f;
-            player.SetPlayerPos(position);
-        }
-        else if(scene == 2)
-        {
-            position.x = 9.125f;
-		    position.y = -32.5f;
-		    player.SetPlayerPos(position);
-        }
-        else if(scene == 3)
-        {
-            position.x = -6f;
-            position.y = 16f;
-            player.SetPlayerPos(position);
-        }
+        player.SetPlayerPos(position);
+
         //Damage the player
         player.UpdateHealth(damage);
     }

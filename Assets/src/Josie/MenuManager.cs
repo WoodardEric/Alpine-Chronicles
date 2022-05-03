@@ -40,4 +40,9 @@ public class MenuManager : MonoBehaviour
         //player.SetPlayerPos(new Vector2(-38.5f, -2.67f));
         SceneManager.LoadScene("menu"); 
     }
+
+    public virtual void SayHello()
+    {
+        Debug.Log("Hello, from menu manager");
+    }
 }

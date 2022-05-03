@@ -8,6 +8,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 /*
  * Summary: Control the changing of scenes
@@ -29,6 +30,10 @@ public class LevelManager : MonoBehaviour
     List<string> keyDoors = new List<string>();
     Scene prevScene;
     Scene currScene;
+    public GameObject loadingScreen;
+    public Slider slider;
+    public GameObject canvas;
+
 
 	/*
 	 * Summary: Set up this class as a Singleton
@@ -69,6 +74,9 @@ public class LevelManager : MonoBehaviour
 	 */
     public void ChangeScene(int toScene, int fromScene)
     {
+        canvas = GameObject.Find("LoadingCanvas");
+        loadingScreen = canvas.transform.GetChild(0).gameObject;
+        slider = loadingScreen.GetComponentInChildren<Slider>();
         PlayerClass player = PlayerClass.Instance;
         Vector2 loadPos = new Vector2(0,0);
         goodScene = 1;
@@ -92,7 +100,7 @@ public class LevelManager : MonoBehaviour
             return;
         }
 
-        SceneManager.LoadScene(toScene);
+        StartCoroutine(LoadAsyncronously(toScene));
 
         //Put the player at the proper position
         if(toScene == 1)
@@ -125,6 +133,22 @@ public class LevelManager : MonoBehaviour
 			    player.SetPlayerPos(loadPos);
 		    }
 	    }
+    }
+
+
+    IEnumerator LoadAsyncronously(int sceneIndex)
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
+
+        loadingScreen.SetActive(true);
+
+        while (!operation.isDone)
+        {
+            float progress = Mathf.Clamp01(operation.progress / 0.9f);
+            slider.value = progress;
+
+            yield return null;
+        }
     }
 
 

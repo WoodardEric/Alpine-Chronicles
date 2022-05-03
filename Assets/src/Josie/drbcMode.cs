@@ -84,4 +84,9 @@ public class drbcMode : MenuManager
         Debug.Log("Password is wrong");
         return false;
     }
+
+    public override void SayHello()
+    {
+        Debug.Log("Hello, from drbcMode");
+    }
 }

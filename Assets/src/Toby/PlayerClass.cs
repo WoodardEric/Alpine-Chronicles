@@ -133,6 +133,10 @@ public class PlayerClass : MonoBehaviour
      */
     void Update()
     {
+        if (this.rgdb.IsSleeping())
+        {
+            this.rgdb.WakeUp();
+        }
         // Check if player is currently interacting, in which case the player shouldn't
         // be able to perform any action aside from the interaction
         if (!IsInteracting())
@@ -278,13 +282,13 @@ public class PlayerClass : MonoBehaviour
     private void FixedUpdate()
     {
         // Check if player is currently interacting
-        if (this.IsInteracting())
+        if (this.IsFrozen())
         {
             // Set bitmasks to freeze the players position and rotation
             this.rgdb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
         }
         // If the player is frozen but not interacting with anything
-        else if (!IsInteracting() && ((rgdb.constraints & RigidbodyConstraints2D.FreezePosition) != RigidbodyConstraints2D.None))
+        else if (!IsFrozen() && ((rgdb.constraints & RigidbodyConstraints2D.FreezePosition) != RigidbodyConstraints2D.None))
         {
             // Get the complement of the bitmasks to unfreeze player
             this.rgdb.constraints &= ~RigidbodyConstraints2D.FreezePositionX;
@@ -328,7 +332,7 @@ public class PlayerClass : MonoBehaviour
         {
             totalStr = playerAtk + equippedWeapon.strength;
         }
-
+        SoundManager.Instance.Play(SoundManager.SoundEffect.Attack);
         // Get an array of all enemies in the player's attack range during attack
         Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(attackArea.position, attackRange, constAttackAngle, enemyLayers);
 
@@ -338,6 +342,7 @@ public class PlayerClass : MonoBehaviour
             Debug.Log("Enemy " + enemy.name + " Hit");
             IHitEnemies enemyHit = enemy.gameObject.GetComponent<IHitEnemies>();
             enemyHit.DamageEnemy(totalStr);  // TODO: Set a variable for attack and reference as the parameter for DamageEnemy()
+            SoundManager.Instance.Play(SoundManager.SoundEffect.Damage);
         }
     }
 
@@ -551,6 +556,16 @@ public class PlayerClass : MonoBehaviour
         // Freeze the player and update interacting variables
         this.interacting = isInteracting;
         this.frozen = isInteracting;
+    }
+
+    public void IsFrozen(bool isFrozen)
+    {
+        this.frozen = isFrozen;
+    }
+
+    public bool IsFrozen()
+    {
+        return this.frozen;
     }
 
 

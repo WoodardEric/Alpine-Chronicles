@@ -20,7 +20,7 @@ public class Door : MonoBehaviour, IInteractable
     {
         Open();
         PlayerClass player = PlayerClass.Instance;
-        player.IsInteracting(false);
+        player.IsFrozen(false);
     }
 
     /*
