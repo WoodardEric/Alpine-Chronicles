@@ -18,7 +18,7 @@ using UnityEngine.SceneManagement;
  * player: PlayerClass type initiated variable
  *
  */
-public class PauseMenu : MenuManager
+public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
 
@@ -49,7 +49,7 @@ public class PauseMenu : MenuManager
     /*
      * Summary: main button, sets game object to false 
      */
-    public override void MainMenu()
+    public void MainMenu()
     {
         Debug.Log("load menu");
         Time.timeScale = 1f;
