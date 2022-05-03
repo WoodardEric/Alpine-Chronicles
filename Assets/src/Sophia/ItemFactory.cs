@@ -13,7 +13,7 @@ using UnityEngine;
 */
 public class ItemFactory
 {
-    public ItemClass GetItemClass()
+    public virtual ItemClass GetItemClass()
     {
         return new ItemClass();
     }
