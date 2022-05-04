@@ -22,6 +22,9 @@ public class inventoryMenu : MonoBehaviour
     public GameObject weaponSix;
     public GameObject weaponThree;
     public GameObject weaponTwo;
+    public GameObject EquipWeapon;
+    public GameObject EquipUtility;
+    
     public static bool inventroyCalled = false;
     static GameObject []items = new GameObject[20];
     static int numItems = 0;
