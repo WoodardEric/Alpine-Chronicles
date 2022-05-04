@@ -88,10 +88,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1479197305927396977}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 494b28c3c45b146419925fc0a41c4c9b, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a05ea348de894aa1b1431dd0cdf4899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   originIndex: 0
+  cameraObj: {fileID: 0}
+  invcamera: {fileID: 0}
 --- !u!225 &814496299141111837
 CanvasGroup:
   m_ObjectHideFlags: 0
