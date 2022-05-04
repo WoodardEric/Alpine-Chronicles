@@ -15,30 +15,6 @@ using UnityEngine;
 public class PlayerInventory : ConcreteAggregate
 {
     /*
-     * Summary: Shows the dynamic type of the inventory
-     *
-     * Returns:
-     * string - Returns the name of the dynamic type of inventory currently bound
-     */
-    public override string GetInvType()
-    {
-        return "Dynamic Player Inventory";
-    }
-
-
-    /*
-     * Summary: Get's the static type of the current aggregate
-     *
-     * Returns:
-     * string - Return a string stating what the static type of the aggregate is
-     */
-    new public string GetStaticType()
-    {
-        return "Static Player Inventory";
-    }
-
-
-    /*
      * Summary: Removes an item to the inventory data structure and indicates success or failure
      *
      * Parameters:
@@ -54,20 +30,27 @@ public class PlayerInventory : ConcreteAggregate
             return false;
         }
 
-        Iterator it = this.CreateIterator();
-        int foundIndex = 0;
-
-        while (!it.IsDone())
+        for (int i = 0; i < count; ++i)
         {
-            ItemClass tempItem = (ItemClass) it.CurrentItem();
+            ItemClass tempItem = (ItemClass) items[i];
             if (tempItem.itemName.Equals(nameOfItem, StringComparison.Ordinal))
             {
-                items.RemoveAt(foundIndex);
-                Debug.Log("REMOVING ITEM: " + tempItem.itemName);
-                return true;
+                if (i == count - 1)
+                {
+                    this.items[i] = null;
+                    --count;
+                    return true;
+                }
+                else
+                {
+                    for (int k = i; k < count - 1; ++k)
+                    {
+                        this.items[k] = this.items[k + 1];
+                    }
+                    this.items[--count] = null;
+                    return true;
+                }
             }
-            ++foundIndex;
-            it.Next();
         }
         // Initialize index of found item to eror value
         return false;
@@ -99,15 +82,15 @@ public class PlayerInventory : ConcreteAggregate
         }
 
         // Check if either item doesn't exist
-        if (this[itemOne] == null || this[itemTwo] == null)
+        if (this.items[itemOne] == null || this.items[itemTwo] == null)
         {
             return false;
         }
 
         // Swap the items
-        ItemClass temp = (ItemClass) this[itemOne];
-        this[itemOne] = this[itemTwo];
-        this[itemTwo] = temp;
+        ItemClass temp = (ItemClass) this.items[itemOne];
+        this.items[itemOne] = this.items[itemTwo];
+        this.items[itemTwo] = temp;
         return true;
     }
 
@@ -140,34 +123,34 @@ public class PlayerInventory : ConcreteAggregate
                 return (false, null);
             }
 
-            this[this.count] = item;
+            this.items[this.count] = item;
             return (true, null);
         }
 
         if (item == null)
         {
-            if (this[index] == null)
+            if (this.items[index] == null)
             {
                 return (false, null);
             }
 
-            ItemClass tempItem = (ItemClass) this[index];
+            ItemClass tempItem = (ItemClass) this.items[index];
             RemoveItem(index);
             return (true, tempItem);
         }
 
         // Check if player is placing equipped item into empty inventory slot
-        if (this[index] == null)
+        if (this.items[index] == null)
         {
-            this[index] = item;
+            this.items[index] = item;
             return (true, null);
         }
 
         
 
         // If item swapped exists, swap it to equip slot of player
-        ItemClass temp = (ItemClass) this[index];
-        this[index] = item;
+        ItemClass temp = (ItemClass) this.items[index];
+        this.items[index] = item;
         return (true, temp);
     }
 }

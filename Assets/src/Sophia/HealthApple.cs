@@ -23,7 +23,6 @@ public class HealthApple : ItemClass
     private readonly string subItemName;
     private int subStrength;
     private int subHealth;
-
     private Sprite subSpriteImage;
     private (int str, int len) subTempStrength;
     private (int spd, int len) subTempSpeed;

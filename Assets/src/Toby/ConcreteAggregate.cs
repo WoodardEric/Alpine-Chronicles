@@ -16,10 +16,12 @@ using UnityEngine;
  * items - a list of C# generic object type
  * count - An integer which holds the current number of elements in the list
  */
-public class ConcreteAggregate : Aggregate
+public class ConcreteAggregate
 {
-    protected List<object> items = new List<object>();
+    //protected List<object> items = new List<object>();
+    protected ItemClass []items = new ItemClass[20];
     const int constMaxInvSize = 20;
+    public int count = 0;
 
 
     /*
@@ -40,7 +42,7 @@ public class ConcreteAggregate : Aggregate
         }
 
         // Otherwise, add item to inventory
-        this[this.count] = addedItem;
+        this.items[count++] = addedItem;
         return true;
     }
 
@@ -61,8 +63,19 @@ public class ConcreteAggregate : Aggregate
             return false;
         }
         
-        // If item exists, remove item
-        items.RemoveAt(index);
+        if (index == count - 1)
+        {
+            this.items[index] = null;
+            --count;
+            return true;
+        }
+        
+        for (int i = index; i < count - 1; ++i)
+        {
+            this.items[i] = this.items[i + 1];
+        }
+        
+        this.items[--count] = null;
         return true;
     }
 
@@ -115,90 +128,22 @@ public class ConcreteAggregate : Aggregate
             return null;
         }
 
-        Iterator it = this.CreateIterator();
-
-        while (!it.IsDone())
+        for (int i = 0; i < count; ++i)
         {
-            ItemClass tempItem = (ItemClass) it.CurrentItem();
-            if (tempItem.itemName.Equals(name, StringComparison.Ordinal))
+            if (items[i].itemName.Equals(name, StringComparison.Ordinal))
             {
-                return tempItem;
+                return items[i];
             }
-            it.Next();
         }
 
         return null;
     }
 
-
-    /*
-     * Summary: Resets the player's inventory
-     */
     public void ResetInventory()
     {
-        for (int i = 0; i < count;)
+        for (int i = 0; i < GetMaxItems(); ++i)
         {
-            RemoveItem(i);
-        }
-    }
-
-
-    /*
-     * Summary: Get's the dynamic type of the current aggregate
-     *
-     * Returns:
-     * string - Return a string stating what the dynamic type of the aggregate is
-     */
-    public virtual string GetInvType()
-    {
-        return "Generic Inventory";
-    }
-
-
-    /*
-     * Summary: Get's the static type of the current aggregate
-     *
-     * Returns:
-     * string - Return a string stating what the static type of the aggregate is
-     */
-    public string GetStaticType()
-    {
-        return "Static Aggregate";
-    }
-
-
-    /*
-     * Summary: Returns an Iterator
-     *
-     * Returns:
-     * Iterator - Return a new Iterator
-     */
-    public override Iterator CreateIterator()
-    {
-        return new ConcreteIterator(this);
-    }
-
-    
-    // Get item count
-    public int count
-    {
-        get { return items.Count; }
-    }
-
-
-    // Indexer
-    public object this[int index]
-    {
-        get
-        {
-            return items[index];
-        }
-        set
-        {
-            if (index < 20)
-            {
-                items.Insert(index, value);
-            }
+            items[i] = null;
         }
     }
 }
