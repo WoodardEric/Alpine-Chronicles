@@ -58,15 +58,16 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
         down = -inventory.GetComponent<RectTransform>().rect.position.y - (inventoryM.GetComponent<RectTransform>().rect.height / 2);
         //width = test.GetComponent<RectTransform>().rect.position.x + (test.GetComponent<RectTransform>().rect.width / 2);
         Debug.Log("Right: " + right + "Left: " + left + "Up: " + up + "Down: " + down + "position: " + eventData.position.x);
+        Debug.Log("POSITION IN CAMERA: " + invcamera.WorldToScreenPoint(eventData.position));
+        Vector3 camPos = invcamera.WorldToScreenPoint(eventData.position);
         if (eventData.position.x > right || eventData.position.x < left || eventData.position.y > up || eventData.position.y < down)
         {
             player.inventory.RemoveItem(originIndex);
             Destroy(draggedItem);
         }
-        Debug.Log("POSITION IN CAMERA: " + invcamera.WorldToScreenPoint(eventData.position));
-        Vector3 camPos = invcamera.WorldToScreenPoint(eventData.position);
+        
         // Row One
-        if (camPos.x > 950f && camPos.y > 500f && camPos.x < 1050 && camPos.y < 600)
+        else if (camPos.x > 950f && camPos.y > 500f && camPos.x < 1050 && camPos.y < 600)
         {
             Debug.Log("MADE IT 0");
             switchIndex = 0;
@@ -189,10 +190,5 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
     public void OnPointerDown(PointerEventData eventData)
     {
         Debug.Log("OnPointerDown");
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        Debug.Log("MADE IT");
     }
 }
