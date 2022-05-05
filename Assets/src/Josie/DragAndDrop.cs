@@ -18,6 +18,9 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
     Rigidbody2D rgdb;
     public GameObject cameraObj;
     public Camera invcamera;
+    public enum slots {EQUIPPEDWEAPON, EQUIPPEDITEM, INVENTORY}
+    bool equippedFound;
+    static int selectedSlot;
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -39,6 +42,17 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
     {
         Debug.Log("OnBeginDrag");
         originPos = new Vector2(rectTransform.localPosition.x, rectTransform.localPosition.y);
+        Vector3 camPos = invcamera.WorldToScreenPoint(eventData.position);
+        if (camPos.x > 660f && camPos.y > 415f && camPos.x < 775 && camPos.y < 525)
+        {
+            Debug.Log("MADE IT TO EQUIPPIED WEAPON");
+            selectedSlot = (int) slots.EQUIPPEDWEAPON;
+        }
+        else if (camPos.x > 660f && camPos.y > 220f && camPos.x < 775 && camPos.y < 330)
+        {
+            Debug.Log("MADE IT TO EQUIPPED ITEM");
+            selectedSlot = (int) slots.EQUIPPEDITEM;
+        }
         //canvasGroup.blocksRaycasts = false;
     }
     public void OnDrag(PointerEventData eventData)
@@ -49,7 +63,6 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
     }
     public void OnEndDrag(PointerEventData eventData)
     {
-        Debug.Log("OnEndDrag");
         inventory = GameObject.Find("Inventory");
         inventoryM = GameObject.Find("InventoryMenu");
         right = inventory.GetComponent<RectTransform>().rect.width - (inventoryM.GetComponent<RectTransform>().rect.width / 1.4f);
@@ -60,7 +73,18 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
         Debug.Log("Right: " + right + "Left: " + left + "Up: " + up + "Down: " + down + "position: " + eventData.position.x);
         Debug.Log("POSITION IN CAMERA: " + invcamera.WorldToScreenPoint(eventData.position));
         Vector3 camPos = invcamera.WorldToScreenPoint(eventData.position);
-        if (eventData.position.x > right || eventData.position.x < left || eventData.position.y > up || eventData.position.y < down)
+        Debug.Log(selectedSlot);
+        if (camPos.x > 660f && camPos.y > 415f && camPos.x < 775 && camPos.y < 525)
+        {
+            Debug.Log("MADE IT TO EQUIPPIED WEAPON");
+            selectedSlot = (int) slots.EQUIPPEDWEAPON;
+        }
+        else if (camPos.x > 660f && camPos.y > 220f && camPos.x < 775 && camPos.y < 330)
+        {
+            Debug.Log("MADE IT TO EQUIPPED ITEM");
+            selectedSlot = (int) slots.EQUIPPEDITEM;
+        }
+        else if (eventData.position.x > right || eventData.position.x < left || eventData.position.y > up || eventData.position.y < down)
         {
             player.inventory.RemoveItem(originIndex);
             Destroy(draggedItem);
@@ -176,7 +200,73 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
             switchIndex = 19;
         }
 
-        if ((switchIndex != -1) && (!player.inventory.SwitchItems(originIndex, switchIndex)))
+
+        if (selectedSlot == (int) slots.EQUIPPEDWEAPON)
+        {
+            if ((eventData.position.x > right || eventData.position.x < left || eventData.position.y > up || eventData.position.y < down)
+                && !(camPos.x > 660f && camPos.y > 415f && camPos.x < 775 && camPos.y < 525))
+            {
+                player.equippedWeapon = null;
+                Destroy(draggedItem);
+            }
+            else
+            {
+                ItemClass tempItem;
+                if (originIndex == 21)
+                {
+                    (equippedFound, tempItem) = player.inventory.SwitchEquippedWeapon(switchIndex, player.equippedWeapon);
+                    if (equippedFound)
+                    {
+                        player.equippedWeapon = tempItem;
+                    }
+                }
+                else
+                {
+                    (equippedFound, tempItem) = player.inventory.SwitchEquippedWeapon(originIndex, player.equippedWeapon);
+                    if (equippedFound)
+                    {
+                        player.equippedWeapon = tempItem;
+                    }
+                }
+            }
+            inventoryM.GetComponent<inventoryMenu>().DestInventory();
+            inventoryM.GetComponent<inventoryMenu>().CreateInventory(false);
+            selectedSlot = -1;
+        }
+        else if (selectedSlot == (int) slots.EQUIPPEDITEM)
+        {
+            if ((eventData.position.x > right || eventData.position.x < left || eventData.position.y > up || eventData.position.y < down)
+                && !(camPos.x > 660f && camPos.y > 220f && camPos.x < 775 && camPos.y < 330))
+            {
+                player.equippedUtil = null;
+                Destroy(draggedItem);
+            }
+            else
+            {
+                ItemClass tempItem;
+                Debug.Log("MADE IT TO ITEM SWITCH");
+                if (originIndex == 22)
+                {
+                    (equippedFound, tempItem) = player.inventory.SwitchEquippedUtil(switchIndex, player.equippedUtil);
+                    if (equippedFound)
+                    {
+                        player.equippedUtil = tempItem;
+                    }
+                }
+                else
+                {
+                    (equippedFound, tempItem) = player.inventory.SwitchEquippedUtil(originIndex, player.equippedUtil);
+                    if (equippedFound)
+                    {
+                        player.equippedUtil = tempItem;
+                    }
+                }
+            }
+            inventoryM.GetComponent<inventoryMenu>().DestInventory();
+            inventoryM.GetComponent<inventoryMenu>().CreateInventory(false);
+            selectedSlot = -1;
+        }
+        else if ((switchIndex != -1) && (!player.inventory.SwitchItems(originIndex, switchIndex)))
         {
             rectTransform.localPosition = originPos;
         }

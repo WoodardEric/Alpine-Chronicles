@@ -21,6 +21,7 @@ using UnityEngine;
 public class RoomKeyOne : ItemClass
 {
     private readonly string subItemName;
+    private readonly string subItemType;
     private int subStrength;
     private int subHealth;
 
@@ -34,6 +35,7 @@ public class RoomKeyOne : ItemClass
     public RoomKeyOne()
     {
         subItemName = "RoomKeyOne";
+        subItemType = "";
         subStrength = -1;
         // error state, if the thing doesnt change it
         subHealth = -1; 
@@ -47,6 +49,11 @@ public class RoomKeyOne : ItemClass
     public override string itemName
     {
         get {return subItemName;}
+    }
+
+    public override string itemType
+    {
+        get {return subItemType;}
     }
 
     public override Sprite spriteImage

@@ -21,12 +21,14 @@ using UnityEngine;
 public class ItemClass
 {
     public virtual string itemName{get;}
+    public virtual string itemType{get;}
     public virtual int strength{get;}
     public virtual int health{get;}
 
     public virtual Sprite spriteImage{get;}
     public virtual (int str, int len)tempStrength{get;}
     public virtual (int spd, int len)tempSpeed{get;}
+    
     
 
     public ItemClass()

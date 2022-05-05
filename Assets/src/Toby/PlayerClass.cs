@@ -124,6 +124,8 @@ public class PlayerClass : MonoBehaviour
             this.inventory = new PlayerInventory();
             this.attackRange = new Vector2(0.75f, 1.5f);
             compSet = true;
+            equippedWeapon = null;
+            equippedUtil = null;
         }
     }
 

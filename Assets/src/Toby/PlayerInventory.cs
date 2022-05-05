@@ -106,7 +106,7 @@ public class PlayerInventory : ConcreteAggregate
      * bool - Return true if the items were switched and false if they were not
      * ItemClass - the item that is to be swapped into the player's equip slot
      */
-    public (bool, ItemClass) SwitchEquipped(int index, ItemClass item)
+    public (bool, ItemClass) SwitchEquippedWeapon(int index, ItemClass item)
     {
         // Check if the index is within bounds of inventory
         if (index < 0 || index >= GetMaxItems())
@@ -118,13 +118,13 @@ public class PlayerInventory : ConcreteAggregate
         // Check if player is putting equipped item into inventory without swapping another item in
         if (index >= this.count)
         {
-            if ((this.count >= GetMaxItems()) || (item == null))
-            {
-                return (false, null);
-            }
+            //if ((this.count >= GetMaxItems()) || (item == null))
+            //{
+            return (false, null);
+            //}
 
-            this.items[this.count] = item;
-            return (true, null);
+            //this.items[this.count] = item;
+            //return (true, null);
         }
 
         if (item == null)
@@ -135,8 +135,13 @@ public class PlayerInventory : ConcreteAggregate
             }
 
             ItemClass tempItem = (ItemClass) this.items[index];
-            RemoveItem(index);
-            return (true, tempItem);
+            if (tempItem.itemType == "Weapon")
+            {
+                RemoveItem(index);
+                return (true, tempItem);
+            }
+            return (false, null);
+            
         }
 
         // Check if player is placing equipped item into empty inventory slot
@@ -150,7 +155,67 @@ public class PlayerInventory : ConcreteAggregate
 
         // If item swapped exists, swap it to equip slot of player
         ItemClass temp = (ItemClass) this.items[index];
-        this.items[index] = item;
-        return (true, temp);
+        if (temp.itemType == "Weapon")
+        {
+            this.items[index] = item;
+            return (true, temp);
+        }
+        return (false, null);
+    }
+
+    public (bool, ItemClass) SwitchEquippedUtil(int index, ItemClass item)
+    {
+        // Check if the index is within bounds of inventory
+        if (index < 0 || index >= GetMaxItems())
+        {
+            return (false, null);
+        }
+
+
+        // Check if player is putting equipped item into inventory without swapping another item in
+        if (index >= this.count)
+        {
+            //if ((this.count >= GetMaxItems()) || (item == null))
+            //{
+            return (false, null);
+            //}
+
+            //this.items[this.count] = item;
+            //return (true, null);
+        }
+
+        if (item == null)
+        {
+            if (this.items[index] == null)
+            {
+                return (false, null);
+            }
+
+            ItemClass tempItem = (ItemClass) this.items[index];
+            if (tempItem.itemType == "Utility")
+            {
+                RemoveItem(index);
+                return (true, tempItem);
+            }
+            return (false, null);
+        }
+
+        // Check if player is placing equipped item into empty inventory slot
+        if (this.items[index] == null)
+        {
+            this.items[index] = item;
+            return (true, null);
+        }
+
+        
+
+        // If item swapped exists, swap it to equip slot of player
+        ItemClass temp = (ItemClass) this.items[index];
+        if (temp.itemType == "Utility")
+        {
+            this.items[index] = item;
+            return (true, temp);
+        }
+        return (false, null);
     }
 }

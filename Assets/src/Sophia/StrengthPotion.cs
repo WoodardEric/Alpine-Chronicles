@@ -22,6 +22,7 @@ using UnityEngine;
 public class StrengthPotion : ItemClass
 {
     private readonly string subItemName;
+    private readonly string subItemType;
     private int subStrength;
     private int subHealth;
 
@@ -35,6 +36,7 @@ public class StrengthPotion : ItemClass
     public StrengthPotion()
     {
         subItemName = "StrengthPotion";
+        subItemType = "Utility";
         subStrength = 20;
          // error state, if the thing doesnt change it
         subHealth = -1;
@@ -48,6 +50,11 @@ public class StrengthPotion : ItemClass
     public override string itemName
     {
         get {return subItemName;}
+    }
+
+    public override string itemType
+    {
+        get {return subItemType;}
     }
 
     public override Sprite spriteImage

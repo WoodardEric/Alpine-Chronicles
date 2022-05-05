@@ -24,6 +24,8 @@ public class inventoryMenu : MonoBehaviour
     public GameObject weaponTwo;
     public static bool inventroyCalled = false;
     static GameObject []items = new GameObject[20];
+    static GameObject equippedWeapon;
+    static GameObject equippedItem;
     static int numItems = 0;
 
     public GameObject inventory;
@@ -56,6 +58,50 @@ public class inventoryMenu : MonoBehaviour
     public void CreateInventory(bool origin)
     {
         float invWidth;
+
+        if (player.equippedWeapon != null)
+        {
+            equippedWeapon = getItemImage(player.equippedWeapon.itemName);
+            if (origin)
+            {
+                equippedWeapon.transform.parent = gameObject.transform.GetChild(0).transform;//.transform.GetChild(0).transform.GetChild(i).transform;
+                invWidth = gameObject.transform.GetChild(0).transform.GetComponent<RectTransform>().rect.width;
+            }
+            else
+            {
+                equippedWeapon.transform.parent = gameObject.transform;
+                invWidth = gameObject.transform.GetComponent<RectTransform>().rect.width;
+            }
+            //equippedWeapon.GetComponent<DragAndDrop>().originIndex = i;
+            equippedWeapon.GetComponent<DragAndDrop>().originIndex = 21;
+            RectTransform rt = equippedWeapon.GetComponent<RectTransform>();
+            rt.localScale = new Vector3(1f, 1f, 0f);
+            rt.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Left, 0, rt.rect.width);
+            rt.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Top, 0, rt.rect.height);
+            rt.localPosition = new Vector3(rt.localPosition.x -320f, rt.localPosition.y -140, 0f);
+        }
+        if (player.equippedUtil != null)
+        {
+            equippedItem = getItemImage(player.equippedUtil.itemName);
+            if (origin)
+            {
+                equippedItem.transform.parent = gameObject.transform.GetChild(0).transform;//.transform.GetChild(0).transform.GetChild(i).transform;
+                invWidth = gameObject.transform.GetChild(0).transform.GetComponent<RectTransform>().rect.width;
+            }
+            else
+            {
+                equippedItem.transform.parent = gameObject.transform;
+                invWidth = gameObject.transform.GetComponent<RectTransform>().rect.width;
+            }
+            //equippedWeapon.GetComponent<DragAndDrop>().originIndex = i;
+            equippedItem.GetComponent<DragAndDrop>().originIndex = 22;
+            RectTransform rt = equippedItem.GetComponent<RectTransform>();
+            rt.localScale = new Vector3(1f, 1f, 0f);
+            rt.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Left, 0, rt.rect.width);
+            rt.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Top, 0, rt.rect.height);
+            rt.localPosition = new Vector3(rt.localPosition.x -320f, rt.localPosition.y -385, 0f);
+        }
+
         for (int i = 0; i < player.inventory.count; ++i)
         {
             Debug.Log(player.inventory.GetItem(i).itemName);
@@ -200,6 +246,14 @@ public class inventoryMenu : MonoBehaviour
         for (int i = 0; i < numItems; ++i)
         {
             Destroy(items[i]);
+        }
+        if(equippedWeapon != null)
+        {
+            Destroy(equippedWeapon);
+        }
+        if (equippedItem != null)
+        {
+            Destroy(equippedItem);
         }
         numItems = 0;
     }

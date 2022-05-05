@@ -21,6 +21,7 @@ using UnityEngine;
 public class WeaponSeven : ItemClass
 {
     private readonly string subItemName;
+    private readonly string subItemType;
     private int subStrength;
     private int subHealth;
 
@@ -34,6 +35,7 @@ public class WeaponSeven : ItemClass
     public WeaponSeven()
     {
         subItemName = "WeaponSeven";
+        subItemType = "Weapon";
         subStrength = 2;
          // error state, if the thing doesnt change it
         subHealth = -1;
@@ -47,6 +49,11 @@ public class WeaponSeven : ItemClass
     public override string itemName
     {
         get {return subItemName;}
+    }
+
+    public override string itemType
+    {
+        get {return subItemType;}
     }
 
     public override Sprite spriteImage

@@ -21,6 +21,7 @@ using UnityEngine;
 public class HealthApple : ItemClass
 {
     private readonly string subItemName;
+    private readonly string subItemType;
     private int subStrength;
     private int subHealth;
     private Sprite subSpriteImage;
@@ -33,6 +34,7 @@ public class HealthApple : ItemClass
     public HealthApple()
     {
         subItemName = "HealthApple";
+        subItemType = "Utility";
         subStrength = -1;
         // error state, if the thing doesnt change it
         subHealth = 5; 
@@ -46,6 +48,11 @@ public class HealthApple : ItemClass
     public override string itemName
     {
         get {return subItemName;}
+    }
+
+    public override string itemType
+    {
+        get {return subItemType;}
     }
 
     public override Sprite spriteImage
