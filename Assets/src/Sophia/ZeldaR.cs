@@ -30,7 +30,7 @@ public class ZeldaR : ItemClass
 
     private Sprite subSpriteImage;
     private (int str, int len) subTempStrength;
-    private (int spd, int len) subTempSpeed;
+    private (float spd, int len) subTempSpeed;
      
 
     /*
@@ -70,7 +70,7 @@ public class ZeldaR : ItemClass
     }
 
 
-    public override (int, int) tempSpeed
+    public override (float, int) tempSpeed
     {
         get { return subTempSpeed; }
     }

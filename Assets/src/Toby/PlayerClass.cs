@@ -45,6 +45,7 @@ public class PlayerClass : MonoBehaviour
     [SerializeField] float moveSpeed;
     protected int health;
     protected const int playerAtk = 1;
+    protected int tempStr;
     protected int totalStr;
     bool modeBC;
 
@@ -126,6 +127,7 @@ public class PlayerClass : MonoBehaviour
             compSet = true;
             equippedWeapon = null;
             equippedUtil = null;
+            tempStr = 0;
         }
     }
 
@@ -147,6 +149,13 @@ public class PlayerClass : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 Attack();
+            }
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                if (equippedUtil != null)
+                {
+                    this.UseItem();
+                }
             }
 
             // If user is moving on both the x and y axis, prioritize the y axis for movement and animations
@@ -328,11 +337,11 @@ public class PlayerClass : MonoBehaviour
     {
         if (equippedWeapon == null)
         {
-            totalStr = playerAtk;
+            totalStr = playerAtk + tempStr;
         }
         else
         {
-            totalStr = playerAtk + equippedWeapon.strength;
+            totalStr = playerAtk + equippedWeapon.strength + tempStr;
         }
         SoundManager.Instance.Play(SoundManager.SoundEffect.Attack);
         // Get an array of all enemies in the player's attack range during attack
@@ -346,6 +355,41 @@ public class PlayerClass : MonoBehaviour
             enemyHit.DamageEnemy(totalStr);  // TODO: Set a variable for attack and reference as the parameter for DamageEnemy()
             SoundManager.Instance.Play(SoundManager.SoundEffect.Damage);
         }
+    }
+
+    void UseItem()
+    {
+        Debug.Log(this.equippedUtil.itemName);
+        if (this.equippedUtil.health != -1)
+        {
+            this.UpdateHealth(equippedUtil.health);
+        }
+        if (this.equippedUtil.tempStrength != (-1, -1))
+        {
+            int length;
+            (tempStr, length) = this.equippedUtil.tempStrength;
+            StartCoroutine(tempStrength(length));
+        }
+        if (this.equippedUtil.tempSpeed != (-1, -1))
+        {
+            int length;
+            float prevSpeed = moveSpeed;
+            (moveSpeed, length) = this.equippedUtil.tempSpeed;
+            StartCoroutine(tempSpeed(length, prevSpeed));
+        }
+        this.equippedUtil = null;
+    }
+
+    IEnumerator tempStrength(int waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        tempStr = 0;;
+    }
+
+    IEnumerator tempSpeed(int waitTime, float prevMoveSpeed)
+    {
+        yield return new WaitForSeconds(waitTime);
+        moveSpeed = prevMoveSpeed;
     }
 
 
@@ -375,6 +419,10 @@ public class PlayerClass : MonoBehaviour
         {
             this.interacting = false;
             return;
+        }
+        else if (other.gameObject.name == "Slime")
+        {
+            this.UpdateHealth(-5);
         }
         else if (other.gameObject.tag != "item")
         {

@@ -27,7 +27,7 @@ public class WeaponSix : ItemClass
 
     private Sprite subSpriteImage;
     private (int str, int len) subTempStrength;
-    private (int spd, int len) subTempSpeed;
+    private (float spd, int len) subTempSpeed;
 
     /*
     * Summary: Assigns values to item variables, and sets sprite image
@@ -73,7 +73,7 @@ public class WeaponSix : ItemClass
         get {return subTempStrength;}
     }
 
-    public override (int, int) tempSpeed
+    public override (float, int) tempSpeed
     {
         get {return subTempSpeed;}
     }

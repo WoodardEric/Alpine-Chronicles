@@ -27,7 +27,7 @@ public class MasterSword : ItemClass
 
     private Sprite subSpriteImage;
     private (int str, int len) subTempStrength;
-    private (int spd, int len) subTempSpeed;
+    private (float spd, int len) subTempSpeed;
 
     public MasterSword()
     {
@@ -72,7 +72,7 @@ public class MasterSword : ItemClass
         get {return subTempStrength;}
     }
 
-    public override (int, int) tempSpeed
+    public override (float, int) tempSpeed
     {
         get {return subTempSpeed;}
     }

@@ -43,7 +43,6 @@ public class inventoryMenu : MonoBehaviour
 
     public void inventoryButton()
     {
-        
         Debug.Log("Inventory menu");
         inventory.SetActive(true);
         Time.timeScale = 0f; 
@@ -226,6 +225,16 @@ public class inventoryMenu : MonoBehaviour
     public void DestInventory()
     {
         Debug.Log("NUM ITEMS" + numItems);
+        
+        if(equippedWeapon != null)
+        {
+            Destroy(equippedWeapon);
+        }
+        if (equippedItem != null)
+        {
+            Destroy(equippedItem);
+        }
+        
         if (numItems == 0)
         {
             return;
@@ -234,14 +243,6 @@ public class inventoryMenu : MonoBehaviour
         for (int i = 0; i < numItems; ++i)
         {
             Destroy(items[i]);
-        }
-        if(equippedWeapon != null)
-        {
-            Destroy(equippedWeapon);
-        }
-        if (equippedItem != null)
-        {
-            Destroy(equippedItem);
         }
         numItems = 0;
     }

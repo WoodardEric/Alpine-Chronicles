@@ -27,7 +27,7 @@ public class ItemClass
 
     public virtual Sprite spriteImage{get;}
     public virtual (int str, int len)tempStrength{get;}
-    public virtual (int spd, int len)tempSpeed{get;}
+    public virtual (float spd, int len)tempSpeed{get;}
     
     
 

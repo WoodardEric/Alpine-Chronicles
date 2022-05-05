@@ -27,7 +27,7 @@ public class SpeedPotion : ItemClass
 
     private Sprite subSpriteImage;
     private (int str, int len) subTempStrength;
-    private (int spd, int len) subTempSpeed;
+    private (float spd, int len) subTempSpeed;
 
     /*
     * Summary: Assigns values to item variables, and sets sprite image
@@ -41,7 +41,7 @@ public class SpeedPotion : ItemClass
         subHealth = -1; 
         subTempStrength = (-1, -1);
         //if speed, first number is increase by how much, and second is for how long in seconds
-        subTempSpeed = (10, 60); 
+        subTempSpeed = (10f, 60); 
         subSpriteImage = Resources.Load<Sprite>("Items Pack/Pixel Art Icon Pack - RPG/Texture/Potion/Red Potion 2.png");
 
     }
@@ -75,7 +75,7 @@ public class SpeedPotion : ItemClass
         get {return subTempStrength;}
     }
 
-    public override (int, int) tempSpeed
+    public override (float, int) tempSpeed
     {
         get {return subTempSpeed;}
     }

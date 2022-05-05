@@ -27,7 +27,7 @@ public class BossKey : ItemClass
 
     private Sprite subSpriteImage;
     private (int str, int len) subTempStrength;
-    private (int spd, int len) subTempSpeed;
+    private (float spd, int len) subTempSpeed;
 
     /*
     * Summary: Assigns values to item variables, and sets sprite image
@@ -80,7 +80,7 @@ public class BossKey : ItemClass
     }
 
 
-    public override (int, int) tempSpeed
+    public override (float, int) tempSpeed
     {
         get {return subTempSpeed;}
     }

@@ -27,7 +27,7 @@ public class Katana : ItemClass
 
     private Sprite subSpriteImage;
     private (int str, int len) subTempStrength;
-    private (int spd, int len) subTempSpeed;
+    private (float spd, int len) subTempSpeed;
 
     public Katana()
     {
@@ -72,7 +72,7 @@ public class Katana : ItemClass
         get {return subTempStrength;}
     }
 
-    public override (int, int) tempSpeed
+    public override (float, int) tempSpeed
     {
         get {return subTempSpeed;}
     }
