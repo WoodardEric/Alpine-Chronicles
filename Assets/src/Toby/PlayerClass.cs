@@ -776,7 +776,7 @@ public class PlayerClass : MonoBehaviour
      */
     private void GameOverAct()
     {
-
+        Application.Quit();
     }
 
 
