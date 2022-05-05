@@ -68,7 +68,7 @@ public class EnemyGruntBug : MonoBehaviour, IHitEnemies
         {
             if(hitCooldown) // If true, it means the enemy CAN attack
             {
-                player.UpdateHealth(-EnemyDamage);
+                player.UpdateHealth(-EnemyDamage, false);
                 hitCooldown = false;
                 StartCoroutine(AttackCooldown());
             }
@@ -219,7 +219,7 @@ public class EnemyGruntBug : MonoBehaviour, IHitEnemies
     }
 
     /// <summary>
-    /// Takes a given value of damage and subtracts it from the enemy’s health. 
+    /// Takes a given value of damage and subtracts it from the enemyï¿½s health. 
     /// Calls EnemyDeath() once health is below zero.
     /// </summary>
     /// <param name="damage"></param>

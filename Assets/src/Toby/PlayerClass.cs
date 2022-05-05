@@ -362,7 +362,7 @@ public class PlayerClass : MonoBehaviour
         Debug.Log(this.equippedUtil.itemName);
         if (this.equippedUtil.health != -1)
         {
-            this.UpdateHealth(equippedUtil.health);
+            this.UpdateHealth(equippedUtil.health, true);
         }
         if (this.equippedUtil.tempStrength != (-1, -1))
         {
@@ -414,6 +414,7 @@ public class PlayerClass : MonoBehaviour
      */
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("COLLIDING WITH " + other.gameObject.name);
         // Check if user is interacting with something interactable or an item
         if (other.gameObject.tag == "interactable")
         {
@@ -422,7 +423,8 @@ public class PlayerClass : MonoBehaviour
         }
         else if (other.gameObject.name == "Slime")
         {
-            this.UpdateHealth(-5);
+            this.UpdateHealth(-5, false);
+            return;
         }
         else if (other.gameObject.tag != "item")
         {
@@ -625,13 +627,16 @@ public class PlayerClass : MonoBehaviour
      * Parameters:
      * change - The amount of health to be added (positive) or taken (negative) from the player
      */
-    public void UpdateHealth(int change)
+    public void UpdateHealth(int change, bool isItem)
     {
         // Increment semaphore
         if (++this.updateNum > 1)
         {
             this.updateNum = 0;
-            return;
+            if (!isItem)
+            {
+                return;
+            }
         }
         // Check if BC mode is active
         if (modeBC)

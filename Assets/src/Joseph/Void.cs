@@ -67,6 +67,6 @@ public class Void : MonoBehaviour
         player.SetPlayerPos(position);
 
         //Damage the player
-        player.UpdateHealth(damage);
+        player.UpdateHealth(damage, false);
     }
 }
