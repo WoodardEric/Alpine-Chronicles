@@ -53,7 +53,6 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
             Debug.Log("MADE IT TO EQUIPPED ITEM");
             selectedSlot = (int) slots.EQUIPPEDITEM;
         }
-        //canvasGroup.blocksRaycasts = false;
     }
     public void OnDrag(PointerEventData eventData)
     {
@@ -69,7 +68,7 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
         left = -inventory.GetComponent<RectTransform>().rect.position.x - (inventoryM.GetComponent<RectTransform>().rect.width / 2) - 5;
         up = -inventory.GetComponent<RectTransform>().rect.position.y + (inventoryM.GetComponent<RectTransform>().rect.height / 2);
         down = -inventory.GetComponent<RectTransform>().rect.position.y - (inventoryM.GetComponent<RectTransform>().rect.height / 2);
-        //width = test.GetComponent<RectTransform>().rect.position.x + (test.GetComponent<RectTransform>().rect.width / 2);
+        
         Debug.Log("Right: " + right + "Left: " + left + "Up: " + up + "Down: " + down + "position: " + eventData.position.x);
         Debug.Log("POSITION IN CAMERA: " + invcamera.WorldToScreenPoint(eventData.position));
         Vector3 camPos = invcamera.WorldToScreenPoint(eventData.position);
@@ -275,7 +274,6 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
             inventoryM.GetComponent<inventoryMenu>().DestInventory();
             inventoryM.GetComponent<inventoryMenu>().CreateInventory(false);
         }
-        //canvasGroup.blocksRaycasts = true;
     }
     public void OnPointerDown(PointerEventData eventData)
     {

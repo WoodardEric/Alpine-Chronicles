@@ -41,12 +41,6 @@ public class inventoryMenu : MonoBehaviour
         player = PlayerClass.Instance;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void inventoryButton()
     {
         
@@ -67,7 +61,7 @@ public class inventoryMenu : MonoBehaviour
             equippedWeapon = getItemImage(player.equippedWeapon.itemName);
             if (origin)
             {
-                equippedWeapon.transform.parent = gameObject.transform.GetChild(0).transform;//.transform.GetChild(0).transform.GetChild(i).transform;
+                equippedWeapon.transform.parent = gameObject.transform.GetChild(0).transform;
                 invWidth = gameObject.transform.GetChild(0).transform.GetComponent<RectTransform>().rect.width;
             }
             else
@@ -75,7 +69,6 @@ public class inventoryMenu : MonoBehaviour
                 equippedWeapon.transform.parent = gameObject.transform;
                 invWidth = gameObject.transform.GetComponent<RectTransform>().rect.width;
             }
-            //equippedWeapon.GetComponent<DragAndDrop>().originIndex = i;
             equippedWeapon.GetComponent<DragAndDrop>().originIndex = 21;
             RectTransform rt = equippedWeapon.GetComponent<RectTransform>();
             rt.localScale = new Vector3(1f, 1f, 0f);
@@ -88,7 +81,7 @@ public class inventoryMenu : MonoBehaviour
             equippedItem = getItemImage(player.equippedUtil.itemName);
             if (origin)
             {
-                equippedItem.transform.parent = gameObject.transform.GetChild(0).transform;//.transform.GetChild(0).transform.GetChild(i).transform;
+                equippedItem.transform.parent = gameObject.transform.GetChild(0).transform;
                 invWidth = gameObject.transform.GetChild(0).transform.GetComponent<RectTransform>().rect.width;
             }
             else
@@ -96,7 +89,7 @@ public class inventoryMenu : MonoBehaviour
                 equippedItem.transform.parent = gameObject.transform;
                 invWidth = gameObject.transform.GetComponent<RectTransform>().rect.width;
             }
-            //equippedWeapon.GetComponent<DragAndDrop>().originIndex = i;
+
             equippedItem.GetComponent<DragAndDrop>().originIndex = 22;
             RectTransform rt = equippedItem.GetComponent<RectTransform>();
             rt.localScale = new Vector3(1f, 1f, 0f);
@@ -111,7 +104,7 @@ public class inventoryMenu : MonoBehaviour
             items[numItems++] = getItemImage(player.inventory.GetItem(i).itemName);
             if (origin)
             {
-                items[i].transform.parent = gameObject.transform.GetChild(0).transform;//.transform.GetChild(0).transform.GetChild(i).transform;
+                items[i].transform.parent = gameObject.transform.GetChild(0).transform;
                 invWidth = gameObject.transform.GetChild(0).transform.GetComponent<RectTransform>().rect.width;
             }
             else
@@ -124,31 +117,23 @@ public class inventoryMenu : MonoBehaviour
             rt.localScale = new Vector3(1f, 1f, 0f);
             rt.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Left, 0, rt.rect.width);
             rt.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Top, 0, rt.rect.height);
-            //GameObject katanaImage = Instantiate(katana, new Vector3(0f,0f,0f), Quaternion.identity);
+            
             if (i < 5)
             {
                 rt.localPosition = new Vector3(-(invWidth / 2.5f) + (i * 150), rt.localPosition.y - 25f, 0f);
-                //item.transform.parent = gameObject.transform.GetChild(0).transform.GetChild(0).transform.GetChild(i).transform;
             }
             else if (i >= 5 && i < 10)
             {
                 rt.localPosition = new Vector3(-(invWidth / 2.5f) + ((i - 5) * 150), rt.localPosition.y - 175f, 0f);
-                //item.transform.parent = gameObject.transform.GetChild(0).transform.GetChild(1).transform.GetChild(i - 5).transform;
             }
             else if (i >= 10 && i < 15)
             {
                 rt.localPosition = new Vector3(-(invWidth / 2.5f) + ((i - 10) * 150), rt.localPosition.y - 325f, 0f);
-                //item.transform.parent = gameObject.transform.GetChild(0).transform.GetChild(2).transform.GetChild(i - 10).transform;
             }
             else
             {
                 rt.localPosition = new Vector3(-(invWidth / 2.5f) + ((i - 15) * 150), rt.localPosition.y - 475f, 0f);
-                //item.transform.parent = gameObject.transform.GetChild(0).transform.GetChild(3).transform.GetChild(i - 15).transform;
             }
-            //RectTransform rt = item.GetComponent<RectTransform>();
-            //rt.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Left, 0, rt.rect.width);
-            //rt.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Top, 0, rt.rect.height);
-            
         }
     }
 
